@@ -67,6 +67,11 @@ ninja.data = [{
           description: "An implementation of the Iten et al. algorithm for quantum circuit pattern matching.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/17_project/";
+            },},{id: "projects-exosky-an-exoplanet-constellation-creator-and-explorer",
+          title: 'Exosky, an Exoplanet Constellation Creator and Explorer',
+          description: "An interactive 3D starfield to create and explore exoplanet constellations.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/18_project/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
