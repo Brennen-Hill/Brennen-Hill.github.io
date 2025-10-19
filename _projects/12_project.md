@@ -5,7 +5,6 @@ description: An extensive overview of the web-based sci-fi action game project, 
 img: assets/img/twg\_banner.jpg
 importance: 1
 category: work
-related\_publications: true
 ---
 
 This document provides an exhaustive overview of the **Thunder Warrior: Genesis (TWG)** project, a web-based, sci-fi action game. This analysis is based on a comprehensive review of the project's complete codebase and a series of detailed reports covering its frontend, backend, core mechanics, itemization, and community-facing features. The project is currently in an **Open Beta** phase, featuring a rich, server-authoritative architecture and deep, multi-layered character customization.
