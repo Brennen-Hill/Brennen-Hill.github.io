@@ -30,6 +30,41 @@
       }
     ]
   },
+  "education": [
+    {
+      "institution": "University of Wisconsin-Madison",
+      "location": "Madison, WI",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science in Computer Science",
+      "startDate": "2022-09",
+      "endDate": "2026-05",
+      "score": "3.81/4.0",
+      "courses": [
+        "GPA: 3.81/4.0",
+        "Honors: Letters & Science Dean's List, Honors in Computer Science Program, Letters & Science Honors Program",
+        "Graduate AI Coursework: Foundation Models, Learning-Based Image Synthesis, Advanced Robotics, Advanced Reinforcement Learning, Theory of Multi-agent Machine Learning.",
+        "AI Coursework: Directed Study on LLMs with Dr. Sala, Game AI, Neurobiology, Artificial Neural Networks, Artificial Intelligence, Game Theory and Learning.",
+        "Neuro Coursework: Molecular and Cellular Mechanisms of Memory, Neurobiology."
+      ]
+    },
+    {
+      "institution": "National University of Singapore",
+      "location": "Singapore",
+      "area": "Computer Science",
+      "studyType": "Exchange Scholar",
+      "startDate": "2025-01",
+      "endDate": "2025-05",
+      "score": "3.75/4.0",
+      "courses": [
+        "Awarded a merit-based placement through a highly competitive, university-wide application process.",
+        "Graduate AI Coursework: Neural Networks and Deep Learning II",
+        "Graduate Neuro Coursework: Frontiers in Neurotechnology, Behavioral & Cognitive Neuroscience.",
+        "Graduate Neuro Coursework: Behavioral & Cognitive Neuroscience",
+        "AI Coursework: AI Planning and Decision Making, Mind and Machine",
+        "Neuro/Bio Engineering Coursework: Bioinformatics, Organoid Engineering, Mind and Machine"
+      ]
+    }
+  ],
   "work": [
     {
       "name": "Wisconsin Neuromorphic Computing and NeuroAI Lab",
@@ -129,41 +164,6 @@
         "Engineered a custom game engine, multiplayer server, database, 3D models, and animations."
       ]
     },
-  ],
-  "education": [
-    {
-      "institution": "University of Wisconsin-Madison",
-      "location": "Madison, WI",
-      "area": "Computer Science",
-      "studyType": "Bachelor of Science",
-      "startDate": "2022-09",
-      "endDate": "2026-05",
-      "score": "3.81/4.0",
-      "courses": [
-        "GPA: 3.81/4.0",
-        "Honors: Letters & Science Dean's List, Honors in Computer Science Program, Letters & Science Honors Program",
-        "Graduate AI Coursework: Foundation Models, Learning-Based Image Synthesis, Advanced Robotics, Advanced Reinforcement Learning, Theory of Multi-agent Machine Learning.",
-        "AI Coursework: Directed Study on LLMs with Dr. Sala, Game AI, Neurobiology, Artificial Neural Networks, Artificial Intelligence, Game Theory and Learning.",
-        "Neuro Coursework: Molecular and Cellular Mechanisms of Memory, Neurobiology."
-      ]
-    },
-    {
-      "institution": "National University of Singapore",
-      "location": "Singapore",
-      "area": "Computer Science",
-      "studyType": "Exchange Scholar",
-      "startDate": "2025-01",
-      "endDate": "2025-05",
-      "score": "3.75/4.0",
-      "courses": [
-        "Awarded a merit-based placement through a highly competitive, university-wide application process.",
-        "Graduate AI Coursework: Neural Networks and Deep Learning II",
-        "Graduate Neuro Coursework: Frontiers in Neurotechnology, Behavioral & Cognitive Neuroscience.",
-        "Graduate Neuro Coursework: Behavioral & Cognitive Neuroscience",
-        "AI Coursework: AI Planning and Decision Making, Mind and Machine",
-        "Neuro/Bio Engineering Coursework: Bioinformatics, Organoid Engineering, Mind and Machine"
-      ]
-    }
   ],
   "publications": [
     {
