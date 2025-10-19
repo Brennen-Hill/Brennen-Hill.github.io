@@ -121,7 +121,7 @@
       "name": "Stealth Mode Startup",
       "location": "Boston, MA",
       "position": "Software Engineer (Research Engineer)",
-      "startDate": "2025-05-01",
+      "startDate": "2025-05",
       "endDate": "Present",
       "highlights": [
         "Spearheaded the complete research and development lifecycle for a novel artificial intelligence system, taking the project from an ambiguous high-level goal to a fully deployed, production-ready system.",
@@ -135,9 +135,9 @@
       "startDate": "2024-05",
       "endDate": "2024-08",
       "highlights": [
-        "Engineered a production-ready implementation of an exact pattern matching algorithm within the Quilc quantum compiler, translating a novel theoretical method into a high-impact optimization tool.",
-        "Reduced quantum circuit depth by up to 37%, shortening execution time on quantum hardware, directly enhancing algorithmic fidelity by mitigating qubit decoherence.",
-        "Project Link: https://github.com/quil-lang/quilc/tree/master/src/match"
+        "Architected a multi-pass compiler in Common Lisp to generate optimized binary directly for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for direct FPGA execution to maximize performance and control flexibility.",
+        "Designed and implemented a custom assembly language to bridge high-level experimental logic with the hardware instruction set, enabling advanced compiler optimizations, automatic resource allocation, and precise picosecond-level timing calculations.",
+        "Awarded a return offer after each period with HRL in recognition of significant technical contributions and research impact."
       ]
     },
     {
@@ -145,10 +145,11 @@
       "location": "Malibu, CA",
       "position": "Quantum Software Intern (Research Engineer)",
       "startDate": "2023-06",
-      "endDate": "2024-08",
+      "endDate": "2023-08",
       "highlights": [
-        "Architected a multi-pass compiler in Common Lisp to generate optimized binary directly for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for direct FPGA execution to maximize performance and control flexibility.",
-        "Designed and implemented a custom assembly language to bridge high-level experimental logic with the hardware instruction set, enabling advanced compiler optimizations, automatic resource allocation, and precise picosecond-level timing calculations.",
+        "Engineered a production-ready implementation of an exact pattern matching algorithm within the Quilc quantum compiler, translating a novel theoretical method into a high-impact optimization tool.",
+        "Reduced quantum circuit depth by up to 37%, shortening execution time on quantum hardware, directly enhancing algorithmic fidelity by mitigating qubit decoherence.",
+        "Project Link: https://github.com/quil-lang/quilc/tree/master/src/match",
         "Awarded a return offer after each period with HRL in recognition of significant technical contributions and research impact."
       ]
     },
