@@ -1,3 +1,12 @@
+---
+layout: page
+title: 'Thunder Warrior: Genesis'
+description: An in-depth analysis of a sci-fi action game featuring deep customization, an authoritative server, and a 3D graphics pipeline.
+img: assets/img/twg/twg-banner.jpg
+importance: 1
+category: work
+---
+
 -----
 layout: page
 title: 'Thunder Warrior: Genesis'
@@ -6,7 +15,6 @@ img: assets/img/twg\_banner.jpg
 importance: 1
 category: work
 ---
-
 This document provides an exhaustive overview of the **Thunder Warrior: Genesis (TWG)** project, a web-based, sci-fi action game. This analysis is based on a comprehensive review of the project's complete codebase and a series of detailed reports covering its frontend, backend, core mechanics, itemization, and community-facing features. The project is currently in an **Open Beta** phase, featuring a rich, server-authoritative architecture and deep, multi-layered character customization.
 
 \<div class="row"\>
