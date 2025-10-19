@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 'Thunder Warrior: Genesis'
+title: "Thunder Warrior: Genesis"
 description: An in-depth analysis of a sci-fi action game featuring deep customization, an authoritative server, and a 3D graphics pipeline.
 img: assets/img/twg/twg-banner.jpg
 importance: 1
