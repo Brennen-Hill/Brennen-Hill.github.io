@@ -8,8 +8,8 @@ middle_name: A.
 last_name: Hill
 # contact_note: >
 #   You can even add a little note about which of these is the best way to reach you.
-# description: > # the ">" symbol means to ignore newlines until "footer_text:"
-#   Description placeholder
+description: > # the ">" symbol means to ignore newlines until "footer_text:"
+  Personal website of Brennen Hill, a researcher investigating how the principles of computation in biological substrates can provide a blueprint for engineering artificial intelligence.
 # footer_text: >
 #   Footer placeholder
 keywords: Brennen Hill, Brennen A. Hill, Brennen Alexander Hill, Researcher, Neuroscience, AI, NeuroAI, Machine Learning, Reinforcement Learning, World Models, Neuromorphic Computing, Engineer # add your own keywords or leave empty
@@ -360,7 +360,7 @@ enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
-enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
+enable_tooltips: true # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
