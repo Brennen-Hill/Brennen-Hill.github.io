@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Thunder Warrior: Genesis - Comprehensive Project Report
+title: 'Thunder Warrior: Genesis - Comprehensive Project Report'
 description: An exhaustive compilation of all project data.
 img: assets/img/12.jpg
 importance: 1
