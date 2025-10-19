@@ -78,7 +78,7 @@
         "Secured formal funding, dedicated space, and administrative support from UW-Madison.",
         "Delivered lectures on advanced topics intersecting neuroscience and AI to audiences of over 100.",
         "Mentoring 100 researchers from initial project proposals to research papers.",
-        "Publications from this research: [2], [4]"
+        "Publications from this research: \"The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet\", \"The Physical Basis of Prediction: World Model Formation in Neural Organoids via an LLM-Generated Curriculum\""
       ]
     },
     {
@@ -90,7 +90,7 @@
       "highlights": [
         "Researching and implementing novel methods for editing representations within large language models including coarse-to-fine pipelines.",
         "Worked with big data, GPU clusters, and high throughput systems.",
-        "Publications from this research: [6], [7]"
+        "Publications from this research: \"HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning\", \"Breaking to Build: A Threat Model of Prompt-Based Attacks for Securing LLMs\""
       ]
     },
     {
@@ -102,7 +102,7 @@
       "highlights": [
         "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
         "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
-        "Publications from this research: [1], [5]"
+        "Publications from this research: \"Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models\", \"Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer\""
       ]
     },
     {
@@ -114,7 +114,7 @@
       "highlights": [
         "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments.",
         "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
-        "Publications from this research: [1], [3]"
+        "Publications from this research: \"Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models\", \"Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula\""
       ]
     },
     {
@@ -244,7 +244,7 @@
       "title": "3rd Place (Standard Platform League 2025), 1st Place (Shield 2024)",
       "date": "2025-05",
       "awarder": "RoboCup International Robotics Competition",
-      "summary": "Achieved top placements in a competition that serves as an international scientific benchmark for multi-agent AI in adversarial environments, using fully autonomous, identical NAO robots. Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models [5]. Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research [1]."
+      "summary": "Achieved top placements in a competition that serves as an international scientific benchmark for multi-agent AI in adversarial environments, using fully autonomous, identical NAO robots. Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models \"Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer\". Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research \"Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models\"."
     },
     {
       "title": "Presenter",
@@ -296,7 +296,11 @@
       "organization": "Cortical Labs",
       "position": "Journal Club Host and speaker",
       "startDate": "2024-10",
-      "summary": "Presented a critical analysis on the origins of intelligence, synthesizing concepts of scale-free cognition and developmental bioelectricity, and referencing work by Dr. Levin to discuss how higher-level agency evolves from the homeostatic, problem-solving capabilities of cellular collectives. Facilitated a post-talk discussion with researchers on the future of synthetic biological intelligence and the applications of the mechanisms presented. Invited to give future talks in recognition of the presentation's quality and the engaging discussion."
+      "highlights": [
+        "Presented a critical analysis on the origins of intelligence, synthesizing concepts of scale-free cognition and developmental bioelectricity, and referencing work by Dr. Levin to discuss how higher-level agency evolves from the homeostatic, problem-solving capabilities of cellular collectives.",
+        "Facilitated a post-talk discussion with researchers on the future of synthetic biological intelligence and the applications of the mechanisms presented.",
+        "Invited to give future talks in recognition of the presentation's quality and the engaging discussion."
+      ]
     },
     {
       "organization": "Madison Machine Learning",
