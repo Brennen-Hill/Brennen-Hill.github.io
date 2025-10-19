@@ -163,7 +163,7 @@
         "Achieved net profit.",
         "Engineered a custom game engine, multiplayer server, database, 3D models, and animations."
       ]
-    },
+    }
   ],
   "publications": [
     {
@@ -362,5 +362,5 @@
       "language": "Spanish",
       "fluency": "Proficient"
     }
-  ],
+  ]
 }
