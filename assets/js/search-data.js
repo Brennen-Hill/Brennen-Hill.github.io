@@ -72,6 +72,11 @@ ninja.data = [{
           description: "An interactive 3D starfield to create and explore exoplanet constellations.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/18_project/";
+            },},{id: "projects-multi-agent-sequential-learning-combating-adversarial-procedural-generation",
+          title: 'multi-agent sequential learning combating adversarial procedural generation',
+          description: "Training defenders and an adversarial level generator simultaneously.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/19_project/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
