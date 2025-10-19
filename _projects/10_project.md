@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Thunder Warrior: Genesis (TWG)
+title: 'Thunder Warrior: Genesis (TWG)'
 description: A comprehensive overview of the open-beta sci-fi action game.
 img: assets/img/twg-banner.jpg
 importance: 1
