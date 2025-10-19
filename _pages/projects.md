@@ -5,7 +5,7 @@ permalink: /projects/
 description:
 nav: true
 nav_order: 3
-display_categories: [hackathon, research]
+display_categories: [research, research engineering, hackathon]
 horizontal: false
 ---
 
