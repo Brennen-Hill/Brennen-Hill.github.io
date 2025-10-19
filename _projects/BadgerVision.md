@@ -4,7 +4,7 @@ title: Badger Vision
 description: Hack Midwest Winner for Best Enterprise Scale Business Solution
 img: assets/img/HackMidwest.jpeg
 importance: 1
-category: work
+category: hackathon
 ---
 
 We won and were noted for the **Best Enterprise Scale Business Solution** at Hack Midwest, the largest hackathon in the region! Our team was awarded $2,500 for our project.
