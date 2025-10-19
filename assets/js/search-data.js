@@ -57,6 +57,16 @@ ninja.data = [{
           description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/15_project/";
+            },},{id: "projects-badger-vision",
+          title: 'Badger Vision',
+          description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/16_project/";
+            },},{id: "projects-39-cl-quil-match-39-pattern-matching-and-replacement",
+          title: '&amp;#39;cl-quil/match&amp;#39;: Pattern Matching and Replacement',
+          description: "An implementation of the Iten et al. algorithm for quantum circuit pattern matching.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/17_project/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
