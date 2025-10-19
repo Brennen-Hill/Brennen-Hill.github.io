@@ -1,7 +1,4 @@
-Using all the information on the project from the following 4 reports, write out a new report. It is important to include every detail. Every line from the 4 reports should be included in the new report. Note that the new report will be significantly longer than the formatting example
-
-## An example of formatting for a website project, for formatting purpose only:
-
+---
 layout: page
 title: project 1
 description: with background image
