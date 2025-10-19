@@ -8,6 +8,15 @@ category: research
 related_publications: false
 ---
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Sign.webp" title="SignLanguageLearner" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    An example of a computer vision model interpretting detecting sign language, credit to Google.
+</div>
+
 ## ABSTRACT
 
 We worked to make a model that can translate sign language into text and enable greater communication between people throughout the world. We worked with a Kaggle dataset holding images of letters in sign language that are labeled by letter. Although models have already been built using this dataset, we deepened the effectiveness of existing models. We experimented with various combinations of data augmentation, transfer learning, and model architecture. After using what we learned from our experiments to build a highly effective model, we greatly surpassed the baseline.
@@ -40,15 +49,15 @@ Pre-processing varied depending on the model that we chose, however for both of 
 ```python
 # data augmentation
 datagen = tf.keras.preprocessing.image.ImageDataGenerator(
-       rotation_range=10,
-       zoom_range = 0.1,
-       width_shift_range=0.1,
-       height_shift_range=0.1,
-       horizontal_flip=True,
-      # zoom_range=0.2,
-       shear_range=0.1,
-       fill_mode='nearest'
-       )
+    rotation_range=10,
+    zoom_range = 0.1,
+    width_shift_range=0.1,
+    height_shift_range=0.1,
+    horizontal_flip=True,
+    # zoom_range=0.2,
+    shear_range=0.1,
+    fill_mode='nearest'
+)
 ```
 
 {% endraw %}
