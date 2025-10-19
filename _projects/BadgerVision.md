@@ -2,18 +2,18 @@
 layout: page
 title: Badger Vision
 description: Hack Midwest Winner for Best Enterprise Scale Business Solution
-img: assets/img/HackMidwest.jpeg # Placeholder: Add a background image for the portfolio page
+img: assets/img/HackMidwest.jpeg
 importance: 1
 category: work
 ---
 
-We won **Best Enterprise Scale Business Solution** at Hack Midwest, the largest hackathon in the region! Our team was awarded $2,500 for our project, built using Pinata's Files API.
+We won and were noted for the **Best Enterprise Scale Business Solution** at Hack Midwest, the largest hackathon in the region! Our team was awarded $2,500 for our project.
 
 Over 300 developers were selected to compete, including experts from leading organizations and universities. After 23 intense hours of coding with only a 1-hour break to sleep, we presented our solution to the judges and were victorious.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/HackMidwest.jpeg" title="Badger Vision Team Winning Hack Midwest" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/HackMidwest.jpeg" title="Badger Vision Team" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -56,7 +56,7 @@ If we acquire the funding to continue work on this project, we would like to pur
 
 ### Team Members
 
-Brennen Hill, Rahul Hathwar, Max Maeder, Utkarsh Sharma, and Jeremy Kintana.
+Brennen Hill, Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma.
 
 <br>
 

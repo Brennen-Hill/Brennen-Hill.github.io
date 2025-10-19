@@ -2,11 +2,21 @@
 layout: page
 title: Exosky, an Exoplanet Constellation Creator and Explorer
 description: An interactive 3D starfield to create and explore exoplanet constellations.
-img: assets/img/ExoSky.jpeg # Optional: Add a path to a background image for the portfolio page
+img: assets/img/ExoSky.jpeg
 importance: 1
 category: work
-related_publications: true # Set to true to show the references
+related_publications: false
 ---
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ExoSky.jpeg" title="ExoSky" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Viewing from another planet one of Earth's constelations.
+</div>
 
 **Final Project Link:** [https://shoebills-in-space.web.app/](https://shoebills-in-space.web.app/)
 

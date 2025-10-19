@@ -1,18 +1,18 @@
 ---
 layout: page
-title: "'cl-quil/match': Pattern Matching and Replacement"
+title: "'cl-quil/match': Template Matching and Replacement"
 description: An implementation of the Iten et al. algorithm for quantum circuit pattern matching.
 img: assets/img/PCOverview.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
 
 This system implements the quantum circuit pattern matching algorithm of Iten et al. It was created during an internship at HRL Laboratories.
 
 **Official Source:** [`https://github.com/quil-lang/quilc/tree/master/src/match`](https://github.com/quil-lang/quilc/tree/master/src/match)
 
-<div class="row">
+<div class="col">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/PatternAndCircuit.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
