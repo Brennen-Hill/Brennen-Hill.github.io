@@ -72,6 +72,21 @@ ninja.data = [{
           description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/15_project/";
+            },},{id: "projects-badger-vision",
+          title: 'Badger Vision',
+          description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/16_project/";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/17_project/";
+            },},{id: "projects-exosky-an-exoplanet-constellation-creator-and-explorer",
+          title: 'Exosky, an Exoplanet Constellation Creator and Explorer',
+          description: "An interactive 3D starfield to create and explore exoplanet constellations.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/18_project/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
