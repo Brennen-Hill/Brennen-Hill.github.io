@@ -36,7 +36,6 @@ We imported the data into Unity to generate stars and exoplanets with the right 
 
 Even though our simulation is pretty, it is highly accurate as well. Star brightness is determined by probe measurements and star color is derived from measured temperature. Stars and planets are placed using their calculated position on January 1st, 2024. We made a few stylistic choices as well. Star and planet size is scaled to make the simulation more visibly appealing and easy to use, and out of the 2 billion stars in the Gaia archive, we only used the brightest half million to optimize performance.
 
-
 ## Project Video
 
 <https://youtu.be/mWGtb8QGUds>
