@@ -137,7 +137,7 @@
       "highlights": [
         "Engineered a production-ready implementation of an exact pattern matching algorithm within the Quilc quantum compiler, translating a novel theoretical method into a high-impact optimization tool.",
         "Reduced quantum circuit depth by up to 37%, shortening execution time on quantum hardware, directly enhancing algorithmic fidelity by mitigating qubit decoherence.",
-        "Project Link: https://github.com/quil-lang/quilc/tree/master/src/match",
+        "Project Link: https://github.com/quil-lang/quilc/tree/master/src/match"
       ]
     },
     {
