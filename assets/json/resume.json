@@ -325,36 +325,28 @@
       "position": "Executive Boardmember and Webmaster",
       "startDate": "2024-03",
       "endDate": "2025-03",
-      "highlights": [
-        "Organized projects, designed a website, and managed resources to support students interested in artificial intelligence."
-      ]
+      "highlights": ["Organized projects, designed a website, and managed resources to support students interested in artificial intelligence."]
     },
     {
       "organization": "Ballroom Association UW-Madison",
       "position": "Executive Boardmember and Webmaster",
       "startDate": "2022-12",
       "endDate": "2023-12",
-      "highlights": [
-        "Designed and built a user-focused website to facilitate member communication."
-      ]
+      "highlights": ["Designed and built a user-focused website to facilitate member communication."]
     },
     {
       "organization": "Agoura Highschool Math Honors Society",
       "position": "Math Tutor",
       "startDate": "2020-08",
       "endDate": "2022-05",
-      "highlights": [
-        "Taught advanced math concepts to students, improving understanding and exam scores."
-      ]
+      "highlights": ["Taught advanced math concepts to students, improving understanding and exam scores."]
     },
     {
       "organization": "Agoura Highschool Science Honors Society",
       "position": "Science Tutor",
       "startDate": "2020-08",
       "endDate": "2022-05",
-      "highlights": [
-        "Taught students advanced science concepts, raising understanding and exam scores."
-      ]
+      "highlights": ["Taught students advanced science concepts, raising understanding and exam scores."]
     }
   ],
   "languages": [

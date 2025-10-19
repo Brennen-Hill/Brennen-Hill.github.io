@@ -36,9 +36,9 @@ Prosopagnosia, or face blindness, affects around **2.5% of the population**—mo
 
 Introducing Badger Vision, an open-source and easy-to-use tool designed to help individuals with face blindness by identifying both faces and emotions.
 
-* **Face Recognition:** If a recognized face is detected, the tool announces the person’s name.
-* **Audio Cues:** For unknown faces, a unique chime is played, with the exact same chime repeating upon subsequent encounters. This use of audio cues makes it easier to recognize faces.
-* **Emotion Detection:** Our model also detects and announces emotions, making it easier to interpret social cues.
+- **Face Recognition:** If a recognized face is detected, the tool announces the person’s name.
+- **Audio Cues:** For unknown faces, a unique chime is played, with the exact same chime repeating upon subsequent encounters. This use of audio cues makes it easier to recognize faces.
+- **Emotion Detection:** Our model also detects and announces emotions, making it easier to interpret social cues.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -65,13 +65,15 @@ We engineered a solution by **writing our own Python API**, proving that live-st
 ### Future Work
 
 If we acquire the funding to continue work on this project, we would like to pursue several goals:
-* Perform clinical trials on a diverse population to evaluate effectiveness.
-* Further refine the codebase and mobile client.
-* Expand the functionality of the application to AR and VR headsets, including smart glasses.
+
+- Perform clinical trials on a diverse population to evaluate effectiveness.
+- Further refine the codebase and mobile client.
+- Expand the functionality of the application to AR and VR headsets, including smart glasses.
 
 ---
 
 ### Team Members
+
 Brennen Hill, Rahul Hathwar, Max Maeder, Utkarsh Sharma, and Jeremy Kintana.
 
 <br>

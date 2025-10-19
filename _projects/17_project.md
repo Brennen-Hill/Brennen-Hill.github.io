@@ -21,6 +21,7 @@ The system exposes two primary functions as the interface: `pattern-match` and `
 `pattern-replace` takes a circuit and a list of patterns as input. `pattern-match` is called with each pattern. Each match with the pattern in the circuit is then replaced with the unmatched section of the pattern. Then `pattern-replace` repeats. The return value of `pattern-replace` is the optimized circuit.
 
 It can be useful to print out the current state of `pattern-match` and `pattern-replace`. To do so, three methods are provided:
+
 - `(print-circ circuit)` takes a circuit as input and prints a visual representation of the circuit
 - `(print-circ-as-canon circuit)` takes a circuit as input and prints a visual representation of the canonical form of the circuit
 - `(print-canon-data canonical-form)` takes a `canonical-form` as input and prints a visual representation of the canonical form
@@ -38,3 +39,4 @@ Run the following command:
 
 ```lisp
 (asdf:test-system "cl-quil/match")
+```
