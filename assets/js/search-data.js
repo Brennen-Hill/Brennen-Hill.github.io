@@ -77,6 +77,11 @@ ninja.data = [{
           description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/16_project/";
+            },},{id: "projects-",
+          title: '',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/17_project/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
