@@ -67,6 +67,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/14_project/";
+            },},{id: "projects-badger-vision",
+          title: 'Badger Vision',
+          description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/15_project/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",

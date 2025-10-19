@@ -1,18 +1,26 @@
 -----
 
-## layout: page title: Thunder Warrior: Genesis description: An extensive overview of the web-based sci-fi action game project, detailing its architecture, gameplay mechanics, and deep customization. img: assets/img/twg\_banner.jpg importance: 1 category: work related\_publications: true
+layout: page
+title: Thunder Warrior: Genesis
+description: An extensive overview of the web-based sci-fi action game project, detailing its architecture, gameplay mechanics, and deep customization.
+img: assets/img/twg\_banner.jpg
+importance: 1
+category: work
+related\_publications: true
+
+---
 
 This document provides an exhaustive overview of the **Thunder Warrior: Genesis (TWG)** project, a web-based, sci-fi action game. This analysis is based on a comprehensive review of the project's complete codebase and a series of detailed reports covering its frontend, backend, core mechanics, itemization, and community-facing features. The project is currently in an **Open Beta** phase, featuring a rich, server-authoritative architecture and deep, multi-layered character customization.
 
 \<div class="row"\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/twg\_homescreen.jpg" title="New Home Page" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/1.jpg" title="New Home Page" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/twg\_combat.jpg" title="In-Game Arena Combat" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/1.jpg" title="In-Game Arena Combat" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/twg\_shop.jpg" title="Shop Interface" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Shop Interface" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \</div\>
 \<div class="caption"\>
@@ -240,10 +248,10 @@ All equipment is fully interchangeable across **7 slots**: Helmet, Torso, Legs, 
 
 \<div class="row justify-content-sm-center"\>
 \<div class="col-sm-8 mt-3 mt-md-0"\>
-{% include figure.liquid path="assets/img/twg\_weapon\_page.jpg" title="Weapon Management Screen" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/1.jpg" title="Weapon Management Screen" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \<div class="col-sm-4 mt-3 mt-md-0"\>
-{% include figure.liquid path="assets/img/twg\_mods.jpg" title="Modification Slots" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/1.jpg" title="Modification Slots" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \</div\>
 \<div class="caption"\>
@@ -287,10 +295,10 @@ Players unlock and equip a wide range of active abilities, which are organized i
 
 \<div class="row"\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/twg\_stamina\_tree.jpg" title="Stamina Ability Tree" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Stamina Ability Tree" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/twg\_force\_tree.jpg" title="Thaumaturgy Ability Tree" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Thaumaturgy Ability Tree" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \</div\>
 \<div class="caption"\>
