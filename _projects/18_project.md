@@ -2,7 +2,7 @@
 layout: page
 title: Exosky, an Exoplanet Constellation Creator and Explorer
 description: An interactive 3D starfield to create and explore exoplanet constellations.
-img: assets/img/exosky_preview.jpg # Optional: Add a path to a background image for the portfolio page
+img: assets/img/ExoSky.jpeg # Optional: Add a path to a background image for the portfolio page
 importance: 1
 category: work
 related_publications: true # Set to true to show the references
@@ -36,32 +36,6 @@ We imported the data into Unity to generate stars and exoplanets with the right 
 
 Even though our simulation is pretty, it is highly accurate as well. Star brightness is determined by probe measurements and star color is derived from measured temperature. Stars and planets are placed using their calculated position on January 1st, 2024. We made a few stylistic choices as well. Star and planet size is scaled to make the simulation more visibly appealing and easy to use, and out of the 2 billion stars in the Gaia archive, we only used the brightest half million to optimize performance.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/exosky_1.jpg" title="Constellation from Earth" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/exosky_2.jpg" title="Traveling to an exoplanet" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/exosky_3.jpg" title="Same constellation, new perspective" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    A user can draw a constellation from one perspective (left), travel light-years to another exoplanet (middle), and see how the constellation's shape changes from the new viewpoint (right).
-</div>
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/exosky_4.jpg" title="3D Starfield" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/exosky_5.jpg" title="Exoplanet exploration" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    The 3D starfield (left) is generated from real astronomical data. Users can freely explore the space around an exoplanet (right).
-</div>
 
 ## Project Video
 

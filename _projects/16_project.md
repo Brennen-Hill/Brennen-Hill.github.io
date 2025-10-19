@@ -2,7 +2,7 @@
 layout: page
 title: Badger Vision
 description: Hack Midwest Winner for Best Enterprise Scale Business Solution
-img: assets/img/badger-vision-header.jpg # Placeholder: Add a background image for the portfolio page
+img: assets/img/HackMidwest.jpeg # Placeholder: Add a background image for the portfolio page
 importance: 1
 category: work
 ---
@@ -13,17 +13,10 @@ Over 300 developers were selected to compete, including experts from leading org
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/badger-vision-team.jpg" title="Badger Vision Team" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/badger-vision-app.jpg" title="Badger Vision App UI" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/badger-vision-award.jpg" title="Hack Midwest Award" class="img-fluid rounded z-depth-1" %}
-    </div>
+        {% include figure.liquid loading="eager" path="assets/img/HackMidwest.jpeg" title="Badger Vision Team" class="img-fluid rounded z-depth-1" %}
 </div>
 <div class="caption">
-    Placeholder images: The Badger Vision team at Hack Midwest, an example of the app interface, and receiving the award.
+    Placeholder images: The Badger Vision team at Hack Midwest receiving the award.
 </div>
 
 ---

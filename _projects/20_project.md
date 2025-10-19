@@ -2,7 +2,7 @@
 layout: page
 title: Sign Language Learner
 description: Translating American Sign Language to text using CNNs
-img: assets/img/sign_language_project.jpg
+img: assets/img/Sign.webp
 importance: 1
 category: work
 ---

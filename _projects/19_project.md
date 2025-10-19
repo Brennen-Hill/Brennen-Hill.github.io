@@ -2,7 +2,7 @@
 layout: page
 title: multi-agent sequential learning combating adversarial procedural generation
 description: Training defenders and an adversarial level generator simultaneously.
-img: assets/img/12.jpg
+img: assets/img/MarlProg.jpeg
 importance: 1
 category: research
 related_publications: false
@@ -20,13 +20,6 @@ The spawns follow a very simple set of rules. If a defender is within their rang
 
 If a spawn reaches the edge of the board, past the defenders, or if a defender is defeated, then the attacker wins. The defenders’ goal is to last as long as they can before a spawn passes them and to avoid any defender losing all life.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <p>The defenders and the attacker have been learning intelligent tactics. The defenders learned to move to where a spawn is and shoot it. The attacker learned to generate spawns in certain patterns. It would frequently generate a spawn that was fast with few other traits in an attempt to have it race past the defenders. The attacker would also sometimes generate two spawns immediately after one another in the same lane so the front spawn would block attacks from the defender from hitting the back spawn.</p>
-        
-        <a href="https://vimeo.com/947575658" target="_blank" rel="noopener noreferrer">View a video from early training here.</a>
-    </div>
-</div>
 <div class="caption">
     A video link demonstrating the learned behaviors from early in the training process.
 </div>
