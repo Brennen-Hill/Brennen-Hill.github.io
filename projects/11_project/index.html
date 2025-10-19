@@ -1,1 +1,1057 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html><body> <p><strong>Thunder Warrior: Genesis (TWG)</strong> is an ambitious, web-based sci-fi action game currently in an open beta phase. This project, built around warring factions of the “Empire” and “Rebellion,” places players in the role of a highly customizable “Thunder Warrior.”</p> <p>The project’s architecture is defined by three core pillars:</p> <ol> <li> <strong>Deep, Multi-Layered Customization:</strong> A central design philosophy allowing players to fine-tune every aspect of their character, from class and skills to a 7-tier rarity system for equipment and a complex “Modifications” system.</li> <li> <strong>Robust Technical Infrastructure:</strong> The game runs on a secure, authoritative server model using WebSockets for real-time communication. It has undergone a significant server revamp to move all client-side processing to the server, dramatically reducing lag.</li> <li> <strong>Active, Transparent Development:</strong> The team is currently executing a major graphical overhaul, replacing all 2D assets with 3D models and animations, and actively solicits community input via four distinct feedback systems.</li> </ol> <p>This project page provides an exhaustive breakdown of the game’s mechanics, content, technical architecture, and user-facing features, based on a comprehensive analysis of the project’s codebase and client-facing documentation.</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/ui-home-remodel-480.webp 480w,/assets/img/twg/ui-home-remodel-800.webp 800w,/assets/img/twg/ui-home-remodel-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/ui-home-remodel.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Remodeled Home Page" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/ui-ingame-info-480.webp 480w,/assets/img/twg/ui-ingame-info-800.webp 800w,/assets/img/twg/ui-ingame-info-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/ui-ingame-info.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="In-Game Information Update" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/ui-web-redesign-480.webp 480w,/assets/img/twg/ui-web-redesign-800.webp 800w,/assets/img/twg/ui-web-redesign-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/ui-web-redesign.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Website Redesign" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="caption"> A look at the completely redesigned UI/UX. Left: The remodeled Home Page with character preview and equipment icons. Middle: The "Information Update" showing exact values on status bars (HP, Stamina, Heat). Right: The revamped website navigation. </div> <hr> <h2 id="i-core-gameplay-mechanics"><strong>I. Core Gameplay Mechanics</strong></h2> <p>The in-game simulation is driven by a series of robust, object-oriented modules. The <code class="language-plaintext highlighter-rouge">gameServer.js</code> file manages all game instances, while the <code class="language-plaintext highlighter-rouge">Trooper.js</code> class represents the central player character, handling all state, physics, and combat logic.</p> <h3 id="character-creation--skills"><strong>Character Creation &amp; Skills</strong></h3> <p>Upon creating an account, players choose a <strong>Class</strong> (e.g., Jedi, Sith, Sabateur, Infiltrator). This choice is foundational, defining:</p> <ul> <li> <strong>Starting Skills:</strong> Base values for Power, Constitution, Thaumaturgy, Stamina, Speed, and Utility.</li> <li> <strong>Faction:</strong> Alignment with either the Empire or Rebellion.</li> <li> <strong>Passive Traits:</strong> Unique abilities, such as gaining health or stamina on a kill.</li> <li> <strong>Starting Equipment:</strong> A full set of armor and one melee and ranged weapon.</li> </ul> <p>The primary character skills include:</p> <ul> <li> <strong>Passive Skills:</strong> <ul> <li> <strong>Power:</strong> Increases damage.</li> <li> <strong>Constitution:</strong> Increases health and healing effectiveness.</li> <li> <strong>Speed:</strong> Governs movement and action speed.</li> </ul> </li> <li> <strong>Ability Skills:</strong> <ul> <li> <strong>Stamina:</strong> A resource pool for “natural” abilities (e.g., sprinting, saber strikes).</li> <li> <strong>Thaumaturgy:</strong> A resource pool for “supernatural” powers (e.g., Force-like abilities).</li> <li> <strong>Utility:</strong> Governs other useful actions.</li> </ul> </li> </ul> <h3 id="physics--movement"><strong>Physics &amp; Movement</strong></h3> <p>The <code class="language-plaintext highlighter-rouge">Trooper.js</code> class implements a complete physics and movement system:</p> <ul> <li> <strong>State:</strong> Manages position (<code class="language-plaintext highlighter-rouge">x</code>, <code class="language-plaintext highlighter-rouge">y</code>, <code class="language-plaintext highlighter-rouge">z</code>), rotation (<code class="language-plaintext highlighter-rouge">rot</code>), velocity, and dimensions (<code class="language-plaintext highlighter-rouge">w</code>, <code class="language-plaintext highlighter-rouge">h</code>,<code class="language-plaintext highlighter-rouge">d</code>).</li> <li> <strong>Movement:</strong> Handles acceleration, deceleration, running, and gravity.</li> <li> <strong>Jumping:</strong> Features a variable-height jump based on key-hold duration, as well as a delayed jump mechanic.</li> <li> <strong>Collision:</strong> Utilizes <code class="language-plaintext highlighter-rouge">CollisionDetection.js</code> to perform AABB (Axis-Aligned Bounding Box) checks for environmental collision, setting <code class="language-plaintext highlighter-rouge">onGround</code> status and managing collision responses.</li> <li> <strong>Weight:</strong> Movement speed and agility costs are directly affected by the character’s total weight, derived from stats and equipped armor.</li> </ul> <h3 id="combat-system"><strong>Combat System</strong></h3> <p>Combat is a real-time system split between ranged and melee. Players can swap weapons at any time by pressing ‘f’.</p> <p><strong>Ranged Combat (<code class="language-plaintext highlighter-rouge">Gun.js</code>)</strong></p> <ul> <li> <strong>Firing:</strong> Manages firing projectiles, tracking weapon heat, and managing firing rate.</li> <li> <strong>Projectiles:</strong> Spawns <code class="language-plaintext highlighter-rouge">Projectile.js</code> instances that travel in a straight line, check for collisions, and apply damage.</li> <li> <strong>Mechanics:</strong> Features projectile spread (<code class="language-plaintext highlighter-rouge">spreadMax</code>), damage falloff based on range (<code class="language-plaintext highlighter-rouge">getDistanceTravelledMult</code>), and an optional overheat system (<code class="language-plaintext highlighter-rouge">heat</code> object in <code class="language-plaintext highlighter-rouge">WeaponBase.js</code>).</li> </ul> <p><strong>Melee Combat (<code class="language-plaintext highlighter-rouge">Saber.js</code>)</strong></p> <ul> <li> <strong>Striking:</strong> Manages strike cooldowns, delays, and stamina costs. Applies damage within a defined arc (<code class="language-plaintext highlighter-rouge">angle</code> and <code class="language-plaintext highlighter-rouge">radius</code>) using collision detection.</li> <li> <strong>Blocking:</strong> Allows players to hold ‘shift’ to block. This action: <ul> <li> <strong>Reflects Projectiles:</strong> All projectiles within the saber’s <code class="language-plaintext highlighter-rouge">projectileAngle</code> are reflected.</li> <li> <strong>Staggers Enemies:</strong> Staggers melee attackers.</li> <li> <strong>Parries:</strong> A <code class="language-plaintext highlighter-rouge">parryTime</code> window at the start of a block provides additional benefits.</li> <li> <strong>Resource Management:</strong> Blocking consumes stamina, with different costs for initial activation, holding the block, blocking projectiles, and blocking melee strikes.</li> </ul> </li> </ul> <hr> <h2 id="ii-the-arsenal-deep-customization"><strong>II. The Arsenal: Deep Customization</strong></h2> <p>Customization is the central pillar of Thunder Warrior: Genesis. All equipment and modifications use a 7-tier rarity system: <strong>Junk, Common, Uncommon, Rare, Epic, Legendary, and Insane</strong>. Rarity increases an item’s statistics and modification potential. Equipment can be acquired from enemy drops or purchased in the Shop using “credits and metal”.</p> <h3 id="ranged-weapons-guns"><strong>Ranged Weapons (Guns)</strong></h3> <p>Ranged weapons are defined by their damage, range, firing speed, heat mechanics, and projectile speed. All base gun models have 3 modification slots.</p> <ul> <li> <strong>E-11 Variants (Blaster Rifle - Thunder Warrior Set):</strong> <ul> <li> <strong>E-11 Twilight:</strong> The standard, balanced rifle. Good all-around stats.</li> <li> <strong>E-11 Affluent:</strong> A critical-hit focused model with more heat capacity but less base damage.</li> <li> <strong>E-11 Viper:</strong> A burst-damage variant with a faster firing speed but less range and heat capacity.</li> </ul> </li> <li> <strong>DLT-19 Variants (Repeating Blaster - Sith Set):</strong> <ul> <li> <strong>DLT-19 Epitome:</strong> Standard model with a very high fire rate, low damage, and low range.</li> <li> <strong>DLT-19 Deluge:</strong> An even higher fire rate and heat capacity, but with minimal damage per shot.</li> <li> <strong>DLT-19 Scarlet:</strong> A heavy-hitting variant with higher damage but a slower fire rate.</li> </ul> </li> <li> <strong>T-21 Variants (Heavy Blaster - Shadow Set):</strong> <ul> <li> <strong>T-21 Shade:</strong> The standard heavy blaster. Very high damage and range, but a very slow fire rate. Excellent base crit and accuracy.</li> <li> <strong>T-21 Vintage:</strong> An even higher damage and range “sniper” model with a painfully slow fire rate.</li> <li> <strong>T-21 Amaranthine:</strong> A closer-quarters version with less damage than the Shade but a better fire rate and heat capacity.</li> </ul> </li> </ul> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/gun-e11-480.webp 480w,/assets/img/twg/gun-e11-800.webp 800w,/assets/img/twg/gun-e11-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/gun-e11.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="E-11 Blaster Rifle" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/gun-dlt19-480.webp 480w,/assets/img/twg/gun-dlt19-800.webp 800w,/assets/img/twg/gun-dlt19-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/gun-dlt19.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="DLT-19 Repeating Blaster" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/gun-t21-480.webp 480w,/assets/img/twg/gun-t21-800.webp 800w,/assets/img/twg/gun-t21-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/gun-t21.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="T-21 Heavy Blaster" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="caption"> The three primary classes of ranged weapons: the balanced E-11 (left), the rapid-fire DLT-19 (middle), and the high-damage T-21 (right). </div> <h3 id="melee-weapons-plasmablades--sabers"><strong>Melee Weapons (Plasmablades / Sabers)</strong></h3> <p>Melee weapons are defined by their offensive <code class="language-plaintext highlighter-rouge">strike</code> stats (damage, delay, radius, cost) and defensive <code class="language-plaintext highlighter-rouge">block</code> stats (parry time, block angles, stamina drain). All base saber models have 3 modification slots.</p> <ul> <li> <strong>Aggressive Sabers (Shadow Set):</strong> High damage, fast attacks, wide arcs, but poor defensive capabilities and high stamina costs. <ul> <li> <strong>Coral Plasmablade (Orange):</strong> Standard aggressive saber.</li> <li> <strong>Amethyst Plasmablade (Purple):</strong> Hits extremely hard but is very slow.</li> <li> <strong>Garnet Plasmablade (Red):</strong> Very fast, rapid-attack saber with lower individual damage.</li> </ul> </li> <li> <strong>Defensive Sabers (Sith Set):</strong> Excellent blocking, wide block angles, long parry windows, and low stamina drain, but very slow, low-damage attacks. <ul> <li> <strong>Tanzanite Plasmablade (Blue):</strong> Standard defensive saber with a very long parry window.</li> <li> <strong>Emerald Plasmablade (Green):</strong> Focused on sustained blocking with almost zero continuous drain.</li> <li> <strong>Peridot Plasmablade (Lime):</strong> Focused on quick-blocking actions with a low initial cost.</li> </ul> </li> <li> <strong>Balanced Sabers (Thunder Warrior Set):</strong> A mix of offensive and defensive stats, representing the middle ground. <ul> <li> <strong>Topaz Plasmablade (Yellow):</strong> The classic, perfectly balanced saber.</li> <li> <strong>Boracite Plasmablade (Cyan):</strong> A high-risk, high-reward “balanced” saber with stronger stats but much higher stamina costs.</li> <li> <strong>Alabaster Plasmablade (White):</strong> A high-efficiency “balanced” saber with weaker stats but very low stamina costs.</li> </ul> </li> </ul> <div class="row justify-content-sm-center"> <div class="col-sm-8 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/sabers-all-colors-480.webp 480w,/assets/img/twg/sabers-all-colors-800.webp 800w,/assets/img/twg/sabers-all-colors-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/sabers-all-colors.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Plasmablade Variants" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm-4 mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/saber-block-480.webp 480w,/assets/img/twg/saber-block-800.webp 800w,/assets/img/twg/saber-block-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/saber-block.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Saber Blocking" loading="lazy" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="caption"> Left: The variety of Plasmablade colors, including Amethyst, Garnet, Tanzanite, and Topaz. Right: A 3D render of a Thunder Warrior demonstrating the saber blocking stance, which can reflect projectiles. </div> <h3 id="armor-sets"><strong>Armor Sets</strong></h3> <p>Armor is split across five slots: <strong>Helmet, Torso, Legs, Right Arm, and Left Arm</strong>. Each piece provides defense, weight, and contributions to passive stats. All base armor pieces have 3 modification slots.</p> <ul> <li> <strong>Thunder Warrior Set:</strong> Standard issue, balanced defensive stats.</li> <li> <strong>Sith Set:</strong> A heavier set focused on Thaumaturgy stats and high Melee Defense.</li> <li> <strong>Shadow Set:</strong> A lightweight set focused on Stamina stats, evasion, Ranged Defense, and stealth.</li> <li> <strong>Festive Set:</strong> A low-stat, likely cosmetic or event-based set.</li> </ul> <h3 id="modifications-system"><strong>Modifications System</strong></h3> <p>The modification system allows for “incredible customization.” Mods are items that can be slotted into equipment to provide powerful bonuses. They follow the same 7-tier rarity system.</p> <ul> <li> <strong>Mod Structure:</strong> <ol> <li> <strong>Main Enhancement:</strong> One primary stat increase (e.g., “Defense” for armor, “Damage” for weapons).</li> <li> <strong>Minor Enhancements:</strong> Up to four secondary enhancements. These can be “Universal Changes” affecting the entire character (e.g., ability cost, healing time) and may sometimes roll as a “slight Decrease” to provide an even larger boost to other traits.</li> </ol> </li> <li> <strong>Examples of Major Mods:</strong> <ul> <li> <strong>Weapon:</strong> Damage, Quick Fire (reduce delays).</li> <li> <strong>Melee:</strong> Power (radius/knockback), Deflection (saber blocking), Reflection (projectile blocking), Slightness (reduce stamina costs).</li> <li> <strong>Ranged:</strong> Firing Speed, Maximum Spread (reduction), Projectile Speed, Cooling Power, Maximum Heat, Range.</li> <li> <strong>Armor:</strong> Defense, Weight (reduction), Stamina/Thaumaturgy/Health Recovery.</li> </ul> </li> <li> <strong>Examples of Minor Traits:</strong> <ul> <li>Thaumaturgy Critical Chance/Damage</li> <li>Stamina Evasion Chance</li> <li>Physical Accuracy</li> <li>Max Health/Stamina/Thaumaturgy</li> <li>Ability Cooldown/Duration/Activation Time</li> <li>Stealth Radius / Stealth Detection</li> <li>Knockback Resistance</li> </ul> </li> </ul> <hr> <h2 id="iii-abilities--status-effects"><strong>III. Abilities &amp; Status Effects</strong></h2> <p>Active skills are defined in <code class="language-plaintext highlighter-rouge">AbilityEffect.js</code> and are split into two main resource trees: Stamina and Thaumaturgy.</p> <h3 id="stamina-abilities-natural"><strong>Stamina Abilities (Natural)</strong></h3> <ul> <li> <strong>Mobility:</strong> <ul> <li> <strong>Bound:</strong> The standard jump.</li> <li> <strong>Sprint:</strong> Increases speed while draining stamina.</li> <li> <strong>Dash:</strong> A brief, extremely fast burst of speed.</li> <li> <strong>Leap:</strong> A long-distance forward jump.</li> </ul> </li> <li> <strong>Saber:</strong> <ul> <li> <strong>Change Weapon:</strong> Swaps between ranged and melee.</li> <li> <strong>Flurry Of Blows:</strong> Increases melee attack speed.</li> <li> <strong>Power Strike:</strong> An enhanced saber strike that applies a slow.</li> <li> <strong>Bleed Strike:</strong> Two strikes that apply a damage-over-time bleed.</li> <li> <strong>Traditional Block:</strong> The standard saber block.</li> </ul> </li> <li> <strong>Combat &amp; Buffs:</strong> <ul> <li> <strong>Heal:</strong> Instantly restores health on a long cooldown.</li> <li> <strong>Oneness:</strong> Reduces character weight by 50%.</li> <li> <strong>Preparation:</strong> A long-cast buff that grants massive boosts to all stats.</li> <li> <strong>Defensive:</strong> Temporarily increases defense.</li> <li> <strong>Fast Fire:</strong> Increases ranged firing speed.</li> <li> <strong>Snipe Shot:</strong> A single, enhanced, high-damage ranged shot.</li> <li> <strong>Burst Shot:</strong> Fires 10 rapid, low-damage shots.</li> </ul> </li> </ul> <h3 id="thaumaturgy-abilities-supernatural--force"><strong>Thaumaturgy Abilities (Supernatural / Force)</strong></h3> <ul> <li> <strong>Buff (Aura):</strong> <ul> <li> <strong>Hover:</strong> Affects allies, reducing their weight and fall speed.</li> <li> <strong>Speed Aura:</strong> Increases movement, melee, and firing speed for nearby allies.</li> <li> <strong>Fortification:</strong> Increases defense for nearby allies.</li> <li> <strong>HealAura:</strong> Heals allies within a radius over time.</li> <li> <strong>Cool:</strong> (Ultimate) Instantly removes all gun heat for allies and reduces heat buildup.</li> </ul> </li> <li> <strong>Combat &amp; Transpose:</strong> <ul> <li> <strong>Push:</strong> Knocks enemies away.</li> <li> <strong>Pull:</strong> Pulls enemies closer.</li> <li> <strong>Life Drain:</strong> Damages an enemy and heals the user for 50% of the damage.</li> <li> <strong>Repulse:</strong> (Ultimate) Pulls enemies in, then blasts them far away.</li> </ul> </li> <li> <strong>Control &amp; Debuff:</strong> <ul> <li> <strong>Weaken:</strong> Reduces enemy damage output.</li> <li> <strong>Tether:</strong> Applies “heavy” (increased weight) and “slow” status effects.</li> <li> <strong>Hold:</strong> Lifts an enemy, allowing the caster to move them.</li> <li> <strong>Choke:</strong> (Ultimate) Lifts an enemy and pulls them toward the caster, dealing damage over time.</li> <li> <strong>Reversal:</strong> Reverses enemy movement and mouse controls.</li> <li> <strong>Freeze:</strong> (Ultimate) Freezes enemies in place, preventing all actions.</li> <li> <strong>Mind Control:</strong> (Ultimate) Takes control of an enemy, changing their affiliation and giving the caster their camera view.</li> </ul> </li> </ul> <h3 id="status-effects-statuseffectjs"><strong>Status Effects (<code class="language-plaintext highlighter-rouge">StatusEffect.js</code>)</strong></h3> <p>The ability system applies a wide range of status effects:</p> <ul> <li> <strong>Buffs:</strong> <code class="language-plaintext highlighter-rouge">cool</code> (heat reduction), <code class="language-plaintext highlighter-rouge">speed</code>, <code class="language-plaintext highlighter-rouge">defense</code>, <code class="language-plaintext highlighter-rouge">healOverTime</code>, <code class="language-plaintext highlighter-rouge">damaging</code>, <code class="language-plaintext highlighter-rouge">weightless</code>, <code class="language-plaintext highlighter-rouge">hover</code>, <code class="language-plaintext highlighter-rouge">jumping</code>, <code class="language-plaintext highlighter-rouge">prepared</code>.</li> <li> <strong>Debuffs:</strong> <code class="language-plaintext highlighter-rouge">knockback</code>, <code class="language-plaintext highlighter-rouge">slow</code>, <code class="language-plaintext highlighter-rouge">confuse</code> (scrambled input), <code class="language-plaintext highlighter-rouge">reverse</code> (inverted input), <code class="language-plaintext highlighter-rouge">fear</code> (forced backward movement), <code class="language-plaintext highlighter-rouge">expose</code> (take more damage), <code class="language-plaintext highlighter-rouge">heavy</code> (increased weight), <code class="language-plaintext highlighter-rouge">stun</code>, <code class="language-plaintext highlighter-rouge">frozen</code>.</li> </ul> <hr> <h2 id="iv-the-world-planets--maps"><strong>IV. The World: Planets &amp; Maps</strong></h2> <p>The game takes place across multiple planets, each with a unique environment. The <code class="language-plaintext highlighter-rouge">mapBuilder.js</code> file procedurally selects a map, defines its obstacles, and assigns spawn points to players based on their affiliation.</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/planet-julix-480.webp 480w,/assets/img/twg/planet-julix-800.webp 800w,/assets/img/twg/planet-julix-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/planet-julix.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Julix IV" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/twg/planet-athemorum-480.webp 480w,/assets/img/twg/planet-athemorum-800.webp 800w,/assets/img/twg/planet-athemorum-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/twg/planet-athemorum.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Athemorum" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="caption"> Two of the battlefields: Julix IV, a "Frozen Wasteland" (left), and Athemorum, a "Scorching Bleakness" (right). </div> <ul> <li> <strong>Julix IV:</strong> A “Frozen Wasteland,” featuring the “Emperial Outpost in Canar Hun.”</li> <li> <strong>Athemorum:</strong> A “Scorching Bleakness,” featuring an “Uncovered Resource Deposit In the Anakoran Desert.”</li> <li> <strong>Frin’Sai:</strong> A “Savage Wilds,” featuring the “Overrun City of Make’Tui.”</li> <li> <strong>Tralion Catornay:</strong> A world of “Unending Splendor,” featuring a “Secret Rebel Depot Hidden in Fernackie’s Valley.”</li> </ul> <hr> <h2 id="v-technical-architecture--development"><strong>V. Technical Architecture &amp; Development</strong></h2> <p>The project is built on a modern, robust client-server model and is undergoing active, transparent development.</p> <h3 id="client-server-model"><strong>Client-Server Model</strong></h3> <ul> <li> <strong>Authoritative Server:</strong> The <code class="language-plaintext highlighter-rouge">gameServer.js</code> file runs the entire game simulation. It creates a <code class="language-plaintext highlighter-rouge">NEW_GAME</code> instance for each room, runs a fixed-rate game loop, updates all <code class="language-plaintext highlighter-rouge">Trooper</code> and <code class="language-plaintext highlighter-rouge">Projectile</code> objects, and checks for win conditions.</li> <li> <strong>WebSocket Communication:</strong> The server uses <code class="language-plaintext highlighter-rouge">websocket.js</code> and <code class="language-plaintext highlighter-rouge">clientWebsocket.js</code> for real-time, two-way communication. The server serializes and broadcasts the game state (<code class="language-plaintext highlighter-rouge">sendUpdate</code>) to all clients, who simply render the result. This model was the result of a <strong>“Server is Completely Revamped”</strong> update, which moved all processing from the client to the server to eliminate lag.</li> <li> <strong>Client Frontend:</strong> The <code class="language-plaintext highlighter-rouge">client.html</code> file serves as the primary UI entry point, managing the main menu, character customization, shop, and settings screens. The CSS extensively uses <code class="language-plaintext highlighter-rouge">vmin</code> units for a responsive, scalable layout.</li> </ul> <h3 id="3d-graphics--animation-pipeline"><strong>3D Graphics &amp; Animation Pipeline</strong></h3> <p>The development team is in the process of a massive graphical overhaul, moving from 2D sprites to a full 3D pipeline. Their 5-step character creation process is as follows:</p> <ol> <li> <strong>First Steps:</strong> Brainstorming ideas that fit the game’s lore.</li> <li> <strong>Design:</strong> Creating reference images and drawings.</li> <li> <strong>Modelling:</strong> Building the character in 3D software, adding textures, colors, and animations.</li> <li> <strong>Customizability:</strong> The 3D model is strategically split into parts (head, torso, arms, legs, weapons) to ensure they can all fit together and be “seperately applied to a Thunderwarrior.”</li> <li> <strong>Implementation:</strong> The 3D model is rendered into thousands of 2D images from every angle and animation state, which are then loaded and combined in-game to create the final, customized character.</li> </ol> <h3 id="account-management--uiux"><strong>Account Management &amp; UI/UX</strong></h3> <p>The project features an exceptionally thorough and secure account management system, with specific, clear error messages for every possible user state.</p> <ul> <li> <strong>Modules:</strong> Full UI and backend logic for: <ul> <li>Sign Up (with full validation)</li> <li>Sign In (with checks for banned/unconfirmed)</li> <li>Email Confirmation</li> <li>Account Recovery (Forgot Password &amp; Forgot Username)</li> <li>Information Editing (Username, Email, Password)</li> <li>Preferences Management (Graphics Quality, FPS Limits)</li> <li>Account Deletion &amp; Banning</li> </ul> </li> <li> <strong>Community Feedback Systems:</strong> The project actively collects data via four distinct channels: <ol> <li> <strong>Feedback System:</strong> For bugs and ideas (with a 5-minute rate limit).</li> <li> <strong>Rating System:</strong> A 1-5 star rating.</li> <li> <strong>Review System:</strong> For detailed (title + message) commentary.</li> <li> <strong>“Contact Us” System:</strong> A public-facing form for users who cannot log in.</li> </ol> </li> </ul> </body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+  <body>
+    <p>
+      <strong>Thunder Warrior: Genesis (TWG)</strong> is an ambitious, web-based
+      sci-fi action game currently in an open beta phase. This project, built
+      around warring factions of the “Empire” and “Rebellion,” places players in
+      the role of a highly customizable “Thunder Warrior.”
+    </p>
+    <p>The project’s architecture is defined by three core pillars:</p>
+    <ol>
+      <li>
+        <strong>Deep, Multi-Layered Customization:</strong> A central design
+        philosophy allowing players to fine-tune every aspect of their
+        character, from class and skills to a 7-tier rarity system for equipment
+        and a complex “Modifications” system.
+      </li>
+      <li>
+        <strong>Robust Technical Infrastructure:</strong> The game runs on a
+        secure, authoritative server model using WebSockets for real-time
+        communication. It has undergone a significant server revamp to move all
+        client-side processing to the server, dramatically reducing lag.
+      </li>
+      <li>
+        <strong>Active, Transparent Development:</strong> The team is currently
+        executing a major graphical overhaul, replacing all 2D assets with 3D
+        models and animations, and actively solicits community input via four
+        distinct feedback systems.
+      </li>
+    </ol>
+    <p>
+      This project page provides an exhaustive breakdown of the game’s
+      mechanics, content, technical architecture, and user-facing features,
+      based on a comprehensive analysis of the project’s codebase and
+      client-facing documentation.
+    </p>
+    <div class="row">
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/ui-home-remodel-480.webp   480w,
+                /assets/img/twg/ui-home-remodel-800.webp   800w,
+                /assets/img/twg/ui-home-remodel-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/ui-home-remodel.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="Remodeled Home Page"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/ui-ingame-info-480.webp   480w,
+                /assets/img/twg/ui-ingame-info-800.webp   800w,
+                /assets/img/twg/ui-ingame-info-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/ui-ingame-info.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="In-Game Information Update"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/ui-web-redesign-480.webp   480w,
+                /assets/img/twg/ui-web-redesign-800.webp   800w,
+                /assets/img/twg/ui-web-redesign-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/ui-web-redesign.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="Website Redesign"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+    </div>
+    <div class="caption">
+      A look at the completely redesigned UI/UX. Left: The remodeled Home Page
+      with character preview and equipment icons. Middle: The "Information
+      Update" showing exact values on status bars (HP, Stamina, Heat). Right:
+      The revamped website navigation.
+    </div>
+    <hr />
+    <h2 id="i-core-gameplay-mechanics">
+      <strong>I. Core Gameplay Mechanics</strong>
+    </h2>
+    <p>
+      The in-game simulation is driven by a series of robust, object-oriented
+      modules. The
+      <code class="language-plaintext highlighter-rouge">gameServer.js</code>
+      file manages all game instances, while the
+      <code class="language-plaintext highlighter-rouge">Trooper.js</code> class
+      represents the central player character, handling all state, physics, and
+      combat logic.
+    </p>
+    <h3 id="character-creation--skills">
+      <strong>Character Creation &amp; Skills</strong>
+    </h3>
+    <p>
+      Upon creating an account, players choose a <strong>Class</strong> (e.g.,
+      Jedi, Sith, Sabateur, Infiltrator). This choice is foundational, defining:
+    </p>
+    <ul>
+      <li>
+        <strong>Starting Skills:</strong> Base values for Power, Constitution,
+        Thaumaturgy, Stamina, Speed, and Utility.
+      </li>
+      <li>
+        <strong>Faction:</strong> Alignment with either the Empire or Rebellion.
+      </li>
+      <li>
+        <strong>Passive Traits:</strong> Unique abilities, such as gaining
+        health or stamina on a kill.
+      </li>
+      <li>
+        <strong>Starting Equipment:</strong> A full set of armor and one melee
+        and ranged weapon.
+      </li>
+    </ul>
+    <p>The primary character skills include:</p>
+    <ul>
+      <li>
+        <strong>Passive Skills:</strong>
+        <ul>
+          <li><strong>Power:</strong> Increases damage.</li>
+          <li>
+            <strong>Constitution:</strong> Increases health and healing
+            effectiveness.
+          </li>
+          <li><strong>Speed:</strong> Governs movement and action speed.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Ability Skills:</strong>
+        <ul>
+          <li>
+            <strong>Stamina:</strong> A resource pool for “natural” abilities
+            (e.g., sprinting, saber strikes).
+          </li>
+          <li>
+            <strong>Thaumaturgy:</strong> A resource pool for “supernatural”
+            powers (e.g., Force-like abilities).
+          </li>
+          <li><strong>Utility:</strong> Governs other useful actions.</li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="physics--movement"><strong>Physics &amp; Movement</strong></h3>
+    <p>
+      The
+      <code class="language-plaintext highlighter-rouge">Trooper.js</code> class
+      implements a complete physics and movement system:
+    </p>
+    <ul>
+      <li>
+        <strong>State:</strong> Manages position (<code
+          class="language-plaintext highlighter-rouge"
+          >x</code
+        >, <code class="language-plaintext highlighter-rouge">y</code>,
+        <code class="language-plaintext highlighter-rouge">z</code>), rotation
+        (<code class="language-plaintext highlighter-rouge">rot</code>),
+        velocity, and dimensions (<code
+          class="language-plaintext highlighter-rouge"
+          >w</code
+        >, <code class="language-plaintext highlighter-rouge">h</code>,<code
+          class="language-plaintext highlighter-rouge"
+          >d</code
+        >).
+      </li>
+      <li>
+        <strong>Movement:</strong> Handles acceleration, deceleration, running,
+        and gravity.
+      </li>
+      <li>
+        <strong>Jumping:</strong> Features a variable-height jump based on
+        key-hold duration, as well as a delayed jump mechanic.
+      </li>
+      <li>
+        <strong>Collision:</strong> Utilizes
+        <code class="language-plaintext highlighter-rouge"
+          >CollisionDetection.js</code
+        >
+        to perform AABB (Axis-Aligned Bounding Box) checks for environmental
+        collision, setting
+        <code class="language-plaintext highlighter-rouge">onGround</code>
+        status and managing collision responses.
+      </li>
+      <li>
+        <strong>Weight:</strong> Movement speed and agility costs are directly
+        affected by the character’s total weight, derived from stats and
+        equipped armor.
+      </li>
+    </ul>
+    <h3 id="combat-system"><strong>Combat System</strong></h3>
+    <p>
+      Combat is a real-time system split between ranged and melee. Players can
+      swap weapons at any time by pressing ‘f’.
+    </p>
+    <p>
+      <strong
+        >Ranged Combat (<code class="language-plaintext highlighter-rouge"
+          >Gun.js</code
+        >)</strong
+      >
+    </p>
+    <ul>
+      <li>
+        <strong>Firing:</strong> Manages firing projectiles, tracking weapon
+        heat, and managing firing rate.
+      </li>
+      <li>
+        <strong>Projectiles:</strong> Spawns
+        <code class="language-plaintext highlighter-rouge">Projectile.js</code>
+        instances that travel in a straight line, check for collisions, and
+        apply damage.
+      </li>
+      <li>
+        <strong>Mechanics:</strong> Features projectile spread (<code
+          class="language-plaintext highlighter-rouge"
+          >spreadMax</code
+        >), damage falloff based on range (<code
+          class="language-plaintext highlighter-rouge"
+          >getDistanceTravelledMult</code
+        >), and an optional overheat system (<code
+          class="language-plaintext highlighter-rouge"
+          >heat</code
+        >
+        object in
+        <code class="language-plaintext highlighter-rouge">WeaponBase.js</code
+        >).
+      </li>
+    </ul>
+    <p>
+      <strong
+        >Melee Combat (<code class="language-plaintext highlighter-rouge"
+          >Saber.js</code
+        >)</strong
+      >
+    </p>
+    <ul>
+      <li>
+        <strong>Striking:</strong> Manages strike cooldowns, delays, and stamina
+        costs. Applies damage within a defined arc (<code
+          class="language-plaintext highlighter-rouge"
+          >angle</code
+        >
+        and <code class="language-plaintext highlighter-rouge">radius</code>)
+        using collision detection.
+      </li>
+      <li>
+        <strong>Blocking:</strong> Allows players to hold ‘shift’ to block. This
+        action:
+        <ul>
+          <li>
+            <strong>Reflects Projectiles:</strong> All projectiles within the
+            saber’s
+            <code class="language-plaintext highlighter-rouge"
+              >projectileAngle</code
+            >
+            are reflected.
+          </li>
+          <li><strong>Staggers Enemies:</strong> Staggers melee attackers.</li>
+          <li>
+            <strong>Parries:</strong> A
+            <code class="language-plaintext highlighter-rouge">parryTime</code>
+            window at the start of a block provides additional benefits.
+          </li>
+          <li>
+            <strong>Resource Management:</strong> Blocking consumes stamina,
+            with different costs for initial activation, holding the block,
+            blocking projectiles, and blocking melee strikes.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <hr />
+    <h2 id="ii-the-arsenal-deep-customization">
+      <strong>II. The Arsenal: Deep Customization</strong>
+    </h2>
+    <p>
+      Customization is the central pillar of Thunder Warrior: Genesis. All
+      equipment and modifications use a 7-tier rarity system:
+      <strong>Junk, Common, Uncommon, Rare, Epic, Legendary, and Insane</strong
+      >. Rarity increases an item’s statistics and modification potential.
+      Equipment can be acquired from enemy drops or purchased in the Shop using
+      “credits and metal”.
+    </p>
+    <h3 id="ranged-weapons-guns"><strong>Ranged Weapons (Guns)</strong></h3>
+    <p>
+      Ranged weapons are defined by their damage, range, firing speed, heat
+      mechanics, and projectile speed. All base gun models have 3 modification
+      slots.
+    </p>
+    <ul>
+      <li>
+        <strong>E-11 Variants (Blaster Rifle - Thunder Warrior Set):</strong>
+        <ul>
+          <li>
+            <strong>E-11 Twilight:</strong> The standard, balanced rifle. Good
+            all-around stats.
+          </li>
+          <li>
+            <strong>E-11 Affluent:</strong> A critical-hit focused model with
+            more heat capacity but less base damage.
+          </li>
+          <li>
+            <strong>E-11 Viper:</strong> A burst-damage variant with a faster
+            firing speed but less range and heat capacity.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>DLT-19 Variants (Repeating Blaster - Sith Set):</strong>
+        <ul>
+          <li>
+            <strong>DLT-19 Epitome:</strong> Standard model with a very high
+            fire rate, low damage, and low range.
+          </li>
+          <li>
+            <strong>DLT-19 Deluge:</strong> An even higher fire rate and heat
+            capacity, but with minimal damage per shot.
+          </li>
+          <li>
+            <strong>DLT-19 Scarlet:</strong> A heavy-hitting variant with higher
+            damage but a slower fire rate.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>T-21 Variants (Heavy Blaster - Shadow Set):</strong>
+        <ul>
+          <li>
+            <strong>T-21 Shade:</strong> The standard heavy blaster. Very high
+            damage and range, but a very slow fire rate. Excellent base crit and
+            accuracy.
+          </li>
+          <li>
+            <strong>T-21 Vintage:</strong> An even higher damage and range
+            “sniper” model with a painfully slow fire rate.
+          </li>
+          <li>
+            <strong>T-21 Amaranthine:</strong> A closer-quarters version with
+            less damage than the Shade but a better fire rate and heat capacity.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="row">
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/gun-e11-480.webp   480w,
+                /assets/img/twg/gun-e11-800.webp   800w,
+                /assets/img/twg/gun-e11-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/gun-e11.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="E-11 Blaster Rifle"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/gun-dlt19-480.webp   480w,
+                /assets/img/twg/gun-dlt19-800.webp   800w,
+                /assets/img/twg/gun-dlt19-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/gun-dlt19.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="DLT-19 Repeating Blaster"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/gun-t21-480.webp   480w,
+                /assets/img/twg/gun-t21-800.webp   800w,
+                /assets/img/twg/gun-t21-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/gun-t21.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="T-21 Heavy Blaster"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+    </div>
+    <div class="caption">
+      The three primary classes of ranged weapons: the balanced E-11 (left), the
+      rapid-fire DLT-19 (middle), and the high-damage T-21 (right).
+    </div>
+    <h3 id="melee-weapons-plasmablades--sabers">
+      <strong>Melee Weapons (Plasmablades / Sabers)</strong>
+    </h3>
+    <p>
+      Melee weapons are defined by their offensive
+      <code class="language-plaintext highlighter-rouge">strike</code> stats
+      (damage, delay, radius, cost) and defensive
+      <code class="language-plaintext highlighter-rouge">block</code> stats
+      (parry time, block angles, stamina drain). All base saber models have 3
+      modification slots.
+    </p>
+    <ul>
+      <li>
+        <strong>Aggressive Sabers (Shadow Set):</strong> High damage, fast
+        attacks, wide arcs, but poor defensive capabilities and high stamina
+        costs.
+        <ul>
+          <li>
+            <strong>Coral Plasmablade (Orange):</strong> Standard aggressive
+            saber.
+          </li>
+          <li>
+            <strong>Amethyst Plasmablade (Purple):</strong> Hits extremely hard
+            but is very slow.
+          </li>
+          <li>
+            <strong>Garnet Plasmablade (Red):</strong> Very fast, rapid-attack
+            saber with lower individual damage.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Defensive Sabers (Sith Set):</strong> Excellent blocking, wide
+        block angles, long parry windows, and low stamina drain, but very slow,
+        low-damage attacks.
+        <ul>
+          <li>
+            <strong>Tanzanite Plasmablade (Blue):</strong> Standard defensive
+            saber with a very long parry window.
+          </li>
+          <li>
+            <strong>Emerald Plasmablade (Green):</strong> Focused on sustained
+            blocking with almost zero continuous drain.
+          </li>
+          <li>
+            <strong>Peridot Plasmablade (Lime):</strong> Focused on
+            quick-blocking actions with a low initial cost.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Balanced Sabers (Thunder Warrior Set):</strong> A mix of
+        offensive and defensive stats, representing the middle ground.
+        <ul>
+          <li>
+            <strong>Topaz Plasmablade (Yellow):</strong> The classic, perfectly
+            balanced saber.
+          </li>
+          <li>
+            <strong>Boracite Plasmablade (Cyan):</strong> A high-risk,
+            high-reward “balanced” saber with stronger stats but much higher
+            stamina costs.
+          </li>
+          <li>
+            <strong>Alabaster Plasmablade (White):</strong> A high-efficiency
+            “balanced” saber with weaker stats but very low stamina costs.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="row justify-content-sm-center">
+      <div class="col-sm-8 mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/sabers-all-colors-480.webp   480w,
+                /assets/img/twg/sabers-all-colors-800.webp   800w,
+                /assets/img/twg/sabers-all-colors-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/sabers-all-colors.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="Plasmablade Variants"
+              loading="lazy"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+      <div class="col-sm-4 mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/saber-block-480.webp   480w,
+                /assets/img/twg/saber-block-800.webp   800w,
+                /assets/img/twg/saber-block-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/saber-block.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="Saber Blocking"
+              loading="lazy"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+    </div>
+    <div class="caption">
+      Left: The variety of Plasmablade colors, including Amethyst, Garnet,
+      Tanzanite, and Topaz. Right: A 3D render of a Thunder Warrior
+      demonstrating the saber blocking stance, which can reflect projectiles.
+    </div>
+    <h3 id="armor-sets"><strong>Armor Sets</strong></h3>
+    <p>
+      Armor is split across five slots:
+      <strong>Helmet, Torso, Legs, Right Arm, and Left Arm</strong>. Each piece
+      provides defense, weight, and contributions to passive stats. All base
+      armor pieces have 3 modification slots.
+    </p>
+    <ul>
+      <li>
+        <strong>Thunder Warrior Set:</strong> Standard issue, balanced defensive
+        stats.
+      </li>
+      <li>
+        <strong>Sith Set:</strong> A heavier set focused on Thaumaturgy stats
+        and high Melee Defense.
+      </li>
+      <li>
+        <strong>Shadow Set:</strong> A lightweight set focused on Stamina stats,
+        evasion, Ranged Defense, and stealth.
+      </li>
+      <li>
+        <strong>Festive Set:</strong> A low-stat, likely cosmetic or event-based
+        set.
+      </li>
+    </ul>
+    <h3 id="modifications-system"><strong>Modifications System</strong></h3>
+    <p>
+      The modification system allows for “incredible customization.” Mods are
+      items that can be slotted into equipment to provide powerful bonuses. They
+      follow the same 7-tier rarity system.
+    </p>
+    <ul>
+      <li>
+        <strong>Mod Structure:</strong>
+        <ol>
+          <li>
+            <strong>Main Enhancement:</strong> One primary stat increase (e.g.,
+            “Defense” for armor, “Damage” for weapons).
+          </li>
+          <li>
+            <strong>Minor Enhancements:</strong> Up to four secondary
+            enhancements. These can be “Universal Changes” affecting the entire
+            character (e.g., ability cost, healing time) and may sometimes roll
+            as a “slight Decrease” to provide an even larger boost to other
+            traits.
+          </li>
+        </ol>
+      </li>
+      <li>
+        <strong>Examples of Major Mods:</strong>
+        <ul>
+          <li><strong>Weapon:</strong> Damage, Quick Fire (reduce delays).</li>
+          <li>
+            <strong>Melee:</strong> Power (radius/knockback), Deflection (saber
+            blocking), Reflection (projectile blocking), Slightness (reduce
+            stamina costs).
+          </li>
+          <li>
+            <strong>Ranged:</strong> Firing Speed, Maximum Spread (reduction),
+            Projectile Speed, Cooling Power, Maximum Heat, Range.
+          </li>
+          <li>
+            <strong>Armor:</strong> Defense, Weight (reduction),
+            Stamina/Thaumaturgy/Health Recovery.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Examples of Minor Traits:</strong>
+        <ul>
+          <li>Thaumaturgy Critical Chance/Damage</li>
+          <li>Stamina Evasion Chance</li>
+          <li>Physical Accuracy</li>
+          <li>Max Health/Stamina/Thaumaturgy</li>
+          <li>Ability Cooldown/Duration/Activation Time</li>
+          <li>Stealth Radius / Stealth Detection</li>
+          <li>Knockback Resistance</li>
+        </ul>
+      </li>
+    </ul>
+    <hr />
+    <h2 id="iii-abilities--status-effects">
+      <strong>III. Abilities &amp; Status Effects</strong>
+    </h2>
+    <p>
+      Active skills are defined in
+      <code class="language-plaintext highlighter-rouge">AbilityEffect.js</code>
+      and are split into two main resource trees: Stamina and Thaumaturgy.
+    </p>
+    <h3 id="stamina-abilities-natural">
+      <strong>Stamina Abilities (Natural)</strong>
+    </h3>
+    <ul>
+      <li>
+        <strong>Mobility:</strong>
+        <ul>
+          <li><strong>Bound:</strong> The standard jump.</li>
+          <li>
+            <strong>Sprint:</strong> Increases speed while draining stamina.
+          </li>
+          <li>
+            <strong>Dash:</strong> A brief, extremely fast burst of speed.
+          </li>
+          <li><strong>Leap:</strong> A long-distance forward jump.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Saber:</strong>
+        <ul>
+          <li>
+            <strong>Change Weapon:</strong> Swaps between ranged and melee.
+          </li>
+          <li>
+            <strong>Flurry Of Blows:</strong> Increases melee attack speed.
+          </li>
+          <li>
+            <strong>Power Strike:</strong> An enhanced saber strike that applies
+            a slow.
+          </li>
+          <li>
+            <strong>Bleed Strike:</strong> Two strikes that apply a
+            damage-over-time bleed.
+          </li>
+          <li><strong>Traditional Block:</strong> The standard saber block.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Combat &amp; Buffs:</strong>
+        <ul>
+          <li>
+            <strong>Heal:</strong> Instantly restores health on a long cooldown.
+          </li>
+          <li><strong>Oneness:</strong> Reduces character weight by 50%.</li>
+          <li>
+            <strong>Preparation:</strong> A long-cast buff that grants massive
+            boosts to all stats.
+          </li>
+          <li><strong>Defensive:</strong> Temporarily increases defense.</li>
+          <li><strong>Fast Fire:</strong> Increases ranged firing speed.</li>
+          <li>
+            <strong>Snipe Shot:</strong> A single, enhanced, high-damage ranged
+            shot.
+          </li>
+          <li>
+            <strong>Burst Shot:</strong> Fires 10 rapid, low-damage shots.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="thaumaturgy-abilities-supernatural--force">
+      <strong>Thaumaturgy Abilities (Supernatural / Force)</strong>
+    </h3>
+    <ul>
+      <li>
+        <strong>Buff (Aura):</strong>
+        <ul>
+          <li>
+            <strong>Hover:</strong> Affects allies, reducing their weight and
+            fall speed.
+          </li>
+          <li>
+            <strong>Speed Aura:</strong> Increases movement, melee, and firing
+            speed for nearby allies.
+          </li>
+          <li>
+            <strong>Fortification:</strong> Increases defense for nearby allies.
+          </li>
+          <li>
+            <strong>HealAura:</strong> Heals allies within a radius over time.
+          </li>
+          <li>
+            <strong>Cool:</strong> (Ultimate) Instantly removes all gun heat for
+            allies and reduces heat buildup.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Combat &amp; Transpose:</strong>
+        <ul>
+          <li><strong>Push:</strong> Knocks enemies away.</li>
+          <li><strong>Pull:</strong> Pulls enemies closer.</li>
+          <li>
+            <strong>Life Drain:</strong> Damages an enemy and heals the user for
+            50% of the damage.
+          </li>
+          <li>
+            <strong>Repulse:</strong> (Ultimate) Pulls enemies in, then blasts
+            them far away.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>Control &amp; Debuff:</strong>
+        <ul>
+          <li><strong>Weaken:</strong> Reduces enemy damage output.</li>
+          <li>
+            <strong>Tether:</strong> Applies “heavy” (increased weight) and
+            “slow” status effects.
+          </li>
+          <li>
+            <strong>Hold:</strong> Lifts an enemy, allowing the caster to move
+            them.
+          </li>
+          <li>
+            <strong>Choke:</strong> (Ultimate) Lifts an enemy and pulls them
+            toward the caster, dealing damage over time.
+          </li>
+          <li>
+            <strong>Reversal:</strong> Reverses enemy movement and mouse
+            controls.
+          </li>
+          <li>
+            <strong>Freeze:</strong> (Ultimate) Freezes enemies in place,
+            preventing all actions.
+          </li>
+          <li>
+            <strong>Mind Control:</strong> (Ultimate) Takes control of an enemy,
+            changing their affiliation and giving the caster their camera view.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h3 id="status-effects-statuseffectjs">
+      <strong
+        >Status Effects (<code class="language-plaintext highlighter-rouge"
+          >StatusEffect.js</code
+        >)</strong
+      >
+    </h3>
+    <p>The ability system applies a wide range of status effects:</p>
+    <ul>
+      <li>
+        <strong>Buffs:</strong>
+        <code class="language-plaintext highlighter-rouge">cool</code> (heat
+        reduction),
+        <code class="language-plaintext highlighter-rouge">speed</code>,
+        <code class="language-plaintext highlighter-rouge">defense</code>,
+        <code class="language-plaintext highlighter-rouge">healOverTime</code>,
+        <code class="language-plaintext highlighter-rouge">damaging</code>,
+        <code class="language-plaintext highlighter-rouge">weightless</code>,
+        <code class="language-plaintext highlighter-rouge">hover</code>,
+        <code class="language-plaintext highlighter-rouge">jumping</code>,
+        <code class="language-plaintext highlighter-rouge">prepared</code>.
+      </li>
+      <li>
+        <strong>Debuffs:</strong>
+        <code class="language-plaintext highlighter-rouge">knockback</code>,
+        <code class="language-plaintext highlighter-rouge">slow</code>,
+        <code class="language-plaintext highlighter-rouge">confuse</code>
+        (scrambled input),
+        <code class="language-plaintext highlighter-rouge">reverse</code>
+        (inverted input),
+        <code class="language-plaintext highlighter-rouge">fear</code> (forced
+        backward movement),
+        <code class="language-plaintext highlighter-rouge">expose</code> (take
+        more damage),
+        <code class="language-plaintext highlighter-rouge">heavy</code>
+        (increased weight),
+        <code class="language-plaintext highlighter-rouge">stun</code>,
+        <code class="language-plaintext highlighter-rouge">frozen</code>.
+      </li>
+    </ul>
+    <hr />
+    <h2 id="iv-the-world-planets--maps">
+      <strong>IV. The World: Planets &amp; Maps</strong>
+    </h2>
+    <p>
+      The game takes place across multiple planets, each with a unique
+      environment. The
+      <code class="language-plaintext highlighter-rouge">mapBuilder.js</code>
+      file procedurally selects a map, defines its obstacles, and assigns spawn
+      points to players based on their affiliation.
+    </p>
+    <div class="row">
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/planet-julix-480.webp   480w,
+                /assets/img/twg/planet-julix-800.webp   800w,
+                /assets/img/twg/planet-julix-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/planet-julix.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="Julix IV"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+      <div class="col-sm mt-3 mt-md-0">
+        <figure>
+          <picture>
+            <source
+              class="responsive-img-srcset"
+              srcset="
+                /assets/img/twg/planet-athemorum-480.webp   480w,
+                /assets/img/twg/planet-athemorum-800.webp   800w,
+                /assets/img/twg/planet-athemorum-1400.webp 1400w
+              "
+              type="image/webp"
+              sizes="95vw"
+            />
+            <img
+              src="/assets/img/twg/planet-athemorum.jpg"
+              class="img-fluid rounded z-depth-1"
+              width="100%"
+              height="auto"
+              title="Athemorum"
+              loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
+            />
+          </picture>
+        </figure>
+      </div>
+    </div>
+    <div class="caption">
+      Two of the battlefields: Julix IV, a "Frozen Wasteland" (left), and
+      Athemorum, a "Scorching Bleakness" (right).
+    </div>
+    <ul>
+      <li>
+        <strong>Julix IV:</strong> A “Frozen Wasteland,” featuring the “Emperial
+        Outpost in Canar Hun.”
+      </li>
+      <li>
+        <strong>Athemorum:</strong> A “Scorching Bleakness,” featuring an
+        “Uncovered Resource Deposit In the Anakoran Desert.”
+      </li>
+      <li>
+        <strong>Frin’Sai:</strong> A “Savage Wilds,” featuring the “Overrun City
+        of Make’Tui.”
+      </li>
+      <li>
+        <strong>Tralion Catornay:</strong> A world of “Unending Splendor,”
+        featuring a “Secret Rebel Depot Hidden in Fernackie’s Valley.”
+      </li>
+    </ul>
+    <hr />
+    <h2 id="v-technical-architecture--development">
+      <strong>V. Technical Architecture &amp; Development</strong>
+    </h2>
+    <p>
+      The project is built on a modern, robust client-server model and is
+      undergoing active, transparent development.
+    </p>
+    <h3 id="client-server-model"><strong>Client-Server Model</strong></h3>
+    <ul>
+      <li>
+        <strong>Authoritative Server:</strong> The
+        <code class="language-plaintext highlighter-rouge">gameServer.js</code>
+        file runs the entire game simulation. It creates a
+        <code class="language-plaintext highlighter-rouge">NEW_GAME</code>
+        instance for each room, runs a fixed-rate game loop, updates all
+        <code class="language-plaintext highlighter-rouge">Trooper</code> and
+        <code class="language-plaintext highlighter-rouge">Projectile</code>
+        objects, and checks for win conditions.
+      </li>
+      <li>
+        <strong>WebSocket Communication:</strong> The server uses
+        <code class="language-plaintext highlighter-rouge">websocket.js</code>
+        and
+        <code class="language-plaintext highlighter-rouge"
+          >clientWebsocket.js</code
+        >
+        for real-time, two-way communication. The server serializes and
+        broadcasts the game state (<code
+          class="language-plaintext highlighter-rouge"
+          >sendUpdate</code
+        >) to all clients, who simply render the result. This model was the
+        result of a <strong>“Server is Completely Revamped”</strong> update,
+        which moved all processing from the client to the server to eliminate
+        lag.
+      </li>
+      <li>
+        <strong>Client Frontend:</strong> The
+        <code class="language-plaintext highlighter-rouge">client.html</code>
+        file serves as the primary UI entry point, managing the main menu,
+        character customization, shop, and settings screens. The CSS extensively
+        uses
+        <code class="language-plaintext highlighter-rouge">vmin</code> units for
+        a responsive, scalable layout.
+      </li>
+    </ul>
+    <h3 id="3d-graphics--animation-pipeline">
+      <strong>3D Graphics &amp; Animation Pipeline</strong>
+    </h3>
+    <p>
+      The development team is in the process of a massive graphical overhaul,
+      moving from 2D sprites to a full 3D pipeline. Their 5-step character
+      creation process is as follows:
+    </p>
+    <ol>
+      <li>
+        <strong>First Steps:</strong> Brainstorming ideas that fit the game’s
+        lore.
+      </li>
+      <li><strong>Design:</strong> Creating reference images and drawings.</li>
+      <li>
+        <strong>Modelling:</strong> Building the character in 3D software,
+        adding textures, colors, and animations.
+      </li>
+      <li>
+        <strong>Customizability:</strong> The 3D model is strategically split
+        into parts (head, torso, arms, legs, weapons) to ensure they can all fit
+        together and be “seperately applied to a Thunderwarrior.”
+      </li>
+      <li>
+        <strong>Implementation:</strong> The 3D model is rendered into thousands
+        of 2D images from every angle and animation state, which are then loaded
+        and combined in-game to create the final, customized character.
+      </li>
+    </ol>
+    <h3 id="account-management--uiux">
+      <strong>Account Management &amp; UI/UX</strong>
+    </h3>
+    <p>
+      The project features an exceptionally thorough and secure account
+      management system, with specific, clear error messages for every possible
+      user state.
+    </p>
+    <ul>
+      <li>
+        <strong>Modules:</strong> Full UI and backend logic for:
+        <ul>
+          <li>Sign Up (with full validation)</li>
+          <li>Sign In (with checks for banned/unconfirmed)</li>
+          <li>Email Confirmation</li>
+          <li>Account Recovery (Forgot Password &amp; Forgot Username)</li>
+          <li>Information Editing (Username, Email, Password)</li>
+          <li>Preferences Management (Graphics Quality, FPS Limits)</li>
+          <li>Account Deletion &amp; Banning</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Community Feedback Systems:</strong> The project actively
+        collects data via four distinct channels:
+        <ol>
+          <li>
+            <strong>Feedback System:</strong> For bugs and ideas (with a
+            5-minute rate limit).
+          </li>
+          <li><strong>Rating System:</strong> A 1-5 star rating.</li>
+          <li>
+            <strong>Review System:</strong> For detailed (title + message)
+            commentary.
+          </li>
+          <li>
+            <strong>“Contact Us” System:</strong> A public-facing form for users
+            who cannot log in.
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
