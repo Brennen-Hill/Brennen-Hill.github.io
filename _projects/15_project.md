@@ -34,18 +34,6 @@ Introducing Badger Vision, an open-source and easy-to-use tool designed to help 
 - **Audio Cues:** For unknown faces, a unique chime is played, with the exact same chime repeating upon subsequent encounters. This use of audio cues makes it easier to recognize faces.
 - **Emotion Detection:** Our model also detects and announces emotions, making it easier to interpret social cues.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/badger-vision-arch.jpg" title="System Architecture" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/badger-vision-demo.jpg" title="Live Demo" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Placeholder images: The system architecture diagram (left) and a demonstration of the real-time detection (right).
-</div>
-
 ### How it Works
 
 Users authenticate the Badger Vision app via a QR code, which downloads pre-configured AI artifacts and settings stored on **Pinata**. The app streams video through our RTMP server to AI recognition servers, leveraging the **Zoom Video SDK**. The camera, which can be discreetly placed in a shirt pocket, identifies faces and emotions using deep learning and convolutional neural networks. Detections are sent back to the app in real time over a WebSocket connection.
