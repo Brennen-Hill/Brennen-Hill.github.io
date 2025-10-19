@@ -56,72 +56,27 @@ ninja.data = [{
           title: 'Badger Vision',
           description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/15_project/";
-            },},{id: "projects-badger-vision",
-          title: 'Badger Vision',
-          description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/16_project/";
-            },},{id: "projects-39-cl-quil-match-39-pattern-matching-and-replacement",
-          title: '&amp;#39;cl-quil/match&amp;#39;: Pattern Matching and Replacement',
-          description: "An implementation of the Iten et al. algorithm for quantum circuit pattern matching.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/17_project/";
+              window.location.href = "/projects/BadgerVision/";
             },},{id: "projects-exosky-an-exoplanet-constellation-creator-and-explorer",
           title: 'Exosky, an Exoplanet Constellation Creator and Explorer',
           description: "An interactive 3D starfield to create and explore exoplanet constellations.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/18_project/";
+              window.location.href = "/projects/Exosky/";
             },},{id: "projects-multi-agent-sequential-learning-combating-adversarial-procedural-generation",
           title: 'multi-agent sequential learning combating adversarial procedural generation',
           description: "Training defenders and an adversarial level generator simultaneously.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/19_project/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+              window.location.href = "/projects/MarlProcGen/";
+            },},{id: "projects-sign-language-learner",
+          title: 'Sign Language Learner',
+          description: "Translating American Sign Language to text using CNNs",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/SignLanguageLearner/";
+            },},{id: "projects-39-cl-quil-match-39-template-matching-and-replacement",
+          title: '&amp;#39;cl-quil/match&amp;#39;: Template Matching and Replacement',
+          description: "An implementation of the Iten et al. algorithm for quantum circuit pattern matching.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/TemplateReplacement/";
             },},{
         id: 'social-email',
         title: 'email',
