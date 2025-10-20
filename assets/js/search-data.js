@@ -45,6 +45,16 @@ ninja.data = [{
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/BadgerVision/";
+            },},{id: "projects-roller-rl",
+          title: 'Roller RL',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Bot/";
+            },},{id: "projects-roller-rl-2",
+          title: 'Roller RL 2',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Bot2/";
             },},{id: "projects-exosky",
           title: 'Exosky',
           description: "An Exoplanet Constellation Creator and Explorer",
@@ -80,6 +90,11 @@ ninja.data = [{
           description: "Thunder Warrior: Genesis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ThunderWarrior/";
+            },},{id: "projects-vision-representations",
+          title: 'Vision Representations',
+          description: "Representation Fine-Tuning for Vision-Language Models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Vis/";
             },},{id: "projects-twg3",
           title: 'TWG3',
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
