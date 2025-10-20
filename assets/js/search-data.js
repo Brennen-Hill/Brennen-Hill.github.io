@@ -70,8 +70,8 @@ ninja.data = [{
           description: "Systematic Analysis of Transfer Learning for Sign Language Alphabet Recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SignLanguageLearner/";
-            },},{id: "projects-thunder-warrior-genesis-comprehensive-project-report",
-          title: 'Thunder Warrior: Genesis - Comprehensive Project Report',
+            },},{id: "projects-twg2",
+          title: 'TWG2',
           description: "An exhaustive compilation of all project data.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/TW2/";
@@ -80,13 +80,13 @@ ninja.data = [{
           description: "Thunder Warrior: Genesis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ThunderWarrior/";
-            },},{id: "projects-thunder-warrior-genesis-comprehensive-project-analysis",
-          title: 'Thunder Warrior: Genesis - Comprehensive Project Analysis',
+            },},{id: "projects-twg3",
+          title: 'TWG3',
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg3/";
-            },},{id: "projects-thunder-warrior-genesis-comprehensive-project-report",
-          title: 'Thunder Warrior: Genesis - Comprehensive Project Report',
+            },},{id: "projects-twg4",
+          title: 'TWG4',
           description: "An exhaustive compilation of all project data.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg4/";
