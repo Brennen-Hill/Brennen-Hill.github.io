@@ -52,12 +52,7 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/13_project/";
-            },},{id: "projects-badger-vision",
+      },{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
@@ -72,16 +67,21 @@ ninja.data = [{
           description: "Training defenders and an adversarial level generator simultaneously.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/MarlProcGen/";
+            },},{id: "projects-quantum-circuit",
+          title: 'Quantum Circuit',
+          description: "An algorithm for quantum circuit pattern matching and optimization.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/QuantumCircuit/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
           description: "Researching methods for translating American Sign Language",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SignLanguageLearner/";
-            },},{id: "projects-quantum-template",
-          title: 'Quantum Template',
-          description: "An algorithm for quantum circuit pattern matching and optimization.",
+            },},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/TemplateReplacement/";
+              window.location.href = "/projects/ThunderWarrior/";
             },},{
         id: 'social-email',
         title: 'email',
