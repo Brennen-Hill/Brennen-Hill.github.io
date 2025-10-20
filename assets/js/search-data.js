@@ -77,9 +77,14 @@ ninja.data = [{
           description: "Researching methods for translating American Sign Language",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SignLanguageLearner/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-thunder-warrior-genesis-comprehensive-project-report",
+          title: 'Thunder Warrior: Genesis - Comprehensive Project Report',
+          description: "An exhaustive compilation of all project data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/TW2/";
+            },},{id: "projects-twg",
+          title: 'TWG',
+          description: "Thunder Warrior: Genesis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ThunderWarrior/";
             },},{
