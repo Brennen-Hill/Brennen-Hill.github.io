@@ -52,7 +52,12 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "projects-badger-vision",
+      },{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/13_project/";
+            },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
