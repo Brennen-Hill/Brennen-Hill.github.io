@@ -52,7 +52,17 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "projects-badger-vision",
+      },{id: "projects-quantum-compiler",
+          title: 'Quantum Compiler',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Assembly/";
+            },},{id: "projects-quantum-compiler",
+          title: 'Quantum Compiler',
+          description: "A Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Assembly2/";
+            },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
@@ -74,19 +84,14 @@ ninja.data = [{
               window.location.href = "/projects/MarlProcGen/";
             },},{id: "projects-quantum-circuit",
           title: 'Quantum Circuit',
-          description: "An algorithm for quantum circuit pattern matching and optimization.",
+          description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/QuantumCircuit/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
-          description: "Researching methods for translating American Sign Language",
+          description: "Systematic Analysis of Transfer Learning for Sign Language Alphabet Recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SignLanguageLearner/";
-            },},{id: "projects-sign-language-learner-2",
-          title: 'Sign Language Learner 2',
-          description: "Researching methods for translating American Sign Language",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/SignLanguageLearner2/";
             },},{id: "projects-thunder-warrior-genesis-comprehensive-project-report",
           title: 'Thunder Warrior: Genesis - Comprehensive Project Report',
           description: "An exhaustive compilation of all project data.",
@@ -97,6 +102,16 @@ ninja.data = [{
           description: "Thunder Warrior: Genesis",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ThunderWarrior/";
+            },},{id: "projects-thunder-warrior-genesis-comprehensive-project-analysis",
+          title: 'Thunder Warrior: Genesis - Comprehensive Project Analysis',
+          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/twg3/";
+            },},{id: "projects-thunder-warrior-genesis-comprehensive-project-report",
+          title: 'Thunder Warrior: Genesis - Comprehensive Project Report',
+          description: "An exhaustive compilation of all project data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/twg4/";
             },},{
         id: 'social-email',
         title: 'email',
