@@ -25,21 +25,23 @@ This report details a two-part investigation into the capabilities and modificat
 To benchmark the logical reasoning capabilities of modern LLMs, a multi-constraint logic puzzle was selected. The task required assigning a unique favorite activity (cooking, kayaking, rock climbing, zip-lining) to four individuals (Abigail, Oliver, Rosa, Blake) based on a set of restrictive clues.
 
 **Problem Statement:**
-* _Abigail, Oliver, Rosa, and Blake all attend the same summer camp, where they can cook, kayak, rock climb, and zip-line. Each child has a different favorite activity._
-* _Clue 1: Abigail’s favorite activity isn’t rock climbing._
-* _Clue 2: Oliver is afraid of heights._
-* _Clue 3: Rosa can’t do her favorite activity without a harness._
-* _Clue 4: Blake likes to keep his feet on the ground at all times._
+
+- _Abigail, Oliver, Rosa, and Blake all attend the same summer camp, where they can cook, kayak, rock climb, and zip-line. Each child has a different favorite activity._
+- _Clue 1: Abigail’s favorite activity isn’t rock climbing._
+- _Clue 2: Oliver is afraid of heights._
+- _Clue 3: Rosa can’t do her favorite activity without a harness._
+- _Clue 4: Blake likes to keep his feet on the ground at all times._
 
 **Baseline (Zero-Shot) Evaluation:**
 When prompted with the puzzle and asked for a direct answer (zero-shot), GPT-4 produced an **incorrect** and logically inconsistent solution. It made self-contradictory statements, such as identifying a constraint (e.g., "Abigail can't choose rock climbing") and then violating it in the final answer. This highlights the limitations of zero-shot reasoning for tasks requiring sequential logical deduction.
 
 **Chain-of-Thought (CoT) Intervention:**
 By instructing the model to "think step-by-step," a CoT approach was initiated. This produced a vastly improved result, yielding the correct solution:
-* **Abigail:** Zip-lining
-* **Oliver:** Kayaking
-* **Rosa:** Rock climbing
-* **Blake:** Cooking
+
+- **Abigail:** Zip-lining
+- **Oliver:** Kayaking
+- **Rosa:** Rock climbing
+- **Blake:** Cooking
 
 A key observation was the emergence of coherent deductive steps. For example, the model reasoned: _"Rosa needs a harness for her favorite activity, which means her favorite must be either rock climbing or zip-lining. Since Abigail doesn’t like rock climbing (per clue 1), and Oliver is afraid of heights (eliminating zip-lining for him), the possibilities become clearer."_ This demonstrates that CoT provides the necessary structure for the model to externalize its reasoning process, avoiding the logical fallacies observed in the zero-shot approach.
 
@@ -49,6 +51,7 @@ To explore more robust reasoning pathways, a Tree-of-Thought (ToT) process was m
 
 **Heuristic Parameterization:**
 Each "thought" was parameterized by:
+
 1.  The list of clues.
 2.  Current role assignments.
 3.  Roles eliminated for each camper.
@@ -58,17 +61,18 @@ Each "thought" was parameterized by:
 The value of each thought-state was calculated using the formula:
 `Score = (CR * 10) - (IR * 1000) + CE - (IE * 100)`
 Where:
-* **CR:** Number of campers assigned **correctly**.
-* **IR:** Number of campers assigned **incorrectly** (violating a clue).
-* **CE:** Total number of roles **correctly eliminated** across all campers.
-* **IE:** Total number of roles **incorrectly eliminated**.
+
+- **CR:** Number of campers assigned **correctly**.
+- **IR:** Number of campers assigned **incorrectly** (violating a clue).
+- **CE:** Total number of roles **correctly eliminated** across all campers.
+- **IE:** Total number of roles **incorrectly eliminated**.
 
 The heavy penalties for incorrect assignments (`IR`) and eliminations (`IE`) were designed to aggressively prune invalid branches of the reasoning tree, ensuring computational efficiency.
 
 **Example Thought-State Evaluation:**
+
 > **State:** Blake is assigned Cooking (correctly deduced from Clue 4).
-> **CR=1, IR=0, CE=10, IE=0**
-> **Heuristic Value:** (1 * 10) - (0 * 1000) + 10 - (0 * 100) = **20**
+> **CR=1, IR=0, CE=10, IE=0** > **Heuristic Value:** (1 _ 10) - (0 _ 1000) + 10 - (0 \* 100) = **20**
 
 This ToT process, guided by the heuristic, also arrived at the correct solution, albeit with a more verbose and explicit exploration of the solution space compared to CoT.
 
@@ -95,9 +99,11 @@ I fine-tuned the pre-trained Shakespearean NanoGPT model using my modified train
 The alignment was successful. The model consistently produced text with a higher density of the letter 't' post-fine-tuning.
 
 **High-Reward Output (More 't's):**
+
 > "And that it the applain at and thy shall the be are"
 
 **Low-Reward Output (Fewer 't's, from a less-tuned model):**
+
 > "And wee his, are have as a dest do of more,"
 
 ### 3.3. Analysis of Alignment vs. Coherence
@@ -105,6 +111,7 @@ The alignment was successful. The model consistently produced text with a higher
 A critical insight emerged from this experiment. While the model successfully aligned with the specified rule, the semantic quality and coherence of its output degraded significantly. The text with the highest reward (most 't's) was often nonsensical.
 
 **Example of High-Quality (Rule-Aligned) but Low-Coherence Text:**
+
 > "TLEONENIUS:
 > What must not for fich--it my hear grones
 > My your truth that in your have shame pronge,
