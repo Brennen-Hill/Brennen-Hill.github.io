@@ -33,7 +33,7 @@ The NASA Space Apps Hackathon is the largest global hackathon in the world. We d
 
 ## High-Level Summary
 
-We developed an interactive 3D starfield based on 5500 exoplanets and half a million stars from NASA and ESA databases. A user can draw constellations and travel to real-life exoplanets to see how the stars — and their constellations — change with perspective. The user can also take pictures of the stars as viewed from an exoplanet as well as any constellations they drew.
+We developed an interactive 3D starfield based on 5500 exoplanets and half a million stars from NASA and ESA databases. A user can draw constellations and travel to real-life exoplanets to see how the stars, and their constellations, change with perspective. The user can also take pictures of the stars as viewed from an exoplanet as well as any constellations they drew.
 
 ## Project Details
 

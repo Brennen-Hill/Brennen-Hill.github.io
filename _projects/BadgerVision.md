@@ -24,7 +24,7 @@ Over 300 developers were selected to compete, including experts from leading org
 
 ### The Problem: Prosopagnosia
 
-Prosopagnosia, or face blindness, affects around **2.5% of the population**—more than 8 million people in the U.S. alone. This condition makes it difficult to recognize faces or interpret facial expressions. As of now, no therapies offer lasting improvements (PsyPost).
+Prosopagnosia, or face blindness, affects around **2.5% of the population**, more than 8 million people in the U.S. alone. This condition makes it difficult to recognize faces or interpret facial expressions. As of now, no therapies offer lasting improvements (PsyPost).
 
 ### Our Solution: Badger Vision
 
@@ -42,7 +42,7 @@ Users authenticate the Badger Vision app via a QR code, which downloads pre-conf
 
 When we ran into challenges working with Zoom, we talked with one of the present sponsors, who had been working as a Zoom engineer for over a decade. The seasoned Zoom engineer said our idea of live-streaming video through Zoom to a server for real-time data analysis was almost certainly impossible.
 
-We engineered a solution by **writing our own Python API**, proving that live-streaming video for this use case was not only possible—it worked.
+We engineered a solution by **writing our own Python API**, proving that live-streaming video for this use case was not only possible, it worked.
 
 ### Future Work
 
