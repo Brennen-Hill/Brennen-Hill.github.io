@@ -54,27 +54,27 @@ ninja.data = [{
         },
       },{id: "projects-badger-vision",
           title: 'Badger Vision',
-          description: "Hack Midwest Winner for Best Enterprise Scale Business Solution",
+          description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/BadgerVision/";
-            },},{id: "projects-exosky-an-exoplanet-constellation-creator-and-explorer",
-          title: 'Exosky, an Exoplanet Constellation Creator and Explorer',
-          description: "An interactive 3D starfield to create and explore exoplanet constellations.",
+            },},{id: "projects-exosky",
+          title: 'Exosky',
+          description: "An Exoplanet Constellation Creator and Explorer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Exosky/";
-            },},{id: "projects-multi-agent-sequential-learning-combating-adversarial-procedural-generation",
-          title: 'multi-agent sequential learning combating adversarial procedural generation',
+            },},{id: "projects-marl-procgen",
+          title: 'MARL ProcGen',
           description: "Training defenders and an adversarial level generator simultaneously.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/MarlProcGen/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
-          description: "Translating American Sign Language to text using CNNs",
+          description: "Researching methods for translating American Sign Language",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SignLanguageLearner/";
-            },},{id: "projects-39-cl-quil-match-39-template-matching-and-replacement",
-          title: '&amp;#39;cl-quil/match&amp;#39;: Template Matching and Replacement',
-          description: "An implementation of the Iten et al. algorithm for quantum circuit pattern matching.",
+            },},{id: "projects-quantum-template",
+          title: 'Quantum Template',
+          description: "An algorithm for quantum circuit pattern matching and optimization.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/TemplateReplacement/";
             },},{
