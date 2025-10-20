@@ -176,7 +176,7 @@
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
       "summary": "Authors: Brennen Hill. Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline."
-    },
+    }
   ],
   "additional first-author publications": [
     {
@@ -256,7 +256,7 @@
       "position": "Dean's List, Honors in Computer Science Program, Letters & Science Honors Program",
       "startDate": "2022-09",
       "endDate": "Present",
-      "name": "University of Wisconsin-Madison",
+      "name": "University of Wisconsin-Madison"
     },
     {
       "position": "Honorable Mention",
@@ -282,10 +282,10 @@
       "position": "Valedictorian of 600, 4.6/4.0 GPA, International Baccalaureate Diploma, State Golden State Seal Merit Award, State Seal of Biliteracy, 4-year Scholar Athlete",
       "startDate": "2018-08",
       "endDate": "2022-05",
-      "name": "Agoura High School",
+      "name": "Agoura High School"
     }
   ],
-  "leadership & professional experience": [
+  "professional research service": [
     {
       "organization": "Conference on Neural Information Processing Systems (NeurIPS)",
       "position": "Peer Reviewer",
@@ -309,7 +309,9 @@
         "Facilitated a post-talk discussion with researchers on the future of synthetic biological intelligence and the applications of the mechanisms presented.",
         "Invited to give future talks in recognition of the presentation's quality and the engaging discussion."
       ]
-    },
+    }
+  ],
+  "leadership & professional experience": [
     {
       "organization": "Madison Machine Learning",
       "position": "Co-Founder",

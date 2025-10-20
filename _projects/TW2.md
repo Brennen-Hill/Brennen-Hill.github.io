@@ -1,24 +1,15 @@
 ---
 layout: page
-title: "Thunder Warrior: Genesis - Comprehensive Project Report"
+title: "TWG2"
 description: An exhaustive compilation of all project data.
 img: assets/img/12.jpg
 importance: 1
 category: game developement
-related_publications: true
----
-
-Here is a comprehensive, detailed report on the "Thunder Warrior: Genesis" project, based on an extensive analysis of the 128 provided HTML message and article files.
-
+toc:
+  sidebar: left
 ---
 
 # **Thunder Warrior: Genesis: A Comprehensive Project Analysis**
-
-**Date:** October 18, 2025
-**Report Prepared By:** Gemini
-**Subject:** In-depth analysis of the "Thunder Warrior: Genesis" project based on client-side message and content files.
-
----
 
 ## **I. Executive Summary**
 
@@ -34,9 +25,7 @@ Key findings from the analysis include:
 4.  **Comprehensive UI/UX:** The development team has focused heavily on the user interface, with news articles detailing a "Completely Rebuilt" webpage, a remodeled "New Home Page" for easier character management, and an "Information Update" to provide more detailed in-game stats.
 5.  **Multi-Faceted Community Engagement:** The project actively solicits user input through three distinct systems: a "Feedback" system for bugs and ideas, a 1-5 "Rating" system, and a "Review" system for detailed commentary.
 
-This report will now proceed to break down every one of these aspects in granular detail, referencing the specific files from which this information was synthesized.
-
----
+## This report will now proceed to break down every one of these aspects in granular detail, referencing the specific files from which this information was synthesized.
 
 ## **II. Project Overview: Thunder Warrior: Genesis**
 
@@ -44,12 +33,10 @@ This report will now proceed to break down every one of these aspects in granula
 
 The files analyzed are all part of a client-side notification system. This system appears to function by loading small, static HTML files containing JavaScript commands.
 
-- **`setMessage(...)`:** This function is used to display status, error, and success messages to the user across all account and feedback modules.
-- **`setArticle(...)` & `newSection(...)`:** These functions are used to dynamically build and display news articles on the game's home page, keeping the community informed of updates.
+- `setMessage(...)`: This function is used to display status, error, and success messages to the user across all account and feedback modules.
+- `setArticle(...)` & `newSection(...)`: These functions are used to dynamically build and display news articles on the game's home page, keeping the community informed of updates.
 
-This architecture allows for modular and easily updatable user notifications without requiring a full page reload or complex client-side templating.
-
----
+## This architecture allows for modular and easily updatable user notifications without requiring a full page reload or complex client-side templating.
 
 ## **III. Detailed Analysis: User Account Management System**
 
@@ -85,8 +72,12 @@ The sign-in process allows users to log in using their credentials.
 
 - **Empty Fields:** The user is notified if "Neither the Username nor Password field may be left empty".
 - **Incorrect Credentials:** A generic error message states that "Either the Usrname or Password entered is incorrect".
-- **Account Status:** - **Unconfirmed:** If the account is not yet confirmed, the sign-in is successful but the user is immediately informed that a new confirmation code has been sent and they must confirm the account. - **Banned/Deleted:** Users with banned or deleted accounts are blocked from signing in and directed to the "Contact Us" page.
-- **One-Time Password (OTP) Handling:** The system supports one-time use passwords (likely from the "Forgot Password" feature). - **Expired:** An OTP that is older than its one-hour lifetime will be rejected. - **Already Used:** An OTP that has already been used is also rejected.
+- **Account Status:**
+  - **Unconfirmed:** If the account is not yet confirmed, the sign-in is successful but the user is immediately informed that a new confirmation code has been sent and they must confirm the account.
+  - **Banned/Deleted:** Users with banned or deleted accounts are blocked from signing in and directed to the "Contact Us" page.
+- **One-Time Password (OTP) Handling:** The system supports one-time use passwords (likely from the "Forgot Password" feature).
+  - **Expired:** An OTP that is older than its one-hour lifetime will be rejected.
+  - **Already Used:** An OTP that has already been used is also rejected.
 
 **Success:**
 
@@ -118,8 +109,12 @@ This system allows users to recover their username or reset their password.
 **Validation and Error Handling:**
 
 - **Empty Fields:** The system requires both username and password fields to be filled to find the account.
-- **No Account Found:** - If an email is entered that is not associated with an account, the system reports: "We could not find the account associated with the email entered". - If the username/password combination doesn't match, a similar error is shown.
-- **Account Status:** - **Unconfirmed:** Unconfirmed accounts cannot use this feature and are directed to the confirmation tab. - **Banned:** Banned accounts are blocked and directed to "Contact Us".
+- **No Account Found:**
+  - If an email is entered that is not associated with an account, the system reports: "We could not find the account associated with the email entered".
+  - If the username/password combination doesn't match, a similar error is shown.
+- **Account Status:**
+  - **Unconfirmed:** Unconfirmed accounts cannot use this feature and are directed to the confirmation tab.
+  - **Banned:** Banned accounts are blocked and directed to "Contact Us".
 
 **Success:**
 
@@ -136,8 +131,13 @@ From the "Manage" tab, users can edit their username, email, and password.
 - **Credential Check:** The user's _current_ credentials must be valid. If not, an error is shown: "Either the Usrname or Password associated with the logged in account are incorrect".
 - **Password Rules:** New passwords must match the confirmation, meet the minimum length (7 characters), and contain only alphanumeric characters.
 - **Username Rules:** New usernames must be within the maximum length (20 characters) and contain only alphanumeric characters.
-- **Conflict Handling:** - **Username Taken:** "That username is already tied to an account. Choose another one". - **Email Taken:** "That email is already tied to an account. Choose another one".
-- **No Change Detected:** The system prevents redundant updates. - "The entered username is the same as the username currently tied to this account". - "The entered email is the same as the email currently tied to this account". \* "The entered password is the same as the password currently tied to this account".
+- **Conflict Handling:**
+  - **Username Taken:** "That username is already tied to an account. Choose another one".
+  - **Email Taken:** "That email is already tied to an account. Choose another one".
+- **No Change Detected:** The system prevents redundant updates.
+  - "The entered username is the same as the username currently tied to this account".
+  - "The entered email is the same as the email currently tied to this account".
+  - "The entered password is the same as the password currently tied to this account".
 - **Banned Account:** Banned accounts cannot be edited.
 
 **Success:**
@@ -175,8 +175,14 @@ The `newsArticle` files provide a rich, detailed look into the game's mechanics,
 ### **A. Core Concept & Onboarding**
 
 - **Classes:** Upon creation, players choose a class (e.g., Jedi, sabateur, sith, infiltrator).
-- **Class Defines:** 1. **Starting Skills:** (Power, Constitution, Thaumaturgy, Stamina, Speed, Utility). 2. **Faction:** (Empire or Rebellion). 3. **Passive Traits:** (e.g., gaining health/stamina on kill). 4. **Starting Equipment:** (Full armor set, one melee weapon, one ranged weapon).
-- **Skills Breakdown:** - **Passive Skills:** Power (damage), Constitution (health/healing), Speed (movement/action speed), Stamina (powers some abilities). - **Ability Skills:** Thaumaturgy (supernatural powers), Stamina (natural abilities), Utility (other useful actions).
+- **Class Defines:**
+  1.  **Starting Skills:** (Power, Constitution, Thaumaturgy, Stamina, Speed, Utility).
+  2.  **Faction:** (Empire or Rebellion).
+  3.  **Passive Traits:** (e.g., gaining health/stamina on kill).
+  4.  **Starting Equipment:** (Full armor set, one melee weapon, one ranged weapon).
+- **Skills Breakdown:**
+  - **Passive Skills:** Power (damage), Constitution (health/healing), Speed (movement/action speed), Stamina (powers some abilities).
+  - **Ability Skills:** Thaumaturgy (supernatural powers), Stamina (natural abilities), Utility (other useful actions).
 
 ### **B. Character Customization: Equipment**
 
@@ -184,7 +190,9 @@ Customization is a central theme. The game features fully interchangeable equipm
 
 - **Equipment Slots:** Helmets, Torso pieces, Leg pieces, Right Arm pieces, Left Arm pieces, Ranged Weapons, and Melee Weapons.
 - **Rarity System:** A 7-tier rarity system is in place: **Junk, Common, Uncommon, Rare, Epic, Legendary, and Insane**. Rarity increases the equipment's statistics.
-- **Acquisition:** 1. **Enemy Drops:** Killing an enemy provides a chance to earn their equipment. The dropped item will either match the enemy's rarity or be one tier lower. 2. **Shop:** Players can use "credits and metal" to unlock new equipment in the shop.
+- **Acquisition:**
+  1.  **Enemy Drops:** Killing an enemy provides a chance to earn their equipment. The dropped item will either match the enemy's rarity or be one tier lower.
+  2.  **Shop:** Players can use "credits and metal" to unlock new equipment in the shop.
 - **Leveling:** Equipment is unlocked at the player's current level; higher-level Thunder Warriors get more powerful gear.
 - **Optimization:** A dedicated article guides players on "Picking the Right Equipment," advising them to think about how gear works together to "achieve a certian goal" (e.g., high damage and low weight for "hit and run tacktics").
 
@@ -193,7 +201,9 @@ Customization is a central theme. The game features fully interchangeable equipm
 A deep modification system allows for "incredible customization" on top of base equipment.
 
 - **Rarity & Acquisition:** Mods follow the same 7-tier rarity system and are acquired from enemy drops or the shop.
-- **Mod Structure:** 1. **Main Enhancement:** One primary stat increase (e.g., "Defense for armour, or Damage for a weapon"). 2. **Minor Enhancements:** Up to four secondary enhancements. These can be smaller stat changes or "Universal Changes" affecting the entire character (e.g., "ability cost" or "time it takes to start healing").
+- **Mod Structure:**
+  1.  **Main Enhancement:** One primary stat increase (e.g., "Defense for armour, or Damage for a weapon").
+  2.  **Minor Enhancements:** Up to four secondary enhancements. These can be smaller stat changes or "Universal Changes" affecting the entire character (e.g., "ability cost" or "time it takes to start healing").
 - **Balancing:** Minor enhancements can sometimes be a "slight Decrease." This is an intentional design choice, as it "meens that the other traits of the mod will be even more powerful".
 - **Equipping:** Players equip mods by clicking a weapon's icon on the home screen, then clicking the weapon's image or the empty mod slots beneath it.
 
@@ -250,14 +260,19 @@ The game's main "Home Page" (the user's dashboard) was also redesigned for easie
 An "Information Update" was released to display more data to players in-game.
 
 - **Status Bars:** Hitpoints, Stamina, Thaumaturgy, and Weapon Heat bars now show "exact values stating their current status and maximum value."
-- **Equipment Stats:** - **Hover-Over:** Hovering over equipment shows key stats (damage, firing speed, range, defense, weight, etc.). - **Detailed View:** Clicking equipment from the home menu reveals an info icon (?) that opens an "extended list of sometimes over twenty diferent stats".
+- **Equipment Stats:**
+  - **Hover-Over:** Hovering over equipment shows key stats (damage, firing speed, range, defense, weight, etc.).
+  - **Detailed View:** Clicking equipment from the home menu reveals an info icon (?) that opens an "extended list of sometimes over twenty diferent stats".
 
 ### **D. Game Error Handling**
 
 A dedicated set of messages (`startGameMessage`) handles all errors related to joining a game.
 
 - **Account Status Errors:** Users are blocked if they are not signed in, unconfirmed, or banned.
-- **Session Errors:** - **Already Signed In:** If the account is already in a game, the user is asked if they want to "kick out the other user". - **Disconnection:** Specific messages exist for generic disconnection and disconnection with a redirect. \* **Failed Rejoin:** A message is shown if a user "failed to rejoin the game".
+- **Session Errors:**
+  - **Already Signed In:** If the account is already in a game, the user is asked if they want to "kick out the other user".
+  - **Disconnection:** Specific messages exist for generic disconnection and disconnection with a redirect.
+  - **Failed Rejoin:** A message is shown if a user "failed to rejoin the game".
 - **Match End:** A message gracefully explains the match ended "either because one team has already won or because the match has exceeded the maximum duration".
 
 ---
@@ -317,7 +332,12 @@ A "Server is Completely Revamped" update was announced to address lag.
 
 The team is in the process of a major graphical overhaul, moving from 2D to 3D.
 
-- **Character Creation Process:** A detailed article, "How We Create Our Characters", outlines their 5-step pipeline: 1. **First Steps:** Idea and lore-fitting. 2. **Design:** Drawing board and reference images. 3. **Modelling:** Building the character in 3D modeling software, adding textures, colors, and animations. 4. **Customizability:** The model is split into parts (head, torso, arms, legs, weapons) so they can be "seperately applied to a Thunderwarrior." 5. **Implementation:** Thousands of images are taken of the 3D model from different angles and animation states. These are loaded and combined in-game to create the player's custom character.
+- **Character Creation Process:** A detailed article, "How We Create Our Characters", outlines their 5-step pipeline:
+  1.  **First Steps:** Idea and lore-fitting.
+  2.  **Design:** Drawing board and reference images.
+  3.  **Modelling:** Building the character in 3D modeling software, adding textures, colors, and animations.
+  4.  **Customizability:** The model is split into parts (head, torso, arms, legs, weapons) so they can be "seperately applied to a Thunderwarrior."
+  5.  **Implementation:** Thousands of images are taken of the 3D model from different angles and animation states. These are loaded and combined in-game to create the player's custom character.
 - **3D Weapons:** An update, "Weapons are Now 3D", details replacing old 2D rotating sprites with 3D models that the character will "actually hold."
 - **3D Animations:** A "Work Begins on 3D Animations" article confirms the move to a fully 3D game, emphasizing that the new 3D parts are being designed to "all fit with all others" to maintain customization.
 - **Animation Improvement:** An "Improved Animations" article discusses efforts to use "more realistic and lifelike movements" and fix clipping issues ("a gun going into the hand holding it").
@@ -326,7 +346,10 @@ The team is in the process of a major graphical overhaul, moving from 2D to 3D.
 
 - **Current Status:** Open Beta.
 - **Community Sentiment:** The developers report that "Comunity Investment is at an All-Time High" and "feedback is still mostly positive" even during lulls in updates.
-- **Announced Future Work:** - **User Interface Redesign:** A "groundbreaking update is about to be released". - **"Something Big":** The team is "working harder than ever" on "something really big coming up". \* **Ongoing 3D Conversion:** The team is still working on swapping out more weapons and animations to 3D.
+- **Announced Future Work:**
+  - **User Interface Redesign:** A "groundbreaking update is about to be released".
+  - **"Something Big":** The team is "working harder than ever" on "something really big coming up".
+  - **Ongoing 3D Conversion:** The team is still working on swapping out more weapons and animations to 3D.
 
 ---
 
@@ -341,17 +364,13 @@ The project's strengths lie in its:
 3.  **A transparent and active development process,** communicating technical changes (server revamps, 3D pipelines) and content updates (new planets, melee weapons) directly to the players.
 4.  **A strong emphasis on community feedback,** with no fewer than four separate channels for users to communicate with the development team.
 
-The project is currently in a critical and exciting phase: transitioning to a more robust server architecture, overhauling its entire graphics engine from 2D to 3D, and preparing for another major UI redesign, all while in an open beta. The data collected from the provided files indicates a mature, well-planned, and feature-rich gaming project.
-
----
+## The project is currently in a critical and exciting phase: transitioning to a more robust server architecture, overhauling its entire graphics engine from 2D to 3D, and preparing for another major UI redesign, all while in an open beta. The data collected from the provided files indicates a mature, well-planned, and feature-rich gaming project.
 
 ---
 
 # **Project Analysis: Thunder Warrior: Genesis - Game Codebase**
 
-This report provides an exhaustive analysis of the provided codebase for the game project "Thunder Warrior: Genesis" (TWG). The analysis covers the frontend structure and styling, client-side logic and WebSocket communication, server-side game management, and the core game mechanics including character representation, weapons, abilities, physics, collision detection, status effects, and map generation.
-
----
+## This report provides an exhaustive analysis of the provided codebase for the game project "Thunder Warrior: Genesis" (TWG). The analysis covers the frontend structure and styling, client-side logic and WebSocket communication, server-side game management, and the core game mechanics including character representation, weapons, abilities, physics, collision detection, status effects, and map generation.
 
 ### I. Frontend Implementation (`client.html`, CSS)
 
@@ -360,15 +379,47 @@ The `client.html` file serves as the entry point and primary structure for the g
 **A. HTML Structure and Metadata:**
 
 - **Document Type**: Standard HTML5 doctype (`<!DOCTYPE html>`).
-- **Head Section**: - **Title**: Sets the page title to "TWG Menu - Thunder Warrior: Genesis". - **Favicons**: Includes a comprehensive set of favicon links (`apple-touch-icon`, `icon`, `manifest`, `mask-icon`, `shortcut icon`) targeting various platforms and browsers, ensuring consistent branding. Also includes meta tags for Microsoft Tile (`msapplication-TileColor`, `msapplication-config`) and theme color (`theme-color`). - **Inline CSS**: Contains a large `<style>` block defining the visual appearance. - **JavaScript**: Links to external `clientWebsocket.js` and includes a substantial inline `<script>` block containing the primary client-side game logic for the menu system.
-- **Body Section**: - **Basic Styling**: Sets a dark background color (`#010105`) and attaches an `onresize` event handler likely used for dynamically adjusting layout or canvas elements. - **Main Containers**: The core content is organized within several top-level `div` elements, each representing a distinct screen or major UI component: - `loadingPage`: Displays loading indicators while fetching initial data. - `classSelectionScreen`: Interface for initial character attribute allocation. - `homeScreen`: The main menu hub, displaying character, resources, and navigation. - `weaponPage`: Screen for viewing and managing weapons and modifications. - `abilityPage`: Screen for viewing and managing character abilities. - `shopScreen`: Interface for purchasing items, equipment, or currency. - `settingsScreen`: A modal overlay for account management and game options. - `rewardsScreen`: A modal overlay to display rewards earned. - `upgradeAbilityScreen`: Modal for selecting ability upgrades upon level-up. - `statsScreen`: Modal overlay displaying detailed statistics for equipment or abilities. - `gameModeSelectionBackground`/`gameModeSelectionTab`: UI for choosing the game mode to enter. - `tellScreen`: A generic modal for displaying informational messages to the player. - `descriptionBackground`: A pop-up element used to show tooltips/details about hovered items. - **Templates**: Utilizes HTML `<template>` tags (`purchaseTemplate`, `paymentScreenTemplate`, `classPointPurchase`, `classOptionTemplate`) for dynamically creating repetitive UI elements like shop items or purchase confirmation dialogs via JavaScript. - **Hidden Elements**: Many screens (`homeScreen`, `weaponPage`, etc.) are initially hidden (`visibility: hidden`) and are shown/hidden by JavaScript as the user navigates. - **IFrame**: Includes an `iframe` with `src='https://thunderwarrior.org/iframe'`, likely used for cross-domain communication, possibly for authentication or account data retrieval. \* **Form**: Contains a hidden `form` (`startForm`) presumably used to POST data when transitioning from the menu to the actual game client.
+- **Head Section**:
+  - **Title**: Sets the page title to "TWG Menu - Thunder Warrior: Genesis".
+  - **Favicons**: Includes a comprehensive set of favicon links (`apple-touch-icon`, `icon`, `manifest`, `mask-icon`, `shortcut icon`) targeting various platforms and browsers, ensuring consistent branding. Also includes meta tags for Microsoft Tile (`msapplication-TileColor`, `msapplication-config`) and theme color (`theme-color`).
+  - **Inline CSS**: Contains a large `<style>` block defining the visual appearance.
+  - **JavaScript**: Links to external `clientWebsocket.js` and includes a substantial inline `<script>` block containing the primary client-side game logic for the menu system.
+- **Body Section**:
+  - **Basic Styling**: Sets a dark background color (`#010105`) and attaches an `onresize` event handler likely used for dynamically adjusting layout or canvas elements.
+  - **Main Containers**: The core content is organized within several top-level `div` elements, each representing a distinct screen or major UI component:
+    - `loadingPage`: Displays loading indicators while fetching initial data.
+    - `classSelectionScreen`: Interface for initial character attribute allocation.
+    - `homeScreen`: The main menu hub, displaying character, resources, and navigation.
+    - `weaponPage`: Screen for viewing and managing weapons and modifications.
+    - `abilityPage`: Screen for viewing and managing character abilities.
+    - `shopScreen`: Interface for purchasing items, equipment, or currency.
+    - `settingsScreen`: A modal overlay for account management and game options.
+    - `rewardsScreen`: A modal overlay to display rewards earned.
+    - `upgradeAbilityScreen`: Modal for selecting ability upgrades upon level-up.
+    - `statsScreen`: Modal overlay displaying detailed statistics for equipment or abilities.
+    - `gameModeSelectionBackground`/`gameModeSelectionTab`: UI for choosing the game mode to enter.
+    - `tellScreen`: A generic modal for displaying informational messages to the player.
+    - `descriptionBackground`: A pop-up element used to show tooltips/details about hovered items.
+  - **Templates**: Utilizes HTML `<template>` tags (`purchaseTemplate`, `paymentScreenTemplate`, `classPointPurchase`, `classOptionTemplate`) for dynamically creating repetitive UI elements like shop items or purchase confirmation dialogs via JavaScript.
+  - **Hidden Elements**: Many screens (`homeScreen`, `weaponPage`, etc.) are initially hidden (`visibility: hidden`) and are shown/hidden by JavaScript as the user navigates.
+  - **IFrame**: Includes an `iframe` with `src='https://thunderwarrior.org/iframe'`, likely used for cross-domain communication, possibly for authentication or account data retrieval.
+  - **Form**: Contains a hidden `form` (`startForm`) presumably used to POST data when transitioning from the menu to the actual game client.
 
 **B. CSS Styling:**
 
 - **Units and Responsiveness**: Extensively uses `vmin` (percentage of the smaller viewport dimension) for sizing and positioning, aiming for a UI that scales proportionally on different screen sizes. Font sizes, widths, heights, margins, padding, border-radius, and absolute positioning coordinates frequently use `vmin`.
 - **Layout**: Primarily uses `position: absolute` for laying out screens and major components within the `homeScreen` container, which acts as a fixed-size viewport (`100vmin` x `100vmin`). Flexbox (`display: flex`) is used in specific areas like the `informationBar` resource displays and ability icon holders for centering and alignment.
-- **Visual Appearance**: - **Color Scheme**: Predominantly dark blues, purples, and grays (`#010105`, `#05051a`, `#111133`, `#222266`, `#606087`) with highlights of white, yellow (`#eddd10`), green (`#079950`), and red. Creates a futuristic/sci-fi aesthetic. - **Gradients**: Uses `linear-gradient` and `radial-gradient` for button backgrounds (`coolButton`) and ability icon effects. - **Borders and Radius**: `border-radius` is used heavily to create rounded corners and circular elements (buttons, resource displays, ability icons, mod slots). - **Text**: Uses a sans-serif font, often white or light gray (`#ffffff`, `#cccccc`, `#777777`). Text styling includes size (`vmin`), alignment, justification, and transformations (uppercase). \* **Transparency/Overlays**: Uses `rgba` colors and semi-transparent backgrounds (`#9a9a9a83`, `#66669aca`) for modal screens (`coverScreen`) to overlay content.
-- **Interactivity & Animation**: - **Hover Effects**: Styles change on `:hover` for elements like buttons (`coolButton`), trait displays, purchase options, providing visual feedback. - **Cursors**: Explicitly sets `cursor: pointer` or `cursor: default` on many elements to indicate interactivity. - **Animations**: Uses CSS `@keyframes` (`spin`, `pulseAnimation`, `pulseAnimationBrighter`) for loading indicators and ability icon pulsing effects. - **Transitions**: Employs CSS `transition` for smooth changes in properties like `opacity` and `background-color`, particularly for ability unlock animations.
+- **Visual Appearance**:
+  - **Color Scheme**: Predominantly dark blues, purples, and grays (`#010105`, `#05051a`, `#111133`, `#222266`, `#606087`) with highlights of white, yellow (`#eddd10`), green (`#079950`), and red. Creates a futuristic/sci-fi aesthetic.
+  - **Gradients**: Uses `linear-gradient` and `radial-gradient` for button backgrounds (`coolButton`) and ability icon effects.
+  - **Borders and Radius**: `border-radius` is used heavily to create rounded corners and circular elements (buttons, resource displays, ability icons, mod slots).
+  - **Text**: Uses a sans-serif font, often white or light gray (`#ffffff`, `#cccccc`, `#777777`). Text styling includes size (`vmin`), alignment, justification, and transformations (uppercase).
+  - **Transparency/Overlays**: Uses `rgba` colors and semi-transparent backgrounds (`#9a9a9a83`, `#66669aca`) for modal screens (`coverScreen`) to overlay content.
+- **Interactivity & Animation**:
+  - **Hover Effects**: Styles change on `:hover` for elements like buttons (`coolButton`), trait displays, purchase options, providing visual feedback.
+  - **Cursors**: Explicitly sets `cursor: pointer` or `cursor: default` on many elements to indicate interactivity.
+  - **Animations**: Uses CSS `@keyframes` (`spin`, `pulseAnimation`, `pulseAnimationBrighter`) for loading indicators and ability icon pulsing effects.
+  - **Transitions**: Employs CSS `transition` for smooth changes in properties like `opacity` and `background-color`, particularly for ability unlock animations.
 - **Specific Component Styling**: Provides detailed styling for almost every UI element mentioned in the HTML structure, including positioning, sizing, colors, borders, text styles, and image handling for elements like resource counters, character equipment slots, ability trees, shop headers/items, settings buttons, loading icons, stat tables, and pop-up descriptions.
 - **Scrollbars**: Customizes the appearance of scrollbars using `::-webkit-scrollbar` pseudo-elements for elements like the stats screen.
 - **User Interaction**: Disables text selection (`user-select: none`) for most elements to maintain a game-like interface.
@@ -381,25 +432,71 @@ The client-side JavaScript manages the user interface, handles user interactions
 
 **A. Initialization and Authentication (`client.html`, `clientWebsocket.js`):**
 
-- **Loading Sequence**: 1. `runGame` calls `loadGame` on window load. 2. `loadGame` checks for WebSocket support. If supported, it messages the iframe (`https://thunderwarrior.org/iframe`) to request account credentials (`getAccount`). 3. An `onmessage` handler listens for the response from the iframe. 4. If credentials (`username`, `password`) are received, they are stored, the iframe is removed, and `load` is called. If not, the user is redirected (`totalRedirect`). 5. `load` calls `createWebSocket` (defined in `clientWebsocket.js`) to establish the WebSocket connection.
-- **WebSocket Connection (`clientWebsocket.js`)**: 1. `createWebSocket` establishes the connection and sets up event handlers (`onopen`, `onerror`, `onmessage`, `onclose`). 2. `messageWS` handles incoming messages. It performs an initial security check (`checkMessage`) involving a key exchange and timestamp verification. 3. If the check passes, a `ticket` is stored, and an 'account' message is sent (`sendAccount`) with credentials and the requested type (`gameMenu`). 4. Subsequent messages are checked against the ticket before being processed by `recieveAnyMessage`.
-- **Data Loading (`client.html`, `clientWebsocket.js`)**: 1. The server responds to the 'account' message with a 'user' message containing `user` data, game `options`, and connection `status`. 2. `recieveAnyMessage` routes the 'user' message to `loadAll` in `client.html`. 3. `loadAll` stores the received `user` data (including trooper stats, equipment, abilities, resources) in the global `troop` variable. It checks if the user is already `inGame` and potentially triggers a rejoin (`rejoinGame`). It then initializes various game aspects: sets options, calculates default trooper values (`setDefaultTrooperValues`), defines equipment/weapon/armour stats (`loadEquipment`), sets up UI displays (`setImageDisplays`), constructs ability data (`constructAbilities`), and starts loading images (`createAllImages`).
-- **Image Loading (`client.html`)**: 1. `createAllImages` initiates loading for numerous images (UI elements, equipment, abilities) using helper functions (`createSimpleImage`, `createBasicImg`). 2. It tracks loading progress (`imagesCreated`, `imageCount`) and updates the `loadStatus` element. 3. Once all images are loaded (`countImages` reaches `imageCount`), `continuePageCreationWithLoadedImages` is called.
-- **Final Setup (`client.html`)**: 1. `continuePageCreationWithLoadedImages` sets up event listeners (`createEternalEvents`, `createHomeScreenEvents`), updates resource displays (`updateResources`), checks if character attributes need selection (`showClassSelectionScreen`) or proceeds to the main menu (`pageCreationWithClassSelected`), sets initial UI element sizes (`setImages`), and finally hides the loading screen (`hideLoadingScreen`).
+- **Loading Sequence**:
+  1.  `runGame` calls `loadGame` on window load.
+  2.  `loadGame` checks for WebSocket support. If supported, it messages the iframe (`https://thunderwarrior.org/iframe`) to request account credentials (`getAccount`).
+  3.  An `onmessage` handler listens for the response from the iframe.
+  4.  If credentials (`username`, `password`) are received, they are stored, the iframe is removed, and `load` is called. If not, the user is redirected (`totalRedirect`).
+  5.  `load` calls `createWebSocket` (defined in `clientWebsocket.js`) to establish the WebSocket connection.
+- **WebSocket Connection (`clientWebsocket.js`)**:
+  1.  `createWebSocket` establishes the connection and sets up event handlers (`onopen`, `onerror`, `onmessage`, `onclose`).
+  2.  `messageWS` handles incoming messages. It performs an initial security check (`checkMessage`) involving a key exchange and timestamp verification.
+  3.  If the check passes, a `ticket` is stored, and an 'account' message is sent (`sendAccount`) with credentials and the requested type (`gameMenu`).
+  4.  Subsequent messages are checked against the ticket before being processed by `recieveAnyMessage`.
+- **Data Loading (`client.html`, `clientWebsocket.js`)**:
+  1.  The server responds to the 'account' message with a 'user' message containing `user` data, game `options`, and connection `status`.
+  2.  `recieveAnyMessage` routes the 'user' message to `loadAll` in `client.html`.
+  3.  `loadAll` stores the received `user` data (including trooper stats, equipment, abilities, resources) in the global `troop` variable. It checks if the user is already `inGame` and potentially triggers a rejoin (`rejoinGame`). It then initializes various game aspects: sets options, calculates default trooper values (`setDefaultTrooperValues`), defines equipment/weapon/armour stats (`loadEquipment`), sets up UI displays (`setImageDisplays`), constructs ability data (`constructAbilities`), and starts loading images (`createAllImages`).
+- **Image Loading (`client.html`)**:
+  1.  `createAllImages` initiates loading for numerous images (UI elements, equipment, abilities) using helper functions (`createSimpleImage`, `createBasicImg`).
+  2.  It tracks loading progress (`imagesCreated`, `imageCount`) and updates the `loadStatus` element.
+  3.  Once all images are loaded (`countImages` reaches `imageCount`), `continuePageCreationWithLoadedImages` is called.
+- **Final Setup (`client.html`)**:
+  1.  `continuePageCreationWithLoadedImages` sets up event listeners (`createEternalEvents`, `createHomeScreenEvents`), updates resource displays (`updateResources`), checks if character attributes need selection (`showClassSelectionScreen`) or proceeds to the main menu (`pageCreationWithClassSelected`), sets initial UI element sizes (`setImages`), and finally hides the loading screen (`hideLoadingScreen`).
 
 **B. UI Management and Navigation (`client.html`):**
 
 - **Screen Visibility**: Uses a global `onPage` variable to track the currently active screen. Functions like `showHomeScreen`, `hideHomeScreen`, `showWeaponScreen`, `hideWeaponScreen`, `showAbilityPage`, `hideAbilityPage`, `showShopScreen`, `hideShopScreen`, `viewSettings`, `closeSettings`, etc., manipulate the `visibility` style property of the corresponding `div` elements to switch between views.
-- **Dynamic Content**: - **Templates**: Uses `<template>` elements and `cloneNode(true)` to generate lists of shop items, purchase options, and class attribute selectors dynamically. - **Resource Display**: `updateResources` function updates the text content of elements displaying credits, skill points, metal, crystals, experience, and player level, using `simplifyNumber` for large values. - **Character Display**: Updates `src` attributes of `img` elements to show equipped armor and weapons (`setDisplayImageSrcs`). Draws the character model onto a canvas (`drawFullCharacter`, `setCharacterBackground`). Updates stat displays (`setAbilityDisplays`). - **Tooltips/Descriptions**: `showWeaponDescription` and `showAbilityDescription` populate and position the `descriptionBackground` element with details about the hovered item, including stats rendered onto a canvas (`setDescriptionCanvas`). `hideWeaponDescription` hides it.
+- **Dynamic Content**:
+  - **Templates**: Uses `<template>` elements and `cloneNode(true)` to generate lists of shop items, purchase options, and class attribute selectors dynamically.
+  - **Resource Display**: `updateResources` function updates the text content of elements displaying credits, skill points, metal, crystals, experience, and player level, using `simplifyNumber` for large values.
+  - **Character Display**: Updates `src` attributes of `img` elements to show equipped armor and weapons (`setDisplayImageSrcs`). Draws the character model onto a canvas (`drawFullCharacter`, `setCharacterBackground`). Updates stat displays (`setAbilityDisplays`).
+  - **Tooltips/Descriptions**: `showWeaponDescription` and `showAbilityDescription` populate and position the `descriptionBackground` element with details about the hovered item, including stats rendered onto a canvas (`setDescriptionCanvas`). `hideWeaponDescription` hides it.
 - **Event Handling**: Numerous `onclick`, `onmouseover`, `onmouseout`, `onkeydown`, `onresize` event handlers trigger functions to handle user interactions like button clicks, hovering over items, keyboard shortcuts, screen resizing, etc.
 
 **C. Core Menu Logic (`client.html`):**
 
-- **Class Selection**: - `showClassSelectionScreen` displays the attribute selection UI if `troop.built` is not "finished". - `buildClassSelectionScreen` dynamically creates the attribute selectors using the `classOptionTemplate`. - `modifyClassOption` handles increasing/decreasing attribute points, checking against available `classPoints`, calculating costs (`getNumCost`), updating visuals, and enabling/disabling buttons (`setClassAddition`, `setClassSubtraction`). - `selectClass` finalizes attribute choices (`setClassProperties`), sets default equipment (`setEquipmentDefaults`), marks `troop.built` as "finished", saves data to the server (`saveTraitToServer`), and transitions to the home screen.
-- **Home Screen**: - Displays character, resources, equipment slots, and stat summaries. - Equipment slots are clickable (`onclick`) to navigate to the `weaponPage`. - Stat displays (`Stamina`, `Thaumaturgy`) are clickable to navigate to the `abilityPage`. - Resource displays are clickable (`onclick`) to open the relevant purchase screen in the shop. \* "Enter the Arena" button (`gameTitle`) shows the game mode selection UI (`showGameModeSelection`).
-- **Weapon/Equipment Page (`weaponPage`)**: - Displays details of the `selectedEquipment`. - Shows a list of available equipment/mods (`fullEquipmentArray`) of the same type in scrollable slots (`weaponSelectionBackground`). `setWeaponScreen` manages this display. - Allows equipping items by clicking (`updateWeapon`). - Allows deconstructing items (`deconstructMod` via backspace/delete key). - Allows viewing and managing equipped mods by clicking the large weapon image (`displayOrHideModOptions`), switching the view (`modsShowing`). - Navigation back to home screen (`showHomeScreen`).
-- **Ability Page (`abilityPage`)**: - Displays the ability tree for either Stamina or Thaumaturgy (`setAbilityPage`). Allows switching between trees. - `createAbilityOption` dynamically generates icons for each ability. - Clicking an ability icon shows its description and status (`setAbilities`). - If unlocked, shows equipped slots (`setGameAbilities`) and allows equipping/unequipping via keyboard shortcuts (`equipAbility`). - If locked, shows prerequisites and costs. Allows unlocking if conditions are met (`setUnlockButton`). - Provides ability recommendations (`abilityAdviceText`).
-- **Shop Page (`shopScreen`)**: - Tabbed interface (`purchaseHeaders`) for different shop categories (Weapons, Armor, Mods, Resources). - Functions like `weaponsShopScreen`, `armourShopScreen`, `purchaseCredits`, etc., configure the displayed items (`setShopSelection`). - Displays purchase options on canvases (`purchaseOption0`, etc.), rendered by `setShopScreen`. - Handles purchases (`makePurchase`), checking resource availability, deducting costs, adding items/resources (`recievePurchasedItem`), and displaying rewards (`showRewardsScreen`). \* Handles crystal purchases by showing a payment screen template (`crystalPurchase`).
+- **Class Selection**:
+  - `showClassSelectionScreen` displays the attribute selection UI if `troop.built` is not "finished".
+  - `buildClassSelectionScreen` dynamically creates the attribute selectors using the `classOptionTemplate`.
+  - `modifyClassOption` handles increasing/decreasing attribute points, checking against available `classPoints`, calculating costs (`getNumCost`), updating visuals, and enabling/disabling buttons (`setClassAddition`, `setClassSubtraction`).
+  - `selectClass` finalizes attribute choices (`setClassProperties`), sets default equipment (`setEquipmentDefaults`), marks `troop.built` as "finished", saves data to the server (`saveTraitToServer`), and transitions to the home screen.
+- **Home Screen**:
+  - Displays character, resources, equipment slots, and stat summaries.
+  - Equipment slots are clickable (`onclick`) to navigate to the `weaponPage`.
+  - Stat displays (`Stamina`, `Thaumaturgy`) are clickable to navigate to the `abilityPage`.
+  - Resource displays are clickable (`onclick`) to open the relevant purchase screen in the shop.
+  - "Enter the Arena" button (`gameTitle`) shows the game mode selection UI (`showGameModeSelection`).
+- **Weapon/Equipment Page (`weaponPage`)**:
+  - Displays details of the `selectedEquipment`.
+  - Shows a list of available equipment/mods (`fullEquipmentArray`) of the same type in scrollable slots (`weaponSelectionBackground`). `setWeaponScreen` manages this display.
+  - Allows equipping items by clicking (`updateWeapon`).
+  - Allows deconstructing items (`deconstructMod` via backspace/delete key).
+  - Allows viewing and managing equipped mods by clicking the large weapon image (`displayOrHideModOptions`), switching the view (`modsShowing`).
+  - Navigation back to home screen (`showHomeScreen`).
+- **Ability Page (`abilityPage`)**:
+  - Displays the ability tree for either Stamina or Thaumaturgy (`setAbilityPage`). Allows switching between trees.
+  - `createAbilityOption` dynamically generates icons for each ability.
+  - Clicking an ability icon shows its description and status (`setAbilities`).
+  - If unlocked, shows equipped slots (`setGameAbilities`) and allows equipping/unequipping via keyboard shortcuts (`equipAbility`).
+  - If locked, shows prerequisites and costs. Allows unlocking if conditions are met (`setUnlockButton`).
+  - Provides ability recommendations (`abilityAdviceText`).
+- **Shop Page (`shopScreen`)**:
+  - Tabbed interface (`purchaseHeaders`) for different shop categories (Weapons, Armor, Mods, Resources).
+  - Functions like `weaponsShopScreen`, `armourShopScreen`, `purchaseCredits`, etc., configure the displayed items (`setShopSelection`).
+  - Displays purchase options on canvases (`purchaseOption0`, etc.), rendered by `setShopScreen`.
+  - Handles purchases (`makePurchase`), checking resource availability, deducting costs, adding items/resources (`recievePurchasedItem`), and displaying rewards (`showRewardsScreen`).
+  - Handles crystal purchases by showing a payment screen template (`crystalPurchase`).
 - **Settings/Modals**: Provides options for account management (linking out), logging out, resetting attributes (`resetAttributesPoints`), triggering ability upgrades (`selectAbilityUpgrade`), and closing the modal. `tell` function displays informational pop-ups.
 - **Starting Game**: `showGameModeSelection` displays options. Clicking a mode calls `startGame`, which packages necessary data (`getGameData`) and uses `sessionStorage` and form submission (`joinGame`) to transition to the actual game client.
 
@@ -420,8 +517,17 @@ The server-side code manages game instances, handles client connections and comm
 
 - **`NEW_GAME` Constructor**: Represents a single game instance/room. It's initialized with game configuration (`game` - including map, players), WebSocket utilities (`w`, `wss`), and callbacks for termination (`terminateGame`, `finishGame`).
 - **Initialization**: Stores game map data, creates `Trooper` objects for each player (`buildTroopers`), initializes projectiles array, sets up `CollisionDetection`. Starts the game loop after a delay (`startGame`, `update`).
-- **Game Loop**: - Runs at a fixed rate (`fps`). - Calculates delta time (`setDeltaTime`). - Updates the state of all troopers and projectiles (`updateGame`). - Checks for win conditions or game end conditions (`checkWin`). \* Sends the updated state to all clients in the room (`sendUpdate`).
-- **Termination**: - `checkWin` monitors trooper `alive` status and affiliation counts (`countAffiliation`). If only one affiliation remains, calls `gameOver`. - `checkWin` also checks for disconnected players (`countAffiliation`) or game timeout (`maxMinutes`). If conditions met, calls `endGame`. - `gameOver` records the winner, notifies troopers, and calls the `finishGame` callback. - `endGame` stops the game loop (`clearInterval`) and calls the `terminateGame` callback.
+- **Game Loop**:
+  - Runs at a fixed rate (`fps`).
+  - Calculates delta time (`setDeltaTime`).
+  - Updates the state of all troopers and projectiles (`updateGame`).
+  - Checks for win conditions or game end conditions (`checkWin`).
+  - Sends the updated state to all clients in the room (`sendUpdate`).
+- **Termination**:
+  - `checkWin` monitors trooper `alive` status and affiliation counts (`countAffiliation`). If only one affiliation remains, calls `gameOver`.
+  - `checkWin` also checks for disconnected players (`countAffiliation`) or game timeout (`maxMinutes`). If conditions met, calls `endGame`.
+  - `gameOver` records the winner, notifies troopers, and calls the `finishGame` callback.
+  - `endGame` stops the game loop (`clearInterval`) and calls the `terminateGame` callback.
 
 **B. Client Communication (`gameServer.js`, `websocket.js`):**
 
@@ -432,7 +538,11 @@ The server-side code manages game instances, handles client connections and comm
 
 **C. Server-Side Game Logic (`gameServer.js` relies on `Trooper.js`, `Projectile.js`, `CollisionDetection.js`):**
 
-- **Simulation**: The core `updateGame` function orchestrates the simulation tick: 1. Calls `prepare` on all troopers (updates delta time, processes input, updates status effects/abilities). 2. Calls `update` on all troopers (handles movement, combat, physics). 3. Calls `update` on all projectiles (moves them, checks collisions). Removes projectiles that hit or expire. 4. Calls `reset` on all troopers (clears temporary multipliers).
+- **Simulation**: The core `updateGame` function orchestrates the simulation tick:
+  1.  Calls `prepare` on all troopers (updates delta time, processes input, updates status effects/abilities).
+  2.  Calls `update` on all troopers (handles movement, combat, physics).
+  3.  Calls `update` on all projectiles (moves them, checks collisions). Removes projectiles that hit or expire.
+  4.  Calls `reset` on all troopers (clears temporary multipliers).
 - **Object Management**: Maintains lists of `troopers` and `projectiles`.
 - **Collision**: Utilizes the `CollisionDetection` instance (`CD`) passed to troopers and projectiles for checking interactions.
 
@@ -456,9 +566,24 @@ These files define the fundamental objects and rules of the game world.
 **B. Weapons (`Gun.js`, `Saber.js`, `WeaponBase.js`):**
 
 - **Common Base (`WeaponBase.js`)**: Provides shared logic for managing firing cooldowns (`firingSpeed`), heat/resource management (`heat`), activation state, and tracking states for potential animation/sound cues. Supports optional overheat mechanics.
-- **Ranged Weapons (`Gun.js`)**: - Handles ranged combat logic: firing projectiles, tracking heat, managing firing rate and spread. - Creates `Projectile` instances when firing. - Supports different weapon stats (damage, range, speed, heat properties) loaded from `initData`. - Integrates with `WeaponBase` for cooldown and heat management. \* Supports special shots activated by abilities.
-- **Melee Weapons (`Saber.js`)**: - Handles melee combat: striking and blocking. - **Striking**: Manages strike cooldowns, delays, applies damage within an arc using collision detection, handles knockback. Supports special strikes from abilities (`addStrike`). - **Blocking**: Manages block state, duration, parry window. Handles projectile reflection (`blockProjectile`), melee deflection (`blockSaber`), and potential Thaumaturgy blocking (`checkBlockThaum`) based on angle checks. Consumes stamina. - Integrates with `WeaponBase`, using stamina as the resource managed by the `heat` system.
-- **Projectiles (`Projectile.js`)**: - Represents individual shots fired by guns. - Moves in a straight line (`update`). - Checks for collisions with obstacles or enemies (`CD.check`). - Applies damage to troopers upon collision, considering falloff (`getDistanceTravelledMult`) and potential blocks. - Tracks distance travelled and expires after exceeding `maxRange`. - Includes visual smoothing logic.
+- **Ranged Weapons (`Gun.js`)**:
+  - Handles ranged combat logic: firing projectiles, tracking heat, managing firing rate and spread.
+  - Creates `Projectile` instances when firing.
+  - Supports different weapon stats (damage, range, speed, heat properties) loaded from `initData`.
+  - Integrates with `WeaponBase` for cooldown and heat management.
+  - Supports special shots activated by abilities.
+- **Melee Weapons (`Saber.js`)**:
+  - Handles melee combat: striking and blocking.
+  - **Striking**: Manages strike cooldowns, delays, applies damage within an arc using collision detection, handles knockback. Supports special strikes from abilities (`addStrike`).
+  - **Blocking**: Manages block state, duration, parry window. Handles projectile reflection (`blockProjectile`), melee deflection (`blockSaber`), and potential Thaumaturgy blocking (`checkBlockThaum`) based on angle checks. Consumes stamina.
+  - Integrates with `WeaponBase`, using stamina as the resource managed by the `heat` system.
+- **Projectiles (`Projectile.js`)**:
+  - Represents individual shots fired by guns.
+  - Moves in a straight line (`update`).
+  - Checks for collisions with obstacles or enemies (`CD.check`).
+  - Applies damage to troopers upon collision, considering falloff (`getDistanceTravelledMult`) and potential blocks.
+  - Tracks distance travelled and expires after exceeding `maxRange`.
+  - Includes visual smoothing logic.
 
 **C. Abilities and Status Effects (`AbilityEffect.js`, `StatusEffect.js`):**
 
@@ -492,19 +617,20 @@ These files define the fundamental objects and rules of the game world.
 - **Data Definitions**: Significant portions of the code involve defining static data for game elements like weapons, armor, mods, and abilities directly within the JavaScript files (`client.html`, `Trooper.js`). This could potentially be externalized to JSON or a database for easier management.
 - **Responsiveness**: The frontend CSS heavily relies on `vmin` units, indicating a strong focus on making the UI scale across different screen sizes, although testing would be needed to confirm effectiveness.
 - **Complexity**: The `Trooper.js`, `client.html`, `AbilityEffect.js`, and `StatusEffect.js` files are particularly large and complex, handling a wide range of interconnected game mechanics and UI elements.
-- **Potential Areas for Refinement**: - Externalizing static game data (weapons, abilities, etc.) from code files. - Potentially breaking down the large inline `<script>` in `client.html` into more focused modules. - More robust error handling, especially around WebSocket communication and game state transitions. - Further optimization of collision detection if performance becomes an issue. \* Adding comments to explain complex logic sections.
+- **Potential Areas for Refinement**:
+  - Externalizing static game data (weapons, abilities, etc.) from code files.
+  - Potentially breaking down the large inline `<script>` in `client.html` into more focused modules.
+  - More robust error handling, especially around WebSocket communication and game state transitions.
+  - Further optimization of collision detection if performance becomes an issue.
+  - Adding comments to explain complex logic sections.
 
-This report covers the structure, functionality, and interactions of the provided code files in extensive detail, outlining the architecture and core mechanics of the Thunder Warrior: Genesis game project.
-
----
+## This report covers the structure, functionality, and interactions of the provided code files in extensive detail, outlining the architecture and core mechanics of the Thunder Warrior: Genesis game project.
 
 ---
 
 # **Detailed Asset and Mechanics Analysis**
 
-Here is an extensive and incredibly detailed description of every Gun, Armor piece, Saber, Ability, Buff, Debuff, and Modification defined within the provided codebase.
-
----
+## Here is an extensive and incredibly detailed description of every Gun, Armor piece, Saber, Ability, Buff, Debuff, and Modification defined within the provided codebase.
 
 ## I. Armor
 
@@ -525,7 +651,6 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 - **Class**: Defensive
 - **Description**: Standard issue armor, balanced stats.
-
   1.  **Thunder Warrior Helmet**
       - **Base Defense**: 2.5
       - **Weight**: 9
@@ -554,7 +679,8 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
       - **Base Defense**: 2
       - **Weight**: 7
       - **Description**: 'Description'
-      - **Slot**: Left Arm \* **Stats Contributions**: Balanced contributions.
+      - **Slot**: Left Arm
+      - **Stats Contributions**: Balanced contributions.
 
 ---
 
@@ -562,7 +688,6 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 - **Class**: Defensive
 - **Description**: Focuses on Thaumaturgy stats and melee defense, heavier than Thunder Warrior set.
-
   1.  **Sith Helmet**
       - **Base Defense**: 2.083
       - **Weight**: 13.5
@@ -591,7 +716,8 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
       - **Base Defense**: 1.667
       - **Weight**: 10.5
       - **Description**: 'Description'
-      - **Slot**: Left Arm \* **Stats Contributions**: Similar focus as the helmet.
+      - **Slot**: Left Arm
+      - **Stats Contributions**: Similar focus as the helmet.
 
 ---
 
@@ -599,7 +725,6 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 - **Class**: Defensive
 - **Description**: Focuses on Stamina stats, evasion, ranged defense, and stealth. Lighter than Thunder Warrior set.
-
   1.  **Shadow Helmet**
       - **Base Defense**: 1.25
       - **Weight**: 5.4
@@ -628,7 +753,8 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
       - **Base Defense**: 1
       - **Weight**: 4.2
       - **Description**: 'Description'
-      - **Slot**: Left Arm \* **Stats Contributions**: Similar focus as the helmet.
+      - **Slot**: Left Arm
+      - **Stats Contributions**: Similar focus as the helmet.
 
 ---
 
@@ -636,7 +762,6 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 - **Class**: Defensive
 - **Description**: Appears to be a lower-stat set, possibly cosmetic or for events. Generally low contributions across the board compared to other sets.
-
   1.  **Festive Helmet**
       - **Base Defense**: 1.0415
       - **Weight**: 7.65
@@ -665,7 +790,8 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
       - **Base Defense**: 0.8335
       - **Weight**: 5.95
       - **Description**: 'Description'
-      - **Slot**: Left Arm \* **Stats Contributions**: Low, balanced contributions.
+      - **Slot**: Left Arm
+      - **Stats Contributions**: Low, balanced contributions.
 
 ---
 
@@ -680,7 +806,11 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
 - **range**: Effective range where projectiles deal maximum damage. Damage falls off up to 3x this range.
 - **firingSpeed**: Time (in ms) between shots. Lower is faster.
 - **projectileSpeed**: Velocity of the projectile.
-- **heat**: Object defining heat mechanics: - `max`: Maximum heat capacity / Time (ms) to cool from max heat. - `increase`: Heat generated per shot (ms). - `coolWaitTime`: Delay (ms) after firing before cooling starts. - `overheatTime`: Duration (ms) the weapon is disabled when overheated.
+- **heat**: Object defining heat mechanics:
+  - `max`: Maximum heat capacity / Time (ms) to cool from max heat.
+  - `increase`: Heat generated per shot (ms).
+  - `coolWaitTime`: Delay (ms) after firing before cooling starts.
+  - `overheatTime`: Duration (ms) the weapon is disabled when overheated.
 - **src**: Image source file name.
 - **projectileColor**: Color identifier for the projectile visual.
 - **type**: Display name of the weapon.
@@ -733,7 +863,8 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
     - **Heat**: Max 3500, Increase 437.5, Wait 2000, Overheat 4500
     - **Crit Chance/Dmg**: 10% / 14%
     - **Accuracy/Acc Dmg**: 2.25% / 4.75%
-    - **Precision**: 1.75 \* **Init Time**: 0.4s
+    - **Precision**: 1.75
+    - **Init Time**: 0.4s
 
 ---
 
@@ -773,7 +904,8 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
     - **Heat**: Max 2000, Increase 80, Wait 4250, Overheat 5000
     - **Crit Chance/Dmg**: 7% / 12%
     - **Accuracy/Acc Dmg**: 2% / 4%
-    - **Precision**: 1.5 \* **Init Time**: 2s
+    - **Precision**: 1.5
+    - **Init Time**: 2s
 
 ---
 
@@ -813,7 +945,8 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
     - **Heat**: Max 3000, Increase 1670, Wait 4400, Overheat 1500
     - **Crit Chance/Dmg**: 22.5% / 20%
     - **Accuracy/Acc Dmg**: 6% / 8.5%
-    - **Precision**: 5.5 \* **Init Time**: 0.8s
+    - **Precision**: 5.5
+    - **Init Time**: 0.8s
 
 ---
 
@@ -824,9 +957,33 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 **Base Stats:**
 
 - **initTime**: Delay after equipping before the weapon can be used.
-- **block**: Object containing blocking stats: - `minTime`: Minimum duration a block must be held. - `parryTime`: Duration of the parry window at the start of a block. - `wait`: Cooldown after blocking before another action can be taken. - `stun`: Duration target is stunned when their melee attack is blocked. - `knockback`: Force applied to target when their melee attack is blocked. - `stabAngle`: Angle (degrees) within which melee attacks can be blocked. - `projectileAngle`: Angle (degrees) within which projectiles can be blocked/reflected. - `reflectionRange`: Range of reflected projectiles.
-  \_ \_ `reflectionSpread`: Spread angle (degrees) of reflected projectiles. - `reflectionDrain`: Stamina cost for blocking a projectile. - `enemyStabDrain`: Stamina drained from attacker when their melee attack is blocked. - `ownStabDrain`: Stamina cost for blocking a melee attack. - `thaumAngle`: Angle (degrees) within which Thaumaturgy effects can be blocked (if applicable). - `enemyThaumDrain`: Stamina drained from attacker when their Thaumaturgy effect is blocked. - `ownThaumDrain`: Stamina cost for blocking a Thaumaturgy effect. - `continualDrain`: Stamina drained per second while holding block. \* `imediateDrain`: Initial stamina cost to start blocking.
-- **strike**: Object containing striking stats: - `delay`: Time between initiating strike and damage being applied. - `wait`: Cooldown after a strike before another action can be taken. - `damage`: Base damage per strike hit (modified by mods, level, rarity). Base values listed are multiplied by 3 in the code. - `knockback`: Force applied to target hit by a strike. - `angle`: Angle (degrees) of the strike arc. - `radius`: Range/radius of the strike arc. - `cost`: Stamina cost per strike. - `duration`: Total animation time for a strike (defined as 1s for all sabers).
+- **block**: Object containing blocking stats:
+  - `minTime`: Minimum duration a block must be held.
+  - `parryTime`: Duration of the parry window at the start of a block.
+  - `wait`: Cooldown after blocking before another action can be taken.
+  - `stun`: Duration target is stunned when their melee attack is blocked.
+  - `knockback`: Force applied to target when their melee attack is blocked.
+  - `stabAngle`: Angle (degrees) within which melee attacks can be blocked.
+  - `projectileAngle`: Angle (degrees) within which projectiles can be blocked/reflected.
+  - `reflectionRange`: Range of reflected projectiles.
+  - `reflectionSpread`: Spread angle (degrees) of reflected projectiles.
+  - `reflectionDrain`: Stamina cost for blocking a projectile.
+  - `enemyStabDrain`: Stamina drained from attacker when their melee attack is blocked.
+  - `ownStabDrain`: Stamina cost for blocking a melee attack.
+  - `thaumAngle`: Angle (degrees) within which Thaumaturgy effects can be blocked (if applicable).
+  - `enemyThaumDrain`: Stamina drained from attacker when their Thaumaturgy effect is blocked.
+  - `ownThaumDrain`: Stamina cost for blocking a Thaumaturgy effect.
+  - `continualDrain`: Stamina drained per second while holding block.
+  - `imediateDrain`: Initial stamina cost to start blocking.
+- **strike**: Object containing striking stats:
+  - `delay`: Time between initiating strike and damage being applied.
+  - `wait`: Cooldown after a strike before another action can be taken.
+  - `damage`: Base damage per strike hit (modified by mods, level, rarity). Base values listed are multiplied by 3 in the code.
+  - `knockback`: Force applied to target hit by a strike.
+  - `angle`: Angle (degrees) of the strike arc.
+  - `radius`: Range/radius of the strike arc.
+  - `cost`: Stamina cost per strike.
+  - `duration`: Total animation time for a strike (defined as 1s for all sabers).
 - **criticalChance/Damage**: Base physical critical hit stats (%).
 - **accuracy/accuracyDamage**: Base physical accuracy stats (%).
 - **precision**: Base physical precision value.
@@ -864,7 +1021,8 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
     - **Block**: Parry 0.2s, Min Time 0.75s, Wait 0.8s, Stun 0.075s, Knockback 0.2, Proj Angle 50, Stab Angle 50, Cont Drain 400, Init Drain 600.
     - **Crit Chance/Dmg**: 15% / 25%
     - **Accuracy/Acc Dmg**: 5% / 6%
-    - **Precision**: 5 \* **Init Time**: 0.85s
+    - **Precision**: 5
+    - **Init Time**: 0.85s
 
 ---
 
@@ -892,7 +1050,8 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
     - **Block**: Parry 0.75s, Min Time 0.75s, Wait 0.15s, Stun 0.6s, Knockback 2.25, Proj Angle 85, Stab Angle 100, Cont Drain 325, Init Drain 100. (Very low initial cost).
     - **Crit Chance/Dmg**: 3.75% / 8.5%
     - **Accuracy/Acc Dmg**: 2.25% / 3%
-    - **Precision**: 1.5 \* **Init Time**: 0.4s
+    - **Precision**: 1.5
+    - **Init Time**: 0.4s
 
 ---
 
@@ -906,10 +1065,22 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
     - **Accuracy/Acc Dmg**: 2.5% / 5%
     - **Precision**: 2.25
     - **Init Time**: 0.75s
-2.  **Boracite Plasmablade (Cyan)** - **Description**: A less efficient but stronger version of the Topaz, suited for high-Stamina builds. Balanced capabilities with higher costs. - **Strike**: Damage 275 (x3=825), Delay 0.5s, Wait 1.75s, Radius 4.5, Angle 60, Knockback 1.4, Cost 510. - **Block**: Parry 0.7s, Min Time 0.7s, Wait 0.35s, Stun 0.35s, Knockback 1.5, Proj Angle 65, Stab Angle 82.5, Cont Drain 510, Init Drain 765. (High costs).
-    What does "par" mean in golf? - **Crit Chance/Dmg**: 7.5% / 27.5% - **Accuracy/Acc Dmg**: 3% / 6.75% - **Precision**: 2.75 - **Init Time**: 0.35s
-3.  **Alabaster Plasmablade (White)** - **Description**: A more efficient but weaker version of the Topaz, suited for low-Stamina builds. Balanced capabilities with lower costs. - **Strike**: Damage 230 (x3=690), Delay 0.725s, Wait 2.125s, Radius 3.5, Angle 45, Knockback 1.1, Cost 210.
-    \_ \_ **Block**: Parry 0.4s, Min Time 0.4s, Wait 0.65s, Stun 0.2s, Knockback 1, Proj Angle 55, Stab Angle 70, Cont Drain 225, Init Drain 365. (Low costs). - **Crit Chance/Dmg**: 4% / 12.5% - **Accuracy/Acc Dmg**: 2.3% / 4.25% - **Precision**: 1.9 \* **Init Time**: 1.5s
+2.  **Boracite Plasmablade (Cyan)**
+    - **Description**: A less efficient but stronger version of the Topaz, suited for high-Stamina builds. Balanced capabilities with higher costs.
+    - **Strike**: Damage 275 (x3=825), Delay 0.5s, Wait 1.75s, Radius 4.5, Angle 60, Knockback 1.4, Cost 510.
+    - **Block**: Parry 0.7s, Min Time 0.7s, Wait 0.35s, Stun 0.35s, Knockback 1.5, Proj Angle 65, Stab Angle 82.5, Cont Drain 510, Init Drain 765. (High costs).
+    - **Crit Chance/Dmg**: 7.5% / 27.5%
+    - **Accuracy/Acc Dmg**: 3% / 6.75%
+    - **Precision**: 2.75
+    - **Init Time**: 0.35s
+3.  **Alabaster Plasmablade (White)**
+    - **Description**: A more efficient but weaker version of the Topaz, suited for low-Stamina builds. Balanced capabilities with lower costs.
+    - **Strike**: Damage 230 (x3=690), Delay 0.725s, Wait 2.125s, Radius 3.5, Angle 45, Knockback 1.1, Cost 210.
+    - **Block**: Parry 0.4s, Min Time 0.4s, Wait 0.65s, Stun 0.2s, Knockback 1, Proj Angle 55, Stab Angle 70, Cont Drain 225, Init Drain 365. (Low costs).
+    - **Crit Chance/Dmg**: 4% / 12.5%
+    - **Accuracy/Acc Dmg**: 2.3% / 4.25%
+    - **Precision**: 1.9
+    - **Init Time**: 1.5s
 
 ---
 
@@ -917,7 +1088,7 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 
 Abilities are active skills triggered by player input, consuming Stamina or Thaumaturgy. They are defined in the `constructAbilities` function in `game/client.html` and their logic is implemented in `game/AbilityEffect.js`.
 
-**Common Properties (Defined in `client.html`)**:
+**Common Properties (Defined in `client.html`):**
 
 - **name**: Display name.
 - **refrence**: Key used to link to the logic in `AbilityEffect.js`.
@@ -990,14 +1161,126 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
     - **Activation/Duration/Cooldown**: 0.5s / Instant / 20s
     - **Cost**: 600 Stamina
     - **Prerequisites**: Launch, Sprint
-9.  **Change Weapon (`ChangeWeapon`)** - **Class/Subclass**: Saber / Utility - **Effect**: Switches between the equipped ranged and melee weapons. The switch takes time defined by the weapons themselves. - **Activation/Duration/Cooldown**: 0s / Until Switched / 10s - **Cost**: 440 Stamina - **Prerequisites**: None 10. **Flurry Of Blows (`FlurryOfBlows`)** - **Class/Subclass**: Saber / Offense - **Effect**: Increases melee attack speed by 75% for 8.5 seconds. Applies "meleeSpeed" status effect. - **Activation/Duration/Cooldown**: 0.8s / 8.5s / 29s
-    M\* **Cost**: 540 Stamina, 25 Thaumaturgy
-    - **Prerequisites**: Change Weapon 11. **Power Strike (`PowerStrike`)** - **Class/Subclass**: Saber / Strike - **Effect**: Performs 1 enhanced saber strike. Deals 1.25x damage, 1.4x radius, 1.6x knockback. Hits apply a 40% slow ("slow" status) for 3.5 seconds. Uses weapon's crit/accuracy stats modified by ability multipliers (e.g., 0.8x Crit Chance, 1.6x Crit Dmg). Costs 1.5x normal strike stamina. - **Activation/Duration/Cooldown**: 0.3s / Saber Speed / 17.5s - **Cost**: 520 Stamina + 1.5x Saber Strike Cost - **Prerequisites**: Flurry Of Blows 12. **Bleed Strike (`BleedStrike`)** - **Class/Subclass**: Saber / Strike - **Effect**: Performs 2 enhanced saber strikes. Deals 1.3x damage, 1.2x radius. Hits apply a bleed ("damageOverTime" status) dealing 100 damage/sec for 4 seconds (damage scales with stats). Modifies weapon crit/accuracy. Costs 1.1x normal strike stamina. - **Activation/Duration/Cooldown**: 0.5s / Saber Speed / 20s - **Cost**: 480 Stamina + 1.1x Saber Strike Cost - **Prerequisites**: Power Strike 13. **Critical Strike (`CriticalStrike`)** - **Class/Subclass**: Saber / Strike - **Effect**: Performs 2 enhanced saber strikes. Deals 1.2x damage. Hits apply 67% defense reduction ("expose" status) for 7 seconds. Greatly enhanced crit/accuracy stats (e.g., 1.9x Crit Chance, 1.4x Crit Dmg). Costs 0.8x normal strike stamina. - **Activation/Duration/Cooldown**: 0.2s / Saber Speed / 15s - **Cost**: 440 Stamina + 0.8x Saber Strike Cost - **Prerequisites**: Power Strike 14. **Swift Strike (`SwiftStrike`)** - **Class/Subclass**: Saber / Strike - **Effect**: Performs 4 rapid saber strikes. Deals 0.6x damage, 0.9x radius, 0.5x knockback. Hits apply 70% damage reduction ("weakness" status) for 3 seconds. Reduced crit/accuracy stats. Costs 0.6x normal strike stamina. Has 0.5x strike cooldown multiplier. - **Activation/Duration/Cooldown**: 0.25s / Saber Speed / 25s - **Cost**: 560 Stamina + 0.6x Saber Strike Cost - **Prerequisites**: Power Strike 15. **Traditional Block (`SimpleBlock`)** - **Class/Subclass**: Saber / Block - **Effect**: Standard saber block. Can block projectiles and melee strikes. Can parry. Uses saber's base blocking stats. Active while key is held (respecting saber's min block time). - **Activation/Duration/Cooldown**: 0s / Until Released / 10s - **Cost**: Saber Block Costs - **Prerequisites**: Change Weapon 16. **Thaumaturgy Block (`ThaumBlock`)** - **Class/Subclass**: Saber / Block - **Effect**: Blocks projectiles, melee, AND Thaumaturgy attacks. Cannot parry. Increased stamina costs (1.25x cost mult, 1.5x drain mult based on saber stats). Active while key is held. - **Activation/Duration/Cooldown**: 0s / Until Released / 5s - **Cost**: 30 Thaumaturgy + Saber Block Costs (modified) - **Prerequisites**: Traditional Block 17. **Parrying Thaumaturgy Block (`ThaumBlockParry`)** - **Class/Subclass**: Saber / Block - **Effect**: Blocks projectiles, melee, and Thaumaturgy. Can parry (with 0.5x parry time multiplier based on saber stat). Significantly increased stamina costs (1.5x cost mult, 2x drain mult). Active while key is held. - **Activation/Duration/Cooldown**: 0s / Until Released / 30s - **Cost**: 120 Thaumaturgy + Saber Block Costs (modified) - **Prerequisites**: Thaumaturgy Block, Swift Strike 18. **Heal (`Heal`)** - **Class/Subclass**: Combat / Heal - **Effect**: Instantly restores 100 health. Cannot be used at full health.
-      C \_ **Activation/Duration/Cooldown**: 2s / Instant / 90s - **Cost**: 1000 Stamina, 50 Thaumaturgy - **Prerequisites**: None 19. **Oneness (`Oneness`)** - **Class/Subclass**: Combat / Buff - **Effect**: Reduces character weight by 50% for 24 seconds. Applies "weightless" status effect. - **Activation/Duration/Cooldown**: 6s / 24s / 52s - **Cost**: 800 Stamina, 10 Thaumaturgy - **Prerequisites**: Heal 20. **Preparation (`Preparation`)** - **Class/Subclass**: Combat / Buff
-      t\* **Effect**: After a long activation time, grants significant boosts (1.5x multiplier) to defense, firing speed, melee speed, cooling, jump, movement speed, and damage for 10 seconds. Applies "prepared" status effect.
-    - **Activation/Duration/Cooldown**: 15s / 10s / 38s - **Cost**: 900 Stamina, 15 Thaumaturgy - **Prerequisites**: Oneness 21. **Heal Over Time (`HealOverTime`)** - **Class/Subclass**: Combat / Heal - **Effect**: Heals 25 health per second for 10 seconds. Applies "healOverTime" status effect. - **Activation/Duration/Cooldown**: 2s / 10s / 75s - **Cost**: 700 Stamina, 35 Thaumaturgy - **Prerequisites**: Heal 22. **Defensive (`Defensive`)** - **Class/Subclass**: Combat / Defense - **Effect**: Increases defense by 50% for 8 seconds. Applies "defense" status effect. - **Activation/Duration/Cooldown**: 0.6s / 8s / 17s - **Cost**: 600 Stamina - **Prerequisites**: Heal Over Time, Oneness 23. **Shield (`Shield`)**
-      A \_ **Class/Subclass**: Combat / Defense - **Effect**: Greatly increases defense by 200% (3x total) for a brief 2 seconds. Applies "defense" status effect. - **Activation/Duration/Cooldown**: 0s / 2s / 23s - **Cost**: 560 Stamina - **Prerequisites**: Defensive 24. **Fast Fire (`FastFire`)**
-      Note: This response is an exact copy of the provided text. - **Class/Subclass**: Combat / Offense - **Effect**: Increases ranged weapon firing speed by 100% (2x) for 12 seconds. Applies "firingSpeed" status effect. - **Activation/Duration/Cooldown**: 4s / 12s / 32s - **Cost**: 520 Stamina, 15 Thaumaturgy - **Prerequisites**: Heal 25. **Annihilation (`Annihilation`)** - **Class/Subclass**: Combat / Offense - **Effect**: Increases all damage output by 30% for 7 seconds. Applies "damaging" status effect. - **Activation/Duration/Cooldown**: 0.5s / 7s / 35s - **Cost**: 640 Stamina - **Prerequisites**: Fast Fire 26. **Snipe Shot (`SnipeShot`)** - **Class/Subclass**: Combat / Shot - **Effect**: Fires 1 enhanced shot from the equipped ranged weapon. Deals 1.5x damage, 2x range, 1.6x projectile speed, 0.7x spread. Enhanced crit/accuracy (e.g., 1.5x Crit Chance, 1.35x Crit Dmg). Costs 2x heat. Slower fire rate (1.45x firing speed multiplier). Deals base 8 Stamina damage. - **Activation/Duration/Cooldown**: 0.25s / Instant / 32s - **Cost**: 380 Stamina + 2x Gun Heat Cost - **Prerequisites**: Annihilation 27. **Triple Shot (`TripleShot`)** - **Class/Subclass**: Combat / Shot - **Effect**: Fires 3 enhanced shots. Deals 1.25x damage, 1.15x range, 1.4x projectile speed, 0.8x spread. Greatly enhanced crit (e.g., 1.75x Crit Chance, 1.9x Crit Dmg). Costs 0.7x heat. Faster fire rate (0.7x firing speed mult). Deals base 4 Stamina damage per shot. - **Activation/Duration/Cooldown**: 0.35s / Instant / 23s - **Cost**: 430 Stamina + 0.7x Gun Heat Cost (per shot) - **Prerequisites**: Fast Fire 28. **Burst Shot (`BurstShot`)** - **Class/Subclass**: Combat / Shot - **Effect**: Fires 10 rapid shots. Deals 0.25x damage, 0.6x range, 0.65x projectile speed, 1.2x spread. Reduced crit/accuracy. Costs 0.2x heat. Much faster fire rate (0.25x firing speed mult). Deals base 2 Stamina damage per shot. - **Activation/Duration/Cooldown**: 0.15s / Instant / 27s - **Cost**: 460 Stamina + 0.2x Gun Heat Cost (per shot) - **Prerequisites**: Triple Shot, Annihilation
+9.  **Change Weapon (`ChangeWeapon`)**
+    - **Class/Subclass**: Saber / Utility
+    - **Effect**: Switches between the equipped ranged and melee weapons. The switch takes time defined by the weapons themselves.
+    - **Activation/Duration/Cooldown**: 0s / Until Switched / 10s
+    - **Cost**: 440 Stamina
+    - **Prerequisites**: None
+10. **Flurry Of Blows (`FlurryOfBlows`)**
+    - **Class/Subclass**: Saber / Offense
+    - **Effect**: Increases melee attack speed by 75% for 8.5 seconds. Applies "meleeSpeed" status effect.
+    - **Activation/Duration/Cooldown**: 0.8s / 8.5s / 29s
+    - **Cost**: 540 Stamina, 25 Thaumaturgy
+    - **Prerequisites**: Change Weapon
+11. **Power Strike (`PowerStrike`)**
+    - **Class/Subclass**: Saber / Strike
+    - **Effect**: Performs 1 enhanced saber strike. Deals 1.25x damage, 1.4x radius, 1.6x knockback. Hits apply a 40% slow ("slow" status) for 3.5 seconds. Uses weapon's crit/accuracy stats modified by ability multipliers (e.g., 0.8x Crit Chance, 1.6x Crit Dmg). Costs 1.5x normal strike stamina.
+    - **Activation/Duration/Cooldown**: 0.3s / Saber Speed / 17.5s
+    - **Cost**: 520 Stamina + 1.5x Saber Strike Cost
+    - **Prerequisites**: Flurry Of Blows
+12. **Bleed Strike (`BleedStrike`)**
+    - **Class/Subclass**: Saber / Strike
+    - **Effect**: Performs 2 enhanced saber strikes. Deals 1.3x damage, 1.2x radius. Hits apply a bleed ("damageOverTime" status) dealing 100 damage/sec for 4 seconds (damage scales with stats). Modifies weapon crit/accuracy. Costs 1.1x normal strike stamina.
+    - **Activation/Duration/Cooldown**: 0.5s / Saber Speed / 20s
+    - **Cost**: 480 Stamina + 1.1x Saber Strike Cost
+    - **Prerequisites**: Power Strike
+13. **Critical Strike (`CriticalStrike`)**
+    - **Class/Subclass**: Saber / Strike
+    - **Effect**: Performs 2 enhanced saber strikes. Deals 1.2x damage. Hits apply 67% defense reduction ("expose" status) for 7 seconds. Greatly enhanced crit/accuracy stats (e.g., 1.9x Crit Chance, 1.4x Crit Dmg). Costs 0.8x normal strike stamina.
+    - **Activation/Duration/Cooldown**: 0.2s / Saber Speed / 15s
+    - **Cost**: 440 Stamina + 0.8x Saber Strike Cost
+    - **Prerequisites**: Power Strike
+14. **Swift Strike (`SwiftStrike`)**
+    - **Class/Subclass**: Saber / Strike
+    - **Effect**: Performs 4 rapid saber strikes. Deals 0.6x damage, 0.9x radius, 0.5x knockback. Hits apply 70% damage reduction ("weakness" status) for 3 seconds. Reduced crit/accuracy stats. Costs 0.6x normal strike stamina. Has 0.5x strike cooldown multiplier.
+    - **Activation/Duration/Cooldown**: 0.25s / Saber Speed / 25s
+    - **Cost**: 560 Stamina + 0.6x Saber Strike Cost
+    - **Prerequisites**: Power Strike
+15. **Traditional Block (`SimpleBlock`)**
+    - **Class/Subclass**: Saber / Block
+    - **Effect**: Standard saber block. Can block projectiles and melee strikes. Can parry. Uses saber's base blocking stats. Active while key is held (respecting saber's min block time).
+    - **Activation/Duration/Cooldown**: 0s / Until Released / 10s
+    - **Cost**: Saber Block Costs
+    - **Prerequisites**: Change Weapon
+16. **Thaumaturgy Block (`ThaumBlock`)**
+    - **Class/Subclass**: Saber / Block
+    - **Effect**: Blocks projectiles, melee, AND Thaumaturgy attacks. Cannot parry. Increased stamina costs (1.25x cost mult, 1.5x drain mult based on saber stats). Active while key is held.
+    - **Activation/Duration/Cooldown**: 0s / Until Released / 5s
+    - **Cost**: 30 Thaumaturgy + Saber Block Costs (modified)
+    - **Prerequisites**: Traditional Block
+17. **Parrying Thaumaturgy Block (`ThaumBlockParry`)**
+    - **Class/Subclass**: Saber / Block
+    - **Effect**: Blocks projectiles, melee, and Thaumaturgy. Can parry (with 0.5x parry time multiplier based on saber stat). Significantly increased stamina costs (1.5x cost mult, 2x drain mult). Active while key is held.
+    - **Activation/Duration/Cooldown**: 0s / Until Released / 30s
+    - **Cost**: 120 Thaumaturgy + Saber Block Costs (modified)
+    - **Prerequisites**: Thaumaturgy Block, Swift Strike
+18. **Heal (`Heal`)**
+    - **Class/Subclass**: Combat / Heal
+    - **Effect**: Instantly restores 100 health. Cannot be used at full health.
+    - **Activation/Duration/Cooldown**: 2s / Instant / 90s
+    - **Cost**: 1000 Stamina, 50 Thaumaturgy
+    - **Prerequisites**: None
+19. **Oneness (`Oneness`)**
+    - **Class/Subclass**: Combat / Buff
+    - **Effect**: Reduces character weight by 50% for 24 seconds. Applies "weightless" status effect.
+    - **Activation/Duration/Cooldown**: 6s / 24s / 52s
+    - **Cost**: 800 Stamina, 10 Thaumaturgy
+    - **Prerequisites**: Heal
+20. **Preparation (`Preparation`)**
+    - **Class/Subclass**: Combat / Buff
+    - **Effect**: After a long activation time, grants significant boosts (1.5x multiplier) to defense, firing speed, melee speed, cooling, jump, movement speed, and damage for 10 seconds. Applies "prepared" status effect.
+    - **Activation/Duration/Cooldown**: 15s / 10s / 38s
+    - **Cost**: 900 Stamina, 15 Thaumaturgy
+    - **Prerequisites**: Oneness
+21. **Heal Over Time (`HealOverTime`)**
+    - **Class/Subclass**: Combat / Heal
+    - **Effect**: Heals 25 health per second for 10 seconds. Applies "healOverTime" status effect.
+    - **Activation/Duration/Cooldown**: 2s / 10s / 75s
+    - **Cost**: 700 Stamina, 35 Thaumaturgy
+    - **Prerequisites**: Heal
+22. **Defensive (`Defensive`)**
+    - **Class/Subclass**: Combat / Defense
+    - **Effect**: Increases defense by 50% for 8 seconds. Applies "defense" status effect.
+    - **Activation/Duration/Cooldown**: 0.6s / 8s / 17s
+    - **Cost**: 600 Stamina
+    - **Prerequisites**: Heal Over Time, Oneness
+23. **Shield (`Shield`)**
+    - **Class/Subclass**: Combat / Defense
+    - **Effect**: Greatly increases defense by 200% (3x total) for a brief 2 seconds. Applies "defense" status effect.
+    - **Activation/Duration/Cooldown**: 0s / 2s / 23s
+    - **Cost**: 560 Stamina
+    - **Prerequisites**: Defensive
+24. **Fast Fire (`FastFire`)**
+    - **Class/Subclass**: Combat / Offense
+    - **Effect**: Increases ranged weapon firing speed by 100% (2x) for 12 seconds. Applies "firingSpeed" status effect.
+    - **Activation/Duration/Cooldown**: 4s / 12s / 32s
+    - **Cost**: 520 Stamina, 15 Thaumaturgy
+    - **Prerequisites**: Heal
+25. **Annihilation (`Annihilation`)**
+    - **Class/Subclass**: Combat / Offense
+    - **Effect**: Increases all damage output by 30% for 7 seconds. Applies "damaging" status effect.
+    - **Activation/Duration/Cooldown**: 0.5s / 7s / 35s
+    - **Cost**: 640 Stamina
+    - **Prerequisites**: Fast Fire
+26. **Snipe Shot (`SnipeShot`)**
+    - **Class/Subclass**: Combat / Shot
+    - **Effect**: Fires 1 enhanced shot from the equipped ranged weapon. Deals 1.5x damage, 2x range, 1.6x projectile speed, 0.7x spread. Enhanced crit/accuracy (e.g., 1.5x Crit Chance, 1.35x Crit Dmg). Costs 2x heat. Slower fire rate (1.45x firing speed multiplier). Deals base 8 Stamina damage.
+    - **Activation/Duration/Cooldown**: 0.25s / Instant / 32s
+    - **Cost**: 380 Stamina + 2x Gun Heat Cost
+    - **Prerequisites**: Annihilation
+27. **Triple Shot (`TripleShot`)**
+    - **Class/Subclass**: Combat / Shot
+    - **Effect**: Fires 3 enhanced shots. Deals 1.25x damage, 1.15x range, 1.4x projectile speed, 0.8x spread. Greatly enhanced crit (e.g., 1.75x Crit Chance, 1.9x Crit Dmg). Costs 0.7x heat. Faster fire rate (0.7x firing speed mult). Deals base 4 Stamina damage per shot.
+    - **Activation/Duration/Cooldown**: 0.35s / Instant / 23s
+    - **Cost**: 430 Stamina + 0.7x Gun Heat Cost (per shot)
+    - **Prerequisites**: Fast Fire
+28. **Burst Shot (`BurstShot`)**
+    - **Class/Subclass**: Combat / Shot
+    - **Effect**: Fires 10 rapid shots. Deals 0.25x damage, 0.6x range, 0.65x projectile speed, 1.2x spread. Reduced crit/accuracy. Costs 0.2x heat. Much faster fire rate (0.25x firing speed mult). Deals base 2 Stamina damage per shot.
+    - **Activation/Duration/Cooldown**: 0.15s / Instant / 27s
+    - **Cost**: 460 Stamina + 0.2x Gun Heat Cost (per shot)
+    - **Prerequisites**: Triple Shot, Annihilation
 
 ---
 
@@ -1034,7 +1317,7 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
     - **Cost**: 95 Thaumaturgy
     - **Prerequisites**: Hover
 6.  **Recovery (`Recovery`)**
-    t \_ **Class/Subclass**: Buff / Support
+    - **Class/Subclass**: Buff / Support
     - **Effect**: Instantly restores 500 stamina to the user.
     - **Activation/Duration/Cooldown**: 5s / Instant / 20s
     - **Cost**: 70 Thaumaturgy
@@ -1051,13 +1334,114 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
     - **Activation/Duration/Cooldown**: 8s / Instant / 17.5s
     - **Cost**: 125 Thaumaturgy
     - **Prerequisites**: Fortification
-9.  **HealAura (`HealAura`)** - **Class/Subclass**: Buff / Heal - **Effect**: Affects allies in 360° radius of 9. Heals 50 health per second for 9 seconds ("healOverTime" logic applied in `AbilityEffect`).
-    Note: This response is an exact copy of the provided text. - **Activation/Duration/Cooldown**: 1.25s / 9s / 26s - **Cost**: 105 Thaumaturgy - **Prerequisites**: Group Preparation 10. **Push (`Push`)** - **Class/Subclass**: Combat / Transpose - **Effect**: Affects enemies in a 75° cone up to 7 range. Deals 360 Thaumaturgy damage. Knocks targets away (force 3.5, y-force 0.75). - **Activation/Duration/Cooldown**: 0.3s / Instant / 13s - **Cost**: 120 Stamina, 95 Thaumaturgy - **Prerequisites**: None 11. **Pull (`Pull`)** - **Class/Subclass**: Combat / Transpose - **Effect**: Affects enemies in a 60° cone up to 9 range. Deals 240 Thaumaturgy damage. Pulls targets closer (force 3, y-force 0.5). - **Activation/Duration/Cooldown**: 0.2s / Instant / 15s - **Cost**: 160 Stamina, 115 Thaumaturgy - **Prerequisites**: Push 12. **Life Drain (`LifeDrain`)** - **Class/Subclass**: Combat / Heal - **Effect**: Affects enemies in a 90° cone up to 12.5 range. Deals 500 Thaumaturgy damage. Heals the user for 50% of the damage dealt. Solo ability. - **Activation/Duration/Cooldown**: 0.3s / Instant / 24s - **Cost**: 80 Thaumaturgy - **Prerequisites**: Pull 13. **Repulse (`Repulse`)**
-    A \_ **Class/Subclass**: Combat / Transpose - **Effect**: Affects enemies in 360° radius of 14. Initially pulls targets closer (force 2.5, y-force 0.5) and deals 700 Thaumaturgy damage over 0.25s activation. Then, after 2.5s duration, pushes targets far away (force 6, y-force 0.9). Solo and Ultimate ability. - **Activation/Duration/Cooldown**: 0.175s / 2.5s / 32s - **Cost**: 240 Stamina, 130 Thaumaturgy - **Prerequisites**: Life Drain 14. **Weaken (`Weaken`)** - **Class/Subclass**: Control / Debuff - **Effect**: Affects enemies in a 75° cone up to 9 range. Deals 450 Thaumaturgy damage. Applies 40% damage reduction ("weakness" status) for 7.5 seconds. - **Activation/Duration/Cooldown**: 0.3s / Instant / 21s - **Cost**: 75 Thaumaturgy - **Prerequisites**: Push 15. **Punish (`Punish`)** - **Class/Subclass**: Combat / Damage - **Effect**: Affects enemies in a 60° cone up to 10.5 range. Deals 360 Thaumaturgy damage. Solo ability. - **Activation/Duration/Cooldown**: 0.65s / Instant / 14s - **Cost**: 75 Thaumaturgy - **Prerequisites**: Weaken 16. **Damage Aura (`DamageAura`)** - **Class/Subclass**: Combat / Damage - **Effect**: Affects enemies in 360° radius of 12 for 10 seconds. Deals 120 Thaumaturgy damage per second and applies 70% slow ("slow" status) each second. Solo and Ultimate ability. - **Activation/Duration/Cooldown**: 1.5s / 10s / 40s - **Cost**: 300 Thaumaturgy - **Prerequisites**: Punish 17. **Expose (`Expose`)** - **Class/Subclass**: Combat / Debuff - **Effect**: Affects enemies in a 45° cone up to 7.5 range. Deals 400 Thaumaturgy damage. Applies 30% increased damage taken ("expose" status, 1/1.3 defense mult) for 6 seconds. Solo ability. - **Activation/Duration/Cooldown**: 0.6s / Instant / 22s - **Cost**: 80 Thaumaturgy - **Prerequisites**: Punish 18. **Tether (`Tether`)** - **Class/Subclass**: Control / Immobalize - **Effect**: Affects enemies in a 90° cone up to 12 range. Deals 350 Thaumaturgy damage. Applies 100% increased weight ("heavy" status) and 30% reduced speed ("slow" status) for 7 seconds. - **Activation/Duration/Cooldown**: 0.4s / Instant / 20s - **Cost**: 100 Stamina, 50 Thaumaturgy - **Prerequisites**: None 19. **Hold (`Hold`)** - **Class/Subclass**: Control / Transpose - **Effect**: Affects enemies in a 90° cone up to 13 range. Deals 280 Thaumaturgy damage initially. Lifts targets off the ground and allows caster to move them slightly using `moveAway` logic for 11 seconds. Deals 30 Thaumaturgy damage per second while held. Cancels target's actions. Solo ability. - **Activation/Duration/Cooldown**: 0.55s / 11s / 24s - **Cost**: 120 Thaumaturgy
-    - **Prerequisites**: Tether 20. **Choke (`Choke`)**
-      note: \*this response is an exact copy of the provided text\* - **Class/Subclass**: Control / Transpose - **Effect**: Affects enemies in a 75° cone up to 11 range. Deals 320 Thaumaturgy damage initially. Lifts targets, pulls them closer using `moveTorwards` logic for 13 seconds. Deals 70 Thaumaturgy damage per second while held. Cancels target's actions. Solo and Ultimate ability. - **Activation/Duration/Cooldown**: 0.45s / 13s / 26s - **Cost**: 130 Thaumaturgy - **Prerequisites**: Hold 21. **Reversal (`Reversal`)**
-      This is an exact copy of the provided text. - **Class/Subclass**: Control / Immobalize - **Effect**: Affects enemies in 360° radius of 15. Deals 240 Thaumaturgy damage. Reverses target's movement and mouse controls ("reverse" status) for 6.5 seconds. - **Activation/Duration/Cooldown**: 0.5s / Instant / 35s - **Cost**: 70 Thaumaturgy - **Prerequisites**: Tether 22. **Confusion (`Confusion`)** - **Class/Subclass**: Control / Immobalize - **Effect**: Affects enemies in a 75° cone up to 13 range. Deals 200 Thaumaturgy damage. Randomly scrambles target's movement and mouse controls ("confuse" status) for 4 seconds. Solo ability. - **Activation/Duration/Cooldown**: 1s / Instant / 23.5s - **Cost**: 110 Thaumaturgy - **Prerequisites**: Reversal 23. **Inspire Fear (`InspireFear`)** - **Class/Subclass**: Control / Immobalize - **Effect**: Affects enemies in a 90° cone up to 14 range. Deals 300 Thaumaturgy damage. Forces targets to run backwards at 1.35x speed ("fear" status) for 5 seconds. - **Activation/Duration/Cooldown**: 0.75s / Instant / 26s - **Cost**: 90 Thaumaturgy - **Prerequisites**: Reversal 24. **Mind Control (`MindControl`)** - **Class/Subclass**: Control / Domminance - **Effect**: Affects enemies in a 60° cone up to 23 range. Deals 250 Thaumaturgy damage initially. Takes control of targets for 16 seconds. Caster's input is redirected to control the targets, their affiliation is temporarily changed, and the caster's own trooper is uncontrollable but gets the target's camera view. Solo and Ultimate ability. - **Activation/Duration/Cooldown**: 0.25s / 16s / 60s - **Cost**: 500 Thaumaturgy - **Prerequisites**: Confusion, Inspire Fear 25. **Overheat (`Overheat`)**
-      Do you have a question? - **Class/Subclass**: Control / Debuff - **Effect**: Affects enemies in 360° radius of 8. Deals 60 Thaumaturgy damage. Instantly forces the target's ranged weapon into an overheated state (`troop.overheatGun`). Solo ability. - **Activation/Duration/Cooldown**: 0.75s / Instant / 30s - **Cost**: 100 Thaumaturgy - **Prerequisites**: Tether 26. **Freeze (`Freeze`)** - **Class/Subclass**: Control / Immobalize - **Effect**: Affects enemies in a 45° cone up to 6.5 range. Deals 70 Thaumaturgy damage. Freezes targets in place ("frozen" status), preventing all actions and movement for 3 seconds. Solo ability. - **Activation/Duration/Cooldown**: 0.6s / Instant / 29s - **Cost**: 120 Thaumaturgy \* **Prerequisites**: Overheat
+9.  **HealAura (`HealAura`)**
+    - **Class/Subclass**: Buff / Heal
+    - **Effect**: Affects allies in 360° radius of 9. Heals 50 health per second for 9 seconds ("healOverTime" logic applied in `AbilityEffect`).
+    - **Activation/Duration/Cooldown**: 1.25s / 9s / 26s
+    - **Cost**: 105 Thaumaturgy
+    - **Prerequisites**: Group Preparation
+10. **Push (`Push`)**
+    - **Class/Subclass**: Combat / Transpose
+    - **Effect**: Affects enemies in a 75° cone up to 7 range. Deals 360 Thaumaturgy damage. Knocks targets away (force 3.5, y-force 0.75).
+    - **Activation/Duration/Cooldown**: 0.3s / Instant / 13s
+    - **Cost**: 120 Stamina, 95 Thaumaturgy
+    - **Prerequisites**: None
+11. **Pull (`Pull`)**
+    - **Class/Subclass**: Combat / Transpose
+    - **Effect**: Affects enemies in a 60° cone up to 9 range. Deals 240 Thaumaturgy damage. Pulls targets closer (force 3, y-force 0.5).
+    - **Activation/Duration/Cooldown**: 0.2s / Instant / 15s
+    - **Cost**: 160 Stamina, 115 Thaumaturgy
+    - **Prerequisites**: Push
+12. **Life Drain (`LifeDrain`)**
+    - **Class/Subclass**: Combat / Heal
+    - **Effect**: Affects enemies in a 90° cone up to 12.5 range. Deals 500 Thaumaturgy damage. Heals the user for 50% of the damage dealt. Solo ability.
+    - **Activation/Duration/Cooldown**: 0.3s / Instant / 24s
+    - **Cost**: 80 Thaumaturgy
+    - **Prerequisites**: Pull
+13. **Repulse (`Repulse`)**
+    - **Class/Subclass**: Combat / Transpose
+    - **Effect**: Affects enemies in 360° radius of 14. Initially pulls targets closer (force 2.5, y-force 0.5) and deals 700 Thaumaturgy damage over 0.25s activation. Then, after 2.5s duration, pushes targets far away (force 6, y-force 0.9). Solo and Ultimate ability.
+    - **Activation/Duration/Cooldown**: 0.175s / 2.5s / 32s
+    - **Cost**: 240 Stamina, 130 Thaumaturgy
+    - **Prerequisites**: Life Drain
+14. **Weaken (`Weaken`)**
+    - **Class/Subclass**: Control / Debuff
+    - **Effect**: Affects enemies in a 75° cone up to 9 range. Deals 450 Thaumaturgy damage. Applies 40% damage reduction ("weakness" status) for 7.5 seconds.
+    - **Activation/Duration/Cooldown**: 0.3s / Instant / 21s
+    - **Cost**: 75 Thaumaturgy
+    - **Prerequisites**: Push
+15. **Punish (`Punish`)**
+    - **Class/Subclass**: Combat / Damage
+    - **Effect**: Affects enemies in a 60° cone up to 10.5 range. Deals 360 Thaumaturgy damage. Solo ability.
+    - **Activation/Duration/Cooldown**: 0.65s / Instant / 14s
+    - **Cost**: 75 Thaumaturgy
+    - **Prerequisites**: Weaken
+16. **Damage Aura (`DamageAura`)**
+    - **Class/Subclass**: Combat / Damage
+    - **Effect**: Affects enemies in 360° radius of 12 for 10 seconds. Deals 120 Thaumaturgy damage per second and applies 70% slow ("slow" status) each second. Solo and Ultimate ability.
+    - **Activation/Duration/Cooldown**: 1.5s / 10s / 40s
+    - **Cost**: 300 Thaumaturgy
+    - **Prerequisites**: Punish
+17. **Expose (`Expose`)**
+    - **Class/Subclass**: Combat / Debuff
+    - **Effect**: Affects enemies in a 45° cone up to 7.5 range. Deals 400 Thaumaturgy damage. Applies 30% increased damage taken ("expose" status, 1/1.3 defense mult) for 6 seconds. Solo ability.
+    - **Activation/Duration/Cooldown**: 0.6s / Instant / 22s
+    - **Cost**: 80 Thaumaturgy
+    - **Prerequisites**: Punish
+18. **Tether (`Tether`)**
+    - **Class/Subclass**: Control / Immobalize
+    - **Effect**: Affects enemies in a 90° cone up to 12 range. Deals 350 Thaumaturgy damage. Applies 100% increased weight ("heavy" status) and 30% reduced speed ("slow" status) for 7 seconds.
+    - **Activation/Duration/Cooldown**: 0.4s / Instant / 20s
+    - **Cost**: 100 Stamina, 50 Thaumaturgy
+    - **Prerequisites**: None
+19. **Hold (`Hold`)**
+    - **Class/Subclass**: Control / Transpose
+    - **Effect**: Affects enemies in a 90° cone up to 13 range. Deals 280 Thaumaturgy damage initially. Lifts targets off the ground and allows caster to move them slightly using `moveAway` logic for 11 seconds. Deals 30 Thaumaturgy damage per second while held. Cancels target's actions. Solo ability.
+    - **Activation/Duration/Cooldown**: 0.55s / 11s / 24s
+    - **Cost**: 120 Thaumaturgy
+    - **Prerequisites**: Tether
+20. **Choke (`Choke`)**
+    - **Class/Subclass**: Control / Transpose
+    - **Effect**: Affects enemies in a 75° cone up to 11 range. Deals 320 Thaumaturgy damage initially. Lifts targets, pulls them closer using `moveTorwards` logic for 13 seconds. Deals 70 Thaumaturgy damage per second while held. Cancels target's actions. Solo and Ultimate ability.
+    - **Activation/Duration/Cooldown**: 0.45s / 13s / 26s
+    - **Cost**: 130 Thaumaturgy
+    - **Prerequisites**: Hold
+21. **Reversal (`Reversal`)**
+    - **Class/Subclass**: Control / Immobalize
+    - **Effect**: Affects enemies in 360° radius of 15. Deals 240 Thaumaturgy damage. Reverses target's movement and mouse controls ("reverse" status) for 6.5 seconds.
+    - **Activation/Duration/Cooldown**: 0.5s / Instant / 35s
+    - **Cost**: 70 Thaumaturgy
+    - **Prerequisites**: Tether
+22. **Confusion (`Confusion`)**
+    - **Class/Subclass**: Control / Immobalize
+    - **Effect**: Affects enemies in a 75° cone up to 13 range. Deals 200 Thaumaturgy damage. Randomly scrambles target's movement and mouse controls ("confuse" status) for 4 seconds. Solo ability.
+    - **Activation/Duration/Cooldown**: 1s / Instant / 23.5s
+    - **Cost**: 110 Thaumaturgy
+    - **Prerequisites**: Reversal
+23. **Inspire Fear (`InspireFear`)**
+    - **Class/Subclass**: Control / Immobalize
+    - **Effect**: Affects enemies in a 90° cone up to 14 range. Deals 300 Thaumaturgy damage. Forces targets to run backwards at 1.35x speed ("fear" status) for 5 seconds.
+    - **Activation/Duration/Cooldown**: 0.75s / Instant / 26s
+    - **Cost**: 90 Thaumaturgy
+    - **Prerequisites**: Reversal
+24. **Mind Control (`MindControl`)**
+    - **Class/Subclass**: Control / Domminance
+    - **Effect**: Affects enemies in a 60° cone up to 23 range. Deals 250 Thaumaturgy damage initially. Takes control of targets for 16 seconds. Caster's input is redirected to control the targets, their affiliation is temporarily changed, and the caster's own trooper is uncontrollable but gets the target's camera view. Solo and Ultimate ability.
+    - **Activation/Duration/Cooldown**: 0.25s / 16s / 60s
+    - **Cost**: 500 Thaumaturgy
+    - **Prerequisites**: Confusion, Inspire Fear
+25. **Overheat (`Overheat`)**
+    - **Class/Subclass**: Control / Debuff
+    - **Effect**: Affects enemies in 360° radius of 8. Deals 60 Thaumaturgy damage. Instantly forces the target's ranged weapon into an overheated state (`troop.overheatGun`). Solo ability.
+    - **Activation/Duration/Cooldown**: 0.75s / Instant / 30s
+    - **Cost**: 100 Thaumaturgy
+    - **Prerequisites**: Tether
+26. **Freeze (`Freeze`)**
+    - **Class/Subclass**: Control / Immobalize
+    - **Effect**: Affects enemies in a 45° cone up to 6.5 range. Deals 70 Thaumaturgy damage. Freezes targets in place ("frozen" status), preventing all actions and movement for 3 seconds. Solo ability.
+    - **Activation/Duration/Cooldown**: 0.6s / Instant / 29s
+    - **Cost**: 120 Thaumaturgy
+    - **Prerequisites**: Overheat
 
 ---
 
@@ -1075,7 +1459,11 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 6.  **`firingSpeed`**: Multiplies `troop.mult.firing` by `ammount`. Duration: `time`.
 7.  **`damaging`**: Multiplies `troop.mult.damage` by `ammount`. Duration: `time`.
 8.  **`weakness`**: Multiplies `troop.mult.damage` by `ammount` (less than 1). Logically a debuff, but potentially marked `buff=true` if applied via a self-inflicted balancing mechanic? Duration: `time`.
-9.  **`meleeSpeed`**: Multiplies `troop.mult.meleeSpeed` by `ammount`. Duration: `time`. 10. **`weightless`**: Multiplies `troop.mult.weight` by `ammount` (less than 1). Duration: `time`. 11. **`hover`**: Multiplies `troop.mult.fallSpeed` by `ammount` (less than 1). Duration: `time`. 12. **`jumping`**: Multiplies `troop.mult.jump` by `ammount`. Duration: `time`. 13. **`prepared`**: Multiplies several stats by `ammount` (defense, firing, meleeSpeed, speed, damage) and divides others (cooling, jump) for `time` duration.
+9.  **`meleeSpeed`**: Multiplies `troop.mult.meleeSpeed` by `ammount`. Duration: `time`.
+10. **`weightless`**: Multiplies `troop.mult.weight` by `ammount` (less than 1). Duration: `time`.
+11. **`hover`**: Multiplies `troop.mult.fallSpeed` by `ammount` (less than 1). Duration: `time`.
+12. **`jumping`**: Multiplies `troop.mult.jump` by `ammount`. Duration: `time`.
+13. **`prepared`**: Multiplies several stats by `ammount` (defense, firing, meleeSpeed, speed, damage) and divides others (cooling, jump) for `time` duration.
 
 ### B. Debuffs (`this.buff = false`)
 
@@ -1087,8 +1475,7 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 6.  **`expose`**: Multiplies `troop.mult.defense` by `ammount` (less than 1, increasing damage taken). Duration: `time`.
 7.  **`heavy`**: Multiplies `troop.mult.weight` by `ammount` (greater than 1). Duration: `time`.
 8.  **`stun`**: Cancels trooper actions (`activate`) and cancels input (`update`). Duration: `time`.
-    9.Boolean algebra
-    **`frozen`**: Cancels actions (`activate`), cancels input (`update`), and sets `troop.mult.fallSpeed = 0` (`update`). Duration: `time`.
+9.  **`frozen`**: Cancels actions (`activate`), cancels input (`update`), and sets `troop.mult.fallSpeed = 0` (`update`). Duration: `time`.
 
 ---
 
@@ -1100,26 +1487,66 @@ Mods enhance equipment stats. They have a base effect, a rarity, a level, and ca
 
 Categorized by the type of equipment they can be applied to. Each has a base effect percentage (`increase` or `decrease`).
 
-1.sfsf
-**Weapon Mods (Apply to Ranged & Melee)** - **Damage**: Increases weapon damage (`increase`: 1.5%). - **Quick Fire**: Decreases delay before use/after actions and initial shot delay (`decrease`: 2.5%). 2. **Melee Mods (Apply to Melee Only)** - **Power**: Increases attack radius and knockback (`increase`: 2.5%). - **Deflection**: Enhances blocking vs sabers (angle, knockback, stun, stamina drain) (`increase`: 2.5%). - **Reflection**: Enhances blocking vs projectiles (angle, accuracy, range) (`increase`: 2.5%). - **Usage Speed**: Reduces cooldown after blocking/striking, reduces min block time (`increase`: 2.5%). - **Slightness**: Reduces stamina costs for all saber actions (`increase`: 0.25 - Note: this seems high, might be a typo and intended `0.025`). - **Parry**: Increases the parry window duration (`increase`: 2.5%). 3. **Ranged Mods (Apply to Ranged Only)** - **Firing Speed**: Decreases delay between shots (`decrease`: 2.5%).
-Look up the provided text - **Maximum Spread**: Decreases weapon spread (`decrease`: 2.5%). - **Projectile Speed**: Increases projectile speed (`increase`: 2.5%). - **Cooling Power**: Increases cooling rate (reduces `coolWaitTime`, `overheatTime`) (`increase`: 2.5%). - **Maximum Heat**: Increases max heat capacity (`increase`: 2.5%). - **Range**: Increases weapon range (`increase`: 2.5%). 4. **Armour Mods (Apply to Armor Only)** - **Defense**: Increases armor defense (`increase`: 1.5%).
-WELCOME
-\_ **Weight**: Decreases armor weight (`decrease`: 2.5%). - **Stamina Recovery**: Increases stamina regen rate (`increase`: 1.5%). - **Thaumaturgy Recovery**: Increases thaumaturgy regen rate (`increase`: 1.5%). \* **Health Recovery**: Increases health regen rate (`increase`: 1.5%).
+1.  **Weapon Mods (Apply to Ranged & Melee)**
+    - **Damage**: Increases weapon damage (`increase`: 1.5%).
+    - **Quick Fire**: Decreases delay before use/after actions and initial shot delay (`decrease`: 2.5%).
+2.  **Melee Mods (Apply to Melee Only)**
+    - **Power**: Increases attack radius and knockback (`increase`: 2.5%).
+    - **Deflection**: Enhances blocking vs sabers (angle, knockback, stun, stamina drain) (`increase`: 2.5%).
+    - **Reflection**: Enhances blocking vs projectiles (angle, accuracy, range) (`increase`: 2.5%).
+    - **Usage Speed**: Reduces cooldown after blocking/striking, reduces min block time (`increase`: 2.5%).
+    - **Slightness**: Reduces stamina costs for all saber actions (`increase`: 0.25 - Note: this seems high, might be a typo and intended `0.025`).
+    - **Parry**: Increases the parry window duration (`increase`: 2.5%).
+3.  **Ranged Mods (Apply to Ranged Only)**
+    - **Firing Speed**: Decreases delay between shots (`decrease`: 2.5%).
+    - **Maximum Spread**: Decreases weapon spread (`decrease`: 2.5%).
+    - **Projectile Speed**: Increases projectile speed (`increase`: 2.5%).
+    - **Cooling Power**: Increases cooling rate (reduces `coolWaitTime`, `overheatTime`) (`increase`: 2.5%).
+    - **Maximum Heat**: Increases max heat capacity (`increase`: 2.5%).
+    - **Range**: Increases weapon range (`increase`: 2.5%).
+4.  **Armour Mods (Apply to Armor Only)**
+    - **Defense**: Increases armor defense (`increase`: 1.5%).
+    - **Weight**: Decreases armor weight (`decrease`: 2.5%).
+    - **Stamina Recovery**: Increases stamina regen rate (`increase`: 1.5%).
+    - **Thaumaturgy Recovery**: Increases thaumaturgy regen rate (`increase`: 1.5%).
+    - **Health Recovery**: Increases health regen rate (`increase`: 1.5%).
 
 ### B. Minor Modifications Traits (`modTraits`)
 
 These are randomly generated secondary stats added to mods based on the mod's rarity. Higher rarity mods get more minor traits. Each trait has a base effect (`increase` or `decrease`) which scales with mod rarity and level. They can also roll as `negative` (inverting the effect) and `specific` (applying a larger bonus but only under specific conditions, not fully implemented/clear).
 
 - **Group 1 (Chance Weight 2)**: Focus on specific Ability vs. Ability interactions.
-  April 18, 2024 - Thaumaturgy Critical Chance/Damage/Resistance/Defense - Thaumaturgy Evasion Chance/Defense - Thaumaturgy Accuracy/Accuracy Damage - Thaumaturgy Precision - Stamina Critical Chance/Damage/Resistance/Defense - Stamina Evasion Chance/Defense - Stamina Accuracy/Accuracy Damage - Stamina Precision - Physical Critical Chance/Damage/Resistance/Defense - Physical Evasion Chance/Defense - Physical Accuracy/Accuracy Damage - Physical Precision - Ranged Defense (Bonus vs. Ranged)
-  April 18, 2024 - Melee Defense (Bonus vs. Melee)
-- **Group 2 (Chance Weight 5)**: Focus on core resource stats. - Max Health/Stamina/Thaumaturgy - Health/Stamina/Thaumaturgy Recovery (Regen Rate) \* Health/Stamina/Thaumaturgy Delay (Regen Delay Reduction)
-- **Group 3 (Chance Weight 3)**: Focus on general Ability stats and defenses/offenses. - Stamina/Thaumaturgy/Physical Defense - Stamina/Thaumaturgy/Physical Damage - Stamina/Thaumaturgy Activation Time (Reduction) - Stamina/Thaumaturgy Duration (Increase) - Stamina/Thaumaturgy Cooldown (Reduction) - Stamina/Thaumaturgy Tenacity (Enemy Effect Duration Reduction)
+  - Thaumaturgy Critical Chance/Damage/Resistance/Defense
+  - Thaumaturgy Evasion Chance/Defense
+  - Thaumaturgy Accuracy/Accuracy Damage
+  - Thaumaturgy Precision
+  - Stamina Critical Chance/Damage/Resistance/Defense
+  - Stamina Evasion Chance/Defense
+  - Stamina Accuracy/Accuracy Damage
+  - Stamina Precision
+  - Physical Critical Chance/Damage/Resistance/Defense
+  - Physical Evasion Chance/Defense
+  - Physical Accuracy/Accuracy Damage
+  - Physical Precision
+  - Ranged Defense (Bonus vs. Ranged)
+  - Melee Defense (Bonus vs. Melee)
+- **Group 2 (Chance Weight 5)**: Focus on core resource stats.
+  - Max Health/Stamina/Thaumaturgy
+  - Health/Stamina/Thaumaturgy Recovery (Regen Rate)
+  - Health/Stamina/Thaumaturgy Delay (Regen Delay Reduction)
+- **Group 3 (Chance Weight 3)**: Focus on general Ability stats and defenses/offenses.
+  - Stamina/Thaumaturgy/Physical Defense
+  - Stamina/Thaumaturgy/Physical Damage
+  - Stamina/Thaumaturgy Activation Time (Reduction)
+  - Stamina/Thaumaturgy Duration (Increase)
+  - Stamina/Thaumaturgy Cooldown (Reduction)
+  - Stamina/Thaumaturgy Tenacity (Enemy Effect Duration Reduction)
 - **Group 4 (Chance Weight 1)**: Focus on miscellaneous/utility stats.
-  A \_ Stealth Radius (Reduction) / Stealth Detection (Increase) - Movement Speed (Increase) - Health/Stamina/Thaumaturgy on Damage (Life/Resource Steal)
-  Two plus two equals four - Health/Stamina/Thaumaturgy on Kill (Gain on Kill) - Stamina/Thaumaturgy Drain (Enemy Resource Drain on Hit) - Health Drain (% Max Health Damage Bonus) - Knockback Resistance (Increase)
-  Do you have a question? - Acceleration/Deceleration Time (Reduction)
-
----
-
-This covers, in extensive detail, every explicitly defined instance of Armor, Guns, Sabers, Abilities, Status Effects, and Mods found within the provided codebase files.
+  - Stealth Radius (Reduction) / Stealth Detection (Increase)
+  - Movement Speed (Increase)
+  - Health/Stamina/Thaumaturgy on Damage (Life/Resource Steal)
+  - Health/Stamina/Thaumaturgy on Kill (Gain on Kill)
+  - Stamina/Thaumaturgy Drain (Enemy Resource Drain on Hit)
+  - Health Drain (% Max Health Damage Bonus)
+  - Knockback Resistance (Increase)
+  - Acceleration/Deceleration Time (Reduction)
