@@ -62,6 +62,11 @@ ninja.data = [{
           description: "An Exoplanet Constellation Creator and Explorer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Exosky/";
+            },},{id: "projects-llm-training",
+          title: 'LLM Training',
+          description: "Training and fine-tuning an LLM",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/LLMTraining/";
             },},{id: "projects-marl-procgen",
           title: 'MARL ProcGen',
           description: "Training defenders and an adversarial level generator simultaneously.",
@@ -77,6 +82,11 @@ ninja.data = [{
           description: "Researching methods for translating American Sign Language",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SignLanguageLearner/";
+            },},{id: "projects-sign-language-learner-2",
+          title: 'Sign Language Learner 2',
+          description: "Researching methods for translating American Sign Language",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/SignLanguageLearner2/";
             },},{id: "projects-thunder-warrior-genesis-comprehensive-project-report",
           title: 'Thunder Warrior: Genesis - Comprehensive Project Report',
           description: "An exhaustive compilation of all project data.",
