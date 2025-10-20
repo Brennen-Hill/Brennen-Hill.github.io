@@ -12,7 +12,7 @@ toc:
 
 # Representation Fine-Tuning for Vision-Language Models
 
-Albert Ge, Brennan Hill, Chapin Pyne, Arnav Sharma, Karl Vachuska
+Brennan Hill, Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
 <br>University of Wisconsin-Madison
 
 ---

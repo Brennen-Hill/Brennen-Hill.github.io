@@ -12,6 +12,11 @@ toc:
 
 # Reinforcement Learning for Quadruped Roller Skating
 
+**Brennen Alexander Hill**
+_Dept. of Computer Science_
+_University of Wisconsin, Madison_
+*bahill4@wisc.edu*
+
 **Hanwen Wang**
 _Dept. of Mechanical Engineering_
 _University of Wisconsin, Madison_
@@ -21,11 +26,6 @@ _University of Wisconsin, Madison_
 _Dept. of Electrical and Computer Engineering_
 _University of Wisconsin, Madison_
 *ramkumar4@wisc.edu*
-
-**Brennen Alexander Hill**
-_Dept. of Computer Science_
-_University of Wisconsin, Madison_
-*bahill4@wisc.edu*
 
 ## Abstract
 
