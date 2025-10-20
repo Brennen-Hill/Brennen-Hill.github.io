@@ -2,9 +2,9 @@
 layout: page
 title: "TWG"
 description: "Thunder Warrior: Genesis"
-img: assets/img/12.jpg
+img: assets/img/TWG.png
 importance: 1
-category: research engineering
+category: game developement
 ---
 
 There are four reports below.

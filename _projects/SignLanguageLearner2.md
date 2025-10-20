@@ -10,9 +10,14 @@ related_publications: false
 
 ## Systematic Analysis of Transfer Learning for Sign Language Alphabet Recognition
 
-{% include figure.liquid loading="eager" path="assets/img/Sign.webp" title="SignLanguageLearner" class="img-fluid rounded z-depth-1" %}
-
-\<figcaption\>An example of gesture recognition for sign language, a key step toward assistive communication technologies. Credit: Google.\</figcaption\>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/Sign.webp" title="SignLanguageLearner" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+  An example of gesture recognition for sign language, a key step toward assistive communication technologies, credit to Google.
+</div>
 
 ---
 
