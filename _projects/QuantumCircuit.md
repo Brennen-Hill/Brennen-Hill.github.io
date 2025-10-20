@@ -65,10 +65,6 @@ This result is highly significant for practical quantum computation.
 
 This project successfully demonstrates the translation of a novel, theoretically complex pattern-matching algorithm into a production-ready, high-impact optimization tool for a quantum compiler. The developed two-phase (greedy-seed + backtracking-expansion) solution proved effective in managing the inherent combinatorial search problem, delivering significant, measurable improvements in circuit fidelity crucial for advancing NISQ-era quantum applications.
 
-
-
-
-
 This system implements the quantum circuit pattern matching algorithm of Iten et al. It was created during an internship at HRL Laboratories.
 
 **Official Source:** [`https://github.com/quil-lang/quilc/tree/master/src/match`](https://github.com/quil-lang/quilc/tree/master/src/match)

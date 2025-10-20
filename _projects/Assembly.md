@@ -10,9 +10,9 @@ related_publications: false
 
 Here is a project report written to frame your internship experience as ideal for an AI PhD program applicant.
 
-***
+---
 
-**Affiliation:** Quantum Software Intern (Research Engineer) - HRL Hughes Research Laboratories 
+**Affiliation:** Quantum Software Intern (Research Engineer) - HRL Hughes Research Laboratories
 
 **Date:** Summer 2024
 
@@ -54,11 +54,11 @@ A primary obstacle was that the official documentation for the QICK tProcessor's
 
 A systematic, empirical methodology was developed to reverse-engineer the true ISA from first principles:
 
-* **Systematic Testing:** A test harness was created to deploy custom-generated 32-bit binary strings directly to the FPGA.
-* **Bit-Level Mapping:** Individual bits and bit-fields were systematically toggled (1 vs. 0) to observe their effect on the hardware's output.
-* **Hierarchical Deduction:** This "trial and error" process was structured as a systematic search. It was discovered that certain bits acted as control flags, changing the function of other locations in the instruction word. By mapping these dependencies, the hierarchy of the ISA was uncovered.
+- **Systematic Testing:** A test harness was created to deploy custom-generated 32-bit binary strings directly to the FPGA.
+- **Bit-Level Mapping:** Individual bits and bit-fields were systematically toggled (1 vs. 0) to observe their effect on the hardware's output.
+- **Hierarchical Deduction:** This "trial and error" process was structured as a systematic search. It was discovered that certain bits acted as control flags, changing the function of other locations in the instruction word. By mapping these dependencies, the hierarchy of the ISA was uncovered.
 
-This rigorous reverse-engineering process successfully mapped the *true* binary interface, creating an accurate specification from scratch and enabling the successful completion of the compiler.
+This rigorous reverse-engineering process successfully mapped the _true_ binary interface, creating an accurate specification from scratch and enabling the successful completion of the compiler.
 
 ---
 
@@ -79,11 +79,11 @@ The project's success and significant technical contributions were recognized wi
 
 This internship involved the complete design, implementation, and validation of a domain-specific compiler for custom hardware. While the domain was quantum control, the core technical challenges are directly analogous to those in high-performance AI research.
 
-* **Parallel to AI Accelerators:** Modern AI is critically dependent on custom accelerators (GPUs, TPUs, neuromorphic chips) with unique, complex, and often sparsely documented instruction sets, just like the QICK tProcessor.
-* **Compiler Optimization:** The most pressing challenges in AI systems involve compilers (e.g., MLIR, XLA, TVM). These systems perform the exact same task as this project: translating a high-level model description (like in PyTorch) into optimized, hardware-specific machine code.
-* **Demonstrated Skills:** This project demonstrates proven expertise in:
-    * **Compiler Architecture:** Designing multi-pass systems, IRs, and optimization passes.
-    * **Hardware-Software Co-Design:** Optimizing software for a specific, low-level hardware target.
-    * **Systematic Research:** The ability to deconstruct and reverse-engineer a complex, undocumented "black box" system (the ISA) from first principles.
+- **Parallel to AI Accelerators:** Modern AI is critically dependent on custom accelerators (GPUs, TPUs, neuromorphic chips) with unique, complex, and often sparsely documented instruction sets, just like the QICK tProcessor.
+- **Compiler Optimization:** The most pressing challenges in AI systems involve compilers (e.g., MLIR, XLA, TVM). These systems perform the exact same task as this project: translating a high-level model description (like in PyTorch) into optimized, hardware-specific machine code.
+- **Demonstrated Skills:** This project demonstrates proven expertise in:
+  - **Compiler Architecture:** Designing multi-pass systems, IRs, and optimization passes.
+  - **Hardware-Software Co-Design:** Optimizing software for a specific, low-level hardware target.
+  - **Systematic Research:** The ability to deconstruct and reverse-engineer a complex, undocumented "black box" system (the ISA) from first principles.
 
 These skills—architecting complex software, optimizing for novel hardware, and a rigorous, empirical research mindset—are precisely what is required to tackle the next generation of challenges in scalable, efficient, and accelerated artificial intelligence. I am eager to apply this "full-stack" perspective, from abstract models down to the binary, to a PhD in AI.

@@ -37,14 +37,14 @@ The compiler operates in multiple passes, transforming a high-level experimental
 
 #### **Key Compiler Passes and Features:**
 
-* **Translation:** High-level control structures (loops, if-statements) were systematically translated into low-level jump and conditional branch instructions, executable by the tProcessor.
-* **Optimization:** The multi-pass design enabled optimization phases to refine the generated code, manage resources efficiently, and calculate precise instruction timing.
-* **Memory Management:** A custom stack and heap were implemented to manage data. The compiler automatically allocated and referenced data across the tProcessor's three distinct memory spaces, identified from documentation and empirical testing:
-    * **Program Memory:** Storing the compiled binary instructions.
-    * **Waveform Memory:** Storing pulse and envelope data.
-    * **General Data Memory:** For experimental results and variables.
+- **Translation:** High-level control structures (loops, if-statements) were systematically translated into low-level jump and conditional branch instructions, executable by the tProcessor.
+- **Optimization:** The multi-pass design enabled optimization phases to refine the generated code, manage resources efficiently, and calculate precise instruction timing.
+- **Memory Management:** A custom stack and heap were implemented to manage data. The compiler automatically allocated and referenced data across the tProcessor's three distinct memory spaces, identified from documentation and empirical testing:
+  - **Program Memory:** Storing the compiled binary instructions.
+  - **Waveform Memory:** Storing pulse and envelope data.
+  - **General Data Memory:** For experimental results and variables.
     The compiler precisely calculated the total memory footprint for each program.
-* **Parametric Sweeps:** A critical feature for experimental physics was implemented, allowing researchers to define sets of hyperparameters. The compiler automatically generated code to iterate through each parameter set, running the experiment multiple times in a single deployment.
+- **Parametric Sweeps:** A critical feature for experimental physics was implemented, allowing researchers to define sets of hyperparameters. The compiler automatically generated code to iterate through each parameter set, running the experiment multiple times in a single deployment.
 
 ---
 
@@ -73,8 +73,8 @@ The primary impact of this project was **enabling physics researchers to move se
 
 This project, while rooted in quantum control, demonstrates a deep expertise in systems engineering and compiler design that is directly transferable to state-of-the-art AI research.
 
-* **AI/ML Compiler Analogy:** The core task—creating a compiler for a domain-specific language (quantum experiments) to target custom hardware (FPGAs)—is directly analogous to the work of modern ML compilers like **MLIR, XLA, and TVM**. These systems compile high-level models from frameworks like PyTorch or TensorFlow into optimized code for heterogeneous hardware (GPUs, TPUs, FPGAs). My experience in IR design, optimization passes, and code generation for a custom ISA is a direct parallel.
-* **Hardware-Software Co-Design:** This project required optimizing software (the compiler) with a deep understanding of the underlying hardware's (the tProcessor's) architecture, memory model, and timing. This is a critical skill in high-performance AI, where researchers must co-design algorithms and hardware to push performance boundaries.
-* **Systematic Research and Problem-Solving:** Successfully reverse-engineering a complex, undocumented binary ISA demonstrates the resilience and methodological rigor required for doctoral research. It proves an ability to deconstruct "black box" problems and build functional, robust systems from first principles.
+- **AI/ML Compiler Analogy:** The core task—creating a compiler for a domain-specific language (quantum experiments) to target custom hardware (FPGAs)—is directly analogous to the work of modern ML compilers like **MLIR, XLA, and TVM**. These systems compile high-level models from frameworks like PyTorch or TensorFlow into optimized code for heterogeneous hardware (GPUs, TPUs, FPGAs). My experience in IR design, optimization passes, and code generation for a custom ISA is a direct parallel.
+- **Hardware-Software Co-Design:** This project required optimizing software (the compiler) with a deep understanding of the underlying hardware's (the tProcessor's) architecture, memory model, and timing. This is a critical skill in high-performance AI, where researchers must co-design algorithms and hardware to push performance boundaries.
+- **Systematic Research and Problem-Solving:** Successfully reverse-engineering a complex, undocumented binary ISA demonstrates the resilience and methodological rigor required for doctoral research. It proves an ability to deconstruct "black box" problems and build functional, robust systems from first principles.
 
 This internship solidified my skills in building high-performance, hardware-aware software systems—the exact skills required to engineer the next generation of efficient and powerful AI.
