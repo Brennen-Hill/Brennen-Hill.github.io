@@ -5,6 +5,7 @@ description: An exhaustive compilation of all project data.
 img: assets/img/12.jpg
 importance: 1
 category: game developement
+related_publications: false
 toc:
   sidebar: left
 ---
