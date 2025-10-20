@@ -1,14 +1,12 @@
 ---
 layout: page
 title: "Quantum Circuit"
-description: An algorithm for quantum circuit pattern matching and optimization.
+description: Production-Ready Pattern Matching for Quantum Circuit Optimization.
 img: assets/img/PCOverview.png
 importance: 1
 category: research engineering
 related_publications: false
 ---
-
-# A Production-Ready Implementation of Exact Pattern Matching for Quantum Circuit Optimization
 
 ### Abstract
 
@@ -66,6 +64,10 @@ This result is highly significant for practical quantum computation.
 ## 6. Conclusion
 
 This project successfully demonstrates the translation of a novel, theoretically complex pattern-matching algorithm into a production-ready, high-impact optimization tool for a quantum compiler. The developed two-phase (greedy-seed + backtracking-expansion) solution proved effective in managing the inherent combinatorial search problem, delivering significant, measurable improvements in circuit fidelity crucial for advancing NISQ-era quantum applications.
+
+
+
+
 
 This system implements the quantum circuit pattern matching algorithm of Iten et al. It was created during an internship at HRL Laboratories.
 

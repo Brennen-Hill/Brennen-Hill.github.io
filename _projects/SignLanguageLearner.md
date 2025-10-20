@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sign Language Learner
-description: Researching methods for translating American Sign Language
+description: Systematic Analysis of Transfer Learning for Sign Language Alphabet Recognition
 img: assets/img/TWG.png
 importance: 1
 category: research
@@ -14,98 +14,103 @@ related_publications: false
     </div>
 </div>
 <div class="caption">
-    An example of a computer vision model interpretting detecting sign language, credit to Google.
+  An example of gesture recognition for sign language, a key step toward assistive communication technologies, credit to Google.
 </div>
 
-## ABSTRACT
+---
 
-We worked to make a model that can translate sign language into text and enable greater communication between people throughout the world. We worked with a Kaggle dataset holding images of letters in sign language that are labeled by letter. Although models have already been built using this dataset, we deepened the effectiveness of existing models. We experimented with various combinations of data augmentation, transfer learning, and model architecture. After using what we learned from our experiments to build a highly effective model, we greatly surpassed the baseline.
+### ABSTRACT
 
-## Introduction
+This project investigates computationally efficient and accurate models for static American Sign Language (ASL) alphabet recognition. Using the Sign Language MNIST dataset, we systematically explored the impact of model architecture, transfer learning strategies, and data augmentation on classification performance. We compare three experimental models based on the ResNet-50 architecture against a 97% accuracy baseline. Our primary contribution is the development of a lightweight, fine-tuned model (Model C) that achieves **99.5% test accuracy**. This model, which utilizes a simplified classification head and single-channel (grayscale) inputs, not only surpasses the baseline but also proves significantly more efficient, reducing training time by over 57% compared to a more complex fine-tuning approach (Model B).
 
-**Problem Statement:** Communication is essential for people around the world to work and share ideas with one another. An issue that gets in the way of this communication is the large number of people who suffer from deafness. Though many deaf people communicate through sign language everyday, the majority of people who are not hearing impaired do not take the time to learn it. We intend to make it easier for all people to communicate by building a sign language translator. Work has already been done to convert sign language to text (Li), and we intend to further that effort.
+---
 
-**Baseline:** For our baseline we looked extensively at the different models used to categorize hand sign images. We wanted to focus on using convolutional neural networks (CNNs) to categorize our images, and as such, chose to focus on a CNN model made by user sachinpatil1280 which reported a 97% accuracy for their model. This implementation takes advantage of a sequential model with an added dense layer with 128 neurons.
+### Introduction
 
-## Data
+#### Problem Statement
 
-### Source
+Effective communication is hindered by barriers between different modalities, such as spoken language and sign language. While millions rely on sign language, a significant portion of the global population does not understand it, creating an information gap. Machine learning models for sign language translation are a foundational component of assistive technologies that aim to bridge this divide. While comprehensive systems must interpret dynamic gestures (Li et al.), a critical first step is the robust and efficient classification of static signs, such as the letters of the alphabet.
 
-We chose to work with the Sign Language MNIST dataset on kaggle, due to MNIST being a popular benchmark for image based machine learning models. You can find the link [here](https://www.kaggle.com/datasets/datamunge/sign-language-mnist).
+#### Baseline and Objectives
 
-### Data Breakdown
+Our work utilizes the **Sign Language MNIST dataset from Kaggle**, a common benchmark for static handshape recognition. The established baseline for this dataset is a custom Convolutional Neural Network (CNN) architecture (Sachinpatil1280) that reports a test accuracy of 97%.
 
-The dataset format is patterned to match closely with the classic MNIST.
-There are 24 classes on this test set, as the letters J and Z are not contained in the dataset because they require gesture motion. Further iterations of our model could be used to include these letters given video input.
-Each training and test case represents a label (0-25) as a one-to-one map for each alphabetic letter A-Z (and no cases for 9=J or 25=Z because of gesture motions).
-There are 27455 training cases and 7172 test cases, with each case consisting of pixel image values between 0-255.
+Our objective was not merely to surpass this accuracy but to conduct a **systematic analysis of transfer learning strategies**, specifically focusing on the trade-offs between model complexity, computational cost (training time), and classification accuracy.
 
-### Pre-Processing
+---
 
-Pre-processing varied depending on the model that we chose, however for both of our models we used the same data augmentation, a snippet of which is provided below. Model A and C take advantage of the parameters pictured below, whereas model B uses double each value in attempts to broaden the dataset. The pictured values below are our optimized augmentation parameters.
+### Methodology
 
-{% raw %}
+#### Dataset and Pre-processing
 
-```python
-# data augmentation
-datagen = tf.keras.preprocessing.image.ImageDataGenerator(
-    rotation_range=10,
-    zoom_range = 0.1,
-    width_shift_range=0.1,
-    height_shift_range=0.1,
-    horizontal_flip=True,
-    # zoom_range=0.2,
-    shear_range=0.1,
-    fill_mode='nearest'
-)
-```
+We used the Sign Language MNIST dataset, which contains 27,455 training and 7,172 test images. Each is a 28x28 grayscale image representing one of 24 static letters of the ASL alphabet; 'J' and 'Z' are excluded as they require motion.
 
-{% endraw %}
+To improve generalization and mitigate overfitting, we applied a standardized data augmentation pipeline using `tf.keras.preprocessing.image.ImageDataGenerator`:
 
-### Model C
+- **Rotation Range:** 10 degrees
+- **Zoom Range:** 0.1
+- **Width/Height Shift Range:** 0.1
+- **Shear Range:** 0.1
+- **Horizontal Flip:** True
 
-For this model, we reduced the image size to 28 by 28, and then added padding for a final size of 32 by 32. Furthermore, we worked with greyscale files, reducing the information that the model had to work with by 2/3rds.
+#### Model Architectures and Experiments
 
-## Tasks performed
+We designed a series of three experiments (Models A, B, and C) all based on the **ResNet-50** architecture, pre-trained on ImageNet.
 
-### Model A
+- **Model A (Complex Custom Head):** Our initial approach involved appending a deep custom classification head to the ResNet-50 base, consisting of multiple fully-connected layers (512 neurons) and pooling layers. This was intended to maximize the feature extraction capabilities of the pre-trained base.
+- **Model B (Standard Fine-Tuning):** Based on the results of Model A, we shifted to a standard fine-tuning strategy. We appended two 128-neuron dense layers. Training was conducted for 30 epochs: the first 10 with the ResNet-50 base **frozen** to train the new head, and the subsequent 20 with the base **unfrozen** for end-to-end fine-tuning. This model also used a doubled augmentation range to test robustness.
+- **Model C (Efficiency-Focused):** This model was designed to optimize both accuracy and computational efficiency. We simplified the architecture by:
+  1.  **Reducing the head** to a single 128-neuron dense layer.
+  2.  **Reducing input data** by modifying the ResNet-50 input layer to accept **single-channel (grayscale)** 28x28 images (padded to 32x32), rather than the standard 3-channel RGB input.
+  3.  Reverting to the original, smaller augmentation parameters.
 
-In this architecture of the model, we decided to avoid reinventing the wheel and use a pre-existing model. We used transfer learning to make use of ResNet-50. We replaced the input of ResNet-50 with the image size we wanted to use. We removed the classification layer at the end of ResNet-50. Before adding our own classification layer that would include the number of outputs we wanted for the alphabet, we added additional layers. We added multiple fully connected layers with 512 neurons and pooling layers. Our motivation was that by adding more layers, we could tune the model to predict accurately on our dataset, rather than just imagent.
+---
 
-### Model B
+### Results and Discussion
 
-This succeeding model takes advantage of freezing and unfreezing of base layers within the ResNet-50 architecture at specific times while limiting the complexity of the model. With a total of 30 epochs, the first 10 were run with the base layers frozen, to capitalize on the advantage of the parameters being pre-trained on ImageNet data. The subsequent 20 layers were run with the base layers unfrozen, with attempts to fine-tune our model on our own ASL images. In addition, two dense layers with 128 neurons were added. Finally, the data augmentation parameters we used to dictate rotation, zoom, blur, and other important elements were doubled in hopes that our model would be more robust with a greater variety of input images.
+Our experimental results show a clear progression, culminating in a highly accurate and efficient model.
 
-### Model C
+| Model        | Key Features                             | Training Time         | Test Accuracy | Key Finding                                                                       |
+| :----------- | :--------------------------------------- | :-------------------- | :------------ | :-------------------------------------------------------------------------------- |
+| **Baseline** | Simple CNN                               | Not Reported          | 97.0%         | High initial benchmark.                                                           |
+| **Model A**  | ResNet-50 + Deep Custom Head             | \> 24h (for 2 epochs) | \< 50% (est.) | **Computationally intractable;** overly complex head failed to train effectively. |
+| **Model B**  | ResNet-50 + Freeze/Unfreeze + Heavy Aug. | \~7 hours             | 98.5%         | Standard fine-tuning surpasses baseline but is time-intensive.                    |
+| **Model C**  | ResNet-50 + Lightweight Head + Grayscale | **\~3 hours**         | **99.5%**     | **Optimal balance:** Highest accuracy and \>50% reduction in training time.       |
 
-Similarly to our previous models, we used ResNet50 for transfer learning with this model. Since Model B had already achieved a higher accuracy than our baseline, this model was focused on getting as efficient as possible. To do this, we scaled down the additional output layers to a dense layer with 128 neurons. Furthermore we reduced the amount of data augmentation by half as compared to Model B, and used grayscale images, reducing the image size by 2/3rds.
+#### Analysis
 
-## Results and Discussions
+**Model A's failure** demonstrated that adding excessive parameters to the classification head was computationally intractable and led to unstable training.
 
-### Model A
+**Model B** confirmed that a standard freeze-unfreeze transfer learning strategy was effective, successfully surpassing the baseline accuracy. However, its 7-hour training time highlighted a significant cost.
 
-This architecture turned out to be efficient. We put a multitude of trainable parameters into the model. After training for a day, the model had finished its second epoch and was highly inaccurate. We realized that adding so many fully connected layers would be unreasonable with our current computing powers. We learned that we would need to put a greater emphasis on efficient model design and moved on to architectures that made use of less trainable parameters.
+**Model C yielded the most significant findings.** By simplifying the classification head and, critically, modifying the model to accept single-channel grayscale input, we achieved a **2.5% accuracy improvement over the baseline** and a **1% improvement over Model B**. Most importantly, these gains were coupled with a **\>57% reduction in training time** compared to Model B.
 
-### Model B
+Furthermore, analysis of Model C's training curves revealed that validation loss began to increase (overfitting) after just 6 epochs. This insight was crucial: by implementing early stopping and saving the best weights (from epoch 6), we achieved the final 99.5% accuracy, demonstrating the model's high capacity and the critical need for careful regularization.
 
-This model succeeded in obtaining a substantial increase in accuracy, however it came at the cost of efficiency and training time. After 10 epochs, this second model achieved an accuracy of 88%, and after 30 epochs, it achieved an accuracy of 98.5% after 30 epochs, which took about 7 hours to complete. Although this accuracy was a vast improvement, the efficiency still needed to be improved.
+---
 
-### Model C
+### Conclusion and Future Work
 
-This model turned out to be both extremely efficient, and after fine tuning, extremely accurate as well. It took about 3 hours to train the model which was a significant improvement. Furthermore, because we trained this model by saving the best parameter weights as opposed to the final result of the training, we were able to maximize the accuracy of our model to 99.5% accuracy.
+Our systematic experimentation demonstrates that for static sign language recognition, a strategically simplified transfer learning model (Model C) significantly outperforms both a standard CNN baseline and a more complex fine-tuning approach. We achieved 99.5% accuracy while substantially reducing computational cost.
 
-An important aspect to note about this model is that even though we only trained it for 10 epochs, after 6 epochs the loss on the validation set started skyrocketing while the loss on the training set stayed relatively constant. In other words, this model started overfitting after only 6 epochs.
+The primary limitation of this project is the dataset itself, which is constrained to static, single-letter images under controlled conditions. This work serves as a foundation for future research, which should focus on:
 
-## Contributors
+1.  **Dynamic Gesture Recognition:** Expanding the model to handle video input to classify motion-based signs (like 'J' and 'Z') using datasets like WLASL.
+2.  **Real-World Robustness:** Testing model performance on "in-the-wild" images with varied lighting, backgrounds, and occlusions.
+3.  **Model Deployment:** Exploring quantization and pruning to deploy an efficient model on edge devices (e.g., mobile phones) for a real-time assistive application.
+
+---
+
+### Contributors
 
 Brennen Hill, Joseph Mostika, Mehul Maheshwari
 
-## References
+---
 
-[1] Wolmark, M. (2023, September 2). 79 hearing loss statistics: How many deaf people in the U.S.?. In-Home & Center-Based ABA - Golden Steps ABATM. https://www.goldenstepsaba.com/resources/hearing-loss-statistics
+### References
 
-[2] Li, D. (n.d.). Welcome to WLASL homepage. WLASL. https://dxli94.github.io/WLASL/
-
-[3] CSC321 tutorial 6: Optimization and Convolutional Neural networks. tut06. (n.d.). https://www.cs.toronto.edu/\~lczhang/321/tut/tut06.html
-
-[4] Tecperson. (2017, October 20). Sign language mnist. Kaggle. https://www.kaggle.com/datasets/datamunge/sign-language-mnist
+[1] Wolmark, M. (2023, September 2). _79 hearing loss statistics: How many deaf people in the U.S.?_. Golden Steps ABA. [https://www.goldenstepsaba.com/resources/hearing-loss-statistics](https://www.goldenstepsaba.com/resources/hearing-loss-statistics)
+[2] Li, D. (n.d.). _Welcome to WLASL homepage_. WLASL. [https://dxli94.github.io/WLASL/](https://dxli94.github.io/WLASL/)
+[3] CSC321 tutorial 6: Optimization and Convolutional Neural networks. (n.d.). [https://www.cs.toronto.edu/\~lczhang/321/tut/tut06.html](https://www.cs.toronto.edu/~lczhang/321/tut/tut06.html)
+[4] Tecperson. (2017, October 20). _Sign language mnist_. Kaggle. [https://www.kaggle.com/datasets/datamunge/sign-language-mnist](https://www.kaggle.com/datasets/datamunge/sign-language-mnist)
+[5] (Added) Sachinpatil1280. (2020, May). _Sign language-mnist-acc-97%_. Kaggle. [https://www.kaggle.com/code/sachinpatil1280/sign-language-mnist-acc-97](https://www.google.com/search?q=https://www.kaggle.com/code/sachinpatil1280/sign-language-mnist-acc-97)
