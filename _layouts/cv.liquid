@@ -95,17 +95,21 @@ layout: default
                   {% include resume/basics.liquid %}
                 {% when 'education' %}
                   {% include resume/education.liquid %}
-                {% when 'work' %}
+                {% when 'research experience' %}
                   {% include resume/work.liquid %}
-                {% when 'volunteer' %}
+                {% when 'research engineer experience' %}
+                  {% include resume/work.liquid %}
+                {% when 'leadership & professional experience' %}
                   {% include resume/volunteer.liquid %}
-                {% when 'projects' %}
+                {% when 'selected research projects' %}
                   {% include resume/projects.liquid %}
                 {% when 'awards' %}
-                  {% include resume/awards.liquid %}
+                  {% include resume/work.liquid %}
                 {% when 'skills' %}
                   {% include resume/skills.liquid %}
-                {% when 'publications' %}
+                {% when 'representative first-author publications' %}
+                  {% include resume/publications.liquid %}
+                {% when 'additional first-author publications' %}
                   {% include resume/publications.liquid %}
                 {% when 'languages' %}
                   {% include resume/languages.liquid %}
