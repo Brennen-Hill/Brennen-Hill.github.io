@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Badger Vision
-description: Hack Midwest Winner for Best Enterprise Scale Business Solution
+description: Hack Midwest Winner and Best Enterprise Scale Business Solution
 img: assets/img/HackMidwest.jpeg
 importance: 1
 category: hackathon

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exosky, an Exoplanet Constellation Creator and Explorer
-description: An interactive 3D starfield to create and explore exoplanet constellations.
+title: Exosky
+description: An Exoplanet Constellation Creator and Explorer
 img: assets/img/ExoSky.jpeg
 importance: 1
 category: hackathon

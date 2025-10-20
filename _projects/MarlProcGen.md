@@ -1,6 +1,6 @@
 ---
 layout: page
-title: multi-agent sequential learning combating adversarial procedural generation
+title: MARL ProcGen
 description: Training defenders and an adversarial level generator simultaneously.
 img: assets/img/MarlProg.jpeg
 importance: 1

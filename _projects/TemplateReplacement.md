@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "'cl-quil/match': Template Matching and Replacement"
-description: An implementation of the Iten et al. algorithm for quantum circuit pattern matching.
+title: "Quantum Template"
+description: An algorithm for quantum circuit pattern matching and optimization.
 img: assets/img/PCOverview.png
 importance: 1
 category: research engineering
