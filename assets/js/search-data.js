@@ -105,6 +105,16 @@ ninja.data = [{
           description: "An exhaustive compilation of all project data.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg4/";
+            },},{id: "projects-vision-representations-2",
+          title: 'Vision Representations 2',
+          description: "Representation Fine-Tuning for Vision-Language Models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vis2/";
+            },},{id: "projects-vision-representations-2",
+          title: 'Vision Representations 2',
+          description: "Representation Fine-Tuning for Vision-Language Models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vis3p/";
             },},{
         id: 'social-email',
         title: 'email',
