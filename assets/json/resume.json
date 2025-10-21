@@ -161,21 +161,24 @@
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents; in NeurIPS 2025 Workshop on Embodied World Models for Decision Making; and in NeurIPS 2025 Workshop on Optimization for Machine Learning",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02912",
-      "summary": "Authors: Brennen Hill, Mant Koh En Wei, Thangavel Jishnuanandh. Developed a novel intention communication framework in MARL that achieved >96% success in a complex coordination task using a learned world model for latent trajectory planning and a self-attention mechanism to encode and share agent intentions, significantly outperforming emergent protocols."
+      "summary": "Developed a novel intention communication framework in MARL that achieved >96% success in a complex coordination task using a learned world model for latent trajectory planning and a self-attention mechanism to encode and share agent intentions, significantly outperforming emergent protocols.",
+      "authors": ["Brennen Hill", "Mant Koh En Wei", "Thangavel Jishnuanandh"]
     },
     {
       "name": "The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Symmetry and Geometry in Neural Representations and in NeurIPS 2025 Workshop on Interpreting Cognition in Deep Learning Models",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02995",
-      "summary": "Authors: Brennen Hill, Zhang Xinyu, Timothy Putra Prasetio. Designed VCNet, a novel architecture emulating the primate visual cortex, achieving state-of-the-art accuracy on two vision benchmarks with over 10x greater parameter efficiency than standard models."
+      "summary": "Designed VCNet, a novel architecture emulating the primate visual cortex, achieving state-of-the-art accuracy on two vision benchmarks with over 10x greater parameter efficiency than standard models.",
+      "authors": ["Brennen Hill", "Zhang Xinyu", "Timothy Putra Prasetio"]
     },
     {
       "name": "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
-      "summary": "Authors: Brennen Hill. Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline."
+      "summary": "Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline.",
+      "authors": ["Brennen Hill"]
     }
   ],
   "additional first-author publications": [
@@ -184,28 +187,32 @@
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents and in NeurIPS 2025 Workshop on Embodied World Models for Decision Making",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04633",
-      "summary": "Authors: Brennen Hill."
+      "summary": "",
+      "authors": ["Brennen Hill"]
     },
     {
       "name": "Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer",
       "publisher": "In NeurIPS 2025 Workshop on Embodied World Models for Decision Making",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04731",
-      "summary": "Authors: Brennen Hill."
+      "summary": "",
+      "authors": ["Brennen Hill"]
     },
     {
       "name": "HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning",
       "publisher": "In preparation",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.09801",
-      "summary": "Authors: Brennen Hill."
+      "summary": "",
+      "authors": ["Brennen Hill"]
     },
     {
       "name": "Breaking to Build: A Threat Model of Prompt-Based Attacks for Securing LLMs",
       "publisher": "In preparation",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.04615",
-      "summary": "Authors: Brennen Hill, Surendra Parla, Venkata Abhijeeth Balabhadruni, Atharv Prajod Padmalayam, Sujay Chandra Shekara Sharma."
+      "summary": "",
+      "authors": ["Brennen Hill", "Surendra Parla", "Venkata Abhijeeth Balabhadruni", "Atharv Prajod Padmalayam", "Sujay Chandra Shekara Sharma"]
     }
   ],
   "selected research projects": [

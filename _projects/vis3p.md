@@ -265,4 +265,6 @@ Wu, Zhengxuan et al. (2024). "ReFT: Representation Finetuning for Language Model
 Zhai, Xiaohua et al. (2023). _Sigmoid Loss for Language Image Pre-Training_. arXiv: 2303.15343 [cs.CV].
 
 Zou, Andy et al. (2023). "Representation Engineering: A Top-Down Approach to AI Transparency". In: _arXiv preprint arXiv:2310.01405_. URL: [https://arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405).
+
+$$
 $$

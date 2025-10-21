@@ -34,7 +34,7 @@ Such a technique has already shown promise in the context of large language mode
 
 \<div class="row"\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/cs839.pdf" title="Figure 1" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/cs839.pdf" title="Figure 1" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \</div\>
 \<div class="caption"\>
@@ -69,7 +69,7 @@ In the realm of vision-language models, related ideas exist but are often still 
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/latex/loReftDiagram.png" title="Figure 2" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/latex/loReftDiagram.png" title="Figure 2" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -84,7 +84,7 @@ In summary, while there is a growing body of research on modifying internal repr
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skatelatex/ft_methods.png" title="Figure 3" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reftlatex/ft_methods.png" title="Figure 3" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -213,7 +213,7 @@ Figure 4 shows that while some benefit can be gained from correctly choosing the
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/var_low_rank_proj.png" title="Figure 4" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/var_low_rank_proj.png" title="Figure 4" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -226,7 +226,7 @@ We started by including only the last layer (layer 23), and then we iteratively 
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/int_on_different_layers.png"" title="Figure 5" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/int_on_different_layers.png"" title="Figure 5" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -264,4 +264,6 @@ Wu, Zhengxuan et al. (2024). "ReFT: Representation Finetuning for Language Model
 Zhai, Xiaohua et al. (2023). _Sigmoid Loss for Language Image Pre-Training_. arXiv: 2303.15343 [cs.CV].
 
 Zou, Andy et al. (2023). "Representation Engineering: A Top-Down Approach to AI Transparency". In: _arXiv preprint arXiv:2310.01405_. URL: [https://arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405).
+
+$$
 $$
