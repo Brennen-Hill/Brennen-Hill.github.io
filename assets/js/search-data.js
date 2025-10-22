@@ -30,26 +30,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-quantum-compiler",
-          title: 'Quantum Compiler',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Assembly/";
-            },},{id: "projects-quantum-compiler",
-          title: 'Quantum Compiler',
-          description: "A Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Assembly2/";
-            },},{id: "projects-badger-vision",
+        },{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/BadgerVision/";
-            },},{id: "projects-roller-rl-4",
-          title: 'Roller RL 4',
-          description: "Reinforcement Learning for Quadruped Roller Skating.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Bot4/";
+              window.location.href = "/projects/Badger-Vision/";
             },},{id: "projects-exosky",
           title: 'Exosky',
           description: "An Exoplanet Constellation Creator and Explorer",
@@ -59,7 +44,7 @@ ninja.data = [{
           title: 'LLM Training',
           description: "Training and fine-tuning an LLM for reasoning",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/LLMTraining/";
+              window.location.href = "/projects/LLM-Training/";
             },},{id: "projects-marl-procgen",
           title: 'MARL ProcGen',
           description: "Training defenders and an adversarial level generator simultaneously.",
@@ -69,47 +54,37 @@ ninja.data = [{
           title: 'Quantum Circuit',
           description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/QuantumCircuit/";
+              window.location.href = "/projects/Quantum-Circuit/";
+            },},{id: "projects-quantum-compiler",
+          title: 'Quantum Compiler',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Quantum_Compiler/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
-          description: "Systematic Analysis of Transfer Learning for Sign Language Alphabet Recognition",
+          description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/SignLanguageLearner/";
-            },},{id: "projects-twg2",
-          title: 'TWG2',
-          description: "An exhaustive compilation of all project data.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/TW2/";
-            },},{id: "projects-twg",
-          title: 'TWG',
-          description: "Thunder Warrior: Genesis",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ThunderWarrior/";
+              window.location.href = "/projects/Sign-Language-Learner/";
             },},{id: "projects-vision-representations",
           title: 'Vision Representations',
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Vis/";
+              window.location.href = "/projects/Vision-Representations/";
+            },},{id: "projects-twg3",
+          title: 'TWG3',
+          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/twg-3-ai-comitee/";
+            },},{id: "projects-twg3",
+          title: 'TWG3',
+          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/twg-3-engineer/";
             },},{id: "projects-twg3",
           title: 'TWG3',
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg3/";
-            },},{id: "projects-twg4",
-          title: 'TWG4',
-          description: "An exhaustive compilation of all project data.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/twg4/";
-            },},{id: "projects-vision-representations-2",
-          title: 'Vision Representations 2',
-          description: "Representation Fine-Tuning for Vision-Language Models.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/vis2/";
-            },},{id: "projects-vision-representations-2",
-          title: 'Vision Representations 2',
-          description: "Representation Fine-Tuning for Vision-Language Models.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/vis3p/";
             },},{
         id: 'social-email',
         title: 'email',
