@@ -65,13 +65,13 @@ ninja.data = [{
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Vision-Representations/";
-            },},{id: "projects-twg3",
-          title: 'TWG3',
+            },},{id: "projects-twg3-ai",
+          title: 'TWG3-ai',
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg-3-ai-comitee/";
-            },},{id: "projects-twg3",
-          title: 'TWG3',
+            },},{id: "projects-twg3-en",
+          title: 'TWG3-en',
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg-3-engineer/";
