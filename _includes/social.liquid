@@ -99,7 +99,7 @@
     {% when 'zotero_username' %}
       <a href="https://www.zotero.org/{{ social[1] }}" title="Zotero"><i class="ai ai-zotero"></i></a>
     {% when 'lab_url' %}
-      <a href="{{social[1]}}"title="Lab"><i class="fa-solid fa-flask"></i></a>
+      <a href="{{social[1]}}" title="Lab"><i class="fa-solid fa-flask"></i></a>
     {% else %}
       <a href="{{ social[1].url }}" title="{{ social[1].title }}">
         {% assign file_ext = social[1].logo | split: '.' | last %}
