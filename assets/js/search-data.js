@@ -154,11 +154,11 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=E7N2fXkAAAAJ", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-lab_url',
+        title: 'Lab_url',
         section: 'Socials',
         handler: () => {
-          window.open("https://neuromorphic.cs.wisc.edu/people", "_blank");
+          window.open("", "_blank");
         },
       },{
       id: 'light-theme',
