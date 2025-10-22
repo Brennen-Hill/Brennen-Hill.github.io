@@ -8,10 +8,6 @@ category: research engineering
 related_publications: false
 ---
 
-Here is a project report written to frame your internship experience as ideal for an AI PhD program applicant.
-
----
-
 **Affiliation:** Quantum Software Intern (Research Engineer) - HRL Hughes Research Laboratories
 
 **Date:** Summer 2024
@@ -75,7 +71,7 @@ The project's success and significant technical contributions were recognized wi
 
 ---
 
-### **5. Conclusion & Relevance to AI PhD Aspirations**
+### **5. Conclusion**
 
 This internship involved the complete design, implementation, and validation of a domain-specific compiler for custom hardware. While the domain was quantum control, the core technical challenges are directly analogous to those in high-performance AI research.
 
@@ -86,4 +82,4 @@ This internship involved the complete design, implementation, and validation of 
   - **Hardware-Software Co-Design:** Optimizing software for a specific, low-level hardware target.
   - **Systematic Research:** The ability to deconstruct and reverse-engineer a complex, undocumented "black box" system (the ISA) from first principles.
 
-These skills—architecting complex software, optimizing for novel hardware, and a rigorous, empirical research mindset—are precisely what is required to tackle the next generation of challenges in scalable, efficient, and accelerated artificial intelligence. I am eager to apply this "full-stack" perspective, from abstract models down to the binary, to a PhD in AI.
+These skills—architecting complex software, optimizing for novel hardware, and a rigorous, empirical research mindset—are precisely what is required to tackle the next generation of challenges in scalable, efficient, and accelerated artificial intelligence.

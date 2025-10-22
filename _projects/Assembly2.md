@@ -69,7 +69,7 @@ The primary impact of this project was **enabling physics researchers to move se
 
 ---
 
-### **5. Relevance to AI and Doctoral Research**
+### **5. Conclusion**
 
 This project, while rooted in quantum control, demonstrates a deep expertise in systems engineering and compiler design that is directly transferable to state-of-the-art AI research.
 
