@@ -14,7 +14,6 @@ related_publications: false
     </div>
 </div>
 
-
 ### Abstract
 
 Fidelity in Noisy Intermediate-Scale Quantum (NISQ) computers is fundamentally limited by gate errors and qubit decoherence, making circuit optimization a critical task. This project details the engineering of a production-ready optimization pass within the **Quilc quantum compiler** to reduce circuit depth. The system implements an exact pattern-matching algorithm, translating a novel theoretical framework into a high-impact optimization tool. A **two-phase algorithmic solution** was devised to manage the combinatorial complexity: (1) a greedy forward-pass on the circuit's DAG representation to find a valid seed match, followed by (2) a comprehensive backtracking search to maximally expand the match. This optimization pass demonstrated significant, measurable impact, **reducing quantum circuit depth by up to 37%**, thereby shortening execution time and enhancing algorithmic fidelity by mitigating decoherence.
@@ -45,7 +44,6 @@ To navigate the high combinatorial complexity of the matching problem, a two-pha
     </div>
 </div>
 
-
 The algorithm first operates on the circuit's **Directed Acyclic Graph (DAG)** representation.
 
 <div class="col">
@@ -53,7 +51,6 @@ The algorithm first operates on the circuit's **Directed Acyclic Graph (DAG)** r
         {% include figure.liquid loading="eager" path="assets/img/ForwardMatchResult.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 
 It executes a greedy forward-pass to rapidly identify a valid _seed match_. This phase efficiently finds an initial, valid (but not necessarily maximal) subgraph isomorphism, which serves as a starting point for a more exhaustive search.
 
@@ -64,7 +61,6 @@ It executes a greedy forward-pass to rapidly identify a valid _seed match_. This
         {% include figure.liquid loading="eager" path="assets/img/BackwardMatchResult.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 
 The seed match from Phase 1 is then fed into a comprehensive **backtracking search** algorithm designed to maximally expand the match. This phase solves the core combinatorial challenge of the project, which involves:
 
