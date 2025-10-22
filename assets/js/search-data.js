@@ -55,6 +55,16 @@ ninja.data = [{
           description: "Reinforcement Learning for Quadruped Roller Skating.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Bot2/";
+            },},{id: "projects-roller-rl-3",
+          title: 'Roller RL 3',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Bot3/";
+            },},{id: "projects-roller-rl-4",
+          title: 'Roller RL 4',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Bot4/";
             },},{id: "projects-exosky",
           title: 'Exosky',
           description: "An Exoplanet Constellation Creator and Explorer",
