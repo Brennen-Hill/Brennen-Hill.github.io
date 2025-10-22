@@ -34,7 +34,7 @@ Such a technique has already shown promise in the context of large language mode
 
 \<div class="row"\>
 \<div class="col-sm mt-3 mt-md-0"\>
-{% include figure.liquid loading="eager" path="assets/img/vis-reft/cs839.pdf" title="Figure 1" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Figure 1" class="img-fluid rounded z-depth-1" %}
 \</div\>
 \</div\>
 \<div class="caption"\>

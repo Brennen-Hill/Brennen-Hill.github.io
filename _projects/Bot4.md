@@ -1,3 +1,15 @@
+---
+layout: page
+title: "Roller RL 4"
+description: Reinforcement Learning for Quadruped Roller Skating.
+img: assets/img/12.jpg
+importance: 1
+category: research
+related_publications: false
+toc:
+  sidebar: left
+---
+
 Here is the combined academic paper, formatted in Markdown for the al-folio template and including the requested image formatting.
 
 ---

@@ -1,3 +1,15 @@
+---
+layout: page
+title: "Roller RL 3"
+description: Reinforcement Learning for Quadruped Roller Skating.
+img: assets/img/12.jpg
+importance: 1
+category: research
+related_publications: false
+toc:
+  sidebar: left
+---
+
 Combine the best parts of that paper, with the following version. Note that for the next version, math will have to be reformatted.
 
 # Reinforcement Learning for Quadruped Roller Skating
