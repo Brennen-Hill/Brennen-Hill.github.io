@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "TWG3"
+title: "TWG3-ai"
 description: A consolidated report analyzing the codebase, game mechanics, and web portal.
 img: assets/img/ExoSky.jpeg
 importance: 1
