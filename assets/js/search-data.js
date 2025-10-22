@@ -45,11 +45,6 @@ ninja.data = [{
           description: "Training and fine-tuning an LLM for reasoning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LLM-Training/";
-            },},{id: "projects-marl-procgen",
-          title: 'MARL ProcGen',
-          description: "Training defenders and an adversarial level generator simultaneously.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/MarlProcGen/";
             },},{id: "projects-quantum-circuit",
           title: 'Quantum Circuit',
           description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
