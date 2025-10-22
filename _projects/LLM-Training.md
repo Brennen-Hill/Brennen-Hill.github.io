@@ -8,8 +8,6 @@ category: research
 related_publications: false
 ---
 
-# Project Report: From Advanced Prompting to Foundational Model Alignment
-
 {% include figure.liquid loading="eager" path="assets/img/Sign.webp" title="SignLanguageLearner" class="img-fluid rounded z-depth-1" %}
 
 ## 1. Abstract
