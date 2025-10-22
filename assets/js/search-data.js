@@ -154,6 +154,13 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=E7N2fXkAAAAJ", "_blank");
         },
       },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://neuromorphic.cs.wisc.edu/people", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
