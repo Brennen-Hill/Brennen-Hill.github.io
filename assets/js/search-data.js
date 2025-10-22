@@ -72,7 +72,7 @@ ninja.data = [{
               window.location.href = "/projects/Exosky/";
             },},{id: "projects-llm-training",
           title: 'LLM Training',
-          description: "Training and fine-tuning an LLM",
+          description: "Training and fine-tuning an LLM for reasoning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/LLMTraining/";
             },},{id: "projects-marl-procgen",
