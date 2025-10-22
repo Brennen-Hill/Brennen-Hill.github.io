@@ -1,7 +1,7 @@
 ---
 layout: page
 title: LLM Training
-description: Training and fine-tuning an LLM
+description: Training and fine-tuning an LLM for reasoning
 img: assets/img/TWG.png
 importance: 1
 category: research
@@ -18,7 +18,7 @@ This report details a two-part investigation into the capabilities and modificat
 
 ---
 
-## 2. Part I: Advanced Prompting for Complex Logical Reasoning
+## 2. Advanced Prompting for Complex Logical Reasoning
 
 ### 2.1. Problem Selection and Baseline Analysis
 
@@ -82,7 +82,7 @@ An important finding was that advanced prompting is not universally beneficial. 
 
 ---
 
-## 3. Part II: Foundational Model Training and Alignment from Scratch
+## 3. Foundational Model Training and Alignment from Scratch
 
 ### 3.1. Objective and Methodology
 

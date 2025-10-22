@@ -8,6 +8,7 @@ category: research
 related_publications: false
 toc:
   sidebar: left
+math: true
 ---
 
 Here is the combined academic paper, formatted in Markdown for the al-folio template and including the requested image formatting.
