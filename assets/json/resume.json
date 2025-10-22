@@ -5,7 +5,7 @@
     "label": "Neuroscience-Inspired AI Researcher",
     "email": "bahill4@wisc.edu",
     "phone": "+1-818-322-5574",
-    "lab website": "https://neuromorphic.cs.wisc.edu/people",
+    "lab": "https://neuromorphic.cs.wisc.edu/people",
     "summary": "My goal is to engineer artificial intelligence by using neural computation as a blueprint. I have pursued this by conducting research across three faculty-led labs and by founding a university NeuroAI lab to foster interdisciplinary collaboration. This work has resulted in four first-author, peer-reviewed publications at archival NeurIPS workshops. I aim to apply this synthesis of computational neuroscience and machine learning to tackle fundamental challenges in AI.",
     "location": {
       "city": "Madison",
@@ -157,7 +157,7 @@
   ],
   "representative first-author publications": [
     {
-      "name": "Ctesting 1 ommunicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models",
+      "name": "Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents; in NeurIPS 2025 Workshop on Embodied World Models for Decision Making; and in NeurIPS 2025 Workshop on Optimization for Machine Learning",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02912",
@@ -166,7 +166,7 @@
     },
     {
       "name": "The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet",
-      "publisher": "testing 1 In proceedings of NeurIPS 2025 Workshop on Symmetry and Geometry in Neural Representations and in NeurIPS 2025 Workshop on Interpreting Cognition in Deep Learning Models",
+      "publisher": "In proceedings of NeurIPS 2025 Workshop on Symmetry and Geometry in Neural Representations and in NeurIPS 2025 Workshop on Interpreting Cognition in Deep Learning Models",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02995",
       "summary": "Designed VCNet, a novel architecture emulating the primate visual cortex, achieving state-of-the-art accuracy on two vision benchmarks with over 10x greater parameter efficiency than standard models.",
@@ -175,10 +175,10 @@
     {
       "name": "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents",
-      "releaseDate": "2025 testing 1",
+      "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
-      "summary": "testing 1Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline.",
-      "authors": ["testing 1", "Brennen A. Hill"]
+      "summary": "Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline.",
+      "authors": ["Brennen A. Hill"]
     }
   ],
   "additional first-author publications": [
@@ -187,15 +187,15 @@
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents and in NeurIPS 2025 Workshop on Embodied World Models for Decision Making",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04633",
-      "summary": "testing 1",
-      "authors": ["Brennen A. Hill", "testing 1"]
+      "summary": "",
+      "authors": ["Brennen A. Hill"]
     },
     {
       "name": "Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer",
       "publisher": "In NeurIPS 2025 Workshop on Embodied World Models for Decision Making",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04731",
-      "summary": "testing 1",
+      "summary": "",
       "authors": ["Brennen A. Hill"]
     },
     {
@@ -203,7 +203,7 @@
       "publisher": "In preparation",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.09801",
-      "summary": "testing 1",
+      "summary": "",
       "authors": ["Brennen A. Hill"]
     },
     {
@@ -211,7 +211,7 @@
       "publisher": "In preparation",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.04615",
-      "summary": "testing 1",
+      "summary": "",
       "authors": ["Brennen A. Hill", "Surendra Parla", "Venkata Abhijeeth Balabhadruni", "Atharv Prajod Padmalayam", "Sujay Chandra Shekara Sharma"]
     }
   ],
