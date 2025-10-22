@@ -28,33 +28,37 @@ The goal of this project was to architect and build this bridge: a domain-specif
 
 ---
 
-### **2. Compiler Architecture & Implementation**
+### **2. Compiler Architecture and Design**
 
-A multi-pass compiler was architected in **Common Lisp**, a language chosen for its high performance (comparable to C), powerful macro system, and exceptional suitability for building domain-specific languages (DSLs) and compilers. The compiler translates a high-level Python representation into an optimized binary block.
+To meet the demands of speed, extensibility, and meta-programming, the compiler was architected in **Common Lisp**. Lisp's powerful macro system is exceptionally suited for creating domain-specific languages (DSLs) and compilers, while its performance is comparable to low-level languages like C.
 
-The compilation pipeline was designed as follows:
+The compiler operates in multiple passes, transforming a high-level experimental description into a final binary block. The pipeline's core strength lies in its use of a two-stage Intermediate Representation (IR).
 
-1.  **Frontend & High-Level IR:** The compiler ingests high-level experimental logic. This logic is translated into a custom high-level Intermediate Representation (IR) that preserves semantic concepts like loops, conditionals, arrays, and parametric sweeps (which run an experiment multiple times with different hyperparameters).
+1.  **High-Level IR:** This representation captures the experiment's abstract logic, such as loops, conditional branches, array operations, and variable references.
+2.  **Low-Level "Assembly API" IR:** A second, custom IR was designed to serve as a direct, human-readable mapping to the tProcessor's binary instruction set. This "assembly API" facilitated advanced compiler optimizations, automatic resource allocation, and precise timing calculations before the final binary was generated.
 
-2.  **Optimization & Resource Management:** Compiler passes perform crucial optimizations, including precise timing calculations and automatic resource allocation. A custom **stack and heap** were implemented to manage data. The compiler also manages three distinct memory spaces on the FPGA: **program instruction memory, waveform data memory, and general data memory**, and correctly allocates resources across them.
+#### **Key Compiler Passes and Features:**
 
-3.  **Assembly-Level IR:** A second, low-level IR was created to serve as an "assembly API." This IR provides a language of instructions that correspond directly to binary operations (e.g., `(command source destination)`). This abstraction was critical for simplifying the final code generation pass and enabling targeted optimizations.
-
-4.  **Backend & Binary Generation:** The final pass translates the low-level assembly IR into a raw binary block. High-level control structures like `if` statements and `loops` are compiled down to hardware-native conditional and unconditional jump instructions. The final output is a block of binary ready to be loaded directly onto the tProcessor.
+- **Translation:** High-level control structures (loops, if-statements) were systematically translated into low-level jump and conditional branch instructions, executable by the tProcessor.
+- **Optimization:** The multi-pass design enabled optimization phases to refine the generated code, manage resources efficiently, and calculate precise instruction timing.
+- **Memory Management:** A custom stack and heap were implemented to manage data. The compiler automatically allocated and referenced data across the tProcessor's three distinct memory spaces:
+  - **Program Memory:** Storing the compiled binary instructions.
+  - **Waveform Memory:** Storing pulse and envelope data.
+  - **General Data Memory:** For experimental results and variables.
+- **Parametric Sweeps:** A critical feature for experimental physics was implemented, allowing researchers to define sets of hyperparameters. The compiler automatically generated code to iterate through each parameter set, running the experiment multiple times in a single deployment.
 
 ---
 
-### **3. Core Challenge: Reverse-Engineering the Undocumented ISA**
+### **3. Core Engineering Challenge: tProcessor ISA Reverse Engineering**
 
-A primary obstacle was that the official documentation for the QICK tProcessor's 32-bit binary instruction set (ISA) was critically inaccurate, with over half of the specifications being incorrect. This made direct compilation impossible.
+A significant obstacle emerged early in the project: the available documentation for the QICK tProcessor's 32-bit binary instruction set was sparse and, in over half the cases, inaccurate. This made direct compilation impossible.
 
-A systematic, empirical methodology was developed to reverse-engineer the true ISA from first principles:
+To solve this, I initiated a **systematic reverse-engineering** process. This was not random trial-and-error but a methodical investigation:
 
-- **Systematic Testing:** A test harness was created to deploy custom-generated 32-bit binary strings directly to the FPGA.
-- **Bit-Level Mapping:** Individual bits and bit-fields were systematically toggled (1 vs. 0) to observe their effect on the hardware's output.
-- **Hierarchical Deduction:** This "trial and error" process was structured as a systematic search. It was discovered that certain bits acted as control flags, changing the function of other locations in the instruction word. By mapping these dependencies, the hierarchy of the ISA was uncovered.
-
-This rigorous reverse-engineering process successfully mapped the _true_ binary interface, creating an accurate specification from scratch and enabling the successful completion of the compiler.
+1.  **Hypothesis and Test:** I formulated hypotheses about the function of specific bits or bit-fields within the 32-bit instruction word.
+2.  **Empirical Validation:** I wrote small compiler passes to generate specific binaries based on these hypotheses. These binaries were then deployed and executed on the Xilinx RFSoC hardware.
+3.  **Iterative Mapping:** By observing the hardware's output (or lack thereof), I systematically mapped the function of each bit. This involved discovering the hierarchical dependencies within the instruction format—determining how certain bits acted as "control flags" that changed the meaning of other bit-fields.
+4.  **Full ISA Reconstruction:** This rigorous, empirical process was repeated until a complete and accurate map of the tProcessor's executable binary format was constructed. This validated map became the foundation for the low-level "Assembly API" and the compiler's final code-generation pass.
 
 ---
 

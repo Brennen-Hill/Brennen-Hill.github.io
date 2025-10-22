@@ -1,20 +1,15 @@
 ---
 layout: page
-title: "Vision Representations 2"
+title: "Vision Representations"
 description: Representation Fine-Tuning for Vision-Language Models.
 img: assets/img/12.jpg
 importance: 1
 category: research
 related_publications: false
-toc:
-  sidebar: left
+pretty_table: true
 ---
 
-# Representation Fine-Tuning for Vision-Language Models
-
-Brennan Hill, Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
-<br>
-University of Wisconsin-Madison
+Brennen Hill, Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
 
 ---
 
@@ -24,7 +19,7 @@ While finetuning large vision-language models has proven effective for various d
 
 ---
 
-## 1\. Introduction
+## 1. Introduction
 
 The rapid advancement of large pre-trained models has revolutionized machine learning, yet adapting these models to downstream tasks often requires substantial compute resources. Parameter-efficient fine-tuning seeks to mitigate this problem by introducing a limited set of tunable parameters while keeping the base model frozen. Methods like low-rank adaption {% cite hu2021loralowrankadaptationlarge %} and prompt tuning {% cite lester2021powerscaleparameterefficientprompt %} have shown promise in reducing the computational overhead of model adaptation, but they still require careful design choices about where and how to insert these trainable components.
 
@@ -32,14 +27,14 @@ Recently, representation fine-tuning {% cite wu2024reft %} has been introduced a
 
 Such a technique has already shown promise in the context of large language models {% cite wu2024reft %}, where researchers demonstrated that representation fine-tuning can guide models to better capture certain desired attributes, improve interpretability, and potentially address emergent behaviors. Despite these advances, the application of representation fine-tuning to vision-language models—complex architectures that fuse visual and linguistic inputs—has not yet been fully explored. Introducing representation fine-tuning to this domain could enable more granular control over how these models represent and integrate multimodal data, potentially leading to improvements in tasks such as image captioning, visual question answering, and multimodal reasoning.
 
-\<div class="row"\>
-\<div class="col-sm mt-3 mt-md-0"\>
+<div class="row">
+<div class="col-sm mt-3 mt-md-0">
 {% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Figure 1" class="img-fluid rounded z-depth-1" %}
-\</div\>
-\</div\>
-\<div class="caption"\>
+</div>
+</div>
+<div class="caption">
 Figure 1. Comparison of spatial depth perception before and after finetuning. nanoLlaVA out of the box answers this question incorrectly, but nanoLlaVA + ReFT produces the correct answer.
-\</div\>
+</div>
 
 In this paper, we apply the ReFT framework to multimodal architectures, demonstrating its effectiveness beyond language-only models. In Figure 1, we illustrate the result of ReFT tuning a vision-language model on CV-Bench {% cite tong2024cambrian1fullyopenvisioncentric %}, a spatial reasoning task. Our contributions are summarized as follows:
 
@@ -49,7 +44,7 @@ Altogether, our work provides a foundation for more resource-efficient adaptatio
 
 We organize the rest of the paper as follows. Section 2 reviews the related work, situating our approach within the existing literature on parameter-efficient fine-tuning and representation engineering. Section 3 details our technical approach, including the experimental framework and model configurations. In Section 4, we present the results of our experiments, comparing ReFT with LoRA and full fine-tuning in terms of both performance and parameter efficiency. Section 5 discusses the implications of our findings, highlighting key takeaways and directions for future research.
 
-## 2\. Related Work
+## 2. Related Work
 
 {% cite barack2021two %} discuss two influential perspectives on understanding cognition in cognitive science. The first, the Sherringtonian view, describes cognition as a direct consequence of node-to-node connections within neural circuits. While this bottom-up perspective has its merits, it struggles to explain complex cognitive phenomena that emerge from intricate patterns of interaction. In contrast, the Hopfieldian view emphasizes cognition as the product of high-dimensional representational spaces, formed from activity patterns across populations of neurons. This top-down view offers a richer framework for explaining higher-level cognitive processes and captures complexities that the Sherringtonian view cannot.
 
@@ -69,7 +64,7 @@ In the realm of vision-language models, related ideas exist but are often still 
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/vis-reft/latex/loReftDiagram.png" title="Figure 2" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/quad-skate/latex/loReftDiagram.png" title="Figure 2" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -84,7 +79,7 @@ In summary, while there is a growing body of research on modifying internal repr
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/vis-reftlatex/ft_methods.png" title="Figure 3" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/quad-skatelatex/ft_methods.png" title="Figure 3" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -93,7 +88,7 @@ Figure 3. Comparing different fine-tuning methods. Full-finetuning and low-rank 
 
 Figure 3 presents an overview of different fine-tuning approaches. Full fine-tuning (left panel) involves editing all node weights. LoRA (middle panel) involves editing a subset of node weights in an efficient manner uses low-rank adaptations of specific layers. Distinctly, ReFT (right panel) does not involving editing node weights, but editing the representations themselves at certain layers.
 
-## 3\. Technical approach
+## 3. Technical approach
 
 In this study, we investigate fine-tuning and generation techniques for large language models with efficient memory utilization using quantized approaches. The methodology integrates state-of-the-art frameworks to address computational constraints while ensuring high-quality model outputs.
 
@@ -177,7 +172,7 @@ Full fine-tuning updates a substantial 60.99% of the model's parameters, making 
 
 The training data was drawn from the CV-Bench dataset, with an 80-20 split for training and validation sets respectively.
 
-## 4\. Experimental Results
+## 4. Experimental Results
 
 | **Fine-tuning Method** | **Validation Accuracy (%)** |
 | :--------------------- | :-------------------------- |
@@ -213,7 +208,7 @@ Figure 4 shows that while some benefit can be gained from correctly choosing the
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/vis-reft/var_low_rank_proj.png" title="Figure 4" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/quad-skate/var_low_rank_proj.png" title="Figure 4" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -226,7 +221,7 @@ We started by including only the last layer (layer 23), and then we iteratively 
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/vis-reft/int_on_different_layers.png" title="Figure 5" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/quad-skate/int_on_different_layers.png" title="Figure 5" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -239,7 +234,7 @@ This seems to indicate that earlier interventions are more effective. Without fu
 
 However, with our current understanding of ReFT, we are unable to realize those computation savings as we don't know how to figure out this hyper-parameter selection without computationally expensive testing. This is also an issue when figuring out which low-rank projection should be used, especially when considering that different layers likely have different optimal ranks for their low-rank projections.
 
-## 5\. Conclusion
+## 5. Conclusion
 
 Prior research {% cite wu2024reft %} has demonstrated ReFT to be a highly parameter-efficient approach for fine-tuning language models with minimal efficiency-performance trade-off. In this paper, we expand ReFT to vision-language models, finding similarly that it can achieve comparable accuracy on spatial understanding tasks with much better parameter efficiency relative to alternative approaches.
 
@@ -264,6 +259,3 @@ Wu, Zhengxuan et al. (2024). "ReFT: Representation Finetuning for Language Model
 Zhai, Xiaohua et al. (2023). _Sigmoid Loss for Language Image Pre-Training_. arXiv: 2303.15343 [cs.CV].
 
 Zou, Andy et al. (2023). "Representation Engineering: A Top-Down Approach to AI Transparency". In: _arXiv preprint arXiv:2310.01405_. URL: [https://arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405).
-
-$$
-$$

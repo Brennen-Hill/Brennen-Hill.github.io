@@ -1,14 +1,13 @@
----
 layout: page
-title: "Roller RL 4"
+title: "RL Skaring"
 description: Reinforcement Learning for Quadruped Roller Skating.
 img: assets/img/12.jpg
 importance: 1
 category: research
 related_publications: false
 toc:
-  sidebar: left
-math: true
+sidebar: left
+
 ---
 
 Here is the combined academic paper, formatted in Markdown for the al-folio template and including the requested image formatting.
@@ -37,8 +36,6 @@ _University of Wisconsin, Madison_
 ## Abstract
 
 We present a framework for training a quadruped robot to roller skate using deep reinforcement learning (RL). To overcome the target hardware's (Unitree Go1) lack of leg yaw, we introduce a novel passive wheel design called the **"X configuration"**, which enables the conversion of sideways leg motion into forward propulsion. Training is conducted using a massively parallel RL framework in the Isaac Gym simulator. The trained policy discovers complex and **emergent gaits**, automatically switching from a **diagonal gait** at 1 m/s to a **galloping gait** to achieve 3 m/s. We demonstrate that this learned roller-skating locomotion is significantly **more energy-efficient** than a traditional trotting gait, exhibiting a substantially lower cost of transport and mechanical power at equivalent speeds. This research validates passive roller skating as a viable, low-cost, and highly efficient locomotion strategy for legged robots.
-
-**Index Terms**—Reinforcement Learning, Quadruped Robotics, Legged Locomotion, Roller Skating, Energy Efficiency, Emergent Behavior, Isaac Gym
 
 ---
 
@@ -92,7 +89,7 @@ To solve this, we designed a fixed **"X Configuration"** for the passive wheels.
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-8 mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/motor\_wheel\_config.png" title="Fig 1. Motor and Wheel Configuration" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/quad-skate/motor_wheel_config.png" title="Fig 1. Motor and Wheel Configuration" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -108,7 +105,7 @@ Our controller architecture is a hierarchical system, as shown in Fig. 2.
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-10 mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/block\_diagram.png" title="Fig 2. Software Block Diagram" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/quad-skate/block_diagram.png" title="Fig 2. Software Block Diagram" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -130,7 +127,9 @@ The action $\mathbf{a}$ outputted by the neural network is scaled to produce the
 
 $$
 \bm{\tau} = k_{p}(\mathbf{q}^{d} - \mathbf{q}) - k_{d}\dot{\mathbf{q}}
-$$where $\mathbf{q}$ and $\dot{\mathbf{q}}$ are the current joint positions and velocities, and $k_p$ and $k_d$ are the PD gains.
+$$
+
+where $\mathbf{q}$ and $\dot{\mathbf{q}}$ are the current joint positions and velocities, and $k_p$ and $k_d$ are the PD gains.
 
 ### E. Rewards and Regularizations
 
@@ -157,7 +156,7 @@ The reward function is crucial for shaping the desired behavior. It is structure
 
 To promote a robust policy, we also employ **domain randomization** by adding noise to all observations and randomizing link friction coefficients during training.
 
------
+---
 
 ## IV. Results and Analysis
 
@@ -174,7 +173,7 @@ After training, the robot was able to successfully track a wide range of velocit
 A significant finding is that the RL policy learned to **automatically switch its gait** based on the commanded forward velocity, without any explicit instruction to do so.
 
 - **At 1 m/s: Diagonal Gait**
-When commanded to move at 1 m/s, the robot adopted a **diagonal gait**. In this gait, the robot keeps a diagonal pair of wheels (e.g., front-left and back-right) on the ground at the same time for stability. As seen in Figs. 3 and 4, the legs push sideways, and the "X configuration" of the wheels converts this push into forward motion.
+  When commanded to move at 1 m/s, the robot adopted a **diagonal gait**. In this gait, the robot keeps a diagonal pair of wheels (e.g., front-left and back-right) on the ground at the same time for stability. As seen in Figs. 3 and 4, the legs push sideways, and the "X configuration" of the wheels converts this push into forward motion.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -189,7 +188,7 @@ When commanded to move at 1 m/s, the robot adopted a **diagonal gait**. In this 
 </div>
 
 - **At 3 m/s: Galloping Gait**
-When commanded to move at a higher speed of 3 m/s, the robot learned that the diagonal gait was insufficient. It autonomously developed a **galloping gait**. This gait is more dynamic, characterized by having **only one wheel in contact** with the ground at any given time. This gait involves more extreme side-to-side leg movements and appears similar to a horse's gallop, enabling the robot to achieve greater speeds.
+  When commanded to move at a higher speed of 3 m/s, the robot learned that the diagonal gait was insufficient. It autonomously developed a **galloping gait**. This gait is more dynamic, characterized by having **only one wheel in contact** with the ground at any given time. This gait involves more extreme side-to-side leg movements and appears similar to a horse's gallop, enabling the robot to achieve greater speeds.
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
@@ -210,13 +209,13 @@ This emergent behavior highlights the power of RL to discover complex and effect
 To validate our primary motivation, we compared the energy efficiency of our roller-skating robot against a baseline **trotting** gait (where the robot steps without wheels rolling). We compared two key metrics:
 
 1.  **Mechanical Power ($p$):** Defined as the sum of absolute joint power. We use the absolute value as both positive and negative power draw from the battery (representing electricity consumption).
-\\begin{equation}
-p = \\sum\_{i=1}^{n\_j} |\\tau\_i \\dot{q}\_i|
-\\end{equation}
+    $$
+    p = \sum_{i=1}^{n\_j} |\tau_i \dot{q}_i|
+    $$
 2.  **Cost of Transport (CoT):** A normalized metric for efficiency.
-\\begin{equation}
-CoT = \\frac{p}{mg||\\mathbf{v}\_{xy}||\_2}
-\\end{equation}
+    $$
+    CoT = \frac{p}{mg||\mathbf{v}_{xy}||_2}
+    $$
 
 The results, shown in Fig. 7, are conclusive. At all tested forward velocities (1 m/s, 2 m/s, and 3 m/s), the roller-skating gait (red line) is **significantly more energy-efficient** than the trotting gait (black line). Both the peak and average mechanical power and cost of transport are substantially lower when skating.
 
@@ -229,7 +228,7 @@ The results, shown in Fig. 7, are conclusive. At all tested forward velocities (
 Fig 7. Energy efficiency comparison between roller skating (red) and trotting (black) at 1 m/s, 2 m/s, and 3 m/s. Top row: Mechanical Power [W]. Bottom row: Cost of Transport. Roller skating is significantly more efficient in all cases.
 </div>
 
------
+---
 
 ## V. Discussion and Limitations
 
@@ -247,7 +246,7 @@ A limitation of our current reward function is that tracking rewards are applied
 
 A potential solution for future work is to incorporate whole-body level rewards, such as tracking the centroidal linear and angular momentum [2] or the center-of-mass position and whole-body orientation [3].
 
------
+---
 
 ## VI. Conclusion
 
@@ -257,13 +256,12 @@ Our RL agent, trained in the `legged_gym` simulator [1], learned to locomote at 
 
 We also identified and solved key simulation challenges related to rolling friction and identified limitations in our current reward function that can lead to whole-body tilt, suggesting clear avenues for future work. This work validates passive roller skating as a viable, low-cost, and highly efficient locomotion strategy for legged robots.
 
------
+---
 
 ## References
 
-[1] N. Rudin, D. Hoeller, P. Reist, and M. Hutter, "Learning to walk in minutes using massively parallel deep reinforcement learning," in *Conference on Robot Learning*. PMLR, 2022, pp. 91-100.
+[1] N. Rudin, D. Hoeller, P. Reist, and M. Hutter, "Learning to walk in minutes using massively parallel deep reinforcement learning," in _Conference on Robot Learning_. PMLR, 2022, pp. 91-100.
 
-[2] H. Dai, A. Valenzuela, and R. Tedrake, "Whole-body motion planning with centroidal dynamics and full kinematics," in *2014 IEEE-RAS International Conference on Humanoid Robots*. IEEE, 2014, pp. 295-302.
+[2] H. Dai, A. Valenzuela, and R. Tedrake, "Whole-body motion planning with centroidal dynamics and full kinematics," in _2014 IEEE-RAS International Conference on Humanoid Robots_. IEEE, 2014, pp. 295-302.
 
-[3] Y.-M. Chen, G. Nelson, R. Griffin, M. Posa, and J. Pratt, "Angular center of mass for humanoid robots," *arXiv preprint arXiv:2210.08111*, 2022.
-$$
+[3] Y.-M. Chen, G. Nelson, R. Griffin, M. Posa, and J. Pratt, "Angular center of mass for humanoid robots," _arXiv preprint arXiv:2210.08111_, 2022.

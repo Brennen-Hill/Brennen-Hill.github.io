@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sign Language Learner
-description: Systematic Analysis of Transfer Learning for Sign Language Alphabet Recognition
+description: Systematic Analysis of Transfer Learning for Sign Language Recognition
 img: assets/img/TWG.png
 importance: 1
 category: research
