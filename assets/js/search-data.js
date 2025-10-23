@@ -85,6 +85,11 @@ ninja.data = [{
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twg-3-engineer/";
+            },},{id: "projects-twg3-struc",
+          title: 'TWG3-struc',
+          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/twg3-struc/";
             },},{id: "projects-twg3",
           title: 'TWG3',
           description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
