@@ -55,7 +55,7 @@ The remainder of this report is organized as follows. Section II provides a brie
 
 ## II. Background: Reinforcement Learning
 
-Reinforcement Learning (RL) is a machine learning paradigm where an **agent** (the robot's control policy) learns to interact with an **environment** (the physics simulation) to maximize a cumulative **reward** signal. At each timestep, the agent observes the environment's current **state** $s_t$, takes an **action** $a_t$, and receives a scalar reward $r_t$ and the next state $s_{t+1}$. The goal is to learn a **policy**, $\pi(a_t|s_t)$, which is a mapping from states to actions that optimizes the expected long-term return (sum of rewards). In this work, we use RL to discover the complex sequence of motor commands required to achieve stable and efficient roller skating, a task that would be exceptionally difficult to explicitly program.
+Reinforcement Learning (RL) is a machine learning paradigm where an **agent** (the robot's control policy) learns to interact with an **environment** (the physics simulation) to maximize a cumulative **reward** signal. At each timestep, the agent observes the environment's current **state** $$s_t$$, takes an **action** $$a_t$$, and receives a scalar reward $$r_t$$ and the next state $$s_{t+1}$$. The goal is to learn a **policy**, $$\pi(a_t|s_t)$$, which is a mapping from states to actions that optimizes the expected long-term return (sum of rewards). In this work, we use RL to discover the complex sequence of motor commands required to achieve stable and efficient roller skating, a task that would be exceptionally difficult to explicitly program.
 
 ---
 
@@ -83,7 +83,7 @@ Fig 1. Left: Robot motor groups (red: hip/roll, green: thigh/pitch, blue: calf/p
 Our controller architecture is a hierarchical system, as shown in Fig. 2.
 
 1.  **High-Level Policy:** A neural network (the RL agent) runs at 50 Hz. It takes observations from the robot's state (detailed in Sec. III-C) and outputs the desired joint positions for all 12 motors.
-2.  **Low-Level Controller:** A joint-level Proportional-Derivative (PD) controller runs at 200 Hz. It receives the desired joint positions $q^d$ from the policy and computes the necessary motor torques $\tau$ to achieve them.
+2.  **Low-Level Controller:** A joint-level Proportional-Derivative (PD) controller runs at 200 Hz. It receives the desired joint positions $$q^d$$ from the policy and computes the necessary motor torques $$\tau$$ to achieve them.
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-10 mt-3 mt-md-0">
@@ -96,22 +96,22 @@ Fig 2. Software Block Diagram. The high-level policy (neural network) runs at 50
 
 ### C. Observation Space
 
-The observation $o$ provided to the policy network includes:
+The observation $$o$$ provided to the policy network includes:
 
-- **Commands:** Desired base linear velocity in the xy-plane ($^{\mathcal{B}}\mathbf{v}_{xy}^{d}$) and angular velocity around the z-axis ($^{\mathcal{B}}\omega_{z}^{d}$).
-- **Base States:** Base height, base orientation (represented as a "projected gravity" vector), and current base linear ($^{\mathcal{B}}\mathbf{v}$) and angular ($^{\mathcal{B}}\bm{\omega}$) velocities.
-- **Joint States:** The position $\mathbf{q}$ and velocity $\dot{\mathbf{q}}$ of all 12 motors.
-- **Last Actions:** The action $\mathbf{a}_{\text{prev}}$ taken in the previous timestep, which helps the policy learn smooth control.
+- **Commands:** Desired base linear velocity in the xy-plane ($$^{\mathcal{B}}\mathbf{v}_{xy}^{d}$$) and angular velocity around the z-axis ($$^{\mathcal{B}}\omega_{z}^{d}$$).
+- **Base States:** Base height, base orientation (represented as a "projected gravity" vector), and current base linear ($$^{\mathcal{B}}\mathbf{v}$$) and angular ($$^{\mathcal{B}}\bm{\omega}$$) velocities.
+- **Joint States:** The position $$\mathbf{q}$$ and velocity $$\dot{\mathbf{q}}$$ of all 12 motors.
+- **Last Actions:** The action $$\mathbf{a}_{\text{prev}}$$ taken in the previous timestep, which helps the policy learn smooth control.
 
 ### D. Action Space and Low-Level Control
 
-The action $\mathbf{a}$ outputted by the neural network is scaled to produce the **desired joint positions** $\mathbf{q}^d$. These are fed to the low-level PD controller, which calculates the final motor torques $\bm{\tau}$ using a zero desired joint velocity:
+The action $$\mathbf{a}$$ outputted by the neural network is scaled to produce the **desired joint positions** $$\mathbf{q}^d$$. These are fed to the low-level PD controller, which calculates the final motor torques $$\bm{\tau}$$ using a zero desired joint velocity:
 
 $$
 \bm{\tau} = k_{p}(\mathbf{q}^{d} - \mathbf{q}) - k_{d}\dot{\mathbf{q}}
 $$
 
-where $\mathbf{q}$ and $\dot{\mathbf{q}}$ are the current joint positions and velocities, and $k_p$ and $k_d$ are the PD gains.
+where $$\mathbf{q}$$ and $$\dot{\mathbf{q}}$$ are the current joint positions and velocities, and $$k_p$$ and $$k_d$$ are the PD gains.
 
 ### E. Rewards and Regularizations
 
@@ -119,22 +119,22 @@ The reward function is crucial for shaping the desired behavior. It is structure
 
 - **Tracking Rewards:**
 
-- **Base Linear Velocity (xy):** $\exp(-||^{\mathcal{B}}\mathbf{v}_{xy} - {^{\mathcal{B}}\mathbf{v}_{xy}^{d}}||_{2}^{2} / \sigma)$
-- **Base Angular Velocity (z):** $\exp(-||^{\mathcal{B}}\omega_{z} - {^{\mathcal{B}}\omega_{z}^{d}}||_{2}^{2} / \sigma)$
+- **Base Linear Velocity (xy):** $$\exp(-||^{\mathcal{B}}\mathbf{v}_{xy} - {^{\mathcal{B}}\mathbf{v}_{xy}^{d}}||_{2}^{2} / \sigma)$$
+- **Base Angular Velocity (z):** $$\exp(-||^{\mathcal{B}}\omega_{z} - {^{\mathcal{B}}\omega_{z}^{d}}||_{2}^{2} / \sigma)$$
 
 - **Penalties (Negative Rewards):**
 
-- **Base Height:** $-(z - z^d)^2$
-- **Base Orientation:** $-||^{\mathcal{B}}\mathbf{u}_{g,xy}||_{2}^{2}$ (penalizes tilt)
-- **Base Linear Velocity (z):** $-^{\mathcal{B}}v_z^2$ (minimizes hopping)
-- **Base Angular Velocity (xy):** $-||^{\mathcal{B}}\bm{\omega}_{xy}||_{2}^{2}$ (minimizes roll/pitch)
-- **Collision Avoidance:** $-||\mathbf{f}||_2^2$ (quadratic penalty on large collision forces on thigh/calf links)
-- **Joint Position Limit:** $-||\mathbf{q}_{\text{exceed}}||_2^2$ (penalizes exceeding joint limits)
+- **Base Height:** $$-(z - z^d)^2$$
+- **Base Orientation:** $$-||^{\mathcal{B}}\mathbf{u}_{g,xy}||_{2}^{2}$$ (penalizes tilt)
+- **Base Linear Velocity (z):** $$-^{\mathcal{B}}v_z^2$$ (minimizes hopping)
+- **Base Angular Velocity (xy):** $$-||^{\mathcal{B}}\bm{\omega}_{xy}||_{2}^{2}$$ (minimizes roll/pitch)
+- **Collision Avoidance:** $$-||\mathbf{f}||_2^2$$ (quadratic penalty on large collision forces on thigh/calf links)
+- **Joint Position Limit:** $$-||\mathbf{q}_{\text{exceed}}||_2^2$$ (penalizes exceeding joint limits)
 
 - **Regularization:**
 
-- **Effort Minimization:** $-||\mathbf{a} - \mathbf{a}_{\text{prev}}||_2^2$ (encourages smooth actions)
-- **Heuristic:** $-||\mathbf{p}_{\text{vert leg, xy}}||_2^2$ (vertical virtual leg regularization)
+- **Effort Minimization:** $$-||\mathbf{a} - \mathbf{a}_{\text{prev}}||_2^2$$ (encourages smooth actions)
+- **Heuristic:** $$-||\mathbf{p}_{\text{vert leg, xy}}||_2^2$$ (vertical virtual leg regularization)
 
 To promote a robust policy, we also employ **domain randomization** by adding noise to all observations and randomizing link friction coefficients during training.
 
@@ -146,9 +146,9 @@ To promote a robust policy, we also employ **domain randomization** by adding no
 
 After training, the robot was able to successfully track a wide range of velocity commands. The maximum command ranges we achieved are:
 
-- **Forward Velocity ($v_x$):** 3 m/s
-- **Sideways Velocity ($v_y$):** 2 m/s
-- **Yaw Velocity ($\omega_z$):** 3 rad/s
+- **Forward Velocity ($$v_x$$):** 3 m/s
+- **Sideways Velocity ($$v_y$$):** 2 m/s
+- **Yaw Velocity ($$\omega_z$$):** 3 rad/s
 
 ### B. Automatic Gait Switch
 
@@ -166,7 +166,7 @@ A significant finding is that the RL policy learned to **automatically switch it
     </div>
 </div>
 <div class="caption">
-    Figs 3 & 4. The robot using a diagonal gait at $t_0$ (left) and $t_1$ (right). The legs push sideways to generate forward motion.
+    Figs 3 & 4. The robot using a diagonal gait at $$t_0$$ (left) and $$t_1$$ (right). The legs push sideways to generate forward motion.
 </div>
 
 - **At 3 m/s: Galloping Gait**
@@ -181,7 +181,7 @@ A significant finding is that the RL policy learned to **automatically switch it
 </div>
 </div>
 <div class="caption">
-Figs 5 &amp; 6. The robot using a galloping gait at $t_0$ (left) and $t_1$ (right). This more dynamic gait is used to achieve higher speeds.
+Figs 5 &amp; 6. The robot using a galloping gait at $$t_0$$ (left) and $$t_1$$ (right). This more dynamic gait is used to achieve higher speeds.
 </div>
 
 This emergent behavior highlights the power of RL to discover complex and effective solutions in high-dimensional control problems.
@@ -190,7 +190,7 @@ This emergent behavior highlights the power of RL to discover complex and effect
 
 To validate our primary motivation, we compared the energy efficiency of our roller-skating robot against a baseline **trotting** gait (where the robot steps without wheels rolling). We compared two key metrics:
 
-1.  **Mechanical Power ($p$):** Defined as the sum of absolute joint power. We use the absolute value as both positive and negative power draw from the battery (representing electricity consumption).
+1.  **Mechanical Power ($$p$$):** Defined as the sum of absolute joint power. We use the absolute value as both positive and negative power draw from the battery (representing electricity consumption).
     $$
     p = \sum_{i=1}^{n\_j} |\tau_i \dot{q}_i|
     $$
