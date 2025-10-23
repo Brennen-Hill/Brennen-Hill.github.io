@@ -76,7 +76,7 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
-          cache-version: 2  #This change didn't fix it.
+          cache-version: 2 #This change didn't fix it.
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
@@ -105,4 +105,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
-          clean: true  #This change didn't fix it.
+          clean: true #This change didn't fix it.
