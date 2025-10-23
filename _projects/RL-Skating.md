@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "RL Skaring"
+title: "RL Skating"
 description: Reinforcement Learning for Quadruped Roller Skating.
 img: assets/img/quad-skate/motor_wheel_config.png
 importance: 1

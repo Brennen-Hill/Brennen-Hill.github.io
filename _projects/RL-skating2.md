@@ -6,6 +6,7 @@ img: assets/img/12.jpg
 importance: 1
 category: research
 related_publications: false
+math: true
 toc:
 sidebar: left
 ---
