@@ -76,11 +76,13 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+          cache-version: 2  #This change didn't fix it.
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
+          cache-version: 2 #This change didn't fix it.
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -103,3 +105,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          clean: true  #This change didn't fix it.
