@@ -1,35 +1,16 @@
+---
 layout: page
 title: "RL Skaring"
 description: Reinforcement Learning for Quadruped Roller Skating.
-img: assets/img/12.jpg
+img: assets/img/quad-skate/motor_wheel_config.png
 importance: 1
 category: research
 related_publications: false
 toc:
 sidebar: left
-
 ---
 
-Here is the combined academic paper, formatted in Markdown for the al-folio template and including the requested image formatting.
-
----
-
-# Reinforcement Learning for Quadruped Roller Skating
-
-**Brennen Alexander Hill**
-_Dept. of Computer Science_
-_University of Wisconsin, Madison_
-*bahill4@wisc.edu*
-
-**Hanwen Wang**
-_Dept. of Mechanical Engineering_
-_University of Wisconsin, Madison_
-*hwang2446@wisc.edu*
-
-**Aswinkumar Ramkumar**
-_Dept. of Electrical and Computer Engineering_
-_University of Wisconsin, Madison_
-*ramkumar4@wisc.edu*
+Brennen Hill, Hanwen Wang, Aswinkumar Ramkumar
 
 ---
 

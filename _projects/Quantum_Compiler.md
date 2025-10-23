@@ -2,7 +2,7 @@
 layout: page
 title: Quantum Compiler
 description: Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor
-img: assets/img/ExoSky.jpeg
+img: assets/img/spinQICK.jpg
 importance: 1
 category: research engineering
 related_publications: false
@@ -13,6 +13,12 @@ related_publications: false
 **Date:** Summer 2024
 
 ---
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/spinQICK.jpg" title="HRL Quantum" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ### **Abstract**
 

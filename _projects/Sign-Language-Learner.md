@@ -8,6 +8,10 @@ category: research
 related_publications: false
 ---
 
+Brennen Hill, Joseph Mostika, Mehul Maheshwari
+
+---
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/Sign.webp" title="SignLanguageLearner" class="img-fluid rounded z-depth-1" %}
@@ -98,12 +102,6 @@ The primary limitation of this project is the dataset itself, which is constrain
 1.  **Dynamic Gesture Recognition:** Expanding the model to handle video input to classify motion-based signs (like 'J' and 'Z') using datasets like WLASL.
 2.  **Real-World Robustness:** Testing model performance on "in-the-wild" images with varied lighting, backgrounds, and occlusions.
 3.  **Model Deployment:** Exploring quantization and pruning to deploy an efficient model on edge devices (e.g., mobile phones) for a real-time assistive application.
-
----
-
-### Contributors
-
-Brennen Hill, Joseph Mostika, Mehul Maheshwari
 
 ---
 

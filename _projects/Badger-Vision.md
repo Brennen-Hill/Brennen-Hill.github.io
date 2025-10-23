@@ -7,6 +7,10 @@ importance: 1
 category: hackathon
 ---
 
+Brennen Hill, Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma.
+
+---
+
 We won and were noted for the **Best Enterprise Scale Business Solution** at Hack Midwest, the largest hackathon in the region! Our team was awarded $2,500 for our project.
 
 Over 300 developers were selected to compete, including experts from leading organizations and universities. After 23 intense hours of coding with only a 1-hour break to sleep, we presented our solution to the judges and were victorious.
@@ -53,10 +57,6 @@ If we acquire the funding to continue work on this project, we would like to pur
 - Expand the functionality of the application to AR and VR headsets, including smart glasses.
 
 ---
-
-### Team Members
-
-Brennen Hill, Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma.
 
 <br>
 

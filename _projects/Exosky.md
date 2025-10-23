@@ -8,6 +8,10 @@ category: hackathon
 related_publications: false
 ---
 
+Brennen Hill, Jeremy Kintana, Max Maeder, Rahul Hathwar
+
+---
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/ExoSky.jpeg" title="ExoSky" class="img-fluid rounded z-depth-1" %}
@@ -63,7 +67,3 @@ Even though our simulation is pretty, it is highly accurate as well. Star bright
 - [Astropy](https://www.astropy.org/)
 - [NumPy](https://numpy.org/)
 - [Pandas](https://pandas.pydata.org/)
-
-## Contributors
-
-Brennen Hill, Jeremy Kintana, Max Maeder, Rahul Hathwar

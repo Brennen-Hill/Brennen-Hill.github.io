@@ -2,7 +2,7 @@
 layout: page
 title: "Vision Representations"
 description: Representation Fine-Tuning for Vision-Language Models.
-img: assets/img/12.jpg
+img: assets/img/vis-reft/loReftDiagram.png
 importance: 1
 category: research
 related_publications: false
@@ -29,7 +29,7 @@ Such a technique has already shown promise in the context of large language mode
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Figure 1" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/spacial_perception.png" title="Figure 1" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -64,7 +64,7 @@ In the realm of vision-language models, related ideas exist but are often still 
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/latex/loReftDiagram.png" title="Figure 2" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/loReftDiagram.png" title="Figure 2" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -79,7 +79,7 @@ In summary, while there is a growing body of research on modifying internal repr
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skatelatex/ft_methods.png" title="Figure 3" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/ft_methods.png" title="Figure 3" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -208,7 +208,7 @@ Figure 4 shows that while some benefit can be gained from correctly choosing the
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/var_low_rank_proj.png" title="Figure 4" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/var_low_rank_proj.png" title="Figure 4" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -221,7 +221,7 @@ We started by including only the last layer (layer 23), and then we iteratively 
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/int_on_different_layers.png" title="Figure 5" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/vis-reft/int_on_different_layers.png" title="Figure 5" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
