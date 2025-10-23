@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "TWG3"
+title: "TWG3-struc"
 description: A consolidated report analyzing the codebase, game mechanics, and web portal.
 img: assets/img/ExoSky.jpeg
 importance: 1
@@ -10,249 +10,33 @@ toc:
   sidebar: left
 ---
 
-## Project Analysis: Thunder Warrior: Genesis - Game Codebase
+## Section 1: Project Overview & Architecture
 
-This report provides an exhaustive analysis of the provided codebase for the game project "Thunder Warrior: Genesis" (TWG). The analysis covers the frontend structure and styling, client-side logic and WebSocket communication, server-side game management, and the core game mechanics including character representation, weapons, abilities, physics, collision detection, status effects, and map generation.
+This section provides a high-level summary of the Thunder Warrior: Genesis project, its overall architecture, and key observations.
 
----
+### I. Executive Summary
 
-### I. Frontend Implementation (`client.html`, CSS)
+This report provides an exhaustive analysis of the web-based game project "Thunder Warrior: Genesis." The analysis is derived from a collection of 128 HTML files located within the project's `homeMessages` directory, as well as the core codebase for the game client, server, and web portal. These files and scripts collectively paint an incredibly detailed picture of the game's features, technical architecture, development status, and community engagement strategies.
 
-The `client.html` file serves as the entry point and primary structure for the game's user interface, specifically the main menu and character customization/management screens before entering the actual arena.
+The project is a sci-fi action game, currently in an open beta phase, which places players in the role of a "Thunder Warrior." The game is built on a universe with warring factions (the "Empire" and the "Rebellion") and features gameplay across multiple planets.
 
-**A. HTML Structure and Metadata:**
+Key findings from the analysis include:
 
-- **Document Type**: Standard HTML5 doctype (`<!DOCTYPE html>`).
-- **Head Section**:
-  - **Title**: Sets the page title to "TWG Menu - Thunder Warrior: Genesis".
-  - **Favicons**: Includes a comprehensive set of favicon links (`apple-touch-icon`, `icon`, `manifest`, `mask-icon`, `shortcut icon`) targeting various platforms and browsers, ensuring consistent branding. Also includes meta tags for Microsoft Tile (`msapplication-TileColor`, `msapplication-config`) and theme color (`theme-color`).
-  - **Inline CSS**: Contains a large `<style>` block defining the visual appearance.
-  - **JavaScript**: Links to external `clientWebsocket.js` and includes a substantial inline `<script>` block containing the primary client-side game logic for the menu system.
-- **Body Section**:
-  - **Basic Styling**: Sets a dark background color (`#010105`) and attaches an `onresize` event handler likely used for dynamically adjusting layout or canvas elements.
-  - **Main Containers**: The core content is organized within several top-level `div` elements, each representing a distinct screen or major UI component:
-    - `loadingPage`: Displays loading indicators while fetching initial data.
-    - `classSelectionScreen`: Interface for initial character attribute allocation.
-    - `homeScreen`: The main menu hub, displaying character, resources, and navigation.
-    - `weaponPage`: Screen for viewing and managing weapons and modifications.
-    - `abilityPage`: Screen for viewing and managing character abilities.
-    - `shopScreen`: Interface for purchasing items, equipment, or currency.
-    - `settingsScreen`: A modal overlay for account management and game options.
-    - `rewardsScreen`: A modal overlay to display rewards earned.
-    - `upgradeAbilityScreen`: Modal for selecting ability upgrades upon level-up.
-    - `statsScreen`: Modal overlay displaying detailed statistics for equipment or abilities.
-    - `gameModeSelectionBackground`/`gameModeSelectionTab`: UI for choosing the game mode to enter.
-    - `tellScreen`: A generic modal for displaying informational messages to the player.
-    - `descriptionBackground`: A pop-up element used to show tooltips/details about hovered items.
-  - **Templates**: Utilizes HTML `<template>` tags (`purchaseTemplate`, `paymentScreenTemplate`, `classPointPurchase`, `classOptionTemplate`) for dynamically creating repetitive UI elements like shop items or purchase confirmation dialogs via JavaScript.
-  - **Hidden Elements**: Many screens (`homeScreen`, `weaponPage`, etc.) are initially hidden (`visibility: hidden`) and are shown/hidden by JavaScript as the user navigates.
-  - **IFrame**: Includes an `iframe` with `src='https://thunderwarrior.org/iframe'`, likely used for cross-domain communication, possibly for authentication or account data retrieval.
-  - **Form**: Contains a hidden `form` (`startForm`) presumably used to POST data when transitioning from the menu to the actual game client.
+1.  **Robust Account Management:** The system features a comprehensive and secure account management lifecycle, including detailed validation for sign-up, sign-in, email confirmation, and password/username recovery.
+2.  **Deep Customization:** This is a core pillar of the game. Players can customize their Thunder Warrior through a multi-layered class system, fully interchangeable equipment (armor, melee weapons, ranged weapons), and a complex "Modifications" system for fine-tuning gear.
+3.  **Authoritative Server Model:** The project uses an authoritative server to run the game simulation, with clients sending input and receiving state updates. This is crucial for a multiplayer action game.
+4.  **Multi-Faceted Community Engagement:** The project actively solicits user input through three distinct systems: a "Feedback" system for bugs and ideas, a 1-5 "Rating" system, and a "Review" system for detailed commentary.
 
-**B. CSS Styling:**
+### II. Project Overview: Thunder Warrior: Genesis
 
-- **Units and Responsiveness**: Extensively uses `vmin` (percentage of the smaller viewport dimension) for sizing and positioning, aiming for a UI that scales proportionally on different screen sizes. Font sizes, widths, heights, margins, padding, border-radius, and absolute positioning coordinates frequently use `vmin`.
-- **Layout**: Primarily uses `position: absolute` for laying out screens and major components within the `homeScreen` container, which acts as a fixed-size viewport (`100vmin` x `100vmin`). Flexbox (`display: flex`) is used in specific areas like the `informationBar` resource displays and ability icon holders for centering and alignment.
-- **Visual Appearance**:
-  - **Color Scheme**: Predominantly dark blues, purples, and grays (`#010105`, `#05051a`, `#111133`, `#222266`, `#606087`) with highlights of white, yellow (`#eddd10`), green (`#079950`), and red. Creates a futuristic/sci-fi aesthetic.
-  - **Gradients**: Uses `linear-gradient` and `radial-gradient` for button backgrounds (`coolButton`) and ability icon effects.
-  - **Borders and Radius**: `border-radius` is used heavily to create rounded corners and circular elements (buttons, resource displays, ability icons, mod slots).
-  - **Text**: Uses a sans-serif font, often white or light gray (`#ffffff`, `#cccccc`, `#777777`). Text styling includes size (`vmin`), alignment, justification, and transformations (uppercase).
-  - **Transparency/Overlays**: Uses `rgba` colors and semi-transparent backgrounds (`#9a9a9a83`, `#66669aca`) for modal screens (`coverScreen`) to overlay content.
-- **Interactivity & Animation**:
-  - **Hover Effects**: Styles change on `:hover` for elements like buttons (`coolButton`), trait displays, purchase options, providing visual feedback.
-  - **Cursors**: Explicitly sets `cursor: pointer` or `cursor: default` on many elements to indicate interactivity.
-  - **Animations**: Uses CSS `@keyframes` (`spin`, `pulseAnimation`, `pulseAnimationBrighter`) for loading indicators and ability icon pulsing effects.
-  - **Transitions**: Employs CSS `transition` for smooth changes in properties like `opacity` and `background-color`, particularly for ability unlock animations.
-- **Specific Component Styling**: Provides detailed styling for almost every UI element mentioned in the HTML structure, including positioning, sizing, colors, borders, text styles, and image handling for elements like resource counters, character equipment slots, ability trees, shop headers/items, settings buttons, loading icons, stat tables, and pop-up descriptions.
-- **Scrollbars**: Customizes the appearance of scrollbars using `::-webkit-scrollbar` pseudo-elements for elements like the stats screen.
-- **User Interaction**: Disables text selection (`user-select: none`) for most elements to maintain a game-like interface.
+"Thunder Warrior: Genesis" is a web-based game that has recently entered an open beta, inviting players to create an account and join the testing phase. The development team is actively encouraging feedback to identify bugs and guide improvement, indicating a community-focused development model. The game has been received positively by game testers, which has encouraged the team to continue development with "more vigor than ever before".
 
----
+The web portal functions by loading small, static HTML files containing JavaScript commands to display modular and easily updatable user notifications.
 
-### II. Client-Side Logic (`client.html` `<script>`, `clientWebsocket.js`)
+- **`setMessage(...)`:** This function is used to display status, error, and success messages to the user across all account and feedback modules.
+- **`setArticle(...)` & `newSection(...)`:** These functions are used to dynamically build and display news articles on the game's home page, keeping the community informed of updates.
 
-The client-side JavaScript manages the user interface, handles user interactions within the menu, prepares data, and communicates with the server via WebSockets.
-
-**A. Initialization and Authentication (`client.html`, `clientWebsocket.js`):**
-
-- **Loading Sequence**:
-  1.  `runGame` calls `loadGame` on window load.
-  2.  `loadGame` checks for WebSocket support. If supported, it messages the iframe (`https://thunderwarrior.org/iframe`) to request account credentials (`getAccount`).
-  3.  An `onmessage` handler listens for the response from the iframe.
-  4.  If credentials (`username`, `password`) are received, they are stored, the iframe is removed, and `load` is called. If not, the user is redirected (`totalRedirect`).
-  5.  `load` calls `createWebSocket` (defined in `clientWebsocket.js`) to establish the WebSocket connection.
-- **WebSocket Connection (`clientWebsocket.js`)**:
-  1.  `createWebSocket` establishes the connection and sets up event handlers (`onopen`, `onerror`, `onmessage`, `onclose`).
-  2.  `messageWS` handles incoming messages. It performs an initial security check (`checkMessage`) involving a key exchange and timestamp verification.
-  3.  If the check passes, a `ticket` is stored, and an 'account' message is sent (`sendAccount`) with credentials and the requested type (`gameMenu`).
-  4.  Subsequent messages are checked against the ticket before being processed by `recieveAnyMessage`.
-- **Data Loading (`client.html`, `clientWebsocket.js`)**:
-  1.  The server responds to the 'account' message with a 'user' message containing `user` data, game `options`, and connection `status`.
-  2.  `recieveAnyMessage` routes the 'user' message to `loadAll` in `client.html`.
-  3.  `loadAll` stores the received `user` data (including trooper stats, equipment, abilities, resources) in the global `troop` variable. It checks if the user is already `inGame` and potentially triggers a rejoin (`rejoinGame`). It then initializes various game aspects: sets options, calculates default trooper values (`setDefaultTrooperValues`), defines equipment/weapon/armour stats (`loadEquipment`), sets up UI displays (`setImageDisplays`), constructs ability data (`constructAbilities`), and starts loading images (`createAllImages`).
-- **Image Loading (`client.html`)**:
-  1.  `createAllImages` initiates loading for numerous images (UI elements, equipment, abilities) using helper functions (`createSimpleImage`, `createBasicImg`).
-  2.  It tracks loading progress (`imagesCreated`, `imageCount`) and updates the `loadStatus` element.
-  3.  Once all images are loaded (`countImages` reaches `imageCount`), `continuePageCreationWithLoadedImages` is called.
-- **Final Setup (`client.html`)**:
-  1.  `continuePageCreationWithLoadedImages` sets up event listeners (`createEternalEvents`, `createHomeScreenEvents`), updates resource displays (`updateResources`), checks if character attributes need selection (`showClassSelectionScreen`) or proceeds to the main menu (`pageCreationWithClassSelected`), sets initial UI element sizes (`setImages`), and finally hides the loading screen (`hideLoadingScreen`).
-
-**B. UI Management and Navigation (`client.html`):**
-
-- **Screen Visibility**: Uses a global `onPage` variable to track the currently active screen. Functions like `showHomeScreen`, `hideHomeScreen`, `showWeaponScreen`, `hideWeaponScreen`, `showAbilityPage`, `hideAbilityPage`, `showShopScreen`, `hideShopScreen`, `viewSettings`, `closeSettings`, etc., manipulate the `visibility` style property of the corresponding `div` elements to switch between views.
-- **Dynamic Content**:
-  - **Templates**: Uses `<template>` elements and `cloneNode(true)` to generate lists of shop items, purchase options, and class attribute selectors dynamically.
-  - **Resource Display**: `updateResources` function updates the text content of elements displaying credits, skill points, metal, crystals, experience, and player level, using `simplifyNumber` for large values.
-  - **Character Display**: Updates `src` attributes of `img` elements to show equipped armor and weapons (`setDisplayImageSrcs`). Draws the character model onto a canvas (`drawFullCharacter`, `setCharacterBackground`). Updates stat displays (`setAbilityDisplays`).
-  - **Tooltips/Descriptions**: `showWeaponDescription` and `showAbilityDescription` populate and position the `descriptionBackground` element with details about the hovered item, including stats rendered onto a canvas (`setDescriptionCanvas`). `hideWeaponDescription` hides it.
-- **Event Handling**: Numerous `onclick`, `onmouseover`, `onmouseout`, `onkeydown`, `onresize` event handlers trigger functions to handle user interactions like button clicks, hovering over items, keyboard shortcuts, screen resizing, etc.
-
-**C. Core Menu Logic (`client.html`):**
-
-- **Class Selection**:
-  - `showClassSelectionScreen` displays the attribute selection UI if `troop.built` is not "finished".
-  - `buildClassSelectionScreen` dynamically creates the attribute selectors using the `classOptionTemplate`.
-  - `modifyClassOption` handles increasing/decreasing attribute points, checking against available `classPoints`, calculating costs (`getNumCost`), updating visuals, and enabling/disabling buttons (`setClassAddition`, `setClassSubtraction`).
-  - `selectClass` finalizes attribute choices (`setClassProperties`), sets default equipment (`setEquipmentDefaults`), marks `troop.built` as "finished", saves data to the server (`saveTraitToServer`), and transitions to the home screen.
-- **Home Screen**:
-  - Displays character, resources, equipment slots, and stat summaries.
-  - Equipment slots are clickable (`onclick`) to navigate to the `weaponPage`.
-  - Stat displays (`Stamina`, `Thaumaturgy`) are clickable to navigate to the `abilityPage`.
-  - Resource displays are clickable (`onclick`) to open the relevant purchase screen in the shop.
-  - "Enter the Arena" button (`gameTitle`) shows the game mode selection UI (`showGameModeSelection`).
-- **Weapon/Equipment Page (`weaponPage`)**:
-  - Displays details of the `selectedEquipment`.
-  - Shows a list of available equipment/mods (`fullEquipmentArray`) of the same type in scrollable slots (`weaponSelectionBackground`). `setWeaponScreen` manages this display.
-  - Allows equipping items by clicking (`updateWeapon`).
-  - Allows deconstructing items (`deconstructMod` via backspace/delete key).
-  - Allows viewing and managing equipped mods by clicking the large weapon image (`displayOrHideModOptions`), switching the view (`modsShowing`).
-  - Navigation back to home screen (`showHomeScreen`).
-- **Ability Page (`abilityPage`)**:
-  - Displays the ability tree for either Stamina or Thaumaturgy (`setAbilityPage`). Allows switching between trees.
-  - `createAbilityOption` dynamically generates icons for each ability.
-  - Clicking an ability icon shows its description and status (`setAbilities`).
-  - If unlocked, shows equipped slots (`setGameAbilities`) and allows equipping/unequipping via keyboard shortcuts (`equipAbility`).
-  - If locked, shows prerequisites and costs. Allows unlocking if conditions are met (`setUnlockButton`).
-  - Provides ability recommendations (`abilityAdviceText`).
-- **Shop Page (`shopScreen`)**:
-  - Tabbed interface (`purchaseHeaders`) for different shop categories (Weapons, Armor, Mods, Resources).
-  - Functions like `weaponsShopScreen`, `armourShopScreen`, `purchaseCredits`, etc., configure the displayed items (`setShopSelection`).
-  - Displays purchase options on canvases (`purchaseOption0`, etc.), rendered by `setShopScreen`.
-  - Handles purchases (`makePurchase`), checking resource availability, deducting costs, adding items/resources (`recievePurchasedItem`), and displaying rewards (`showRewardsScreen`).
-  - Handles crystal purchases by showing a payment screen template (`crystalPurchase`).
-- **Settings/Modals**: Provides options for account management (linking out), logging out, resetting attributes (`resetAttributesPoints`), triggering ability upgrades (`selectAbilityUpgrade`), and closing the modal. `tell` function displays informational pop-ups.
-- **Starting Game**: `showGameModeSelection` displays options. Clicking a mode calls `startGame`, which packages necessary data (`getGameData`) and uses `sessionStorage` and form submission (`joinGame`) to transition to the actual game client.
-
-**D. Data Management (`client.html`):**
-
-- **Global `troop` Object**: Holds all player-specific data received from the server (stats, resources, inventory, abilities, etc.).
-- **Equipment/Ability Definitions**: Defines extensive static data for base equipment (helmets, bodies, legs, arms, ranged weapons, melee weapons), mods (multipliers, traits), and abilities (stamina, thaumaturgy) including their stats, costs, descriptions, prerequisites, etc.
-- **Calculations**: Includes functions to calculate modified equipment stats based on mods (`getModifiedEquipment`, `modifyWeapons`, `modifyArmour`, etc.), calculate item power (`getPower`), calculate ability descriptions with dynamic values (`getAbilityDescription`), calculate costs (`getNumCost`), etc.
-- **Server Synchronization**: Uses `saveTraitToServer` to send updates to the server via WebSocket whenever critical data changes (e.g., equipping items, unlocking abilities, spending resources, changing settings).
-
----
-
-### III. Server-Side Logic (`gameServer.js`, `websocket.js`)
-
-The server-side code manages game instances, handles client connections and communication within a game, and runs the core game simulation.
-
-**A. Game Instance Management (`gameServer.js`):**
-
-- **`NEW_GAME` Constructor**: Represents a single game instance/room. It's initialized with game configuration (`game` - including map, players), WebSocket utilities (`w`, `wss`), and callbacks for termination (`terminateGame`, `finishGame`).
-- **Initialization**: Stores game map data, creates `Trooper` objects for each player (`buildTroopers`), initializes projectiles array, sets up `CollisionDetection`. Starts the game loop after a delay (`startGame`, `update`).
-- **Game Loop**:
-  - Runs at a fixed rate (`fps`).
-  - Calculates delta time (`setDeltaTime`).
-  - Updates the state of all troopers and projectiles (`updateGame`).
-  - Checks for win conditions or game end conditions (`checkWin`).
-  - Sends the updated state to all clients in the room (`sendUpdate`).
-- **Termination**:
-  - `checkWin` monitors trooper `alive` status and affiliation counts (`countAffiliation`). If only one affiliation remains, calls `gameOver`.
-  - `checkWin` also checks for disconnected players (`countAffiliation`) or game timeout (`maxMinutes`). If conditions met, calls `endGame`.
-  - `gameOver` records the winner, notifies troopers, and calls the `finishGame` callback.
-  - `endGame` stops the game loop (`clearInterval`) and calls the `terminateGame` callback.
-
-**B. Client Communication (`gameServer.js`, `websocket.js`):**
-
-- **Input Handling**: `newInput` method receives player input from the WebSocket server and forwards it to the corresponding `Trooper` object using `getTrooper`.
-- **Connection Management**: `disconnect` and `rejoin` methods update the `connected` status of `Trooper` objects. `check` verifies if a player is allowed to rejoin.
-- **State Synchronization**: `sendUpdate` gathers data from all `Trooper` and `Projectile` objects (using their `.data` getters) and broadcasts it to all connected clients in the game's room using `w.sendToRooms`.
-- **WebSocket Utilities (`websocket.js`)**: Provides helper functions for sending messages (`send`, `broadcast`, `sendToRooms`), managing room membership (`joinRoom`, `inRoom`, `leaveRoom`), handling keep-alive pings (`startPing`), and verifying client connections (`checkMessage`).
-
-**C. Server-Side Game Logic (`gameServer.js` relies on `Trooper.js`, `Projectile.js`, `CollisionDetection.js`):**
-
-- **Simulation**: The core `updateGame` function orchestrates the simulation tick:
-  1.  Calls `prepare` on all troopers (updates delta time, processes input, updates status effects/abilities).
-  2.  Calls `update` on all troopers (handles movement, combat, physics).
-  3.  Calls `update` on all projectiles (moves them, checks collisions). Removes projectiles that hit or expire.
-  4.  Calls `reset` on all troopers (clears temporary multipliers).
-- **Object Management**: Maintains lists of `troopers` and `projectiles`.
-- **Collision**: Utilizes the `CollisionDetection` instance (`CD`) passed to troopers and projectiles for checking interactions.
-
----
-
-### IV. Core Game Mechanics
-
-These files define the fundamental objects and rules of the game world.
-
-**A. Character (`Trooper.js`):**
-
-- **Representation**: The central class representing a player character in the game world.
-- **State**: Maintains extensive state including position (`x`, `y`, `z`), rotation (`rot`), dimensions (`w`, `h`, `d`), velocity (`velocity`, `speed`), core stats (HP, Stamina, Thaumaturgy objects), affiliation (`af`), alive/connected status, kills, killer info, equipped weapons (`gun`, `saber`), active abilities, status effects, input state, camera position/rotation, and animation state flags (jumping, falling, running, etc.).
-- **Physics/Movement**: Implements gravity, acceleration/deceleration, jumping (including delayed jump and variable height based on hold), running, collision response (`boxCollision`), on-ground vs. in-air logic, knockback resistance. Movement speed is affected by base stats, weight (from stats and armor), and status effects/abilities.
-- **Combat**: Handles taking damage (`damage` method), applying defenses, calculating critical hits and evasion. Tracks health (`hp`) and death state. Delegates weapon firing/blocking/striking to `Gun` and `Saber` instances. Triggers resource regeneration upon dealing damage or getting kills.
-- **Resources**: Manages HP, Stamina, and Thaumaturgy, including maximum values, current values, regeneration rates, cooldowns after usage, and effects of abilities/status effects.
-- **Abilities**: Manages the activation, execution, and cooldown of abilities based on player input and game state. Interacts with `AbilityEffect.js` for specific logic.
-- **Status Effects**: Manages the application and updating of status effects via the `status` array, interacting with `StatusEffect.js`. Status effects modify multipliers (`troop.mult`) affecting speed, defense, damage, etc.
-- **Data Serialization**: The `.data` getter packages essential state for network synchronization.
-
-**B. Weapons (`Gun.js`, `Saber.js`, `WeaponBase.js`):**
-
-- **Common Base (`WeaponBase.js`)**: Provides shared logic for managing firing cooldowns (`firingSpeed`), heat/resource management (`heat`), activation state, and tracking states for potential animation/sound cues. Supports optional overheat mechanics.
-- **Ranged Weapons (`Gun.js`)**:
-  - Handles ranged combat logic: firing projectiles, tracking heat, managing firing rate and spread.
-  - Creates `Projectile` instances when firing.
-  - Supports different weapon stats (damage, range, speed, heat properties) loaded from `initData`.
-  - Integrates with `WeaponBase` for cooldown and heat management.
-  - Supports special shots activated by abilities.
-- **Melee Weapons (`Saber.js`)**:
-  - Handles melee combat: striking and blocking.
-  - **Striking**: Manages strike cooldowns, delays, applies damage within an arc using collision detection, handles knockback. Supports special strikes from abilities (`addStrike`).
-  - **Blocking**: Manages block state, duration, parry window. Handles projectile reflection (`blockProjectile`), melee deflection (`blockSaber`), and potential Thaumaturgy blocking (`checkBlockThaum`) based on angle checks. Consumes stamina.
-  - Integrates with `WeaponBase`, using stamina as the resource managed by the `heat` system.
-- **Projectiles (`Projectile.js`)**:
-  - Represents individual shots fired by guns.
-  - Moves in a straight line (`update`).
-  - Checks for collisions with obstacles or enemies (`CD.check`).
-  - Applies damage to troopers upon collision, considering falloff (`getDistanceTravelledMult`) and potential blocks.
-  - Tracks distance travelled and expires after exceeding `maxRange`.
-  - Includes visual smoothing logic.
-
-**C. Abilities and Status Effects (`AbilityEffect.js`, `StatusEffect.js`):**
-
-- **Ability Logic (`AbilityEffect.js`)**: Contains the specific implementation for each ability, defining prerequisites, activation logic, per-tick updates, and end conditions. Interacts heavily with the `Trooper` object and `CollisionDetection`.
-- **Status Effect Logic (`StatusEffect.js`)**: Defines how temporary buffs and debuffs modify a trooper's state or behavior over time. Typically modifies `troop.mult` properties or applies direct effects each tick.
-
-**D. Physics and Collision (`CollisionDetection.js`, `MathVector.js`, `Trooper.js`):**
-
-- **Collision Detection (`CollisionDetection.js`)**: Provides functions to check for intersections between different shapes (AABB boxes, planes, arcs) used for character movement, projectile hits, and ability areas of effect.
-- **Vector Math (`MathVector.js`)**: Includes utilities for rotating vectors, normalizing angles, calculating directions, and normalizing movement vectors.
-- **Trooper Physics (`Trooper.js`)**: Implements basic physics including gravity, acceleration, deceleration, jumping, air resistance (simplified), and collision response (stopping movement, setting `onGround` state).
-
-**E. Map Generation (`mapBuilder.js`):**
-
-- **Procedure**: Selects a map type, defines its obstacles and spawn points, and assigns spawn points to players based on affiliation.
-- **Data Format**: Defines maps as arrays of obstacle objects and structured spawn position data.
-
-**F. Web Configuration (`robots.txt`):**
-
-- **Standard File**: Provides instructions for web crawlers.
-- **Configuration**: Disallows access to a `/test` directory but allows crawling of all other content.
-
----
-
-### V. Overall Architecture and Observations
+### III. Overall Architecture and Observations
 
 - **Client-Server Model**: The project follows a typical authoritative server model. The server (`gameServer.js`) runs the game simulation, and clients (`client.html`, `clientWebsocket.js`) send input and receive game state updates via WebSockets.
 - **Modularity**: The codebase is reasonably modular, with separate files for distinct concerns like weapons (`Gun.js`, `Saber.js`), characters (`Trooper.js`), abilities (`AbilityEffect.js`), server logic (`gameServer.js`), client UI (`client.html`), networking (`websocket.js`, `clientWebsocket.js`), physics utilities (`CollisionDetection.js`, `MathVector.js`), etc.
@@ -268,15 +52,78 @@ These files define the fundamental objects and rules of the game world.
   - Further optimization of collision detection if performance becomes an issue.
   - Adding comments to explain complex logic sections.
 
-This report covers the structure, functionality, and interactions of the provided code files in extensive detail, outlining the architecture and core mechanics of the Thunder Warrior: Genesis game project.
-
-## Report 2: Game Asset & Mechanics Analysis (from Report 3)
-
-Okay, here is an extensive and incredibly detailed description of every Gun, Armor piece, Saber, Ability, Buff, Debuff, and Modification defined within the provided codebase.
-
 ---
 
-## I. Armor
+## Section 2: Gameplay, Mechanics, & Assets
+
+This section details the user-facing gameplay features and provides a comprehensive catalog of all defined assets, including armor, weapons, abilities, and modifications.
+
+### I. Gameplay & Features (User-Facing)
+
+The `newsArticle` files provide a rich, detailed look into the game's mechanics, features, and development roadmap.
+
+**A. Core Concept & Onboarding**
+
+- **Classes:** Upon creation, players choose a class (e.g., Jedi, sabateur, sith, infiltrator).
+- **Class Defines:**
+  1.  **Starting Skills:** (Power, Constitution, Thaumaturgy, Stamina, Speed, Utility).
+  2.  **Faction:** (Empire or Rebellion).
+  3.  **Passive Traits:** (e.g., gaining health/stamina on kill).
+  4.  **Starting Equipment:** (Full armor set, one melee weapon, one ranged weapon).
+- **Skills Breakdown:**
+  - **Passive Skills:** Power (damage), Constitution (health/healing), Speed (movement/action speed), Stamina (powers some abilities).
+  - **Ability Skills:** Thaumaturgy (supernatural powers), Stamina (natural abilities), Utility (other useful actions).
+
+**B. Character Customization: Equipment**
+
+Customization is a central theme. The game features fully interchangeable equipment.
+
+- **Equipment Slots:** Helmets, Torso pieces, Leg pieces, Right Arm pieces, Left Arm pieces, Ranged Weapons, and Melee Weapons.
+- **Rarity System:** A 7-tier rarity system is in place: **Junk, Common, Uncommon, Rare, Epic, Legendary, and Insane**. Rarity increases the equipment's statistics.
+- **Acquisition:**
+  1.  **Enemy Drops:** Killing an enemy provides a chance to earn their equipment. The dropped item will either match the enemy's rarity or be one tier lower.
+  2.  **Shop:** Players can use "credits and metal" to unlock new equipment in the shop.
+- **Leveling:** Equipment is unlocked at the player's current level; higher-level Thunder Warriors get more powerful gear.
+- **Optimization:** A dedicated article guides players on "Picking the Right Equipment," advising them to think about how gear works together to "achieve a certian goal" (e.g., high damage and low weight for "hit and run tacktics").
+
+**C. Character Customization: Modifications System**
+
+A deep modification system allows for "incredible customization" on top of base equipment.
+
+- **Rarity & Acquisition:** Mods follow the same 7-tier rarity system and are acquired from enemy drops or the shop.
+- **Mod Structure:**
+  1.  **Main Enhancement:** One primary stat increase (e.g., "Defense for armour, or Damage for a weapon").
+  2.  **Minor Enhancements:** Up to four secondary enhancements. These can be smaller stat changes or "Universal Changes" affecting the entire character (e.g., "ability cost" or "time it takes to start healing").
+- **Balancing:** Minor enhancements can sometimes be a "slight Decrease." This is an intentional design choice, as it "meens that the other traits of the mod will be even more powerful".
+- **Equipping:** Players equip mods by clicking a weapon's icon on the home screen, then clicking the weapon's image or the empty mod slots beneath it.
+
+**D. Combat System**
+
+The game features both ranged and melee combat.
+
+- **Melee Weapons:** Introduced as a major update, melee weapons "revolutionize combat".
+- **Swapping:** Players press 'f' to swap between ranged and melee weapons.
+- **Melee Attack:** Higher damage, less range, and lower rate of fire than ranged weapons. Players are "unable to block while stabbing."
+- **Melee Block:** By holding 'shift', players can block. This "reflects all projectiles" within a specific angle and can "stagger enemeies who attack you with a ranged weapon" (this seems to mean _stagger enemies who attack you with a melee weapon_).
+
+**E. Game World & Locations**
+
+Players fight on various planets, each with a unique location and environment.
+
+- **Julix IV:** A "Frozen Wasteland." The map is an "Emperial Outpost in Canar Hun."
+- **Athemorum:** A "Scorching Bleakness." The map is an "Uncovered Resource Deposit In the Anakoran Desert."
+- **Frin'Sai:** A "Savage Wilds." The map is the "Overrun City of Make'Tui."
+- **Tralion Catornay:** A world of "Unending Splendor." The map is a "Secret Rebel Depot Hidden in Fernackie's Valley."
+- **Future Locations:** The team is "constantly adding new planets" and is open to suggestions via the feedback tab.
+
+**F. Shop System**
+
+The Shop is the primary way to acquire equipment and mods using in-game resources.
+
+- **Unlocks:** Players can pay for a _type_ of item (e.g., weapon, armor) and aim for a specific rarity, but the "rarity will vary".
+- **Purchases:** A separate system allows players to "pay more resources to make a purchase at a higher ratiy as well", suggesting both a random (unlock) and a guaranteed (purchase) acquisition method.
+
+### II. Asset Catalog: Armor
 
 Armor pieces provide defensive stats, affect weight, and contribute to various passive character traits. They are defined within the `loadEquipment` function in `game/client.html`. Each piece belongs to a set and has base stats that are further modified by rarity, level, mods, and character attributes. All initially defined armor pieces have 3 modification slots.
 
@@ -291,7 +138,7 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 ---
 
-### A. Thunder Warrior Set (Default/Balanced)
+**A. Thunder Warrior Set (Default/Balanced)**
 
 - **Class**: Defensive
 - **Description**: Standard issue armor, balanced stats.
@@ -329,7 +176,7 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 ---
 
-### B. Sith Set
+**B. Sith Set**
 
 - **Class**: Defensive
 - **Description**: Focuses on Thaumaturgy stats and melee defense, heavier than Thunder Warrior set.
@@ -367,7 +214,7 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 ---
 
-### C. Shadow Set
+**C. Shadow Set**
 
 - **Class**: Defensive
 - **Description**: Focuses on Stamina stats, evasion, ranged defense, and stealth. Lighter than Thunder Warrior set.
@@ -405,7 +252,7 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 ---
 
-### D. Festive Set
+**D. Festive Set**
 
 - **Class**: Defensive
 - **Description**: Appears to be a lower-stat set, possibly cosmetic or for events. Generally low contributions across the board compared to other sets.
@@ -443,7 +290,7 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 ---
 
-## II. Ranged Weapons (Guns)
+### III. Asset Catalog: Ranged Weapons (Guns)
 
 Guns are defined in the `loadEquipment` function in `game/client.html`. They handle projectile firing, heat management, and contribute to offensive stats. All initially defined guns have 3 modification slots. The `Gun.js` file handles their in-game logic.
 
@@ -475,7 +322,7 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
 
 ---
 
-### A. E-11 Variants (Blaster Rifle - Thunder Warrior Set)
+**A. E-11 Variants (Blaster Rifle - Thunder Warrior Set)**
 
 1.  **E-11 Twilight**
     - **Description**: The standard, balanced E-11. Good all-around stats but excels in no specific area.
@@ -516,7 +363,7 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
 
 ---
 
-### B. DLT-19 Variants (Repeating Blaster - Sith Set)
+**B. DLT-19 Variants (Repeating Blaster - Sith Set)**
 
 1.  **DLT-19 Epitome**
     - **Description**: Standard DLT-19. Very high fire rate, low damage/range. Slow initial cooling but cools quickly once started.
@@ -557,7 +404,7 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
 
 ---
 
-### C. T-21 Variants (Heavy Blaster - Shadow Set)
+**C. T-21 Variants (Heavy Blaster - Shadow Set)**
 
 1.  **T-21 Shade**
     - **Description**: Standard T-21. Very high damage and range, very low fire rate. Great crit, accuracy, and precision.
@@ -598,7 +445,7 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
 
 ---
 
-## III. Melee Weapons (Sabers)
+### IV. Asset Catalog: Melee Weapons (Sabers)
 
 Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadEquipment` in `game/client.html`. They handle striking and blocking mechanics. All initially defined sabers have 3 modification slots. The `Saber.js` file handles their in-game logic.
 
@@ -645,7 +492,7 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 
 ---
 
-### A. Aggressive Sabers (Shadow Set)
+**A. Aggressive Sabers (Shadow Set)**
 
 1.  **Coral Plasmablade (Orange)**
     - **Description**: Focuses on pure offensive potential. Standard aggressive saber.
@@ -674,7 +521,7 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 
 ---
 
-### B. Defensive Sabers (Sith Set)
+**B. Defensive Sabers (Sith Set)**
 
 1.  **Tanzanite Plasmablade (Blue)**
     - **Description**: Focuses on pure defensive potential. Standard defensive saber with a long parry window.
@@ -703,7 +550,7 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 
 ---
 
-### C. Balanced Sabers (Thunder Warrior Set)
+**C. Balanced Sabers (Thunder Warrior Set)**
 
 1.  **Topaz Plasmablade (Yellow)**
     - **Description**: The classic, balanced plasmablade, mixing offense and defense.
@@ -732,7 +579,7 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 
 ---
 
-## IV. Abilities
+### V. Asset Catalog: Abilities
 
 Abilities are active skills triggered by player input, consuming Stamina or Thaumaturgy. They are defined in the `constructAbilities` function in `game/client.html` and their logic is implemented in `game/AbilityEffect.js`.
 
@@ -759,7 +606,7 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
 
 ---
 
-### A. Stamina Abilities
+**A. Stamina Abilities**
 
 1.  **Bound (`Jump`)**
     - **Class/Subclass**: Mobility / Jump
@@ -932,7 +779,7 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
 
 ---
 
-### B. Thaumaturgy Abilities (Force)
+**B. Thaumaturgy Abilities (Force)**
 
 1.  **Hover (`Hover`)**
     - **Class/Subclass**: Buff / Movement
@@ -977,7 +824,7 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
     - **Cost**: 110 Thaumaturgy
     - **Prerequisites**: Recovery
 8.  **Group Preparation (`GroupPrep`)**
-    - **Class/Subclass**: Buff / Support
+    - **Class/Assisted Subclass**: Buff / Support
     - **Effect**: Affects allies in a 60° cone up to 9 range. After activation time, grants boosts (2x multiplier) to various stats ("prepared" status) for 5 seconds.
     - **Activation/Duration/Cooldown**: 8s / Instant / 17.5s
     - **Cost**: 125 Thaumaturgy
@@ -1093,11 +940,11 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
 
 ---
 
-## V. Status Effects (Buffs & Debuffs)
+### VI. Asset Catalog: Status Effects (Buffs & Debuffs)
 
 These are temporary effects applied to Troopers, defined in `game/StatusEffect.js`. They modify trooper behavior or stats over time.
 
-### A. Buffs (`this.buff = true`)
+**A. Buffs (`this.buff = true`)**
 
 1.  **`cool`**: Instantly removes gun heat on activation. Reduces subsequent heat generation by `ammount` (e.g., 0.25 means 75% reduction). Duration: `time`.
 2.  **`speed`**: Multiplies `troop.mult.speed` by `ammount`. Duration: `time`.
@@ -1113,7 +960,7 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 12. **`jumping`**: Multiplies `troop.mult.jump` by `ammount`. Duration: `time`.
 13. **`prepared`**: Multiplies several stats by `ammount` (defense, firing, meleeSpeed, speed, damage) and divides others (cooling, jump) for `time` duration.
 
-### B. Debuffs (`this.buff = false`)
+**B. Debuffs (`this.buff = false`)**
 
 1.  **`knockback`**: Applies a decaying force (`force`) in direction (`x`, `z`, `y`) over time, resisted by `troop.knockbackResistance` and weight. `strong` flag calls `troop.release()`.
 2.  **`slow`**: Multiplies `troop.mult.speed` by `ammount` (less than 1). Duration: `time`.
@@ -1127,11 +974,11 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 
 ---
 
-## VI. Modifications (Mods)
+### VII. Asset Catalog: Modifications (Mods)
 
 Mods enhance equipment stats. They have a base effect, a rarity, a level, and can have Minor Modifications. Defined as global variables in `game/client.html`.
 
-### A. Major Mods
+**A. Major Mods**
 
 Categorized by the type of equipment they can be applied to. Each has a base effect percentage (`increase` or `decrease`).
 
@@ -1159,7 +1006,7 @@ Categorized by the type of equipment they can be applied to. Each has a base eff
     - **Thaumaturgy Recovery**: Increases thaumaturgy regen rate (`increase`: 1.5%).
     - **Health Recovery**: Increases health regen rate (`increase`: 1.5%).
 
-### B. Minor Modifications Traits (`modTraits`)
+**B. Minor Modifications Traits (`modTraits`)**
 
 These are randomly generated secondary stats added to mods based on the mod's rarity. Higher rarity mods get more minor traits. Each trait has a base effect (`increase` or `decrease`) which scales with mod rarity and level. They can also roll as `negative` (inverting the effect) and `specific` (applying a larger bonus but only under specific conditions, not fully implemented/clear).
 
@@ -1201,50 +1048,243 @@ These are randomly generated secondary stats added to mods based on the mod's ra
 
 ---
 
-This covers, in extensive detail, every explicitly defined instance of Armor, Guns, Sabers, Abilities, Status Effects, and Mods found within the provided codebase files.
+## Section 3: Technical Implementation Analysis
 
-## Report 3: Web Portal & Community Analysis (from Report 4)
+This section provides a detailed analysis of the project's codebase, examining the server-side game logic, the core mechanics implementation, and the frontend web portal.
 
-Here is a comprehensive, detailed report on the "Thunder Warrior: Genesis" project, based on an extensive analysis of the 128 provided HTML message and article files.
+### I. Server-Side Logic (`gameServer.js`, `websocket.js`)
 
----
+The server-side code manages game instances, handles client connections and communication within a game, and runs the core game simulation.
 
-## **I. Executive Summary**
+**A. Game Instance Management (`gameServer.js`):**
 
-This report provides an exhaustive analysis of the web-based game project "Thunder Warrior: Genesis." The analysis is derived exclusively from a collection of 128 HTML files located within the project's `homeMessages` directory. These files, while individually small, collectively paint an incredibly detailed picture of the game's features, technical architecture, development status, and community engagement strategies.
+- **`NEW_GAME` Constructor**: Represents a single game instance/room. It's initialized with game configuration (`game` - including map, players), WebSocket utilities (`w`, `wss`), and callbacks for termination (`terminateGame`, `finishGame`).
+- **Initialization**: Stores game map data, creates `Trooper` objects for each player (`buildTroopers`), initializes projectiles array, sets up `CollisionDetection`. Starts the game loop after a delay (`startGame`, `update`).
+- **Game Loop**:
+  - Runs at a fixed rate (`fps`).
+  - Calculates delta time (`setDeltaTime`).
+  - Updates the state of all troopers and projectiles (`updateGame`).
+  - Checks for win conditions or game end conditions (`checkWin`).
+  - Sends the updated state to all clients in the room (`sendUpdate`).
+- **Termination**:
+  - `checkWin` monitors trooper `alive` status and affiliation counts (`countAffiliation`). If only one affiliation remains, calls `gameOver`.
+  - `checkWin` also checks for disconnected players (`countAffiliation`) or game timeout (`maxMinutes`). If conditions met, calls `endGame`.
+  - `gameOver` records the winner, notifies troopers, and calls the `finishGame` callback.
+  - `endGame` stops the game loop (`clearInterval`) and calls the `terminateGame` callback.
 
-The project is a sci-fi action game, currently in an open beta phase, which places players in the role of a "Thunder Warrior." The game is built on a universe with warring factions (the "Empire" and the "Rebellion") and features gameplay across multiple planets.
+**B. Client Communication (`gameServer.js`, `websocket.js`):**
 
-Key findings from the analysis include:
+- **Input Handling**: `newInput` method receives player input from the WebSocket server and forwards it to the corresponding `Trooper` object using `getTrooper`.
+- **Connection Management**: `disconnect` and `rejoin` methods update the `connected` status of `Trooper` objects. `check` verifies if a player is allowed to rejoin.
+- **State Synchronization**: `sendUpdate` gathers data from all `Trooper` and `Projectile` objects (using their `.data` getters) and broadcasts it to all connected clients in the game's room using `w.sendToRooms`.
+- **WebSocket Utilities (`websocket.js`)**: Provides helper functions for sending messages (`send`, `broadcast`, `sendToRooms`), managing room membership (`joinRoom`, `inRoom`, `leaveRoom`), handling keep-alive pings (`startPing`), and verifying client connections (`checkMessage`).
 
-1.  **Robust Account Management:** The system features a comprehensive and secure account management lifecycle, including detailed validation for sign-up, sign-in, email confirmation, and password/username recovery.
-2.  **Deep Customization:** This is a core pillar of the game. Players can customize their Thunder Warrior through a multi-layered class system, fully interchangeable equipment (armor, melee weapons, ranged weapons), and a complex "Modifications" system for fine-tuning gear.
-3.  **Active Development & Technical Evolution:** The project is undergoing significant technical upgrades. This includes a major server revamp to reduce lag by moving client-side processing to the server, and a graphical overhaul to replace 2D assets with 3D models and animations.
-4.  **Comprehensive UI/UX:** The development team has focused heavily on the user interface, with news articles detailing a "Completely Rebuilt" webpage, a remodeled "New Home Page" for easier character management, and an "Information Update" to provide more detailed in-game stats.
-5.  **Multi-Faceted Community Engagement:** The project actively solicits user input through three distinct systems: a "Feedback" system for bugs and ideas, a 1-5 "Rating" system, and a "Review" system for detailed commentary.
+**C. Server-Side Game Logic (`gameServer.js` relies on `Trooper.js`, `Projectile.js`, `CollisionDetection.js`):**
 
-This report will now proceed to break down every one of these aspects in granular detail, referencing the specific files from which this information was synthesized.
+- **Simulation**: The core `updateGame` function orchestrates the simulation tick:
+  1.  Calls `prepare` on all troopers (updates delta time, processes input, updates status effects/abilities).
+  2.  Calls `update` on all troopers (handles movement, combat, physics).
+  3.  Calls `update` on all projectiles (moves them, checks collisions). Removes projectiles that hit or expire.
+  4.  Calls `reset` on all troopers (clears temporary multipliers).
+- **Object Management**: Maintains lists of `troopers` and `projectiles`.
+- **Collision**: Utilizes the `CollisionDetection` instance (`CD`) passed to troopers and projectiles for checking interactions.
 
----
+### II. Core Game Mechanics (Code Implementation)
 
-## **II. Project Overview: Thunder Warrior: Genesis**
+These files define the fundamental objects and rules of the game world.
 
-"Thunder Warrior: Genesis" is a web-based game that has recently entered an open beta, inviting players to create an account and join the testing phase. The development team is actively encouraging feedback to identify bugs and guide improvement, indicating a community-focused development model. The game has been received positively by game testers, which has encouraged the team to continue development with "more vigor than ever before".
+**A. Character (`Trooper.js`):**
 
-The files analyzed are all part of a client-side notification system. This system appears to function by loading small, static HTML files containing JavaScript commands.
+- **Representation**: The central class representing a player character in the game world.
+- **State**: Maintains extensive state including position (`x`, `y`, `z`), rotation (`rot`), dimensions (`w`, `h`, `d`), velocity (`velocity`, `speed`), core stats (HP, Stamina, Thaumaturgy objects), affiliation (`af`), alive/connected status, kills, killer info, equipped weapons (`gun`, `saber`), active abilities, status effects, input state, camera position/rotation, and animation state flags (jumping, falling, running, etc.).
+- **Physics/Movement**: Implements gravity, acceleration/deceleration, jumping (including delayed jump and variable height based on hold), running, collision response (`boxCollision`), on-ground vs. in-air logic, knockback resistance. Movement speed is affected by base stats, weight (from stats and armor), and status effects/abilities.
+- **Combat**: Handles taking damage (`damage` method), applying defenses, calculating critical hits and evasion. Tracks health (`hp`) and death state. Delegates weapon firing/blocking/striking to `Gun` and `Saber` instances. Triggers resource regeneration upon dealing damage or getting kills.
+- **Resources**: Manages HP, Stamina, and Thaumaturgy, including maximum values, current values, regeneration rates, cooldowns after usage, and effects of abilities/status effects.
+- **Abilities**: Manages the activation, execution, and cooldown of abilities based on player input and game state. Interacts with `AbilityEffect.js` for specific logic.
+- **Status Effects**: Manages the application and updating of status effects via the `status` array, interacting with `StatusEffect.js`. Status effects modify multipliers (`troop.mult`) affecting speed, defense, damage, etc.
+- **Data Serialization**: The `.data` getter packages essential state for network synchronization.
 
-- **`setMessage(...)`:** This function is used to display status, error, and success messages to the user across all account and feedback modules.
-- **`setArticle(...)` & `newSection(...)`:** These functions are used to dynamically build and display news articles on the game's home page, keeping the community informed of updates.
+**B. Weapons (`Gun.js`, `Saber.js`, `WeaponBase.js`):**
 
-This architecture allows for modular and easily updatable user notifications without requiring a full page reload or complex client-side templating.
+- **Common Base (`WeaponBase.js`)**: Provides shared logic for managing firing cooldowns (`firingSpeed`), heat/resource management (`heat`), activation state, and tracking states for potential animation/sound cues. Supports optional overheat mechanics.
+- **Ranged Weapons (`Gun.js`)**:
+  - Handles ranged combat logic: firing projectiles, tracking heat, managing firing rate and spread.
+  - Creates `Projectile` instances when firing.
+  - Supports different weapon stats (damage, range, speed, heat properties) loaded from `initData`.
+  - Integrates with `WeaponBase` for cooldown and heat management.
+  - Supports special shots activated by abilities.
+- **Melee Weapons (`Saber.js`)**:
+  - Handles melee combat: striking and blocking.
+  - **Striking**: Manages strike cooldowns, delays, applies damage within an arc using collision detection, handles knockback. Supports special strikes from abilities (`addStrike`).
+  - **Blocking**: Manages block state, duration, parry window. Handles projectile reflection (`blockProjectile`), melee deflection (`blockSaber`), and potential Thaumaturgy blocking (`checkBlockThaum`) based on angle checks. Consumes stamina.
+  - Integrates with `WeaponBase`, using stamina as the resource managed by the `heat` system.
+- **Projectiles (`Projectile.js`)**:
+  - Represents individual shots fired by guns.
+  - Moves in a straight line (`update`).
+  - Checks for collisions with obstacles or enemies (`CD.check`).
+  - Applies damage to troopers upon collision, considering falloff (`getDistanceTravelledMult`) and potential blocks.
+  - Tracks distance travelled and expires after exceeding `maxRange`.
+  - Includes visual smoothing logic.
 
----
+**C. Abilities and Status Effects (`AbilityEffect.js`, `StatusEffect.js`):**
 
-## **III. Detailed Analysis: User Account Management System**
+- **Ability Logic (`AbilityEffect.js`)**: Contains the specific implementation for each ability, defining prerequisites, activation logic, per-tick updates, and end conditions. Interacts heavily with the `Trooper` object and `CollisionDetection`.
+- **Status Effect Logic (`StatusEffect.js`)**: Defines how temporary buffs and debuffs modify a trooper's state or behavior over time. Typically modifies `troop.mult` properties or applies direct effects each tick.
+
+**D. Physics and Collision (`CollisionDetection.js`, `MathVector.js`, `Trooper.js`):**
+
+- **Collision Detection (`CollisionDetection.js`)**: Provides functions to check for intersections between different shapes (AABB boxes, planes, arcs) used for character movement, projectile hits, and ability areas of effect.
+- **Vector Math (`MathVector.js`)**: Includes utilities for rotating vectors, normalizing angles, calculating directions, and normalizing movement vectors.
+- **Trooper Physics (`Trooper.js`)**: Implements basic physics including gravity, acceleration, deceleration, jumping, air resistance (simplified), and collision response (stopping movement, setting `onGround` state).
+
+**E. Map Generation (`mapBuilder.js`):**
+
+- **Procedure**: Selects a map type, defines its obstacles and spawn points, and assigns spawn points to players based on affiliation.
+- **Data Format**: Defines maps as arrays of obstacle objects and structured spawn position data.
+
+**F. Web Configuration (`robots.txt`):**
+
+- **Standard File**: Provides instructions for web crawlers.
+- **Configuration**: Disallows access to a `/test` directory but allows crawling of all other content.
+
+### III. Web Portal Frontend (`client.html`, CSS)
+
+The `client.html` file serves as the entry point and primary structure for the game's user interface, specifically the main menu and character customization/management screens before entering the actual arena.
+
+**A. HTML Structure and Metadata:**
+
+- **Document Type**: Standard HTML5 doctype (`<!DOCTYPE html>`).
+- **Head Section**:
+  - **Title**: Sets the page title to "TWG Menu - Thunder Warrior: Genesis".
+  - **Favicons**: Includes a comprehensive set of favicon links (`apple-touch-icon`, `icon`, `manifest`, `mask-icon`, `shortcut icon`) targeting various platforms and browsers, ensuring consistent branding. Also includes meta tags for Microsoft Tile (`msapplication-TileColor`, `msapplication-config`) and theme color (`theme-color`).
+  - **Inline CSS**: Contains a large `<style>` block defining the visual appearance.
+  - **JavaScript**: Links to external `clientWebsocket.js` and includes a substantial inline `<script>` block containing the primary client-side game logic for the menu system.
+- **Body Section**:
+  - **Basic Styling**: Sets a dark background color (`#010105`) and attaches an `onresize` event handler likely used for dynamically adjusting layout or canvas elements.
+  - **Main Containers**: The core content is organized within several top-level `div` elements, each representing a distinct screen or major UI component:
+    - `loadingPage`: Displays loading indicators while fetching initial data.
+    - `classSelectionScreen`: Interface for initial character attribute allocation.
+    - `homeScreen`: The main menu hub, displaying character, resources, and navigation.
+    - `weaponPage`: Screen for viewing and managing weapons and modifications.
+    - `abilityPage`: Screen for viewing and managing character abilities.
+    - `shopScreen`: Interface for purchasing items, equipment, or currency.
+    - `settingsScreen`: A modal overlay for account management and game options.
+    - `rewardsScreen`: A modal overlay to display rewards earned.
+    - `upgradeAbilityScreen`: Modal for selecting ability upgrades upon level-up.
+    - `statsScreen`: Modal overlay displaying detailed statistics for equipment or abilities.
+    - `gameModeSelectionBackground`/`gameModeSelectionTab`: UI for choosing the game mode to enter.
+    - `tellScreen`: A generic modal for displaying informational messages to the player.
+    - `descriptionBackground`: A pop-up element used to show tooltips/details about hovered items.
+  - **Templates**: Utilizes HTML `<template>` tags (`purchaseTemplate`, `paymentScreenTemplate`, `classPointPurchase`, `classOptionTemplate`) for dynamically creating repetitive UI elements like shop items or purchase confirmation dialogs via JavaScript.
+  - **Hidden Elements**: Many screens (`homeScreen`, `weaponPage`, etc.) are initially hidden (`visibility: hidden`) and are shown/hidden by JavaScript as the user navigates.
+  - **IFrame**: Includes an `iframe` with `src='https://thunderwarrior.org/iframe'`, likely used for cross-domain communication, possibly for authentication or account data retrieval.
+  - **Form**: Contains a hidden `form` (`startForm`) presumably used to POST data when transitioning from the menu to the actual game client.
+
+**B. CSS Styling:**
+
+- **Units and Responsiveness**: Extensively uses `vmin` (percentage of the smaller viewport dimension) for sizing and positioning, aiming for a UI that scales proportionally on different screen sizes. Font sizes, widths, heights, margins, padding, border-radius, and absolute positioning coordinates frequently use `vmin`.
+- **Layout**: Primarily uses `position: absolute` for laying out screens and major components within the `homeScreen` container, which acts as a fixed-size viewport (`100vmin` x `100vmin`). Flexbox (`display: flex`) is used in specific areas like the `informationBar` resource displays and ability icon holders for centering and alignment.
+- **Visual Appearance**:
+  - **Color Scheme**: Predominantly dark blues, purples, and grays (`#010105`, `#05051a`, `#111133`, `#222266`, `#606087`) with highlights of white, yellow (`#eddd10`), green (`#079950`), and red. Creates a futuristic/sci-fi aesthetic.
+  - **Gradients**: Uses `linear-gradient` and `radial-gradient` for button backgrounds (`coolButton`) and ability icon effects.
+  - **Borders and Radius**: `border-radius` is used heavily to create rounded corners and circular elements (buttons, resource displays, ability icons, mod slots).
+  - **Text**: Uses a sans-serif font, often white or light gray (`#ffffff`, `#cccccc`, `#777777`). Text styling includes size (`vmin`), alignment, justification, and transformations (uppercase).
+  - **Transparency/Overlays**: Uses `rgba` colors and semi-transparent backgrounds (`#9a9a9a83`, `#66669aca`) for modal screens (`coverScreen`) to overlay content.
+- **Interactivity & Animation**:
+  - **Hover Effects**: Styles change on `:hover` for elements like buttons (`coolButton`), trait displays, purchase options, providing visual feedback.
+  - **Cursors**: Explicitly sets `cursor: pointer` or `cursor: default` on many elements to indicate interactivity.
+  - **Animations**: Uses CSS `@keyframes` (`spin`, `pulseAnimation`, `pulseAnimationBrighter`) for loading indicators and ability icon pulsing effects.
+  - **Transitions**: Employs CSS `transition` for smooth changes in properties like `opacity` and `background-color`, particularly for ability unlock animations.
+- **Specific Component Styling**: Provides detailed styling for almost every UI element mentioned in the HTML structure, including positioning, sizing, colors, borders, text styles, and image handling for elements like resource counters, character equipment slots, ability trees, shop headers/items, settings buttons, loading icons, stat tables, and pop-up descriptions.
+- **Scrollbars**: Customizes the appearance of scrollbars using `::-webkit-scrollbar` pseudo-elements for elements like the stats screen.
+- **User Interaction**: Disables text selection (`user-select: none`) for most elements to maintain a game-like interface.
+
+### IV. Web Portal Client-Side Logic (`client.html` `<script>`, `clientWebsocket.js`)
+
+The client-side JavaScript manages the user interface, handles user interactions within the menu, prepares data, and communicates with the server via WebSockets.
+
+**A. Initialization and Authentication (`client.html`, `clientWebsocket.js`):**
+
+- **Loading Sequence**:
+  1.  `runGame` calls `loadGame` on window load.
+  2.  `loadGame` checks for WebSocket support. If supported, it messages the iframe (`https://thunderwarrior.org/iframe`) to request account credentials (`getAccount`).
+  3.  An `onmessage` handler listens for the response from the iframe.
+  4.  If credentials (`username`, `password`) are received, they are stored, the iframe is removed, and `load` is called. If not, the user is redirected (`totalRedirect`).
+  5.  `load` calls `createWebSocket` (defined in `clientWebsocket.js`) to establish the WebSocket connection.
+- **WebSocket Connection (`clientWebsocket.js`)**:
+  1.  `createWebSocket` establishes the connection and sets up event handlers (`onopen`, `onerror`, `onmessage`, `onclose`).
+  2.  `messageWS` handles incoming messages. It performs an initial security check (`checkMessage`) involving a key exchange and timestamp verification.
+  3.  If the check passes, a `ticket` is stored, and an 'account' message is sent (`sendAccount`) with credentials and the requested type (`gameMenu`).
+  4.  Subsequent messages are checked against the ticket before being processed by `recieveAnyMessage`.
+- **Data Loading (`client.html`, `clientWebsocket.js`)**:
+  1.  The server responds to the 'account' message with a 'user' message containing `user` data, game `options`, and connection `status`.
+  2.  `recieveAnyMessage` routes the 'user' message to `loadAll` in `client.html`.
+  3.  `loadAll` stores the received `user` data (including trooper stats, equipment, abilities, resources) in the global `troop` variable. It checks if the user is already `inGame` and potentially triggers a rejoin (`rejoinGame`). It then initializes various game aspects: sets options, calculates default trooper values (`setDefaultTrooperValues`), defines equipment/weapon/armour stats (`loadEquipment`), sets up UI displays (`setImageDisplays`), constructs ability data (`constructAbilities`), and starts loading images (`createAllImages`).
+- **Image Loading (`client.html`)**:
+  1.  `createAllImages` initiates loading for numerous images (UI elements, equipment, abilities) using helper functions (`createSimpleImage`, `createBasicImg`).
+  2.  It tracks loading progress (`imagesCreated`, `imageCount`) and updates the `loadStatus` element.
+  3.  Once all images are loaded (`countImages` reaches `imageCount`), `continuePageCreationWithLoadedImages` is called.
+- **Final Setup (`client.html`)**:
+  1.  `continuePageCreationWithLoadedImages` sets up event listeners (`createEternalEvents`, `createHomeScreenEvents`), updates resource displays (`updateResources`), checks if character attributes need selection (`showClassSelectionScreen`) or proceeds to the main menu (`pageCreationWithClassSelected`), sets initial UI element sizes (`setImages`), and finally hides the loading screen (`hideLoadingScreen`).
+
+**B. UI Management and Navigation (`client.html`):**
+
+- **Screen Visibility**: Uses a global `onPage` variable to track the currently active screen. Functions like `showHomeScreen`, `hideHomeScreen`, `showWeaponScreen`, `hideWeaponScreen`, `showAbilityPage`, `hideAbilityPage`, `showShopScreen`, `hideShopScreen`, `viewSettings`, `closeSettings`, etc., manipulate the `visibility` style property of the corresponding `div` elements to switch between views.
+- **Dynamic Content**:
+  - **Templates**: Uses `<template>` elements and `cloneNode(true)` to generate lists of shop items, purchase options, and class attribute selectors dynamically.
+  - **Resource Display**: `updateResources` function updates the text content of elements displaying credits, skill points, metal, crystals, experience, and player level, using `simplifyNumber` for large values.
+  - **Character Display**: Updates `src` attributes of `img` elements to show equipped armor and weapons (`setDisplayImageSrcs`). Draws the character model onto a canvas (`drawFullCharacter`, `setCharacterBackground`). Updates stat displays (`setAbilityDisplays`).
+  - **Tooltips/Descriptions**: `showWeaponDescription` and `showAbilityDescription` populate and position the `descriptionBackground` element with details about the hovered item, including stats rendered onto a canvas (`setDescriptionCanvas`). `hideWeaponDescription` hides it.
+- **Event Handling**: Numerous `onclick`, `onmouseover`, `onmouseout`, `onkeydown`, `onresize` event handlers trigger functions to handle user interactions like button clicks, hovering over items, keyboard shortcuts, screen resizing, etc.
+
+**C. Core Menu Logic (`client.html`):**
+
+- **Class Selection**:
+  - `showClassSelectionScreen` displays the attribute selection UI if `troop.built` is not "finished".
+  - `buildClassSelectionScreen` dynamically creates the attribute selectors using the `classOptionTemplate`.
+  - `modifyClassOption` handles increasing/decreasing attribute points, checking against available `classPoints`, calculating costs (`getNumCost`), updating visuals, and enabling/disabling buttons (`setClassAddition`, `setClassSubtraction`).
+  - `selectClass` finalizes attribute choices (`setClassProperties`), sets default equipment (`setEquipmentDefaults`), marks `troop.built` as "finished", saves data to the server (`saveTraitToServer`), and transitions to the home screen.
+- **Home Screen**:
+  - Displays character, resources, equipment slots, and stat summaries.
+  - Equipment slots are clickable (`onclick`) to navigate to the `weaponPage`.
+  - Stat displays (`Stamina`, `Thaumaturgy`) are clickable to navigate to the `abilityPage`.
+  - Resource displays are clickable (`onclick`) to open the relevant purchase screen in the shop.
+  - "Enter the Arena" button (`gameTitle`) shows the game mode selection UI (`showGameModeSelection`).
+- **Weapon/Equipment Page (`weaponPage`)**:
+  - Displays details of the `selectedEquipment`.
+  - Shows a list of available equipment/mods (`fullEquipmentArray`) of the same type in scrollable slots (`weaponSelectionBackground`). `setWeaponScreen` manages this display.
+  - Allows equipping items by clicking (`updateWeapon`).
+  - Allows deconstructing items (`deconstructMod` via backspace/delete key).
+  - Allows viewing and managing equipped mods by clicking the large weapon image (`displayOrHideModOptions`), switching the view (`modsShowing`).
+  - Navigation back to home screen (`showHomeScreen`).
+- **Ability Page (`abilityPage`)**:
+  - Displays the ability tree for either Stamina or Thaumaturgy (`setAbilityPage`). Allows switching between trees.
+  - `createAbilityOption` dynamically generates icons for each ability.
+  - Clicking an ability icon shows its description and status (`setAbilities`).
+  - If unlocked, shows equipped slots (`setGameAbilities`) and allows equipping/unequipping via keyboard shortcuts (`equipAbility`).
+  - If locked, shows prerequisites and costs. Allows unlocking if conditions are met (`setUnlockButton`).
+  - Provides ability recommendations (`abilityAdviceText`).
+- **Shop Page (`shopScreen`)**:
+  - Tabbed interface (`purchaseHeaders`) for different shop categories (Weapons, Armor, Mods, Resources).
+  - Functions like `weaponsShopScreen`, `armourShopScreen`, `purchaseCredits`, etc., configure the displayed items (`setShopSelection`).
+  - Displays purchase options on canvases (`purchaseOption0`, etc.), rendered by `setShopScreen`.
+  - Handles purchases (`makePurchase`), checking resource availability, deducting costs, adding items/resources (`recievePurchasedItem`), and displaying rewards (`showRewardsScreen`).
+  - Handles crystal purchases by showing a payment screen template (`crystalPurchase`).
+- **Settings/Modals**: Provides options for account management (linking out), logging out, resetting attributes (`resetAttributesPoints`), triggering ability upgrades (`selectAbilityUpgrade`), and closing the modal. `tell` function displays informational pop-ups.
+- **Starting Game**: `showGameModeSelection` displays options. Clicking a mode calls `startGame`, which packages necessary data (`getGameData`) and uses `sessionStorage` and form submission (`joinGame`) to transition to the actual game client.
+
+**D. Data Management (`client.html`):**
+
+- **Global `troop` Object**: Holds all player-specific data received from the server (stats, resources, inventory, abilities, etc.).
+- **Equipment/Ability Definitions**: Defines extensive static data for base equipment (helmets, bodies, legs, arms, ranged weapons, melee weapons), mods (multipliers, traits), and abilities (stamina, thaumaturgy) including their stats, costs, descriptions, prerequisites, etc.
+- **Calculations**: Includes functions to calculate modified equipment stats based on mods (`getModifiedEquipment`, `modifyWeapons`, `modifyArmour`, etc.), calculate item power (`getPower`), calculate ability descriptions with dynamic values (`getAbilityDescription`), calculate costs (`getNumCost`), etc.
+- **Server Synchronization**: Uses `saveTraitToServer` to send updates to the server via WebSocket whenever critical data changes (e.g., equipping items, unlocking abilities, spending resources, changing settings).
+
+### V. Web Portal User Account Management System
 
 The project features an exceptionally thorough account management system, covering every stage of the user lifecycle. The system is designed to be secure, user-friendly, and robust, with specific, clear error messages for nearly every possible user error or account status.
 
-### **A. Account Sign Up (Registration)**
+**A. Account Sign Up (Registration)**
 
 The registration process requires a username, email, and a matching password/confirmation password.
 
@@ -1266,7 +1306,7 @@ The registration process requires a username, email, and a matching password/con
 
 - Upon successful creation, the user is informed that a confirmation code has been sent to their email, which they must use in the "Confirm Tab".
 
-### **B. Account Sign In (Authentication)**
+**B. Account Sign In (Authentication)**
 
 The sign-in process allows users to log in using their credentials.
 
@@ -1285,7 +1325,7 @@ The sign-in process allows users to log in using their credentials.
 
 - A simple success message is displayed: "You have succesfully signed in!".
 
-### **C. Account Confirmation**
+**C. Account Confirmation**
 
 This module is dedicated to users confirming their email address by entering a code.
 
@@ -1304,7 +1344,7 @@ This module is dedicated to users confirming their email address by entering a c
 
 - Successful confirmation is met with a welcoming message: "You have Succesfully Confirmed your Email Address. Time to Start Playing!".
 
-### **D. Account Recovery (Forgot Password/Username)**
+**D. Account Recovery (Forgot Password/Username)**
 
 This system allows users to recover their username or reset their password.
 
@@ -1323,7 +1363,7 @@ This system allows users to recover their username or reset their password.
 - **Username Recovery:** The system confirms that the username "has been successfully found and sent to this account`s email".
 - **Password Recovery:** The system sends a "one time use password" to the account's email and explicitly warns the user to "imediately use the management tab to change your password" after signing in. This OTP expires after one hour.
 
-### **E. Account Information Editing**
+**E. Account Information Editing**
 
 From the "Manage" tab, users can edit their username, email, and password.
 
@@ -1347,7 +1387,7 @@ From the "Manage" tab, users can edit their username, email, and password.
 - **Standard Success:** A simple confirmation: "You have succesfully changed your account's information!".
 - **Email Change Success:** If the email is changed, a special message is shown: "You have succesfully changed your account's information, including your email!" This message explicitly informs the user that they will receive a new confirmation code and must re-confirm their account.
 
-### **F. Account Preferences Management**
+**F. Account Preferences Management**
 
 Users can also manage game preferences, such as graphics quality and FPS limits.
 
@@ -1360,7 +1400,7 @@ Users can also manage game preferences, such as graphics quality and FPS limits.
 
 - Successful changes are confirmed, and a callback function is triggered to clear related `sessionStorage` items (e.g., `gamePixelRatio`, `homePixelRatio`, `fpsSlider`).
 
-### **G. Account Deletion & Banning**
+**G. Account Deletion & Banning**
 
 The system includes functionality for account deletion and banning.
 
@@ -1368,105 +1408,7 @@ The system includes functionality for account deletion and banning.
 - **Banned Status:** As seen in every other module, a "banned" status (e.g., `signIn/banned.html`, `feedback/banned.html`, `rating/banned.html`) prevents any account activity and directs the user to "Contact Us."
 - **Admin Banning Tool:** A "Deletion Code" module exists, which appears to be an administrative tool. It includes messages for "account has been succesfully banned", "This code is either tiped incorrectly", and "This account is already confirmed". This suggests a system for admins to ban accounts using a code, possibly one sent to a user's email.
 
----
-
-## **IV. Detailed Analysis: Gameplay & Features**
-
-The `newsArticle` files provide a rich, detailed look into the game's mechanics, features, and development roadmap.
-
-### **A. Core Concept & Onboarding**
-
-- **Classes:** Upon creation, players choose a class (e.g., Jedi, sabateur, sith, infiltrator).
-- **Class Defines:**
-  1.  **Starting Skills:** (Power, Constitution, Thaumaturgy, Stamina, Speed, Utility).
-  2.  **Faction:** (Empire or Rebellion).
-  3.  **Passive Traits:** (e.g., gaining health/stamina on kill).
-  4.  **Starting Equipment:** (Full armor set, one melee weapon, one ranged weapon).
-- **Skills Breakdown:**
-  - **Passive Skills:** Power (damage), Constitution (health/healing), Speed (movement/action speed), Stamina (powers some abilities).
-  - **Ability Skills:** Thaumaturgy (supernatural powers), Stamina (natural abilities), Utility (other useful actions).
-
-### **B. Character Customization: Equipment**
-
-Customization is a central theme. The game features fully interchangeable equipment.
-
-- **Equipment Slots:** Helmets, Torso pieces, Leg pieces, Right Arm pieces, Left Arm pieces, Ranged Weapons, and Melee Weapons.
-- **Rarity System:** A 7-tier rarity system is in place: **Junk, Common, Uncommon, Rare, Epic, Legendary, and Insane**. Rarity increases the equipment's statistics.
-- **Acquisition:**
-  1.  **Enemy Drops:** Killing an enemy provides a chance to earn their equipment. The dropped item will either match the enemy's rarity or be one tier lower.
-  2.  **Shop:** Players can use "credits and metal" to unlock new equipment in the shop.
-- **Leveling:** Equipment is unlocked at the player's current level; higher-level Thunder Warriors get more powerful gear.
-- **Optimization:** A dedicated article guides players on "Picking the Right Equipment," advising them to think about how gear works together to "achieve a certian goal" (e.g., high damage and low weight for "hit and run tacktics").
-
-### **C. Character Customization: Modifications System**
-
-A deep modification system allows for "incredible customization" on top of base equipment.
-
-- **Rarity & Acquisition:** Mods follow the same 7-tier rarity system and are acquired from enemy drops or the shop.
-- **Mod Structure:**
-  1.  **Main Enhancement:** One primary stat increase (e.g., "Defense for armour, or Damage for a weapon").
-  2.  **Minor Enhancements:** Up to four secondary enhancements. These can be smaller stat changes or "Universal Changes" affecting the entire character (e.g., "ability cost" or "time it takes to start healing").
-- **Balancing:** Minor enhancements can sometimes be a "slight Decrease." This is an intentional design choice, as it "meens that the other traits of the mod will be even more powerful".
-- **Equipping:** Players equip mods by clicking a weapon's icon on the home screen, then clicking the weapon's image or the empty mod slots beneath it.
-
-### **D. Combat System**
-
-The game features both ranged and melee combat.
-
-- **Melee Weapons:** Introduced as a major update, melee weapons "revolutionize combat".
-- **Swapping:** Players press 'f' to swap between ranged and melee weapons.
-- **Melee Attack:** Higher damage, less range, and lower rate of fire than ranged weapons. Players are "unable to block while stabbing."
-- **Melee Block:** By holding 'shift', players can block. This "reflects all projectiles" within a specific angle and can "stagger enemeies who attack you with a ranged weapon" (this seems to mean _stagger enemies who attack you with a melee weapon_).
-
-### **E. Game World & Locations**
-
-Players fight on various planets, each with a unique location and environment.
-
-- **Julix IV:** A "Frozen Wasteland." The map is an "Emperial Outpost in Canar Hun."
-- **Athemorum:** A "Scorching Bleakness." The map is an "Uncovered Resource Deposit In the Anakoran Desert."
-- **Frin'Sai:** A "Savage Wilds." The map is the "Overrun City of Make'Tui."
-- **Tralion Catornay:** A world of "Unending Splendor." The map is a "Secret Rebel Depot Hidden in Fernackie's Valley."
-- **Future Locations:** The team is "constantly adding new planets" and is open to suggestions via the feedback tab.
-
-### **F. Shop System**
-
-The Shop is the primary way to acquire equipment and mods using in-game resources.
-
-- **Unlocks:** Players can pay for a _type_ of item (e.g., weapon, armor) and aim for a specific rarity, but the "rarity will vary".
-- **Purchases:** A separate system allows players to "pay more resources to make a purchase at a higher ratiy as well", suggesting both a random (unlock) and a guaranteed (purchase) acquisition method.
-
----
-
-## **V. Detailed Analysis: User Interface (UI) & User Experience (UX)**
-
-The project files reveal a significant and ongoing effort to refine the game's UI and UX, both on the website and in-game.
-
-### **A. Web Page Redesign**
-
-The entire website has been "completely revamped".
-
-- **Navigation:** A new persistent "bar that stays at the top of the screen," a new menu on the right, and an account management dropdown accessible by hovering the profile icon or username.
-- **New Pages:** "About," "How to Play," and "Credits" pages were added.
-- **Technical:** Images were "completely optimized for maximum quality and incredibly reduced loading delays".
-
-### **B. Home Page Remodeling**
-
-The game's main "Home Page" (the user's dashboard) was also redesigned for easier customization.
-
-- **Preview Screen:** A central element shows a preview of the player's Thunder Warrior with all equipped gear.
-- **Equipment Icons:** Icons for each equipment slot "surrounding the preview... can be clicked on to get to... the Equipment Screen."
-- **Information Bar:** Displays the player's affiliation, username/email, resources (Credits, Metal, Experience), and quick-access buttons to "Settings" and "Shop".
-
-### **C. In-Game UI ("Information Update")**
-
-An "Information Update" was released to display more data to players in-game.
-
-- **Status Bars:** Hitpoints, Stamina, Thaumaturgy, and Weapon Heat bars now show "exact values stating their current status and maximum value."
-- **Equipment Stats:**
-  - **Hover-Over:** Hovering over equipment shows key stats (damage, firing speed, range, defense, weight, etc.).
-  - **Detailed View:** Clicking equipment from the home menu reveals an info icon (?) that opens an "extended list of sometimes over twenty diferent stats".
-
-### **D. Game Error Handling**
+**H. Game Error Handling**
 
 A dedicated set of messages (`startGameMessage`) handles all errors related to joining a game.
 
@@ -1479,50 +1421,44 @@ A dedicated set of messages (`startGameMessage`) handles all errors related to j
 
 ---
 
-## **VI. Detailed Analysis: Community & Feedback Systems**
+## Section 4: Project Development & Community
 
-The project maintains a strong focus on community data collection through three separate systems, plus a public contact form. All systems (except "Contact Us") require the user to be signed in and confirmed.
+This section analyzes the project's development history, UI/UX evolution, technical infrastructure changes, and community feedback mechanisms, based on developer communications.
 
-### **A. Feedback System**
+### I. User Interface (UI) & User Experience (UX) Evolution
 
-Used for submitting bugs, ideas, and general feedback.
+The project files reveal a significant and ongoing effort to refine the game's UI and UX, both on the website and in-game.
 
-- **Validation:** Checks for empty "Topic and Message" fields.
-- **Account Checks:** Blocks users who are not signed in, unconfirmed, banned, or "not found".
-- **Spam Prevention:** A rate limit is in place: "we only allow one Feedback Message to be sent once per Five Minutes".
-- **Success:** "You have succesfully submitted feedback!".
-- **Debug/Admin:** Two unusual messages exist: "Failed to reset account" and "Succesfully reset account to default values", suggesting a hidden admin function on the feedback page to reset an account.
+**A. Web Page Redesign**
 
-### **B. Rating System**
+The entire website has been "completely revamped".
 
-A simple 1-5 star rating system.
+- **Navigation:** A new persistent "bar that stays at the top of the screen," a new menu on the right, and an account management dropdown accessible by hovering the profile icon or username.
+- **New Pages:** "About," "How to Play," and "Credits" pages were added.
+- **Technical:** Images were "completely optimized for maximum quality and incredibly reduced loading delays".
 
-- **Validation:** "The Rating must be within the range of one to five".
-- **Account Checks:** Blocks users who are not signed in, unconfirmed, banned, or "not found".
-- **Functionality:** Users can submit a new rating, update their existing rating, or delete their rating. Error messages exist if no rating is found to update/delete.
+**B. Home Page Remodeling**
 
-### **C. Review System**
+The game's main "Home Page" (the user's dashboard) was also redesigned for easier customization.
 
-A more detailed review system with a title and message body.
+- **Preview Screen:** A central element shows a preview of the player's Thunder Warrior with all equipped gear.
+- **Equipment Icons:** Icons for each equipment slot "surrounding the preview... can be clicked on to get to... the Equipment Screen."
+- **Information Bar:** Displays the player's affiliation, username/email, resources (Credits, Metal, Experience), and quick-access buttons to "Settings" and "Shop".
 
-- **Validation:** Checks for an empty title and an empty message.
-- **Account Checks:** Blocks users who are not signed in, unconfirmed, banned, or "not found".
-- **Functionality:** Users can submit a new review, update their review, or delete their review. An error exists for "no review associated with this account".
+**C. In-Game UI ("Information Update")**
 
-### **D. "Contact Us" System**
+An "Information Update" was released to display more data to players in-game.
 
-A public-facing form, likely for users who cannot sign in (e.g., banned users).
+- **Status Bars:** Hitpoints, Stamina, Thaumaturgy, and Weapon Heat bars now show "exact values stating their current status and maximum value."
+- **Equipment Stats:**
+  - **Hover-Over:** Hovering over equipment shows key stats (damage, firing speed, range, defense, weight, etc.).
+  - **Detailed View:** Clicking equipment from the home menu reveals an info icon (?) that opens an "extended list of sometimes over twenty diferent stats".
 
-- **Validation:** It requires a First Name, Last Name, Email, Topic, and Message.
-- **Success:** "You have succesfully sent us a message!".
-
----
-
-## **VII. Detailed Analysis: Technical Infrastructure & Development**
+### II. Technical Infrastructure & Development Pipeline
 
 The news articles provide rare insight into the project's backend architecture, development pipeline, and future plans.
 
-### **A. Server Architecture & Performance**
+**A. Server Architecture & Performance**
 
 A "Server is Completely Revamped" update was announced to address lag.
 
@@ -1530,7 +1466,7 @@ A "Server is Completely Revamped" update was announced to address lag.
 - **New Model:** "The only thing the client now does is render the images."
 - **The Result:** "lag is greatly reduced" and the delay between button press and on-screen action is "practivally nonexistant". This signifies a move from a client-authoritative model to a server-authoritative model, crucial for a multiplayer game.
 
-### **B. 3D Graphics & Animation Pipeline**
+**B. 3D Graphics & Animation Pipeline**
 
 The team is in the process of a major graphical overhaul, moving from 2D to 3D.
 
@@ -1544,7 +1480,7 @@ The team is in the process of a major graphical overhaul, moving from 2D to 3D.
 - **3D Animations:** A "Work Begins on 3D Animations" article confirms the move to a fully 3D game, emphasizing that the new 3D parts are being designed to "all fit with all others" to maintain customization.
 - **Animation Improvement:** An "Improved Animations" article discusses efforts to use "more realistic and lifelike movements" and fix clipping issues ("a gun going into the hand holding it").
 
-### **C. Project Status & Future Work**
+**C. Project Status & Future Work**
 
 - **Current Status:** Open Beta.
 - **Community Sentiment:** The developers report that "Comunity Investment is at an All-Time High" and "feedback is still mostly positive" even during lulls in updates.
@@ -1553,11 +1489,48 @@ The team is in the process of a major graphical overhaul, moving from 2D to 3D.
   - **"Something Big":** The team is "working harder than ever" on "something really big coming up".
   - **Ongoing 3D Conversion:** The team is still working on swapping out more weapons and animations to 3D.
 
+### III. Community & Feedback Systems
+
+The project maintains a strong focus on community data collection through three separate systems, plus a public contact form. All systems (except "Contact Us") require the user to be signed in and confirmed.
+
+**A. Feedback System**
+
+Used for submitting bugs, ideas, and general feedback.
+
+- **Validation:** Checks for empty "Topic and Message" fields.
+- **Account Checks:** Blocks users who are not signed in, unconfirmed, banned, or "not found".
+- **Spam Prevention:** A rate limit is in place: "we only allow one Feedback Message to be sent once per Five Minutes".
+- **Success:** "You have succesfully submitted feedback!".
+- **Debug/Admin:** Two unusual messages exist: "Failed to reset account" and "Succesfully reset account to default values", suggesting a hidden admin function on the feedback page to reset an account.
+
+**B. Rating System**
+
+A simple 1-5 star rating system.
+
+- **Validation:** "The Rating must be within the range of one to five".
+- **Account Checks:** Blocks users who are not signed in, unconfirmed, banned, or "not found".
+- **Functionality:** Users can submit a new rating, update their existing rating, or delete their rating. Error messages exist if no rating is found to update/delete.
+
+**C. Review System**
+
+A more detailed review system with a title and message body.
+
+- **Validation:** Checks for an empty title and an empty message.
+- **Account Checks:** Blocks users who are not signed in, unconfirmed, banned, or "not found".
+- **Functionality:** Users can submit a new review, update their review, or delete their review. An error exists for "no review associated with this account".
+
+**D. "Contact Us" System**
+
+A public-facing form, likely for users who cannot sign in (e.g., banned users).
+
+- **Validation:** It requires a First Name, Last Name, Email, Topic, and Message.
+- **Success:** "You have succesfully sent us a message!".
+
 ---
 
-## **VIII. Conclusion**
+## Section 5: Conclusion
 
-The 128 "homeMessages" files provide a uniquely comprehensive blueprint of the "Thunder Warrior: Genesis" project. This is not a simple game, but an ambitious, large-scale web application with a deep and nuanced architecture.
+The provided codebase and message files provide a uniquely comprehensive blueprint of the "Thunder Warrior: Genesis" project. This is not a simple game, but an ambitious, large-scale web application with a deep and nuanced architecture.
 
 The project's strengths lie in its:
 
@@ -1566,4 +1539,4 @@ The project's strengths lie in its:
 3.  **A transparent and active development process,** communicating technical changes (server revamps, 3D pipelines) and content updates (new planets, melee weapons) directly to the players.
 4.  **A strong emphasis on community feedback,** with no fewer than four separate channels for users to communicate with the development team.
 
-The project is currently in a critical and exciting phase: transitioning to a more robust server architecture, overhauling its entire graphics engine from 2D to 3D, and preparing for another major UI redesign, all while in an open beta. The data collected from the provided files indicates a mature, well-planned, and feature-rich gaming project.
+The project is currently in a critical and exciting phase: transitioning to a more robust authoritative server architecture, overhauling its entire graphics engine from 2D to 3D, and preparing for another major UI redesign, all while in an open beta. The data collected indicates a mature, well-planned, and feature-rich gaming project.
