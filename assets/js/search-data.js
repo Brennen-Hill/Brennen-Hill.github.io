@@ -55,6 +55,11 @@ ninja.data = [{
           description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Quantum_Compiler/";
+            },},{id: "projects-rl-skaring",
+          title: 'RL Skaring',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/RL-Skating/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
           description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
