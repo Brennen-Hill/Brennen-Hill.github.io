@@ -30,7 +30,27 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-badger-vision",
+        },{id: "projects-ai-nav-1",
+          title: 'AI Nav 1',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AI-Navigation1/";
+            },},{id: "projects-ai-nav-2",
+          title: 'AI Nav 2',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AI-Navigation2/";
+            },},{id: "projects-ai-testbed-1",
+          title: 'AI Testbed 1',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AI-Testbed1/";
+            },},{id: "projects-ai-testbed-2",
+          title: 'AI Testbed 2',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AI-Tested2/";
+            },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
