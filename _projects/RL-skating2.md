@@ -1,23 +1,43 @@
----
 layout: page
-title: "RL Skaring"
+title: "Roller RL 4"
 description: Reinforcement Learning for Quadruped Roller Skating.
-img: assets/img/quad-skate/motor_wheel_config.png
+img: assets/img/12.jpg
 importance: 1
 category: research
 related_publications: false
-math: true
 toc:
-  sidebar: left
+sidebar: left
+
 ---
 
-Brennen Hill, Hanwen Wang, Aswinkumar Ramkumar
+Here is the combined academic paper, formatted in Markdown for the al-folio template and including the requested image formatting.
+
+---
+
+# Reinforcement Learning for Quadruped Roller Skating
+
+**Brennen Alexander Hill**
+_Dept. of Computer Science_
+_University of Wisconsin, Madison_
+*bahill4@wisc.edu*
+
+**Hanwen Wang**
+_Dept. of Mechanical Engineering_
+_University of Wisconsin, Madison_
+*hwang2446@wisc.edu*
+
+**Aswinkumar Ramkumar**
+_Dept. of Electrical and Computer Engineering_
+_University of Wisconsin, Madison_
+*ramkumar4@wisc.edu*
 
 ---
 
 ## Abstract
 
 We present a framework for training a quadruped robot to roller skate using deep reinforcement learning (RL). To overcome the target hardware's (Unitree Go1) lack of leg yaw, we introduce a novel passive wheel design called the **"X configuration"**, which enables the conversion of sideways leg motion into forward propulsion. Training is conducted using a massively parallel RL framework in the Isaac Gym simulator. The trained policy discovers complex and **emergent gaits**, automatically switching from a **diagonal gait** at 1 m/s to a **galloping gait** to achieve 3 m/s. We demonstrate that this learned roller-skating locomotion is significantly **more energy-efficient** than a traditional trotting gait, exhibiting a substantially lower cost of transport and mechanical power at equivalent speeds. This research validates passive roller skating as a viable, low-cost, and highly efficient locomotion strategy for legged robots.
+
+**Index Terms**—Reinforcement Learning, Quadruped Robotics, Legged Locomotion, Roller Skating, Energy Efficiency, Emergent Behavior, Isaac Gym
 
 ---
 
@@ -71,7 +91,7 @@ To solve this, we designed a fixed **"X Configuration"** for the passive wheels.
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-8 mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/motor_wheel_config.png" title="Fig 1. Motor and Wheel Configuration" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Fig 1. Motor and Wheel Configuration" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -87,7 +107,7 @@ Our controller architecture is a hierarchical system, as shown in Fig. 2.
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-10 mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/block_diagram.png" title="Fig 2. Software Block Diagram" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Fig 2. Software Block Diagram" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -159,14 +179,14 @@ A significant finding is that the RL policy learned to **automatically switch it
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/quad-skate/diag-1.png" title="Diagonal gait at t0" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Diagonal gait at t0" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/quad-skate/diag-3.png" title="Diagonal gait at t1" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Diagonal gait at t1" class="img-fluid rounded z-depth-1" %}
     </div>
-</div>
-<div class="caption">
-    Figs 3 & 4. The robot using a diagonal gait at $t_0$ (left) and $t_1$ (right). The legs push sideways to generate forward motion.
+    </div>
+    <div class="caption">
+    Figs 3 &amp; 4. The robot using a diagonal gait at $t_0$ (left) and $t_1$ (right). The legs push sideways to generate forward motion.
 </div>
 
 - **At 3 m/s: Galloping Gait**
@@ -174,10 +194,10 @@ A significant finding is that the RL policy learned to **automatically switch it
 
 <div class="row">
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/gallop-1.png" title="Galloping gait at t0" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Galloping gait at t0" class="img-fluid rounded z-depth-1" %}
 </div>
 <div class="col-sm mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/gallop-2.png" title="Galloping gait at t1" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Galloping gait at t1" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">
@@ -203,7 +223,7 @@ The results, shown in Fig. 7, are conclusive. At all tested forward velocities (
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-10 mt-3 mt-md-0">
-{% include figure.liquid loading="eager" path="assets/img/quad-skate/energy_efficiency_comparison.png" title="Fig 7. Energy Efficiency Comparison" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid loading="eager" path="assets/img/12.jpg" title="Fig 7. Energy Efficiency Comparison" class="img-fluid rounded z-depth-1" %}
 </div>
 </div>
 <div class="caption">

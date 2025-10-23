@@ -69,9 +69,6 @@ The seed match from Phase 1 is then fed into a comprehensive **backtracking sear
 
 <div class="col">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/BackwardMatchResult.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/MaximalMatch.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
