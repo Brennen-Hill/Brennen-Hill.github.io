@@ -14,8 +14,6 @@ related_publications: false
     </div>
 </div>
 
-{% include figure.liquid loading="eager" path="assets/img/Sign.webp" title="SignLanguageLearner" class="img-fluid rounded z-depth-1" %}
-
 ## 1. Abstract
 
 This report details a two-part investigation into the capabilities and modification of Large Language Models (LLMs). The first phase explored the frontier of prompt engineering, analyzing the performance gap between zero-shot, Chain-of-Thought (CoT), and a manually implemented Tree-of-Thought (ToT) paradigm on a complex logical reasoning task. We developed a novel evaluation heuristic to guide the ToT process, successfully solving a puzzle where simpler methods failed. The second phase moved from prompting to the model's core, where we trained and fine-tuned a foundational model (NanoGPT) from scratch. This was achieved by directly modifying the model's loss function to align its behavior with an arbitrary, non-semantic rule, a process that demonstrated a successful fine-tuning intervention and revealed critical trade-offs between rule-based alignment and semantic coherence.
