@@ -55,8 +55,8 @@ ninja.data = [{
           description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Quantum_Compiler/";
-            },},{id: "projects-rl-skaring",
-          title: 'RL Skaring',
+            },},{id: "projects-rl-skating",
+          title: 'RL Skating',
           description: "Reinforcement Learning for Quadruped Roller Skating.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/RL-Skating/";
