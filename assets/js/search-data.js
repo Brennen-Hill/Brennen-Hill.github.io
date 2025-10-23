@@ -60,6 +60,11 @@ ninja.data = [{
           description: "Reinforcement Learning for Quadruped Roller Skating.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/RL-Skating/";
+            },},{id: "projects-roller-rl-4",
+          title: 'Roller RL 4',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/RL-skating2/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
           description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
