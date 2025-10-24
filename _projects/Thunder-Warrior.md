@@ -60,7 +60,9 @@ The professional-grade quality is evidenced by the depth of its systems, which i
 - **Complex Combat:** Advanced mechanics far beyond a typical web game, such as projectile speed, damage falloff, weapon heat, and a melee system with blocking that can reflect projectiles and stagger enemies.
 - **Robust Infrastructure:** A complete, secure account management system (covering sign-up, email confirmation, and password recovery) and multiple built-in community feedback systems (feedback, ratings, and reviews) to foster player engagement and guide iterative development.
 
-This report will now proceed with a deep, file-by-file analysis of the final codebase, providing evidence for the systems that made "Thunder Warrior: Genesis" a success. It will cover the complex authoritative server model, the custom physics, the massive 50+ skill ability system, the deep equipment and modification database, and the robust, professional-grade account management portal. Due to the immense size of the codebase, the remainder of the report was generated through an automated pipeline.
+This report will now proceed with a deep, file-by-file analysis of the final codebase, providing evidence for the systems that made "Thunder Warrior: Genesis" a success. It will cover the complex authoritative server model, the custom physics, the massive 50+ skill ability system, the deep equipment and modification database, and the robust, professional-grade account management portal.
+
+Due to the immense size of the codebase, the remainder of the report was generated through a custom automated pipeline.
 
 ## Section 1: Project Overview & Architecture
 
