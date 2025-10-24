@@ -30,7 +30,17 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-ai-nav-1",
+        },{id: "projects-ai-nav-2-formatted",
+          title: 'AI Nav 2 formatted',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AI-Nav-1/";
+            },},{id: "projects-ai-nav-2-formatted",
+          title: 'AI Nav 2 formatted',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/AI-Nav-2/";
+            },},{id: "projects-ai-nav-1",
           title: 'AI Nav 1',
           description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
           section: "Projects",handler: () => {
