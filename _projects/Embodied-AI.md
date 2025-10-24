@@ -26,14 +26,14 @@ To spearhead the complete research and development lifecycle for a novel, on-dev
 
 - **Dynamic Platform Accommodation:** The algorithm was designed from the ground up to explicitly account for a dynamic, mobile platform, a key differentiator from most SOTA methods.
 
-- **Prototyping & Validation:** I developed initial prototypes in Python to validate the theory against simulated data. After success, I built a robust data pipeline to ingest, process, and replay historical telemetry data from numerous real-world operational runs, enabling massive-scale regression testing.
+- **Prototyping & Validation:** I developed initial prototypes in Python to validate the theory against simulated data. After success, I built a robust data pipeline to ingest, process, and replay historical telemetry data from numerous real-world operational runs, enabling massive-scale regression testing. This pipeline included a [https://BrennenHill.com/Embodied-AI](robotic simulation & analysis platform).
 
 - **Production Implementation:** The final, high-performance algorithm was implemented in Lisp. This system was rigorously validated through a multi-stage pipeline, progressing from high-fidelity simulation to extensive on-hardware performance analysis to prove its real-world robustness.
 
 ## Technology Stack
 
 - **Lisp:** Used for the core, on-device, high-performance algorithm. Selected for its high-speed execution, low-level customizability, and powerful metaprogramming capabilities, which enabled rapid debugging and iterative development directly on the running system.
-  **Python:** Used for data pipelines, simulation, benchmarking, prototyping, and validation.
+- **Python:** Used for data pipelines, simulation, benchmarking, prototyping, and validation.
 
 ## Results & Impact
 

@@ -10,7 +10,7 @@ related_publications: false
 
 ## Objective
 
-To design and implement a high-fidelity 3D simulation and analysis platform for the company's mobile robotics platform. The primary goals were to create a robust testbed for R&D of new autonomous features (including https://BrennenHill.com/Embodied-AI) and to provide a company-wide tool for performance analysis, mission review, and debugging of systems.
+To design and implement a high-fidelity 3D simulation and analysis platform for the company's mobile robotics platform. The primary goals were to create a robust testbed for R&D of new autonomous features,[https://BrennenHill.com/Embodied-AI](including state estimation for embodied AI), and to provide a company-wide tool for performance analysis, mission review, and debugging of systems.
 
 ## Challenges
 
