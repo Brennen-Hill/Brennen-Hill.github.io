@@ -30,12 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-robotics-platform",
-          title: 'Robotics Platform',
-          description: "3D Robotic Simulation &amp; Analysis Platform",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-testbed/";
-            },},{id: "projects-badger-vision",
+        },{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
@@ -64,42 +59,37 @@ ninja.data = [{
           title: 'Quantum Compiler',
           description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/Quantum_Compiler/";
+              window.location.href = "/projects/Quantum-Compiler/";
             },},{id: "projects-rl-skating",
           title: 'RL Skating',
           description: "Reinforcement Learning for Quadruped Roller Skating.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/RL-Skating/";
+            },},{id: "projects-robotics-platform",
+          title: 'Robotics Platform',
+          description: "3D Robotic Simulation &amp; Analysis Platform",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Robotics-Platform/";
             },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
           description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Sign-Language-Learner/";
+            },},{id: "projects-twg3-struc",
+          title: 'TWG3-struc',
+          description: "it is.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Stealth-Startup/";
+            },},{id: "projects-twg3-struc",
+          title: 'TWG3-struc',
+          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Thunder-Warrior/";
             },},{id: "projects-vision-representations",
           title: 'Vision Representations',
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Vision-Representations/";
-            },},{id: "projects-twg3-ai",
-          title: 'TWG3-ai',
-          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/twg-3-ai-comitee/";
-            },},{id: "projects-twg3-en",
-          title: 'TWG3-en',
-          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/twg-3-engineer/";
-            },},{id: "projects-twg3-struc",
-          title: 'TWG3-struc',
-          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/twg3-struc/";
-            },},{id: "projects-twg3",
-          title: 'TWG3',
-          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/twg3/";
             },},{
         id: 'social-email',
         title: 'email',
