@@ -75,9 +75,9 @@ ninja.data = [{
           description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Sign-Language-Learner/";
-            },},{id: "projects-twg3-struc",
-          title: 'TWG3-struc',
-          description: "it is.",
+            },},{id: "projects-research-amp-developement-in-embodied-ai-and-robotics",
+          title: 'Research &amp;amp; Developement in Embodied AI and Robotics',
+          description: "Stealth-Mode Startup",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Stealth-Startup/";
             },},{id: "projects-twg3-struc",
