@@ -53,7 +53,7 @@ The remainder of this report is organized as follows. Section II provides a brie
 
 ## II. Background: Reinforcement Learning
 
-Reinforcement Learning (RL) is a machine learning paradigm where an **agent** (the robot's control policy) learns to interact with an **environment** (the physics simulation) to maximize a cumulative **reward** signal. At each timestep, the agent observes the environment's current **state** $$s_t$$, takes an **action** $$a_t$$, and receives a scalar reward $$r_t$$ and the next state $$s_{t+1}$$. The goal is to learn a **policy**, $$\pi(a_t|s_t)$$, which is a mapping from states to actions that optimizes the expected long-term return (sum of rewards). In this work, we use RL to discover the complex sequence of motor commands required to achieve stable and efficient roller skating, a task that would be exceptionally difficult to explicitly program.
+Reinforcement Learning (RL) is a machine learning paradigm where an **agent** (the robot's control policy) learns to interact with an **environment** (the physics simulation) to maximize a cumulative **reward** signal. At each timestep, the agent observes the environment's current **state** $$s_t$$, takes an **action** $$a_t$$, and receives a scalar reward $$r_t$$ and the next state $s_{t+1}$. The goal is to learn a **policy**, $\pi(a_t|s_t)$, which is a mapping from states to actions that optimizes the expected long-term return (sum of rewards). In this work, we use RL to discover the complex sequence of motor commands required to achieve stable and efficient roller skating, a task that would be exceptionally difficult to explicitly program.
 
 ## III. Methodology
 
@@ -162,7 +162,7 @@ A significant finding is that the RL policy learned to **automatically switch it
     </div>
 </div>
 <div class="caption">
-    Figs 3 & 4. The robot using a diagonal gait at $$t_0$$ (left) and $$t_1$$ (right). The legs push sideways to generate forward motion.
+    Figs 3 & 4. The robot using a diagonal gait at $$t_0$ (left) and $$t_1$$ (right). The legs push sideways to generate forward motion.
 </div>
 
 - **At 3 m/s: Galloping Gait**
