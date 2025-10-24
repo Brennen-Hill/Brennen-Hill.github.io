@@ -16,14 +16,14 @@ To design and implement a high-fidelity 3D simulation and analysis platform for 
 
 The main difficulty was integrating disparate data streams into a single, synchronized, and interactive view. This required developing a pipeline to accurately reconstruct complex, real-world robotic movement and sensor data from telemetry logs.
 
-**Methodology & Solution**
+## Methodology & Solution
 
 - **Platform Development:** I developed the platform from the ground up using Unreal Engine, employing both C++ for core logic and Blueprints for UI and rapid iteration.
 - **Data Ingestion & Reconstruction:** I engineered a data pipeline to parse robotic telemetry logs. This system reconstructs the robot's complete 3D movement path and orients it over accurate 3D terrain models.
 - **Visualization:** The simulator visualizes the robot's complete state vector and associated sensor data.
 - **Usability:** I implemented extensive user controls, including multiple dynamic camera perspectives, data visualization toggles, data layers, and system-state variables to empower researchers and engineers to perform in-depth analysis.
 
-**Results & Impact**
+## Results & Impact**
 
 - **R&D Testbed:** The platform serves as a critical testbed for designing, iterating on, and validating new features. It was instrumental in the development of the High-Precision State Estimation system.
 

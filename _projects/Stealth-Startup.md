@@ -6,7 +6,7 @@ importance: 1
 category: none
 ---
 
-## R\&D at a Stealth-Mode Robotics Startup
+## R&D at a Stealth-Mode Robotics Startup
 
 As a research engineer at a stealth-mode robotics AI startup (title: software engineer), my work focuses on the full lifecycle of research and development for novel embodied AI systems.
 
@@ -18,7 +18,7 @@ Below are two key projects detailing this experience. As this work is for a star
 
 ### [Project 1: Robust Robotic State Estimation Algorithm](https://BrennenHill.com/Embodied-AI)
 
-A novel, on-device AI system I researched, designed, and deployed from first principles. This algorithm uses a manifold disentanglement technique to overcome the failures of SOTA methods on our noisy, resource-constrained sensors. The system is implemented in Lisp and achieved a **\>100x improvement** in state estimation accuracy.
+A novel, on-device AI system I researched, designed, and deployed from first principles. This algorithm uses a manifold disentanglement technique to overcome the failures of SOTA methods on our noisy, resource-constrained sensors. The system is implemented in Lisp and achieved a **>100x improvement** in state estimation accuracy.
 
 ### [Project 2: 3D Robotic Simulation & Analysis Platform](https://BrennenHill.com/Robotics-Platform)
 
