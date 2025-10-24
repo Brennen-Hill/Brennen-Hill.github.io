@@ -30,41 +30,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-ai-nav-2-formatted",
-          title: 'AI Nav 2 formatted',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+        },{id: "projects-robotics-platform",
+          title: 'Robotics Platform',
+          description: "3D Robotic Simulation &amp; Analysis Platform",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-Nav-1/";
-            },},{id: "projects-ai-nav-2-formatted",
-          title: 'AI Nav 2 formatted',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-Nav-2/";
-            },},{id: "projects-ai-nav-1",
-          title: 'AI Nav 1',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-Navigation1/";
-            },},{id: "projects-ai-nav-2",
-          title: 'AI Nav 2',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-Navigation2/";
-            },},{id: "projects-ai-testbed-1",
-          title: 'AI Testbed 1',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-Testbed1/";
-            },},{id: "projects-ai-testbed-2",
-          title: 'AI Testbed 2',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/AI-Tested2/";
+              window.location.href = "/projects/AI-testbed/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Badger-Vision/";
+            },},{id: "projects-embodied-ai",
+          title: 'Embodied AI',
+          description: "Robust Robotic State Estimation via Manifold Disentanglement for Embodied AI on the Edge.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Embodied-AI/";
             },},{id: "projects-exosky",
           title: 'Exosky',
           description: "An Exoplanet Constellation Creator and Explorer",
