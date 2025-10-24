@@ -12,7 +12,7 @@ Brennen Hill, Joseph Mostika, Mehul Maheshwari
 
 ---
 
-### ABSTRACT
+### Abstract
 
 This project investigates computationally efficient and accurate models for static American Sign Language (ASL) alphabet recognition. Using the Sign Language MNIST dataset, we systematically explored the impact of model architecture, transfer learning strategies, and data augmentation on classification performance. We compare three experimental models based on the ResNet-50 architecture against a 97% accuracy baseline. Our primary contribution is the development of a lightweight, fine-tuned model (Model C) that achieves **99.5% test accuracy**. This model, which utilizes a simplified classification head and single-channel (grayscale) inputs, not only surpasses the baseline but also proves significantly more efficient, reducing training time by over 57% compared to a more complex fine-tuning approach (Model B).
 

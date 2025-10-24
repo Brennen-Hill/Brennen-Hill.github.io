@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Thunder Warrior"
-description: Analyzing the game mechanics, and web portal, and systems of a massive multiplayer game.
+description: The game mechanics, web portal, and systems of a massive multiplayer game.
 img: assets/img/TWG.png
 importance: 1
 category: game developement
@@ -9,6 +9,15 @@ related_publications: false
 toc:
   sidebar: left
 ---
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/video/gameVideo.mp4" class="img-fluid rounded z-depth-1" controls=true autoplay=true %}
+    </div>
+</div>
+<div class="caption">
+    Launch trailer.
+</div>
 
 ## Abstract
 
@@ -996,8 +1005,8 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 5.  **`firingSpeed`**: Multiplies `troop.mult.firing` by `ammount`. Duration: `time`.
 6.  **`damaging`**: Multiplies `troop.mult.damage` by `ammount`. Duration: `time`.
 7.  **`meleeSpeed`**: Multiplies `troop.mult.meleeSpeed` by `ammount`. Duration: `time`.
-8. **`weightless`**: Multiplies `troop.mult.weight` by `ammount` (less than 1). Duration: `time`.
-9. **`hover`**: Multiplies `troop.mult.fallSpeed` by `ammount` (less than 1). Duration: `time`.
+8.  **`weightless`**: Multiplies `troop.mult.weight` by `ammount` (less than 1). Duration: `time`.
+9.  **`hover`**: Multiplies `troop.mult.fallSpeed` by `ammount` (less than 1). Duration: `time`.
 10. **`jumping`**: Multiplies `troop.mult.jump` by `ammount`. Duration: `time`.
 11. **`prepared`**: Multiplies several stats by `ammount` (defense, firing, meleeSpeed, speed, damage) and divides others (cooling, jump) for `time` duration.
 
@@ -1012,8 +1021,8 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 7.  **`heavy`**: Multiplies `troop.mult.weight` by `ammount` (greater than 1). Duration: `time`.
 8.  **`stun`**: Cancels trooper actions (`activate`) and cancels input (`update`). Duration: `time`.
 9.  **`frozen`**: Cancels actions (`activate`), cancels input (`update`), and sets `troop.mult.fallSpeed = 0` (`update`). Duration: `time`.
-10.  **`weakness`**: Multiplies `troop.mult.damage` by `ammount` (less than 1). Duration: `time`.
-11.  **`damageOverTime`**: Deals `damage` of `damageType` periodically over `time` duration, applying source's offensive stats (`crit`, `accuracy`, `precision`).
+10. **`weakness`**: Multiplies `troop.mult.damage` by `ammount` (less than 1). Duration: `time`.
+11. **`damageOverTime`**: Deals `damage` of `damageType` periodically over `time` duration, applying source's offensive stats (`crit`, `accuracy`, `precision`).
 
 ---
 
@@ -1095,7 +1104,7 @@ These are randomly generated secondary stats added to mods based on the mod's ra
 
 This section provides a detailed analysis of the project's codebase, examining the server-side game logic, the core mechanics implementation, and the frontend web portal.
 
-### I. Server-Side Logic 
+### I. Server-Side Logic
 
 The server-side code manages game instances, handles client connections and communication within a game, and runs the core game simulation.
 
