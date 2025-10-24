@@ -124,6 +124,7 @@
       "position": "Software Engineer (Research Engineer)",
       "startDate": "2025-05",
       "endDate": "Present",
+      "url": "https://brennenhill.com/projects/Stealth-Startup",
       "highlights": [
         "Spearheaded the complete research and development lifecycle for a novel artificial intelligence system, taking the project from an ambiguous high-level goal to a fully deployed, production-ready system.",
         "Devised, prototyped, and implemented a custom, hardware-aware algorithm that significantly outperformed SOTA approaches by over 100x in accuracy on the system's hardware."
@@ -135,6 +136,7 @@
       "position": "Quantum Software Intern (Research Engineer)",
       "startDate": "2024-05",
       "endDate": "2024-08",
+      "url": "https://brennenhill.com/projects/Qunatum-Compiler",
       "highlights": [
         "Architected a multi-pass compiler in Common Lisp to generate optimized binary directly for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for direct FPGA execution to maximize performance and control flexibility.",
         "Designed and implemented a custom assembly language to bridge high-level experimental logic with the hardware instruction set, enabling advanced compiler optimizations, automatic resource allocation, and precise picosecond-level timing calculations.",
@@ -147,6 +149,7 @@
       "position": "Quantum Software Intern (Research Engineer)",
       "startDate": "2023-06",
       "endDate": "2023-08",
+      "url": "https://brennenhill.com/projects/Quantum-Circuit",
       "highlights": [
         "Engineered a production-ready implementation of an exact pattern matching algorithm within the Quilc quantum compiler, translating a novel theoretical method into a high-impact optimization tool.",
         "Reduced quantum circuit depth by up to 37%, shortening execution time on quantum hardware, directly enhancing algorithmic fidelity by mitigating qubit decoherence.",
@@ -221,6 +224,7 @@
       "description": "Lead Researcher",
       "startDate": "2024-09",
       "endDate": "2024-12",
+      "url": "https://brennenhill.com/projects/Vision-Representation",
       "highlights": [
         "Investigated Representation Fine-Tuning, a parameter-efficient fine-tuning method, on a vision-language model (nanoLLaVA) for a spatial reasoning task.",
         "Co-authored a research paper demonstrating that ReFT achieved accuracy comparable to LoRA (65.7% vs. 66.0%) while using nearly 10x fewer trainable parameters (0.019% of the model)."
@@ -231,6 +235,7 @@
       "description": "Researcher",
       "startDate": "2024-09",
       "endDate": "2024-12",
+      "url": "https://brennenhill.com/projects/RL-Skating",
       "highlights": [
         "Co-authored a research paper on training a Unitree Go1 quadruped robot with passive wheels to skate using reinforcement learning in the Isaac Gym simulator.",
         "Developed an RL policy that resulted in emergent complex behaviors, including automatic gait switching from a stable diagonal gait at low speeds to a dynamic galloping gait at high speeds (3 m/s)."
@@ -269,6 +274,7 @@
       "position": "Honorable Mention",
       "startDate": "2024-10",
       "name": "NASA International Space Apps Challenge 2024",
+      "url": "https://brennenhill.com/projects/Exosky",
       "highlights": [
         "Received a global Honorable Mention, only awarded to 19 of 93,520 (0.02%) global participants.",
         "Processed large-scale NASA/ESA astronomical data and implemented the 3D visualization, rendering, and user interface.",
@@ -279,6 +285,7 @@
       "position": "Winner (awarded $2,500)",
       "startDate": "2024-10",
       "name": "Hack Midwest 2024",
+      "url": "https://brennenhill.com/projects/Badger-Vision",
       "highlights": [
         "Won (of over 300 developers), awarded $2,500, and noted for Best Enterprise-Scale Buisnesss Solution.",
         "Designed and built \"Badger Vision,\" an AI-powered assistive tool to help individuals with prosopagnosia (face blindness) by providing real-time audio cues for face identification and emotion recognition.",
@@ -358,6 +365,7 @@
       "position": "Lead Developer and Founder",
       "startDate": "2018-03",
       "endDate": "2022-04",
+      "url": "https://brennenhill.com/projects/Thunder-Warrior/",
       "highlights": [
         "Designed, built, self-published, and marketed the video game Thunder Warrior: Genesis.",
         "Achieved net profit.",
