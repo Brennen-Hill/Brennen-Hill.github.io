@@ -80,9 +80,9 @@ ninja.data = [{
           description: "Stealth-Mode Startup",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Stealth-Startup/";
-            },},{id: "projects-twg3-struc",
-          title: 'TWG3-struc',
-          description: "A consolidated report analyzing the codebase, game mechanics, and web portal.",
+            },},{id: "projects-thunder-warrior",
+          title: 'Thunder Warrior',
+          description: "Analyzing the game mechanics, and web portal, and systems of a massive multiplayer game.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Thunder-Warrior/";
             },},{id: "projects-vision-representations",
