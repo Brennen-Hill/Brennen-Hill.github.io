@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "TWG3-struc"
-description: A consolidated report analyzing the codebase, game mechanics, and web portal.
+title: "Thunder Warrior"
+description: Analyzing the game mechanics, and web portal, and systems of a massive multiplayer game.
 img: assets/img/TWG.png
 importance: 1
 category: game developement
