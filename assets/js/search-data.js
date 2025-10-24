@@ -82,7 +82,7 @@ ninja.data = [{
               window.location.href = "/projects/Stealth-Startup/";
             },},{id: "projects-thunder-warrior",
           title: 'Thunder Warrior',
-          description: "Analyzing the game mechanics, and web portal, and systems of a massive multiplayer game.",
+          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Thunder-Warrior/";
             },},{id: "projects-vision-representations",
