@@ -79,7 +79,7 @@ Key findings from the analysis include:
 3.  **Authoritative Server Model:** The project uses an authoritative server to run the game simulation, with clients sending input and receiving state updates. This is crucial for a multiplayer action game.
 4.  **Multi-Faceted Community Engagement:** The project actively solicits user input through three distinct systems: a "Feedback" system for bugs and ideas, a 1-5 "Rating" system, and a "Review" system for detailed commentary.
 
-### II. Project Overview: Thunder Warrior: Genesis
+### II. Web Portal Overview
 
 "Thunder Warrior: Genesis" is a web-based game, inviting players to create an account and join. The development team is actively encouraging feedback to identify bugs and guide improvement, indicating a community-focused development model. The game has been received positively by game testers, which has encouraged the team to continue development with "more vigor than ever before".
 
@@ -88,21 +88,15 @@ The web portal functions by loading small, static HTML files containing JavaScri
 - **`setMessage(...)`:** This function is used to display status, error, and success messages to the user across all account and feedback modules.
 - **`setArticle(...)` & `newSection(...)`:** These functions are used to dynamically build and display news articles on the game's home page, keeping the community informed of updates.
 
-### III. Overall Architecture and Observations
+### III. Architecture
 
 - **Client-Server Model**: The project follows a typical authoritative server model. The server (`gameServer.js`) runs the game simulation, and clients (`client.html`, `clientWebsocket.js`) send input and receive game state updates via WebSockets.
 - **Modularity**: The codebase is reasonably modular, with separate files for distinct concerns like weapons (`Gun.js`, `Saber.js`), characters (`Trooper.js`), abilities (`AbilityEffect.js`), server logic (`gameServer.js`), client UI (`client.html`), networking (`websocket.js`, `clientWebsocket.js`), physics utilities (`CollisionDetection.js`, `MathVector.js`), etc.
 - **Object-Oriented Elements**: Uses constructor functions and prototypes (implicit in the `module.exports = ClassName; function ClassName(...) {...}` pattern) to create classes like `Trooper`, `Gun`, `Saber`, `Projectile`, `WeaponBase`.
 - **State Management**: State is primarily managed within the `Trooper` objects on the server and synchronized to clients. The client menu (`client.html`) maintains its own UI state and player data (`troop` object), synchronizing changes back to the server.
-- **Data Definitions**: Significant portions of the code involve defining static data for game elements like weapons, armor, mods, and abilities directly within the JavaScript files (`client.html`, `Trooper.js`). This could potentially be externalized to JSON or a database for easier management.
+- **Data Definitions**: Significant portions of the code involve defining static data for game elements like weapons, armor, mods, and abilities directly within the JavaScript files (`client.html`, `Trooper.js`).
 - **Responsiveness**: The frontend CSS heavily relies on `vmin` units, indicating a strong focus on making the UI scale across different screen sizes.
 - **Complexity**: The `Trooper.js`, `client.html`, `AbilityEffect.js`, and `StatusEffect.js` files are particularly large and complex, handling a wide range of interconnected game mechanics and UI elements.
-- **Potential Areas for Refinement**:
-  - Externalizing static game data (weapons, abilities, etc.) from code files.
-  - Potentially breaking down the large inline `<script>` in `client.html` into more focused modules.
-  - More robust error handling, especially around WebSocket communication and game state transitions.
-  - Further optimization of collision detection if performance becomes an issue.
-  - Adding comments to explain complex logic sections.
 
 ---
 
@@ -110,7 +104,7 @@ The web portal functions by loading small, static HTML files containing JavaScri
 
 This section details the user-facing gameplay features and provides a comprehensive catalog of all defined assets, including armor, weapons, abilities, and modifications.
 
-### I. Gameplay & Features (User-Facing)
+### I. Gameplay (User-Facing)
 
 The `newsArticle` files provide a rich, detailed look into the game's mechanics, features, and development roadmap.
 
@@ -175,7 +169,7 @@ The Shop is the primary way to acquire equipment and mods using in-game resource
 - **Unlocks:** Players can pay for a _type_ of item (e.g., weapon, armor) and aim for a specific rarity, but the "rarity will vary".
 - **Purchases:** A separate system allows players to "pay more resources to make a purchase at a higher ratiy as well", suggesting both a random (unlock) and a guaranteed (purchase) acquisition method.
 
-### II. Asset Catalog: Armor
+### II. Armor
 
 Armor pieces provide defensive stats, affect weight, and contribute to various passive character traits. They are defined within the `loadEquipment` function in `game/client.html`. Each piece belongs to a set and has base stats that are further modified by rarity, level, mods, and character attributes. All initially defined armor pieces have 3 modification slots.
 
@@ -337,7 +331,7 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 
 ---
 
-### III. Asset Catalog: Ranged Weapons (Guns)
+### III. Ranged Weapons
 
 Guns are defined in the `loadEquipment` function in `game/client.html`. They handle projectile firing, heat management, and contribute to offensive stats. All initially defined guns have 3 modification slots. The `Gun.js` file handles their in-game logic.
 
@@ -492,7 +486,7 @@ Guns are defined in the `loadEquipment` function in `game/client.html`. They han
 
 ---
 
-### IV. Asset Catalog: Melee Weapons (Sabers)
+### IV. Melee Weapons
 
 Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadEquipment` in `game/client.html`. They handle striking and blocking mechanics. All initially defined sabers have 3 modification slots. The `Saber.js` file handles their in-game logic.
 
@@ -626,7 +620,7 @@ Sabers (Plasmablades) are defined in the `getLaserSwords` function within `loadE
 
 ---
 
-### V. Asset Catalog: Abilities
+### V. Abilities
 
 Abilities are active skills triggered by player input, consuming Stamina or Thaumaturgy. They are defined in the `constructAbilities` function in `game/client.html` and their logic is implemented in `game/AbilityEffect.js`.
 
@@ -987,7 +981,7 @@ Abilities are active skills triggered by player input, consuming Stamina or Thau
 
 ---
 
-### VI. Asset Catalog: Status Effects (Buffs & Debuffs)
+### VI. Status Effects
 
 These are temporary effects applied to Troopers, defined in `game/StatusEffect.js`. They modify trooper behavior or stats over time.
 
@@ -997,15 +991,13 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 2.  **`speed`**: Multiplies `troop.mult.speed` by `ammount`. Duration: `time`.
 3.  **`defense`**: Multiplies `troop.mult.defense` by `ammount`. Duration: `time`.
 4.  **`healOverTime`**: Heals `ammount` health periodically (seems fixed at 25/sec in implementation) over `time` duration.
-5.  **`damageOverTime`**: Deals `damage` of `damageType` periodically over `time` duration, applying source's offensive stats (`crit`, `accuracy`, `precision`). Note: Marked as `buff=true` likely because it originates from an ally's Life Drain or similar effect, though it harms the recipient.
-6.  **`firingSpeed`**: Multiplies `troop.mult.firing` by `ammount`. Duration: `time`.
-7.  **`damaging`**: Multiplies `troop.mult.damage` by `ammount`. Duration: `time`.
-8.  **`weakness`**: Multiplies `troop.mult.damage` by `ammount` (less than 1). Logically a debuff, but potentially marked `buff=true` if applied via a self-inflicted balancing mechanic? Duration: `time`.
-9.  **`meleeSpeed`**: Multiplies `troop.mult.meleeSpeed` by `ammount`. Duration: `time`.
-10. **`weightless`**: Multiplies `troop.mult.weight` by `ammount` (less than 1). Duration: `time`.
-11. **`hover`**: Multiplies `troop.mult.fallSpeed` by `ammount` (less than 1). Duration: `time`.
-12. **`jumping`**: Multiplies `troop.mult.jump` by `ammount`. Duration: `time`.
-13. **`prepared`**: Multiplies several stats by `ammount` (defense, firing, meleeSpeed, speed, damage) and divides others (cooling, jump) for `time` duration.
+5.  **`firingSpeed`**: Multiplies `troop.mult.firing` by `ammount`. Duration: `time`.
+6.  **`damaging`**: Multiplies `troop.mult.damage` by `ammount`. Duration: `time`.
+7.  **`meleeSpeed`**: Multiplies `troop.mult.meleeSpeed` by `ammount`. Duration: `time`.
+8. **`weightless`**: Multiplies `troop.mult.weight` by `ammount` (less than 1). Duration: `time`.
+9. **`hover`**: Multiplies `troop.mult.fallSpeed` by `ammount` (less than 1). Duration: `time`.
+10. **`jumping`**: Multiplies `troop.mult.jump` by `ammount`. Duration: `time`.
+11. **`prepared`**: Multiplies several stats by `ammount` (defense, firing, meleeSpeed, speed, damage) and divides others (cooling, jump) for `time` duration.
 
 **B. Debuffs (`this.buff = false`)**
 
@@ -1018,10 +1010,12 @@ These are temporary effects applied to Troopers, defined in `game/StatusEffect.j
 7.  **`heavy`**: Multiplies `troop.mult.weight` by `ammount` (greater than 1). Duration: `time`.
 8.  **`stun`**: Cancels trooper actions (`activate`) and cancels input (`update`). Duration: `time`.
 9.  **`frozen`**: Cancels actions (`activate`), cancels input (`update`), and sets `troop.mult.fallSpeed = 0` (`update`). Duration: `time`.
+10.  **`weakness`**: Multiplies `troop.mult.damage` by `ammount` (less than 1). Duration: `time`.
+11.  **`damageOverTime`**: Deals `damage` of `damageType` periodically over `time` duration, applying source's offensive stats (`crit`, `accuracy`, `precision`).
 
 ---
 
-### VII. Asset Catalog: Modifications (Mods)
+### VII. Modifications
 
 Mods enhance equipment stats. They have a base effect, a rarity, a level, and can have Minor Modifications. Defined as global variables in `game/client.html`.
 
@@ -1099,7 +1093,7 @@ These are randomly generated secondary stats added to mods based on the mod's ra
 
 This section provides a detailed analysis of the project's codebase, examining the server-side game logic, the core mechanics implementation, and the frontend web portal.
 
-### I. Server-Side Logic (`gameServer.js`, `websocket.js`)
+### I. Server-Side Logic 
 
 The server-side code manages game instances, handles client connections and communication within a game, and runs the core game simulation.
 
@@ -1136,7 +1130,7 @@ The server-side code manages game instances, handles client connections and comm
 - **Object Management**: Maintains lists of `troopers` and `projectiles`.
 - **Collision**: Utilizes the `CollisionDetection` instance (`CD`) passed to troopers and projectiles for checking interactions.
 
-### II. Core Game Mechanics (Code Implementation)
+### II. Core Game Mechanics
 
 These files define the fundamental objects and rules of the game world.
 
@@ -1194,7 +1188,7 @@ These files define the fundamental objects and rules of the game world.
 - **Standard File**: Provides instructions for web crawlers.
 - **Configuration**: Disallows access to a `/test` directory but allows crawling of all other content.
 
-### III. Web Portal Frontend (`client.html`, CSS)
+### III. Web Portal Frontend
 
 The `client.html` file serves as the entry point and primary structure for the game's user interface, specifically the main menu and character customization/management screens before entering the actual arena.
 
@@ -1246,7 +1240,7 @@ The `client.html` file serves as the entry point and primary structure for the g
 - **Scrollbars**: Customizes the appearance of scrollbars using `::-webkit-scrollbar` pseudo-elements for elements like the stats screen.
 - **User Interaction**: Disables text selection (`user-select: none`) for most elements to maintain a game-like interface.
 
-### IV. Web Portal Client-Side Logic (`client.html` `<script>`, `clientWebsocket.js`)
+### IV. Web Portal Client-Side Logic
 
 The client-side JavaScript manages the user interface, handles user interactions within the menu, prepares data, and communicates with the server via WebSockets.
 
@@ -1468,11 +1462,11 @@ A dedicated set of messages (`startGameMessage`) handles all errors related to j
 
 ---
 
-## Section 4: Project Development & Community
+## Section 4: Development & Community
 
 This section analyzes the project's development history, UI/UX evolution, technical infrastructure changes, and community feedback mechanisms, based on developer communications.
 
-### I. User Interface (UI) & User Experience (UX) Evolution
+### I. UI & UX Evolution
 
 The project files reveal a significant and ongoing effort to refine the game's UI and UX, both on the website and in-game.
 
@@ -1577,7 +1571,7 @@ A public-facing form, likely for users who cannot sign in (e.g., banned users).
 
 ## Section 5: Conclusion
 
-The provided codebase and message files provide a uniquely comprehensive blueprint of the "Thunder Warrior: Genesis" project. This is not a simple game, but an ambitious, large-scale web application with a deep and nuanced architecture.
+The provided codebase and message files provide a uniquely comprehensive blueprint of the "Thdunder Warrior: Genesis" project. This is not a simple game, but an ambitious, large-scale web application with a deep and nuanced architecture.
 
 The project's strengths lie in its:
 
