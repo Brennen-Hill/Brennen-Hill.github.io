@@ -23,7 +23,7 @@ The main difficulty was integrating disparate data streams into a single, synchr
 - **Visualization:** The simulator visualizes the robot's complete state vector and associated sensor data.
 - **Usability:** I implemented extensive user controls, including multiple dynamic camera perspectives, data visualization toggles, data layers, and system-state variables to empower researchers and engineers to perform in-depth analysis.
 
-## Results & Impact**
+## Results & Impact\*\*
 
 - **R&D Testbed:** The platform serves as a critical testbed for designing, iterating on, and validating new features. It was instrumental in the development of the High-Precision State Estimation system.
 

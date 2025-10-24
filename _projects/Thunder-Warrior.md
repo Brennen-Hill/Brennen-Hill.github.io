@@ -24,9 +24,9 @@ As the sole developer, I was responsible for 100% of the project, from concept t
 
 Key technical decisions driven by this philosophy include:
 
-* **Custom Physics Engine:** The game's entire physics and collision detection systems were built manually.
-* **Custom Database:** I built a custom database from the ground up to manage all player, equipment, and world data.
-* **Custom Networking:** I opted to use the base `ws` WebSocket library over a heavier framework. This provided only the underlying functionality, giving me the high degree of customization needed to build a responsive, authoritative server.
+- **Custom Physics Engine:** The game's entire physics and collision detection systems were built manually.
+- **Custom Database:** I built a custom database from the ground up to manage all player, equipment, and world data.
+- **Custom Networking:** I opted to use the base `ws` WebSocket library over a heavier framework. This provided only the underlying functionality, giving me the high degree of customization needed to build a responsive, authoritative server.
 
 ---
 
@@ -34,14 +34,14 @@ Key technical decisions driven by this philosophy include:
 
 To bring this vision to life, I taught myself and mastered a wide range of professional tools and concepts.
 
-* **Backend:** An authoritative `gameServer.js` built on **Node.js** and hosted on **AWS** handles all game logic, physics, and state.
-* **Frontend:** The client is built with HTML, CSS, and JavaScript, using responsive design to scale across all devices.
-* **3D Art Pipeline:** All 3D models and animations were created in **Blender**. These 3D assets were then processed for multiple frontends:
-    * through a custom 2.5D sprite-baking pipeline to create thousands of images, ensuring high-fidelity graphics that perform well on low-power devices
-    * in 3.js for efficient 3D rendering
-    * and Unity for the highest end 3D graphics
-* **Commercial Success:** The game successfully achieved **net profit**. This was driven by a microtransaction system, built using **Stripe**, which allowed players to purchase an in-game currency ("crystals") to unlock equipment faster. This monetization model proved successful, resulting in a net profit where revenue exceeded all development and hosting costs.
-* **Version Control:** The entire 3-year development history was meticulously managed using **Git** and **GitHub**.
+- **Backend:** An authoritative `gameServer.js` built on **Node.js** and hosted on **AWS** handles all game logic, physics, and state.
+- **Frontend:** The client is built with HTML, CSS, and JavaScript, using responsive design to scale across all devices.
+- **3D Art Pipeline:** All 3D models and animations were created in **Blender**. These 3D assets were then processed for multiple frontends:
+  - through a custom 2.5D sprite-baking pipeline to create thousands of images, ensuring high-fidelity graphics that perform well on low-power devices
+  - in 3.js for efficient 3D rendering
+  - and Unity for the highest end 3D graphics
+- **Commercial Success:** The game successfully achieved **net profit**. This was driven by a microtransaction system, built using **Stripe**, which allowed players to purchase an in-game currency ("crystals") to unlock equipment faster. This monetization model proved successful, resulting in a net profit where revenue exceeded all development and hosting costs.
+- **Version Control:** The entire 3-year development history was meticulously managed using **Git** and **GitHub**.
 
 ---
 
@@ -55,10 +55,10 @@ Of all the skills I had to learn—from multiple programming languages to 3D art
 
 The professional-grade quality is evidenced by the depth of its systems, which include:
 
-* **Deep Customization:** A massive database of player equipment, including multiple armor sets, dozens of unique ranged and melee weapons, and a deep modification system with 7 rarity tiers.
-* **Complex RPG Systems:** A multi-tree skill system with **over 50 unique abilities** (e.g., "Mind Control," "Freeze," "Repulse") and a robust set of status effects and ststus management system for the numerous buffs and debuffs.
-* **Complex Combat:** Advanced mechanics far beyond a typical web game, such as projectile speed, damage falloff, weapon heat, and a melee system with blocking that can reflect projectiles and stagger enemies.
-* **Robust Infrastructure:** A complete, secure account management system (covering sign-up, email confirmation, and password recovery) and multiple built-in community feedback systems (feedback, ratings, and reviews) to foster player engagement and guide iterative development.
+- **Deep Customization:** A massive database of player equipment, including multiple armor sets, dozens of unique ranged and melee weapons, and a deep modification system with 7 rarity tiers.
+- **Complex RPG Systems:** A multi-tree skill system with **over 50 unique abilities** (e.g., "Mind Control," "Freeze," "Repulse") and a robust set of status effects and ststus management system for the numerous buffs and debuffs.
+- **Complex Combat:** Advanced mechanics far beyond a typical web game, such as projectile speed, damage falloff, weapon heat, and a melee system with blocking that can reflect projectiles and stagger enemies.
+- **Robust Infrastructure:** A complete, secure account management system (covering sign-up, email confirmation, and password recovery) and multiple built-in community feedback systems (feedback, ratings, and reviews) to foster player engagement and guide iterative development.
 
 This report will now proceed with a deep, file-by-file analysis of the final codebase, providing evidence for the systems that made "Thunder Warrior: Genesis" a success. It will cover the complex authoritative server model, the custom physics, the massive 50+ skill ability system, the deep equipment and modification database, and the robust, professional-grade account management portal. Due to the immense size of the codebase, the remainder of the report was generated through an automated pipeline.
 
