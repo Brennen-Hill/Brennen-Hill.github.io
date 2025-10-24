@@ -136,7 +136,7 @@
       "position": "Quantum Software Intern (Research Engineer)",
       "startDate": "2024-05",
       "endDate": "2024-08",
-      "url": "https://brennenhill.com/projects/Qunatum-Compiler",
+      "url": "https://brennenhill.com/projects/Quantum-Compiler",
       "highlights": [
         "Architected a multi-pass compiler in Common Lisp to generate optimized binary directly for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for direct FPGA execution to maximize performance and control flexibility.",
         "Designed and implemented a custom assembly language to bridge high-level experimental logic with the hardware instruction set, enabling advanced compiler optimizations, automatic resource allocation, and precise picosecond-level timing calculations.",

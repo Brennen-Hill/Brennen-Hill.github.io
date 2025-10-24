@@ -16,10 +16,10 @@ Below are two key projects detailing this experience. As this work is for a star
 
 ---
 
-### [Project 1: Robust Robotic State Estimation Algorithm](https://BrennenHill.com/Embodied-AI)
+### [Project 1: Robust Robotic State Estimation Algorithm](https://BrennenHill.com/projects/Embodied-AI)
 
 A novel, on-device AI system I researched, designed, and deployed from first principles. This algorithm uses a manifold disentanglement technique to overcome the failures of SOTA methods on our noisy, resource-constrained sensors. The system is implemented in Lisp and achieved a **>100x improvement** in state estimation accuracy.
 
-### [Project 2: 3D Robotic Simulation & Analysis Platform](https://BrennenHill.com/Robotics-Platform)
+### [Project 2: 3D Robotic Simulation & Analysis Platform](https://brennenhill.com/projects/Robotics-Platform)
 
 A high-fidelity simulation and analysis tool I built from the ground up using Unreal Engine. It serves as a testbed available company-wide for validating new autonomous features, analyzing system performance, and debugging complex, real-world mission data.
