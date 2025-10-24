@@ -36,6 +36,7 @@ Key technical decisions driven by this philosophy include:
 - **Custom Physics Engine:** The game's entire physics and collision detection systems were built manually.
 - **Custom Database:** I built a custom database from the ground up to manage all player, equipment, and world data.
 - **Custom Networking:** I opted to use the base `ws` WebSocket library over a heavier framework. This provided only the underlying functionality, giving me the high degree of customization needed to build a responsive, authoritative server.
+- **Custom Assets:** I manually built all models, images, animations, and other visuals.
 
 ---
 
@@ -50,7 +51,6 @@ To bring this vision to life, I taught myself and mastered a wide range of profe
   - in 3.js for efficient 3D rendering
   - and Unity for the highest end 3D graphics
 - **Commercial Success:** The game successfully achieved **net profit**. This was driven by a microtransaction system, built using **Stripe**, which allowed players to purchase an in-game currency ("crystals") to unlock equipment faster. This monetization model proved successful, resulting in a net profit where revenue exceeded all development and hosting costs.
-- **Version Control:** The entire 3-year development history was meticulously managed using **Git** and **GitHub**.
 
 ---
 
@@ -71,7 +71,7 @@ The professional-grade quality is evidenced by the depth of its systems, which i
 
 This report will now proceed with a deep, file-by-file analysis of the final codebase, providing evidence for the systems that made "Thunder Warrior: Genesis" a success. It will cover the complex authoritative server model, the custom physics, the massive 50+ skill ability system, the deep equipment and modification database, and the robust, professional-grade account management portal.
 
-Due to the immense size of the codebase, the remainder of the report was generated through a custom automated pipeline.
+**Due to the immense size of the codebase, the remainder of the report was generated through a custom automated pipeline.**
 
 ## Section 1: Project Overview & Architecture
 
@@ -1141,7 +1141,7 @@ The server-side code manages game instances, handles client connections and comm
 - **Object Management**: Maintains lists of `troopers` and `projectiles`.
 - **Collision**: Utilizes the `CollisionDetection` instance (`CD`) passed to troopers and projectiles for checking interactions.
 
-### II. Core Game Mechanics
+### II. Core Mechanics
 
 These files define the fundamental objects and rules of the game world.
 
@@ -1251,7 +1251,7 @@ The `client.html` file serves as the entry point and primary structure for the g
 - **Scrollbars**: Customizes the appearance of scrollbars using `::-webkit-scrollbar` pseudo-elements for elements like the stats screen.
 - **User Interaction**: Disables text selection (`user-select: none`) for most elements to maintain a game-like interface.
 
-### IV. Web Portal Client-Side Logic
+### IV. Web Portal Client
 
 The client-side JavaScript manages the user interface, handles user interactions within the menu, prepares data, and communicates with the server via WebSockets.
 
@@ -1332,7 +1332,7 @@ The client-side JavaScript manages the user interface, handles user interactions
 - **Calculations**: Includes functions to calculate modified equipment stats based on mods (`getModifiedEquipment`, `modifyWeapons`, `modifyArmour`, etc.), calculate item power (`getPower`), calculate ability descriptions with dynamic values (`getAbilityDescription`), calculate costs (`getNumCost`), etc.
 - **Server Synchronization**: Uses `saveTraitToServer` to send updates to the server via WebSocket whenever critical data changes (e.g., equipping items, unlocking abilities, spending resources, changing settings).
 
-### V. Web Portal User Account Management System
+### V. Account UI
 
 The project features an exceptionally thorough account management system, covering every stage of the user lifecycle. The system is designed to be secure, user-friendly, and robust, with specific, clear error messages for nearly every possible user error or account status.
 
@@ -1506,7 +1506,7 @@ An "Information Update" was released to display more data to players in-game.
   - **Hover-Over:** Hovering over equipment shows key stats (damage, firing speed, range, defense, weight, etc.).
   - **Detailed View:** Clicking equipment from the home menu reveals an info icon (?) that opens an "extended list of sometimes over twenty diferent stats".
 
-### II. Technical Infrastructure & Development Pipeline
+### II. Development Changes
 
 The news articles provide rare insight into the project's backend architecture, development pipeline, and future plans.
 
@@ -1541,7 +1541,7 @@ The team made a major graphical overhaul, moving from 2D to 3D.
   - **"Something Big":** The team is "working harder than ever" on "something really big coming up".
   - **Ongoing 3D Conversion:** The team is still working on swapping out more weapons and animations to 3D.
 
-### III. Community & Feedback Systems
+### III. Community
 
 The project maintains a strong focus on community data collection through three separate systems, plus a public contact form. All systems (except "Contact Us") require the user to be signed in and confirmed.
 
@@ -1582,7 +1582,7 @@ A public-facing form, likely for users who cannot sign in (e.g., banned users).
 
 ## Section 5: Conclusion
 
-The provided codebase and message files provide a uniquely comprehensive blueprint of the "Thdunder Warrior: Genesis" project. This is not a simple game, but an ambitious, large-scale web application with a deep and nuanced architecture.
+The provided codebase and message files provide a uniquely comprehensive blueprint of the "Thdunder Warrior: Genesis" project. This is an ambitious, large-scale web application with a deep and nuanced architecture.
 
 The project's strengths lie in its:
 
@@ -1591,4 +1591,4 @@ The project's strengths lie in its:
 3.  **A transparent and active development process,** communicating technical changes (server revamps, 3D pipelines) and content updates (new planets, melee weapons) directly to the players.
 4.  **A strong emphasis on community feedback,** with no fewer than four separate channels for users to communicate with the development team.
 
-The data collected indicates a mature, well-planned, and feature-rich gaming project.
+These strengths are the result of a mature, well-planned, and feature-rich gaming project.
