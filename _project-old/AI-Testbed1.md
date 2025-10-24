@@ -2,7 +2,7 @@
 layout: page
 title: AI Testbed 1
 description: Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor
-img: assets/img/ExoSky.jpeg
+img: assets/img/RoboticsPlatform.jpg
 importance: 1
 category: research engineering
 related_publications: false

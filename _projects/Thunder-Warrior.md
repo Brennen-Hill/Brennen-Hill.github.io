@@ -2,7 +2,7 @@
 layout: page
 title: "TWG3-struc"
 description: A consolidated report analyzing the codebase, game mechanics, and web portal.
-img: assets/img/ExoSky.jpeg
+img: assets/img/TWG.png
 importance: 1
 category: game developement
 related_publications: false
