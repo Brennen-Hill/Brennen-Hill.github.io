@@ -22,7 +22,7 @@ related_publications: false
 
 ### **Abstract**
 
-This report details the architecture and implementation of a novel multi-pass compiler, written in Common Lisp, to generate optimized binary for the custom QICK (Quantum Instrumentation Control Kit) tProcessor ISA. The primary objective was to create a low-level, high-performance pathway for direct FPGA execution, bridging the gap between high-level experimental logic in Python and the picosecond-level control required for quantum hardware. The project involved designing two custom Intermediate Representations (IRs), including an assembly-level API, to manage translation, optimization, automatic resource allocation, and precise timing calculations. A significant challenge was the systematic reverse-engineering of the QICK 32-bit binary instruction set due to highly inaccurate documentation. The fully validated compiler was deployed on a Xilinx RFSoC FPGA to execute complex pulse sequences on physical spin-qubit hardware. This project demonstrates deep expertise in system architecture, compiler design, and hardware-software co-design—foundational skills for developing the high-performance computing systems required for large-scale AI research and novel hardware acceleration.
+This report details the architecture and implementation of a novel multi-pass compiler, written in Common Lisp, to generate optimized binary for the custom QICK (Quantum Instrumentation Control Kit) tProcessor ISA. The primary objective was to create a low-level, high-performance pathway for direct FPGA execution, bridging the gap between high-level experimental logic in Python and the picosecond-level control required for quantum hardware. The project involved designing two custom Intermediate Representations (IRs), including an assembly-level API, to manage translation, optimization, automatic resource allocation, and precise timing calculations. A significant challenge was the systematic reverse-engineering of the QICK 32-bit binary instruction set due to highly inaccurate documentation. The fully validated by generating binaries verifiable against the QICK codebase, and its output is prepared for direct deployment on a Xilinx RFSoC FPGA to execute complex pulse sequences on physical spin-qubit hardware. This project demonstrates deep expertise in system architecture, compiler design, and hardware-software co-design—foundational skills for developing the high-performance computing systems required for large-scale AI research and novel hardware acceleration.
 
 ---
 
@@ -62,15 +62,15 @@ A significant obstacle emerged early in the project: the available documentation
 To solve this, I initiated a **systematic reverse-engineering** process. This was not random trial-and-error but a methodical investigation:
 
 1.  **Hypothesis and Test:** I formulated hypotheses about the function of specific bits or bit-fields within the 32-bit instruction word.
-2.  **Empirical Validation:** I wrote small compiler passes to generate specific binaries based on these hypotheses. These binaries were then deployed and executed on the Xilinx RFSoC hardware.
-3.  **Iterative Mapping:** By observing the hardware's output (or lack thereof), I systematically mapped the function of each bit. This involved discovering the hierarchical dependencies within the instruction format—determining how certain bits acted as "control flags" that changed the meaning of other bit-fields.
+2.  **Empirical Validation:** I wrote small compiler passes to generate specific binaries based on these hypotheses. These binaries were then validated against the existing QICK codebase's simulation and binary-processing tools, which can be run on a standard computer..
+3.  **Iterative Mapping:** By observing the output and behavior within the QICK software environment, I systematically mapped the function of each bit. This involved discovering the hierarchical dependencies within the instruction format—determining how certain bits acted as "control flags" that changed the meaning of other bit-fields.
 4.  **Full ISA Reconstruction:** This rigorous, empirical process was repeated until a complete and accurate map of the tProcessor's executable binary format was constructed. This validated map became the foundation for the low-level "Assembly API" and the compiler's final code-generation pass.
 
 ---
 
 ### **4. Validation & Research Impact**
 
-The full compilation pipeline was validated by deploying the compiler-generated binaries onto a Xilinx RFSoC FPGA. This binary was then used to execute complex pulse sequences on **physical spin-qubit hardware**, confirming the correctness of the compiler and the reverse-engineered ISA.
+The full compilation pipeline was validated by generating binaries and verifying their correctness and compatibility using the QICK software stack. The compiler's output is structured for direct deployment and has been confirmed to connect with the Xilinx RFSoC FPGA, readying it to execute complex pulse sequences on **physical spin-qubit hardware**, confirming the correctness of the compiler and the reverse-engineered ISA.
 
 The impact of this project is twofold:
 
