@@ -10,10 +10,6 @@ role: Software Engineer
 collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 ---
 
-We won and were noted for the **Best Enterprise Scale Business Solution** at Hack Midwest, the largest hackathon in the region! Our team was awarded $2,500 for our project.
-
-Over 300 developers were selected to compete, including experts from leading organizations and universities. After 23 intense hours of coding with only a 1-hour break to sleep, we presented our solution to the judges and were victorious.
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/HackMidwest.jpeg" title="Badger Vision Team" class="img-fluid rounded z-depth-1" %}
@@ -24,6 +20,12 @@ Over 300 developers were selected to compete, including experts from leading org
 </div>
 
 ---
+
+### Overview
+
+We won and were noted for the **Best Enterprise Scale Business Solution** at Hack Midwest, the largest hackathon in the region! Our team was awarded $2,500 for our project.
+
+Over 300 developers were selected to compete, including experts from leading organizations and universities. After 23 intense hours of coding with only a 1-hour break to sleep, we presented our solution to the judges and were victorious.
 
 ### The Problem: Prosopagnosia
 

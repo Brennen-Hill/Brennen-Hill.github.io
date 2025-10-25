@@ -1,9 +1,10 @@
 ---
 layout: page
 title: "Research & Developement in Embodied AI and Robotics"
-description: "Stealth-Mode Startup"
 importance: 1
 category: none
+start: May 2025
+organization: Stealth Startup
 ---
 
 ## R&D at a Stealth-Mode Robotics Startup
