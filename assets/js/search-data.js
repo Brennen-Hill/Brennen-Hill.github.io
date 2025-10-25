@@ -30,7 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-robotics-platform",
+        },{id: "projects-rl-skating",
+          title: 'RL Skating',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/RL-Skating/";
+            },},{id: "projects-robotics-platform",
           title: 'Robotics Platform',
           description: "3D Robotic Simulation &amp; Analysis Platform",
           section: "Projects",handler: () => {
@@ -85,11 +90,6 @@ ninja.data = [{
           description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
           section: "Projects",handler: () => {
               window.location.href = "/projects/quantum-compiler/";
-            },},{id: "projects-rl-skating",
-          title: 'RL Skating',
-          description: "Reinforcement Learning for Quadruped Roller Skating.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/rl-skating/";
             },},{
         id: 'social-email',
         title: 'email',
