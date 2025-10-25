@@ -8,9 +8,10 @@ layout: default
 {% endif %}
 
 <div class="post">
-  <header class="post-header">
+  <header class="post-header mb-5">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description mb-3">{{ page.description }}</p>
+
+    <p class="post-description mb-2">{{ page.description }}</p>
 
     {% if page.role or page.organization or page.start or page.end or page.location or page.collaborators %}
       <div class="small text-muted">

@@ -13,7 +13,7 @@ role: Researcher
 collaborators: Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
 ---
 
-**Abstract**
+## Abstract
 
 While finetuning large vision-language models has proven effective for various downstream tasks, it often requires modifying a substantial portion of model parameters. In this work, we investigate representation finetuning (ReFT) as a parameter-efficient alternative to traditional finetuning approaches. Using spatial reasoning as a benchmark task, we demonstrate that ReFT can match the performance of conventional finetuning methods while reducing the number of tunable parameters by an order of magnitude. Through comparative experiments with baseline models like nanoLlaVA, we show that our ReFT approach achieves comparable accuracy on spatial understanding tasks despite its significantly smaller parameter footprint. Our findings suggest that targeted representation finetuning offers a promising direction for efficient model adaptation, potentially enabling more resource-conscious approaches to vision-language model specialization.
 
