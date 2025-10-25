@@ -13,7 +13,7 @@ organization: Stealth Startup
 
 ## Objective
 
-To design and implement a high-fidelity 3D simulation and analysis platform for the company's mobile robotics platform. The primary goals were to create a robust testbed for R&D of new autonomous features, including [state estimation for embodied AI](https://BrennenHill.com/Embodied-AI), and to provide a company-wide tool for performance analysis, mission review, and debugging of systems.
+To design and implement a high-fidelity 3D simulation and analysis platform for the company's mobile robotics platform. The primary goals were to create a robust testbed for R&D of new autonomous features, including [state estimation for embodied AI](https://BrennenHill.com/projects/embodied-ai), and to provide a company-wide tool for performance analysis, mission review, and debugging of systems.
 
 ## Challenges
 
