@@ -30,17 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-exosky",
-          title: 'Exosky',
-          description: "An Exoplanet Constellation Creator and Explorer",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Exosky/";
-            },},{id: "projects-llm-training",
-          title: 'LLM Training',
-          description: "Training and fine-tuning an LLM for reasoning",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/LLM-Training/";
-            },},{id: "projects-quantum-circuit",
+        },{id: "projects-quantum-circuit",
           title: 'Quantum Circuit',
           description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
           section: "Projects",handler: () => {
@@ -90,6 +80,16 @@ ninja.data = [{
           description: "Robust Robotic State Estimation via Manifold Disentanglement for Embodied AI on the Edge.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/embodied-ai/";
+            },},{id: "projects-exosky",
+          title: 'Exosky',
+          description: "An Exoplanet Constellation Creator and Explorer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/exosky/";
+            },},{id: "projects-llm-training",
+          title: 'LLM Training',
+          description: "Training and fine-tuning an LLM for reasoning",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llm-training/";
             },},{
         id: 'social-email',
         title: 'email',
