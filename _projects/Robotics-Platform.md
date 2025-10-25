@@ -3,9 +3,12 @@ layout: page
 title: Robotics Platform
 description: 3D Robotic Simulation & Analysis Platform
 img: assets/img/RoboticsPlatform.jpg
-importance: 1
+importance: 4
 category: research engineering
 related_publications: false
+start: May 2025
+role: Lead Research Engineer
+organization: Stealth Startup
 ---
 
 ## Objective

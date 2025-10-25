@@ -3,12 +3,15 @@ layout: page
 title: Sign Language Learner
 description: Systematic Analysis of Transfer Learning for Sign Language Recognition
 img: assets/img/Sign.webp
-importance: 1
+importance: 4
 category: research
 related_publications: false
----
-
-Brennen Hill, Joseph Mostika, Mehul Maheshwari
+start: February 2024
+end: May 2024
+role: Lead Researcher
+related_publications: false
+organization: Stealth Startup
+collaborators: Joseph Mostika, Mehul Maheshwari
 
 ---
 

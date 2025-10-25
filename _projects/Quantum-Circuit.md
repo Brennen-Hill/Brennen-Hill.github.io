@@ -3,9 +3,13 @@ layout: page
 title: "Quantum Circuit"
 description: Production-Ready Pattern Matching for Quantum Circuit Optimization.
 img: assets/img/PCOverview.png
-importance: 1
+importance: 3
 category: research engineering
 related_publications: false
+start: June 2023
+end: August 2023
+role: Lead Research Engineer
+organization: Hughes Research Laboratories (HRL)
 ---
 
 <div class="col">

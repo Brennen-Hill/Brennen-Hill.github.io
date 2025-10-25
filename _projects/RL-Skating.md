@@ -3,16 +3,16 @@ layout: page
 title: "RL Skating"
 description: Reinforcement Learning for Quadruped Roller Skating.
 img: assets/img/quad-skate/motor_wheel_config.png
-importance: 1
+importance: 2
 category: research
 related_publications: false
 math: true
 toc:
   sidebar: left
----
-
-Brennen Hill, Hanwen Wang, Aswinkumar Ramkumar
-
+start: October 2024
+end: December 2024
+role: Researcher
+collaborators: Hanwen Wang, Aswinkumar Ramkumar
 ---
 
 ## Abstract

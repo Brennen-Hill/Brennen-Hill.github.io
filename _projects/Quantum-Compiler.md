@@ -3,14 +3,13 @@ layout: page
 title: Quantum Compiler
 description: Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor
 img: assets/img/spinQICK.jpg
-importance: 1
+importance: 2
 category: research engineering
 related_publications: false
-start: Affiliation
+start: May 2024
 end: Summer 2024
-role: Quantum Software Intern (Research Engineer)
-organization: HRL Hughes Research Laboratories
-collaborators: jim and max
+role: Research Engineer
+organization: Hughes Research Laboratories (HRL)
 ---
 
 <div class="row">

@@ -1,16 +1,16 @@
 ---
 layout: page
-title: "Vision Representations"
+title: "Vision-Language Representations"
 description: Representation Fine-Tuning for Vision-Language Models.
 img: assets/img/vis-reft/loReftDiagram.png
 importance: 1
 category: research
 related_publications: false
 pretty_table: true
----
-
-Brennen Hill, Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
-
+start: September 2024
+end: December 2024
+role: Researcher
+collaborators: Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
 ---
 
 **Abstract**

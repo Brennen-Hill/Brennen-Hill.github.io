@@ -5,7 +5,10 @@ description: Robust Robotic State Estimation via Manifold Disentanglement for Em
 importance: 1
 img: assets/img/robot.jpg
 category: research engineering
+start: May 2025
+role: Lead Research Engineer
 related_publications: false
+organization: Stealth Startup
 ---
 
 ## Objective

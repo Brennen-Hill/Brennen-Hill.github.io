@@ -3,9 +3,12 @@ layout: page
 title: LLM Training
 description: Training and fine-tuning an LLM for reasoning
 img: assets/img/transformer_architecture.png
-importance: 1
+importance: 3
 category: research
 related_publications: false
+start: February 2024
+end: March 2024
+role: Lead Researcher
 ---
 
 <div class="row">

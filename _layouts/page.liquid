@@ -1,86 +1,50 @@
 ---
 layout: default
 ---
-{% if page._styles or page.role or page.organization or page.start or page.location %}
-
+{% if page._styles %}
   <style type="text/css">
     {{ page._styles }}
-
-    /* Added styles for project metadata */
-    .project-meta {
-      color: var(--global-grey);
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
-    .project-meta p {
-      margin-bottom: 0.25rem;
-      display: flex;
-      align-items: center;
-    }
-    .project-meta i {
-      width: 1.5em; /* Give icons consistent spacing */
-      text-align: center;
-      margin-right: 0.25em;
-    }
   </style>
 {% endif %}
 
 <div class="post">
-
   <header class="post-header">
-
     <h1 class="post-title">{{ page.title }}</h1>
-
     <p class="post-description">{{ page.description }}</p>
 
-    {% if page.role or page.organization or page.start or page.location %}
-      <div class="project-meta">
-        {% if page.role or page.organization %}
-          <p>
-            <i class="fas fa-user-tie"></i>
-            {% if page.role %}{{ page.role }}{% endif %}
-            {% if page.role and page.organization %} at {% endif %}
-            {% if page.organization %}{{ page.organization }}{% endif %}
-          </p>
-        {% endif %}
-
-        {% if page.start %}
-          <p>
-            <i class="fas fa-calendar-alt"></i>
-            {{ page.start }} – {% if page.end %}{{ page.end }}{% else %}present{% endif %}
-          </p>
-        {% elsif page.end %}
-          <p>
-            <i class="fas fa-calendar-alt"></i>
-            Completed: {{ page.end }}
-          </p>
-        {% endif %}
-
-        {% if page.location %}
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            {{ page.location }}
-          </p>
-        {% endif %}
-      </div>
-    {% endif %}
-
+    {%- if page.start or page.end -%}
+      <p class="post-description">
+        <strong>Date:</strong>
+        {%- if page.start -%}
+          {{ page.start }} – {{ page.end | default: 'present' }}
+        {%- else -%}
+          {{ page.end }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+    {%- if page.role -%}
+      <p class="post-description"><strong>Role:</strong> {{ page.role }}</p>
+    {%- endif -%}
+    {%- if page.organization -%}
+      <p class="post-description"><strong>Organization:</strong> {{ page.organization }}</p>
+    {%- endif -%}
+    {%- if page.collaborators -%}
+      <p class="post-description"><strong>Collaborators:</strong> {{ page.collaborators }}</p>
+    {%- endif -%}
   </header>
 
-
-  <article> {{ content }} </article>
-
+  <article>
+    {{ content }}
+  </article>
 
   {% if page.related_publications %}
-
     <h2>References</h2>
-
-    <div class="publications"> {% bibliography --cited_in_order %} </div>
-
+    <div class="publications">
+      {% bibliography --cited_in_order %}
+    </div>
   {% endif %}
 
-
   {% if site.giscus and page.giscus_comments %}
-     {% include giscus.liquid %}
+    {% include giscus.liquid %}
   {% endif %}
 </div>

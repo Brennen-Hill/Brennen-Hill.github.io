@@ -3,13 +3,12 @@ layout: page
 title: Exosky
 description: An Exoplanet Constellation Creator and Explorer
 img: assets/img/ExoSky.jpeg
-importance: 1
+importance: 2
 category: hackathon
 related_publications: false
----
-
-Brennen Hill, Jeremy Kintana, Max Maeder, Rahul Hathwar
-
+end: October 2024
+role: Lead software engineer
+collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 ---
 
 <div class="row">
