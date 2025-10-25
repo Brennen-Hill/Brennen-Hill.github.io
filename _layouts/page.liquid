@@ -1,26 +1,27 @@
 ---
 layout: default
 ---
-{% if page._styles or page.role or page.organization or page.start or page.location %}
+{% if page._styles or page.role or page.organization or page.start or page.location or page.collaborators %}
   <style type="text/css">
-    {{ page._styles }}
+        {{ page._styles }}
 
-    /* Added styles for project metadata */
-    .project-meta {
-      color: var(--global-grey);
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
-    .project-meta p {
-      margin-bottom: 0.25rem;
-      display: flex;
-      align-items: center;
-    }
-    .project-meta i {
-      width: 1.5em;
-      /* Give icons consistent spacing */
-      text-align: center;
-      margin-right: 0.25em;
+        /* Added styles for project metadata */
+        .project-meta {
+          color: var(--global-grey);
+    font-size: 0.9rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem; /* Added spacing for TOC */
+        }
+        .project-meta p {
+          margin-bottom: 0.25rem;
+          display: flex;
+    align-items: center;
+        }
+        .project-meta i {
+          width: 1.5em;
+    /* Give icons consistent spacing */
+          text-align: center;
+          margin-right: 0.25em;
     }
   </style>
 {% endif %}
@@ -32,8 +33,8 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
 
     {%- comment -%}
-      The project-meta block was here.
-      It has been moved to _layouts/default.liquid to appear in the sidebar.
+      Project meta block removed.
+      It is now in _layouts/default.liquid to be part of the sidebar.
     {%- endcomment -%}
   </header>
 

@@ -224,7 +224,7 @@
       "description": "Lead Researcher",
       "startDate": "2024-09",
       "endDate": "2024-12",
-      "url": "https://brennenhill.com/projects/Vision-Representation",
+      "url": "https://brennenhill.com/projects/Vision-Representations",
       "highlights": [
         "Investigated Representation Fine-Tuning, a parameter-efficient fine-tuning method, on a vision-language model (nanoLLaVA) for a spatial reasoning task.",
         "Co-authored a research paper demonstrating that ReFT achieved accuracy comparable to LoRA (65.7% vs. 66.0%) while using nearly 10x fewer trainable parameters (0.019% of the model)."
