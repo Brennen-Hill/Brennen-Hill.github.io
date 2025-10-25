@@ -74,9 +74,9 @@
                   {% endif %}
                 </div>
               {% endif %}
-              {%- comment -%} TOC: Added sticky-sm-top to make it static on mobile {%- endcomment -%}
+              {%- comment -%} TOC: Use sticky-top to match theme's CSS offset {%- endcomment -%}
               {% if page.toc and page.toc.sidebar %}
-                <nav id="toc-sidebar" class="sticky-sm-top"></nav>
+                <nav id="toc-sidebar" class="sticky-top"></nav>
               {% endif %}
             </div>
           </div>
@@ -110,9 +110,9 @@
                   {% endif %}
                 </div>
               {% endif %}
-              {%- comment -%} TOC: Added sticky-sm-top to make it static on mobile {%- endcomment -%}
+              {%- comment -%} TOC: Use sticky-top to match theme's CSS offset {%- endcomment -%}
               {% if page.toc and page.toc.sidebar %}
-                <nav id="toc-sidebar" class="sticky-sm-top"></nav>
+                <nav id="toc-sidebar" class="sticky-top"></nav>
               {% endif %}
             </div>
             <div class="col-sm-9">

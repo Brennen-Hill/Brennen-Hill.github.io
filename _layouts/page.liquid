@@ -1,9 +1,21 @@
 ---
 layout: default
 ---
-{% if page._styles %}
+{% if page._styles or (page.toc and page.toc.sidebar) %}
   <style type="text/css">
     {{ page._styles }}
+
+    /*
+      TOC Sidebar Overrides
+      1. Make TOC static on mobile (xs) screens.
+      2. Force display: block to override bootstrap-toc.min.css.
+    */
+    @media (max-width: 767.98px) {
+      #toc-sidebar {
+        position: static !important;
+        display: block !important;
+      }
+    }
   </style>
 {% endif %}
 
