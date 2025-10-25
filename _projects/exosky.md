@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exosky
+title: ExoSky
 description: Global Honorable Mention for an Exoplanet Constellation Creator & Explorer
 img: assets/img/ExoSky.jpeg
 importance: 2
@@ -13,11 +13,20 @@ collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/ExoSky.jpeg" title="ExoSky" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Viewing one of Earth's constellations from the perspective of an exoplanet.
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="https://www.youtube.com/embed/mWGtb8QGUds" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    An overview of Exosky, creating constelations and vieweing them from other planets.
+    Demo: A brief overview and then a constellation drawn from Earth changes shape when viewed from a distant exoplanet. 
 </div>
 
 **Final Project Link:** [https://shoebills-in-space.web.app/](https://shoebills-in-space.web.app/)
@@ -50,7 +59,7 @@ Even though our simulation is pretty, it is highly accurate as well. Star bright
 
 ### View on Github
 
-- [Exosky GitHub](https://github.com/Brennen-Hill/Exosky)
+- [Exoky GitHub](https://github.com/Brennen-Hill/Exosky)
 
 ### Space Agency Data
 
