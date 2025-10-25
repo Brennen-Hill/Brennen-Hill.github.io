@@ -11,7 +11,7 @@ organization: Stealth Startup
 
 At a stealth-mode robotics AI startup, my work focuses on the full lifecycle of research and development for novel embodied AI systems.
 
-I am responsible for both building foundational R\&D infrastructure and designing and deploying core algorithms for high-precision autonomy. This work enables our mobile robotics platforms to operate effectively despite severe hardware and sensor constraints.
+I am responsible for both building foundational R&D infrastructure and designing and deploying core algorithms for high-precision autonomy. This work enables our mobile robotics platforms to operate effectively despite severe hardware and sensor constraints.
 
 Below are two key projects detailing this experience. As this work is for a startup in stealth, I am limited in the specific details I can share. All descriptions focus on the technical problems and my solutions while protecting proprietary information.
 
