@@ -30,12 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-badger-vision",
-          title: 'Badger Vision',
-          description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Badger-Vision/";
-            },},{id: "projects-embodied-ai",
+        },{id: "projects-embodied-ai",
           title: 'Embodied AI',
           description: "Robust Robotic State Estimation via Manifold Disentanglement for Embodied AI on the Edge.",
           section: "Projects",handler: () => {
@@ -90,6 +85,11 @@ ninja.data = [{
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Vision-Representations/";
+            },},{id: "projects-badger-vision",
+          title: 'Badger Vision',
+          description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/badger-vision/";
             },},{
         id: 'social-email',
         title: 'email',
