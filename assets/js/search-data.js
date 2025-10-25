@@ -42,7 +42,7 @@ ninja.data = [{
               window.location.href = "/projects/embodied-ai/";
             },},{id: "projects-exosky",
           title: 'Exosky',
-          description: "An Exoplanet Constellation Creator and Explorer",
+          description: "Global Honorable Mention for an Exoplanet Constellation Creator &amp; Explorer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/exosky/";
             },},{id: "projects-llm-training",
