@@ -30,17 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-thunder-warrior",
-          title: 'Thunder Warrior',
-          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Thunder-Warrior/";
-            },},{id: "projects-vision-language-representations",
-          title: 'Vision-Language Representations',
-          description: "Representation Fine-Tuning for Vision-Language Models.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Vision-Representations/";
-            },},{id: "projects-badger-vision",
+        },{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
@@ -90,6 +80,16 @@ ninja.data = [{
           description: "Stealth-Mode Startup",
           section: "Projects",handler: () => {
               window.location.href = "/projects/stealth-startup/";
+            },},{id: "projects-thunder-warrior",
+          title: 'Thunder Warrior',
+          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thunder-warrior/";
+            },},{id: "projects-vision-language-representations",
+          title: 'Vision-Language Representations',
+          description: "Representation Fine-Tuning for Vision-Language Models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vision-representations/";
             },},{
         id: 'social-email',
         title: 'email',
