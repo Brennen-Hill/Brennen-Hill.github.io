@@ -85,8 +85,8 @@ ninja.data = [{
           description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Thunder-Warrior/";
-            },},{id: "projects-vision-representations",
-          title: 'Vision Representations',
+            },},{id: "projects-vision-language-representations",
+          title: 'Vision-Language Representations',
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Vision-Representations/";
