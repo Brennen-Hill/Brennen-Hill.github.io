@@ -10,7 +10,6 @@ start: February 2024
 end: May 2024
 role: Lead Researcher
 related_publications: false
-organization: Stealth Startup
 collaborators: Joseph Mostika, Mehul Maheshwari
 
 ---
