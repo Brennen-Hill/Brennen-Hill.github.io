@@ -30,17 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-research-amp-developement-in-embodied-ai-and-robotics",
-          title: 'Research &amp;amp; Developement in Embodied AI and Robotics',
-          description: "Stealth-Mode Startup",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Stealth-Startup/";
-            },},{id: "projects-thunder-warrior",
-          title: 'Thunder Warrior',
-          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Thunder-Warrior/";
-            },},{id: "projects-vision-language-representations",
+        },{id: "projects-vision-language-representations",
           title: 'Vision-Language Representations',
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
@@ -90,6 +80,16 @@ ninja.data = [{
           description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sign-language-learner/";
+            },},{id: "projects-research-amp-developement-in-embodied-ai-and-robotics",
+          title: 'Research &amp;amp; Developement in Embodied AI and Robotics',
+          description: "Stealth-Mode Startup",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/stealth-startup/";
+            },},{id: "projects-thunder-warrior",
+          title: 'Thunder Warrior',
+          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thunder-warrior/";
             },},{
         id: 'social-email',
         title: 'email',
