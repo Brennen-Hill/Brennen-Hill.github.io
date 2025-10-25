@@ -75,7 +75,7 @@
         "Secured formal funding, dedicated space, and administrative support from UW-Madison.",
         "Delivered lectures on advanced topics intersecting neuroscience and AI to audiences of over 100.",
         "Mentoring 100 researchers from initial project proposals to research papers.",
-        "Publications from this research: \"The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet\", \"The Physical Basis of Prediction: World Model Formation in Neural Organoids via an LLM-Generated Curriculum\""
+        "Publications from this research: [2], [4]"
       ]
     },
     {
@@ -87,7 +87,7 @@
       "highlights": [
         "Researching and implementing novel methods for editing representations within large language models including coarse-to-fine pipelines.",
         "Worked with big data, GPU clusters, and high throughput systems.",
-        "Publications from this research: \"HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning\", \"Breaking to Build: A Threat Model of Prompt-Based Attacks for Securing LLMs\""
+        "Publications from this research: [6], [7]"
       ]
     },
     {
@@ -99,7 +99,7 @@
       "highlights": [
         "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
         "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
-        "Publications from this research: \"Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models\", \"Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer\""
+        "Publications from this research: [1] (in collaboration with Dr. Berland's Complex Play Lab), [5]"
       ]
     },
     {
@@ -111,7 +111,7 @@
       "highlights": [
         "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments.",
         "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
-        "Publications from this research: \"Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models\", \"Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula\""
+        "Publications from this research: [1] (in collaboration with Dr. Berland's Complex Play Lab), [3]"
       ]
     }
   ],
@@ -158,7 +158,7 @@
   ],
   "representative first-author publications": [
     {
-      "name": "Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models",
+      "name": "[1] Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents; in NeurIPS 2025 Workshop on Embodied World Models for Decision Making; and in NeurIPS 2025 Workshop on Optimization for Machine Learning",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02912",
@@ -166,7 +166,7 @@
       "authors": ["Brennen A. Hill", "Mant Koh En Wei", "Thangavel Jishnuanandh"]
     },
     {
-      "name": "The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet",
+      "name": "[2] The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Symmetry and Geometry in Neural Representations and in NeurIPS 2025 Workshop on Interpreting Cognition in Deep Learning Models",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02995",
@@ -174,7 +174,7 @@
       "authors": ["Brennen A. Hill", "Zhang Xinyu", "Timothy Putra Prasetio"]
     },
     {
-      "name": "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula",
+      "name": "[3] Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
@@ -184,7 +184,7 @@
   ],
   "additional first-author publications": [
     {
-      "name": "The Physical Basis of Prediction: World Model Formation in Neural Organoids via an LLM-Generated Curriculum",
+      "name": "[4] The Physical Basis of Prediction: World Model Formation in Neural Organoids via an LLM-Generated Curriculum",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents and in NeurIPS 2025 Workshop on Embodied World Models for Decision Making",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04633",
@@ -192,7 +192,7 @@
       "authors": ["Brennen A. Hill"]
     },
     {
-      "name": "Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer",
+      "name": "[5] Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer",
       "publisher": "In NeurIPS 2025 Workshop on Embodied World Models for Decision Making",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04731",
@@ -200,7 +200,7 @@
       "authors": ["Brennen A. Hill"]
     },
     {
-      "name": "HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning",
+      "name": "[6] HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning",
       "publisher": "In preparation",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.09801",
@@ -208,7 +208,7 @@
       "authors": ["Brennen A. Hill"]
     },
     {
-      "name": "Breaking to Build: A Threat Model of Prompt-Based Attacks for Securing LLMs",
+      "name": "[7] Breaking to Build: A Threat Model of Prompt-Based Attacks for Securing LLMs",
       "publisher": "In preparation",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.04615",
@@ -248,14 +248,14 @@
       "name": "RoboCup International Robotics Competition",
       "highlights": [
         "Achieved top placements in a competition that serves as an international scientific benchmark for multi-agent AI in adversarial environments, using fully autonomous, identical NAO robots.",
-        "Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models \"Hierarchical Task Environments as the Next Frontier for Embodied World Models in Robot Soccer\"",
-        "Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research \"Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models\""
+        "Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models [5]",
+        "Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research [1]"
       ]
     },
     {
       "position": "Presenter",
       "startDate": "2025-01",
-      "endDate": "Present",
+      "endDate": "2025-01",
       "name": "National University of Singapore School of Computing Showcase",
       "highlights": [
         "Selected to present a self-developed 3D videogame to an audience of over 100 students and faculty.",
@@ -271,6 +271,7 @@
     {
       "position": "Honorable Mention",
       "startDate": "2024-10",
+      "endDate": "2024-10",
       "name": "NASA International Space Apps Challenge 2024",
       "url": "https://brennenhill.com/projects/exosky",
       "highlights": [
@@ -282,11 +283,12 @@
     {
       "position": "Winner (awarded $2,500)",
       "startDate": "2024-10",
+      "endDate": "2024-10",
       "name": "Hack Midwest 2024",
       "url": "https://brennenhill.com/projects/badger-vision",
       "highlights": [
         "Won (of over 300 developers), awarded $2,500, and noted for Best Enterprise-Scale Buisnesss Solution.",
-        "Designed and built \"Badger Vision,\" an AI-powered assistive tool to help individuals with prosopagnosia (face blindness) by providing real-time audio cues for face identification and emotion recognition.",
+        "Designed and built Badger Vision, an AI-powered assistive tool to help individuals with prosopagnosia (face blindness) by providing real-time audio cues for face identification and emotion recognition.",
         "Implemented a computer vision pipeline using deep learning (convolutional neural networks) to identify individuals and classify their emotional expressions from a live low-level video stream."
       ]
     },
@@ -302,6 +304,7 @@
       "organization": "Conference on Neural Information Processing Systems (NeurIPS)",
       "position": "Peer Reviewer",
       "startDate": "2025-09",
+      "endDate": "2025-09",
       "summary": "Served as a peer reviewer upon nomination by the respective program committees:",
       "highlights": [
         "Neurips 2025 Workshop on Scaling Environments for Agents (SEA)",
@@ -316,6 +319,7 @@
       "organization": "Cortical Labs",
       "position": "Journal Club Host and speaker",
       "startDate": "2024-10",
+      "endDate": "2024-10",
       "highlights": [
         "Presented a critical analysis on the origins of intelligence, synthesizing concepts of scale-free cognition and developmental bioelectricity, and referencing work by Dr. Levin to discuss how higher-level agency evolves from the homeostatic, problem-solving capabilities of cellular collectives.",
         "Facilitated a post-talk discussion with researchers on the future of synthetic biological intelligence and the applications of the mechanisms presented.",
@@ -358,7 +362,7 @@
       "highlights": ["Designed and built a user-focused website to facilitate member communication."]
     },
     {
-      "name": "Thunder Warrior Gaming",
+      "organization": "Thunder Warrior Gaming",
       "location": "Los Angeles, CA",
       "position": "Lead Developer and Founder",
       "startDate": "2018-03",
