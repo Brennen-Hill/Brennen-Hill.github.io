@@ -77,7 +77,7 @@ ninja.data = [{
               window.location.href = "/projects/sign-language-learner/";
             },},{id: "projects-research-amp-developement-in-embodied-ai-and-robotics",
           title: 'Research &amp;amp; Developement in Embodied AI and Robotics',
-          description: "Stealth-Mode Startup",
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/stealth-startup/";
             },},{id: "projects-thunder-warrior",
