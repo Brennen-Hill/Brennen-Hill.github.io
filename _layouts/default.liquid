@@ -3,13 +3,11 @@
   <head>
     {% if page.redirect %}
       {% if page.redirect == true %}
-        {% assign redirect = site.baseurl |
-append: '/' %}
+        {% assign redirect = site.baseurl | append: '/' %}
       {% elsif page.redirect contains '://' %}
         {% assign redirect = page.redirect %}
       {% else %}
-        {% assign redirect = page.redirect |
-relative_url %}
+        {% assign redirect = page.redirect | relative_url %}
       {% endif %}
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
@@ -30,14 +28,12 @@ relative_url %}
       {% if page.toc and page.toc.sidebar %}
         {% assign has_sidebar_content = true %}
       {% endif %}
-      {%- comment -%} Added all project meta fields to this check {%- endcomment -%}
       {% if page.role or page.organization or page.start or page.end or page.location or page.collaborators %}
         {% assign has_sidebar_content = true %}
       {% endif %}
 
       {% if has_sidebar_content %}
-        {% if 
-page.toc.sidebar == 'right' %}
+        {% if page.toc.sidebar == 'right' %}
           <div class="row">
             <div class="col-sm-9">{{ content }}</div>
             <div class="col-sm-3">
@@ -54,7 +50,7 @@ page.toc.sidebar == 'right' %}
                     <p>
                       <i class="fas fa-calendar-alt"></i>
                       {%- if page.start -%}
-                        {{ page.start }} – {{ page.end | default: "present" }}
+                        {{ page.start }} – {{ page.end | default: 'present' }}
                       {%- else -%}
                         {{ page.end }}
                       {%- endif -%}
@@ -71,8 +67,8 @@ page.toc.sidebar == 'right' %}
               {%- comment -%} TOC {%- endcomment -%}
               {% if page.toc and page.toc.sidebar %}
                 <nav id="toc-sidebar" class="sticky-top"></nav>
-  
-          </div>
+              {% endif %}
+            </div>
           </div>
         {% else %}
           <div class="row">
@@ -91,7 +87,7 @@ page.toc.sidebar == 'right' %}
                     <p>
                       <i class="fas fa-calendar-alt"></i>
                       {%- if page.start -%}
-                        {{ page.start }} – {{ page.end | default: "present" }}
+                        {{ page.start }} – {{ page.end | default: 'present' }}
                       {%- else -%}
                         {{ page.end }}
                       {%- endif -%}
@@ -108,8 +104,8 @@ page.toc.sidebar == 'right' %}
               {%- comment -%} TOC {%- endcomment -%}
               {% if page.toc and page.toc.sidebar %}
                 <nav id="toc-sidebar" class="sticky-top"></nav>
-      
-      </div>
+              {% endif %}
+            </div>
           </div>
         {% endif %}
       {% else %}
@@ -117,8 +113,7 @@ page.toc.sidebar == 'right' %}
       {% endif %}
     </div>
 
-    {% include footer.liquid 
-%}
+    {% include footer.liquid %}
 
     {% include scripts.liquid %}
   </body>
