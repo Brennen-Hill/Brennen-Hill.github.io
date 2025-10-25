@@ -8,7 +8,7 @@ category: none
 
 ## R&D at a Stealth-Mode Robotics Startup
 
-As a research engineer at a stealth-mode robotics AI startup (title: software engineer), my work focuses on the full lifecycle of research and development for novel embodied AI systems.
+At a stealth-mode robotics AI startup, my work focuses on the full lifecycle of research and development for novel embodied AI systems.
 
 I am responsible for both building foundational R\&D infrastructure and designing and deploying core algorithms for high-precision autonomy. This work enables our mobile robotics platforms to operate effectively despite severe hardware and sensor constraints.
 
