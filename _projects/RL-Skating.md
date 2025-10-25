@@ -162,7 +162,7 @@ A significant finding is that the RL policy learned to **automatically switch it
     </div>
 </div>
 <div class="caption">
-    Figs 3 & 4. The robot using a diagonal gait at $$t_0$$ (left) and $$t_1$$ (right). The legs push sideways to generate forward motion.
+    Figs 3 & 4. The robot using a diagonal gait at $t_0$ (left) and $t_1$ (right). The legs push sideways to generate forward motion.
 </div>
 
 - **At 3 m/s: Galloping Gait**
@@ -177,7 +177,7 @@ A significant finding is that the RL policy learned to **automatically switch it
 </div>
 </div>
 <div class="caption">
-Figs 5 &amp; 6. The robot using a galloping gait at $$t_0$$ (left) and $$t_1$$ (right). This more dynamic gait is used to achieve higher speeds.
+Figs 5 &amp; 6. The robot using a galloping gait at $t_0$ (left) and $t_1$ (right). This more dynamic gait is used to achieve higher speeds.
 </div>
 
 This emergent behavior highlights the power of RL to discover complex and effective solutions in high-dimensional control problems.

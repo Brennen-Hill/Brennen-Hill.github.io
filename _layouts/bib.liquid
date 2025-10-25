@@ -171,16 +171,11 @@
       {% comment %} --- Multi-Venue List (our new code) --- {% endcomment %}
       {% if entry.also_in %}
         {% assign venues_list = entry.also_in | split: ';' %}
-        <ul class="venues-list" style="list-style-type: none; padding-left: 0; margin-bottom: 0.25rem; font-style: italic;">
+        <ul class="venues-list" style="list-style-type: none; padding-left: 0; margin-bottom: 0.25rem;">
           {% for v in venues_list %}
             <li style="margin-bottom: 0.25rem;">Also in: {{ v | strip }}</li>
           {% endfor %}
         </ul>
-      {% endif %}
-
-      {% comment %} --- Year --- {% endcomment %}
-      {% if entry.year %}
-        <em>({{ entry.year }})</em>
       {% endif %}
     </div>
 
