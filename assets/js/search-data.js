@@ -30,17 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-embodied-ai",
-          title: 'Embodied AI',
-          description: "Robust Robotic State Estimation via Manifold Disentanglement for Embodied AI on the Edge.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Embodied-AI/";
-            },},{id: "projects-exosky",
-          title: 'Exosky',
-          description: "An Exoplanet Constellation Creator and Explorer",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Exosky/";
-            },},{id: "projects-llm-training",
+        },{id: "projects-llm-training",
           title: 'LLM Training',
           description: "Training and fine-tuning an LLM for reasoning",
           section: "Projects",handler: () => {
@@ -90,6 +80,16 @@ ninja.data = [{
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
               window.location.href = "/projects/badger-vision/";
+            },},{id: "projects-embodied-ai",
+          title: 'Embodied AI',
+          description: "Robust Robotic State Estimation via Manifold Disentanglement for Embodied AI on the Edge.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/embodied-ai/";
+            },},{id: "projects-exosky",
+          title: 'Exosky',
+          description: "An Exoplanet Constellation Creator and Explorer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/exosky/";
             },},{
         id: 'social-email',
         title: 'email',
