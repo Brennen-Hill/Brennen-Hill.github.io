@@ -6,13 +6,23 @@ layout: default
     {{ page._styles }}
 
     /*
-      TOC Sidebar Overrides
-      1. Make TOC static on mobile (xs) screens.
-      2. Force display: block to override bootstrap-toc.min.css.
+      TOC Sidebar Overrides for Mobile
     */
     @media (max-width: 767.98px) {
+      /* 1. Make the TOC container static and visible */
       #toc-sidebar {
         position: static !important;
+        display: block !important;
+      }
+
+      /*
+        2. Force all TOC sub-lists to display.
+           bootstrap-toc.min.css hides them (display: none)
+           and only shows the '.active' one. On mobile, this
+           results in an empty-looking TOC. This forces them
+           to be visible.
+      */
+      #toc-sidebar .nav-link+ul {
         display: block !important;
       }
     }
