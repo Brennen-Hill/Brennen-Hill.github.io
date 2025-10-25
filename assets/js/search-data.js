@@ -30,7 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-vision-language-representations",
+        },{id: "projects-thunder-warrior",
+          title: 'Thunder Warrior',
+          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Thunder-Warrior/";
+            },},{id: "projects-vision-language-representations",
           title: 'Vision-Language Representations',
           description: "Representation Fine-Tuning for Vision-Language Models.",
           section: "Projects",handler: () => {
@@ -85,11 +90,6 @@ ninja.data = [{
           description: "Stealth-Mode Startup",
           section: "Projects",handler: () => {
               window.location.href = "/projects/stealth-startup/";
-            },},{id: "projects-thunder-warrior",
-          title: 'Thunder Warrior',
-          description: "The game mechanics, web portal, and systems of a massive multiplayer game.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/thunder-warrior/";
             },},{
         id: 'social-email',
         title: 'email',
