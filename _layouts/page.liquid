@@ -2,9 +2,10 @@
 layout: default
 ---
 {% if page._styles or page.role or page.organization or page.start or page.location %}
-    <style type="text/css">
-    {{ page._styles }}
-    
+
+  <style type="text/css">
+    {{ page._styles }}
+
     /* Added styles for project metadata */
     .project-meta {
       color: var(--global-grey);
@@ -21,17 +22,19 @@ layout: default
       text-align: center;
       margin-right: 0.25em;
     }
-  </style>
+  </style>
 {% endif %}
 
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
+
+  <header class="post-header">
+
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    <p class="post-description">{{ page.description }}</p>
 
     {% if page.role or page.organization or page.start or page.location %}
       <div class="project-meta">
-        
         {% if page.role or page.organization %}
           <p>
             <i class="fas fa-user-tie"></i>
@@ -59,23 +62,25 @@ layout: default
             {{ page.location }}
           </p>
         {% endif %}
-
       </div>
     {% endif %}
-      </header>
 
-  <article>
-    {{ content }}
-  </article>
+  </header>
 
-  {% if page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% bibliography --cited_in_order %}
-    </div>
-  {% endif %}
 
-  {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
-  {% endif %}
+  <article> {{ content }} </article>
+
+
+  {% if page.related_publications %}
+
+    <h2>References</h2>
+
+    <div class="publications"> {% bibliography --cited_in_order %} </div>
+
+  {% endif %}
+
+
+  {% if site.giscus and page.giscus_comments %}
+     {% include giscus.liquid %}
+  {% endif %}
 </div>
