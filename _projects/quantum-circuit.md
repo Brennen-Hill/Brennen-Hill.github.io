@@ -18,7 +18,7 @@ organization: Hughes Research Laboratories (HRL)
     </div>
 </div>
 
-### Abstract
+## Abstract
 
 Fidelity in Noisy Intermediate-Scale Quantum (NISQ) computers is fundamentally limited by gate errors and qubit decoherence, making circuit optimization a critical task. This project details the engineering of a production-ready optimization pass within the **Quilc quantum compiler** to reduce circuit depth. The system implements an exact pattern-matching algorithm, translating a novel theoretical framework into a high-impact optimization tool. A **two-phase algorithmic solution** was devised to manage the combinatorial complexity: (1) a greedy forward-pass on the circuit's DAG representation to find a valid seed match, followed by (2) a comprehensive backtracking search to maximally expand the match. This optimization pass demonstrated significant, measurable impact, **reducing quantum circuit depth by up to 37%**, thereby shortening execution time and enhancing algorithmic fidelity by mitigating decoherence.
 
@@ -103,9 +103,9 @@ This project successfully demonstrates the translation of a novel, theoretically
 
 This system implements the quantum circuit pattern matching algorithm of Iten et al. It was created during an internship at HRL Laboratories.
 
-**Official Source:** [`https://github.com/quil-lang/quilc/tree/master/src/match`](https://github.com/quil-lang/quilc/tree/master/src/match)
+## Running the Code
 
-## Description
+**Official Source:** [`https://github.com/quil-lang/quilc/tree/master/src/match`](https://github.com/quil-lang/quilc/tree/master/src/match)
 
 The system exposes two primary functions as the interface: `pattern-match` and `pattern-replace`.
 
@@ -119,17 +119,13 @@ It can be useful to print out the current state of `pattern-match` and `pattern-
 - `(print-circ-as-canon circuit)` takes a circuit as input and prints a visual representation of the canonical form of the circuit
 - `(print-canon-data canonical-form)` takes a `canonical-form` as input and prints a visual representation of the canonical form
 
-## How To Use
+### How To Use
 
 1.  Load `"cl-quil/match"`.
 2.  Implement the gate interface by creating a subclass of the class `gate`. An example of how to do this can be found in `test-gate.lisp`
 3.  Realise a circuit and a pattern as lists of objects that subclass `gate`.
 4.  Run `(pattern-match circuit pattern)` or `(pattern-replace circuit patterns)`.
 
-## How To Test
+### How To Test
 
-Run the following command:
-
-```lisp
-(asdf:test-system "cl-quil/match")
-```
+Run `(asdf:test-system "cl-quil/match")`

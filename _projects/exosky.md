@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Exosky
-description: An Exoplanet Constellation Creator and Explorer
+description: Global Honorable Mention for an Exoplanet Constellation Creator & Explorer
 img: assets/img/ExoSky.jpeg
 importance: 2
 category: hackathon
@@ -13,11 +13,11 @@ collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/ExoSky.jpeg" title="ExoSky" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="https://youtu.be/mWGtb8QGUds" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Viewing from another planet one of Earth's constelations.
+    An overview of Exosky, creating constelations and vieweing them from other planets.
 </div>
 
 **Final Project Link:** [https://shoebills-in-space.web.app/](https://shoebills-in-space.web.app/)
@@ -48,16 +48,16 @@ We imported the data into Unity to generate stars and exoplanets with the right 
 
 Even though our simulation is pretty, it is highly accurate as well. Star brightness is determined by probe measurements and star color is derived from measured temperature. Stars and planets are placed using their calculated position on January 1st, 2024. We made a few stylistic choices as well. Star and planet size is scaled to make the simulation more visibly appealing and easy to use, and out of the 2 billion stars in the Gaia archive, we only used the brightest half million to optimize performance.
 
-## Project Video
+### View on Github
 
-<https://youtu.be/mWGtb8QGUds>
+- [Exosky GitHub](https://github.com/Brennen-Hill/Exosky)
 
-## Space Agency Data
+### Space Agency Data
 
 - [Gaia DR3](https://www.cosmos.esa.int/web/gaia/data-release-3)
 - [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)
 
-## References
+### References
 
 - [Unity](https://unity.com/)
 - [Google Colab](https://colab.research.google.com/)

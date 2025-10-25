@@ -7,7 +7,7 @@ importance: 2
 category: research engineering
 related_publications: false
 start: May 2024
-end: Summer 2024
+end: August 2024
 role: Research Engineer
 organization: Hughes Research Laboratories (HRL)
 ---

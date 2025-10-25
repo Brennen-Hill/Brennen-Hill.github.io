@@ -55,8 +55,8 @@ If we acquire the funding to continue work on this project, we would like to pur
 - Further refine the codebase and mobile client.
 - Expand the functionality of the application to AR and VR headsets, including smart glasses.
 
----
-
 <br>
 
-<a href="https://github.com/Bell-Herald/BadgerVision" class="btn btn-primary btn-lg" role="button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+### View on Github
+
+[Badger Vision GitHub](https://github.com/Brennen-Hill/BadgerVision)
