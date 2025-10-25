@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
-  <!-- Head -->
   <head>
     {% if page.redirect %}
       {% if page.redirect == true %}
@@ -15,30 +14,114 @@
     {% include head.liquid %}
   </head>
 
-  <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Header -->
     {% include header.liquid %}
 
-    <!-- Content -->
     <div class="container mt-5" role="main">
+      {%- comment -%}
+        Check if we need to display a sidebar.
+        A sidebar is displayed if:
+        1. page.toc.sidebar is enabled
+        2. The page has project metadata (role, organization, start, location)
+      {%- endcomment -%}
+      {% assign has_sidebar_content = false %}
       {% if page.toc and page.toc.sidebar %}
+        {% assign has_sidebar_content = true %}
+      {% endif %}
+      {% if page.role or page.organization or page.start or page.location %}
+        {% assign has_sidebar_content = true %}
+      {% endif %}
+
+      {% if has_sidebar_content %}
+        {%- comment -%}
+          Sidebar layout detected.
+          By default, sidebar is on the left.
+          If page.toc.sidebar == 'right', it moves to the right.
+        {%- endcomment -%}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
-            <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
-            <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              {%- comment -%}Render project metadata (moved from page.liquid){%- endcomment -%}
+              {% if page.role or page.organization or page.start or page.location %}
+                <div class="project-meta">
+                  {% if page.role or page.organization %}
+                    <p>
+                      <i class="fas fa-user-tie"></i>
+                      {% if page.role %}{{ page.role }}{% endif %}
+                      {% if page.role and page.organization %} at {% endif %}
+                      {% if page.organization %}{{ page.organization }}{% endif %}
+                    </p>
+                  {% endif %}
+
+                  {% if page.start %}
+                    <p>
+                      <i class="fas fa-calendar-alt"></i>
+                      {{ page.start }} – {% if page.end %}{{ page.end }}{% else %}present{% endif %}
+                    </p>
+                  {% elsif page.end %}
+                    <p>
+                      <i class="fas fa-calendar-alt"></i>
+                      Completed: {{ page.end }}
+                    </p>
+                  {% endif %}
+
+                  {% if page.location %}
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>
+                      {{ page.location }}
+                    </p>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {%- comment -%}Render TOC if enabled{%- endcomment -%}
+              {% if page.toc and page.toc.sidebar %}
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              {% endif %}
             </div>
           </div>
         {% else %}
           <div class="row">
-            <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
-              <nav id="toc-sidebar" class="sticky-top"></nav>
+              {%- comment -%}Render project metadata (moved from page.liquid){%- endcomment -%}
+              {% if page.role or page.organization or page.start or page.location %}
+                <div class="project-meta">
+                  {% if page.role or page.organization %}
+                    <p>
+                      <i class="fas fa-user-tie"></i>
+                      {% if page.role %}{{ page.role }}{% endif %}
+                      {% if page.role and page.organization %} at {% endif %}
+                      {% if page.organization %}{{ page.organization }}{% endif %}
+                    </p>
+                  {% endif %}
+
+                  {% if page.start %}
+                    <p>
+                      <i class="fas fa-calendar-alt"></i>
+                      {{ page.start }} – {% if page.end %}{{ page.end }}{% else %}present{% endif %}
+                    </p>
+                  {% elsif page.end %}
+                    <p>
+                      <i class="fas fa-calendar-alt"></i>
+                      Completed: {{ page.end }}
+                    </p>
+                  {% endif %}
+
+                  {% if page.location %}
+                    <p>
+                      <i class="fas fa-map-marker-alt"></i>
+                      {{ page.location }}
+                    </p>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+              {%- comment -%}Render TOC if enabled{%- endcomment -%}
+              {% if page.toc and page.toc.sidebar %}
+                <nav id="toc-sidebar" class="sticky-top"></nav>
+              {% endif %}
             </div>
-            <!-- main content area -->
             <div class="col-sm-9">{{ content }}</div>
           </div>
         {% endif %}
@@ -47,10 +130,8 @@
       {% endif %}
     </div>
 
-    <!-- Footer -->
     {% include footer.liquid %}
 
-    <!-- JavaScripts -->
     {% include scripts.liquid %}
   </body>
 </html>
