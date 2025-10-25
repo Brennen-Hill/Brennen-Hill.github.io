@@ -30,7 +30,37 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-sign-language-learner",
+        },{id: "projects-exosky",
+          title: 'Exosky',
+          description: "An Exoplanet Constellation Creator and Explorer",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Exosky/";
+            },},{id: "projects-llm-training",
+          title: 'LLM Training',
+          description: "Training and fine-tuning an LLM for reasoning",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/LLM-Training/";
+            },},{id: "projects-quantum-circuit",
+          title: 'Quantum Circuit',
+          description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Quantum-Circuit/";
+            },},{id: "projects-quantum-compiler",
+          title: 'Quantum Compiler',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Quantum-Compiler/";
+            },},{id: "projects-rl-skating",
+          title: 'RL Skating',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/RL-Skating/";
+            },},{id: "projects-robotics-platform",
+          title: 'Robotics Platform',
+          description: "3D Robotic Simulation &amp; Analysis Platform",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Robotics-Platform/";
+            },},{id: "projects-sign-language-learner",
           title: 'Sign Language Learner',
           description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
           section: "Projects",handler: () => {
@@ -60,36 +90,6 @@ ninja.data = [{
           description: "Robust Robotic State Estimation via Manifold Disentanglement for Embodied AI on the Edge.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/embodied-ai/";
-            },},{id: "projects-exosky",
-          title: 'Exosky',
-          description: "An Exoplanet Constellation Creator and Explorer",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/exosky/";
-            },},{id: "projects-llm-training",
-          title: 'LLM Training',
-          description: "Training and fine-tuning an LLM for reasoning",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/llm-training/";
-            },},{id: "projects-quantum-circuit",
-          title: 'Quantum Circuit',
-          description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/quantum-circuit/";
-            },},{id: "projects-quantum-compiler",
-          title: 'Quantum Compiler',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/quantum-compiler/";
-            },},{id: "projects-rl-skating",
-          title: 'RL Skating',
-          description: "Reinforcement Learning for Quadruped Roller Skating.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/rl-skating/";
-            },},{id: "projects-robotics-platform",
-          title: 'Robotics Platform',
-          description: "3D Robotic Simulation &amp; Analysis Platform",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/robotics-platform/";
             },},{
         id: 'social-email',
         title: 'email',
