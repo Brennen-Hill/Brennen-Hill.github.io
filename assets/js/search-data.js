@@ -30,22 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-rl-skating",
-          title: 'RL Skating',
-          description: "Reinforcement Learning for Quadruped Roller Skating.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/RL-Skating/";
-            },},{id: "projects-robotics-platform",
-          title: 'Robotics Platform',
-          description: "3D Robotic Simulation &amp; Analysis Platform",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Robotics-Platform/";
-            },},{id: "projects-sign-language-learner",
-          title: 'Sign Language Learner',
-          description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Sign-Language-Learner/";
-            },},{id: "projects-research-amp-developement-in-embodied-ai-and-robotics",
+        },{id: "projects-research-amp-developement-in-embodied-ai-and-robotics",
           title: 'Research &amp;amp; Developement in Embodied AI and Robotics',
           description: "Stealth-Mode Startup",
           section: "Projects",handler: () => {
@@ -90,6 +75,21 @@ ninja.data = [{
           description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
           section: "Projects",handler: () => {
               window.location.href = "/projects/quantum-compiler/";
+            },},{id: "projects-rl-skating",
+          title: 'RL Skating',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rl-skating/";
+            },},{id: "projects-robotics-platform",
+          title: 'Robotics Platform',
+          description: "3D Robotic Simulation &amp; Analysis Platform",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/robotics-platform/";
+            },},{id: "projects-sign-language-learner",
+          title: 'Sign Language Learner',
+          description: "Systematic Analysis of Transfer Learning for Sign Language Recognition",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sign-language-learner/";
             },},{
         id: 'social-email',
         title: 'email',
