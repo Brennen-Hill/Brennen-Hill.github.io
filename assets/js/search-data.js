@@ -30,22 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-quantum-circuit",
-          title: 'Quantum Circuit',
-          description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Quantum-Circuit/";
-            },},{id: "projects-quantum-compiler",
-          title: 'Quantum Compiler',
-          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/Quantum-Compiler/";
-            },},{id: "projects-rl-skating",
-          title: 'RL Skating',
-          description: "Reinforcement Learning for Quadruped Roller Skating.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/RL-Skating/";
-            },},{id: "projects-robotics-platform",
+        },{id: "projects-robotics-platform",
           title: 'Robotics Platform',
           description: "3D Robotic Simulation &amp; Analysis Platform",
           section: "Projects",handler: () => {
@@ -90,6 +75,21 @@ ninja.data = [{
           description: "Training and fine-tuning an LLM for reasoning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/llm-training/";
+            },},{id: "projects-quantum-circuit",
+          title: 'Quantum Circuit',
+          description: "Production-Ready Pattern Matching for Quantum Circuit Optimization.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/quantum-circuit/";
+            },},{id: "projects-quantum-compiler",
+          title: 'Quantum Compiler',
+          description: "Architecting a Multi-Pass Compiler for High-Performance Quantum Control on the QICK tProcessor",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/quantum-compiler/";
+            },},{id: "projects-rl-skating",
+          title: 'RL Skating',
+          description: "Reinforcement Learning for Quadruped Roller Skating.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rl-skating/";
             },},{
         id: 'social-email',
         title: 'email',
