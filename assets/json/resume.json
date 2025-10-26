@@ -99,7 +99,7 @@
       "highlights": [
         "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
         "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
-        "Publications from this research: [1] (in collaboration with Dr. Berland's Complex Play Lab), [5]"
+        "Publications from this research: [1] (in collaboration with Dr. Berland's Lab), [5]"
       ]
     },
     {
@@ -111,7 +111,7 @@
       "highlights": [
         "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments.",
         "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
-        "Publications from this research: [1] (in collaboration with Dr. Berland's Complex Play Lab), [3]"
+        "Publications from this research: [1] (in collaboration with Dr. Hanna's Lab), [3]"
       ]
     }
   ],
