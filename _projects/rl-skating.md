@@ -29,7 +29,7 @@ Energy efficiency remains a critical challenge in legged robotics. While legged 
 
 This project explores an alternative: equipping a quadruped robot with **passive, unactuated roller skates**. This approach maintains the low cost and mechanical simplicity of a purely legged system while offering the potential for high **energy efficiency** on flat surfaces.
 
-However, controlling such a system is highly non-trivial. The dynamics of roller skating—generating forward motion from sideways leg pushes—are complex and difficult to model or hand-engineer. We turn to **deep reinforcement learning (RL)** as a data-driven approach to master this skill. By defining a suitable reward structure, RL allows the robot to _discover_ optimal control policies and complex gaits automatically.
+However, controlling such a system is highly non-trivial. The dynamics of roller skating, generating forward motion from sideways leg pushes, are complex and difficult to model or hand-engineer. We turn to **deep reinforcement learning (RL)** as a data-driven approach to master this skill. By defining a suitable reward structure, RL allows the robot to _discover_ optimal control policies and complex gaits automatically.
 
 ### B. Related Previous Work
 

@@ -60,7 +60,7 @@ To bring this vision to life, I taught myself and mastered a wide range of profe
 
 ### The Greatest Challenge: Networking
 
-Of all the skills I had to learn—from multiple programming languages to 3D art and game design—the most challenging aspect was networking. The game uses an authoritative server model, where the server runs the entire game simulation, and the client is primarily for rendering and input. Implementing an authoritative server that could run the entire game simulation, process inputs from all clients, and maintain a correct and fluid-looking game state for every player was an immense hurdle. Successfully engineering this system was a technical achievement.
+Of all the skills I had to learn, from multiple programming languages to 3D art and game design, the most challenging aspect was networking. The game uses an authoritative server model, where the server runs the entire game simulation, and the client is primarily for rendering and input. Implementing an authoritative server that could run the entire game simulation, process inputs from all clients, and maintain a correct and fluid-looking game state for every player was an immense hurdle. Successfully engineering this system required client-side prediction, server optimization, message minimization, lag compensation, interpolation, data optimization, graphics optimization, physics optimization, and more.
 
 ### Project Scope & Outcome
 
