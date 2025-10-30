@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description:
+description: My peer-reviewed publications, which represent large-scale research projects, are detailed on the [Publications](https://brennenhill.com/publications) page. This page is dedicated to my other projects.
 nav: true
 nav_order: 3
 display_categories: [research, research engineering, game developement, hackathon]
