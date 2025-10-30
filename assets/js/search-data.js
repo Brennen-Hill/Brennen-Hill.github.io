@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "",
+          description: "My peer-reviewed publications, which represent large-scale research projects, are detailed on the [Publications](https://brennenhill.com/publications) page. This page is dedicated to my other projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
