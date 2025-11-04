@@ -75,7 +75,7 @@
         "Secured formal funding, dedicated space, and administrative support from UW-Madison.",
         "Delivered lectures on advanced topics intersecting neuroscience and AI to audiences of over 100.",
         "Mentoring researchers from initial project proposals to research papers.",
-        "Publications from this research: [2], [4]"
+        "Publications from this research: [2], [4], [6]"
       ]
     },
     {
@@ -87,7 +87,7 @@
       "highlights": [
         "Researching and implementing novel methods for editing representations within large language models including coarse-to-fine pipelines.",
         "Worked with big data, GPU clusters, and high throughput systems.",
-        "Publications from this research: [6], [7]"
+        "Publications from this research: [7], [8]"
       ]
     },
     {
@@ -205,22 +205,30 @@
       "order": 5
     },
     {
-      "name": "HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning",
-      "publisher": "In preparation",
+      "name": "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control",
+      "publisher": "In review",
       "releaseDate": "",
-      "url": "https://arxiv.org/abs/2509.09801",
-      "summary": "",
+      "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
       "authors": ["Brennen A. Hill"],
       "order": 6
     },
     {
+      "name": "HEFT: A Coarse-to-Fine Hierarchy for Enhancing the Efficiency and Accuracy of Language Model Reasoning",
+      "publisher": "In review",
+      "releaseDate": "",
+      "url": "https://arxiv.org/abs/2509.09801",
+      "summary": "",
+      "authors": ["Brennen A. Hill"],
+      "order": 7
+    },
+    {
       "name": "Breaking to Build: A Threat Model of Prompt-Based Attacks for Securing LLMs",
-      "publisher": "In preparation",
+      "publisher": "In review",
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.04615",
       "summary": "",
       "authors": ["Brennen A. Hill", "Surendra Parla", "Venkata Abhijeeth Balabhadruni", "Atharv Prajod Padmalayam", "Sujay Chandra Shekara Sharma"],
-      "order": 7
+      "order": 8
     }
   ],
   "selected research projects": [
