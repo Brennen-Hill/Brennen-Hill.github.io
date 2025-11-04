@@ -2,13 +2,15 @@
 layout: page
 title: projects
 permalink: /projects/
-description: My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications">publications page</a>. This page is dedicated to my other projects.
 nav: true
 nav_order: 3
 display_categories: [research, research engineering, game developement, hackathon]
 horizontal: false
 ---
 
+<div class="post-description mb-3">
+My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications">publications page</a>. This page is dedicated to my other projects.
+</div>
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
