@@ -208,6 +208,7 @@
       "name": "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control",
       "publisher": "In review",
       "releaseDate": "",
+      "url": "https://arxiv.org/abs/2511.02241",
       "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
       "authors": ["Brennen A. Hill"],
       "order": 6
