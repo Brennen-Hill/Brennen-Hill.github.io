@@ -7,6 +7,7 @@
     "phone": "+1-818-322-5574",
     "lab": "https://neuromorphic.cs.wisc.edu/people",
     "summary": "My goal is to engineer artificial intelligence by using neural computation as a blueprint. I have pursued this by conducting research across three faculty-led labs and by founding a university NeuroAI lab to foster interdisciplinary collaboration. This work has resulted in four first-author, peer-reviewed publications at archival NeurIPS workshops. I aim to apply this synthesis of computational neuroscience and machine learning to tackle fundamental challenges in AI.",
+
     "location": {
       "city": "Madison",
       "region": "WI",
@@ -27,6 +28,11 @@
         "network": "Google Scholar",
         "username": "E7N2fXkAAAAJ",
         "url": "https://scholar.google.com/citations?user=E7N2fXkAAAAJ"
+      },
+      {
+        "network": "Website",
+        "username": "BrennenHill.com",
+        "url": "https://brennenhill.com"
       }
     ]
   },
@@ -41,9 +47,9 @@
       "courses": [
         "GPA: 3.81/4.0",
         "Honors: Letters & Science Dean's List, Honors in Computer Science Program, Letters & Science Honors Program",
-        "Graduate AI Coursework: Foundation Models, Learning-Based Image Synthesis, Advanced Robotics, Advanced Reinforcement Learning, Theory of Multi-agent Machine Learning.",
-        "AI Coursework: Directed Study on LLMs with Dr. Sala, Game AI, Neurobiology, Artificial Neural Networks, Artificial Intelligence, Game Theory and Learning.",
-        "Neuro Coursework: Molecular and Cellular Mechanisms of Memory, Neurobiology."
+        "Graduate AI Coursework: Foundation Models, Learning-Based Image Synthesis, Advanced Robotics, Advanced Reinforcement Learning, Advanced Seminar (audit), Theory of Multi-agent Machine Learning, Mathematical Foundations of ML (upcoming).",
+        "AI Coursework: Directed Study on LLMs with Dr. Sala, Game AI, Artificial Neural Networks, Artificial Intelligence, Game Theory & Learning.",
+        "Neuro Coursework: Molecular & Cellular Mechanisms of Memory, Neurobiology, Computational Neuroscience (upcoming), Nanotechnology in Neuroscience (upcoming)."
       ]
     },
     {
@@ -55,14 +61,36 @@
       "score": "3.75/4.0",
       "courses": [
         "Awarded a merit-based placement through a highly competitive, university-wide application process.",
-        "Graduate AI Coursework: Neural Networks and Deep Learning II",
-        "Graduate Neuro Coursework: Frontiers in Neurotechnology, Behavioral & Cognitive Neuroscience.",
-        "AI Coursework: AI Planning and Decision Making, Mind and Machine",
-        "Neuro/Bio Engineering Coursework: Bioinformatics, Organoid Engineering, Mind and Machine"
+        "Graduate AI Coursework: Neural Networks & Deep Learning II (audit).",
+        "Graduate Neuro Coursework: Frontiers in Neurotechnology (audit), Behavioral & Cognitive Neuroscience (audit).",
+        "AI Coursework: AI Planning & Decision Making, Mind & Machine.",
+        "Neuro/Bio Engineering Coursework: Bioinformatics, Organoid Engineering (audit), Mind & Machine."
       ]
     }
   ],
   "research experience": [
+    {
+      "name": "Dr. Kumar-Singh (Tufts University, Neuroscience)",
+      "location": "Boston, MA (Remote)",
+      "position": "NeuroAI Research Collaborator & AI Lead",
+      "startDate": "2025-10",
+      "endDate": "Present",
+      "highlights": [
+        "Personally recruited by Dr. Kumar-Singh to serve as the AI lead for two proposed biomedical ventures.",
+        "Authored comprehensive technical roadmaps analyzing competitive landscape, resource requirements, and strategic path for (1) a genAI platform for de novo AAV gene-therapy vector design & (2) a clinically-tailored AI vision aid for patients with AMD & Glaucoma."
+      ]
+    },
+    {
+      "name": "Dr. Michael Levin (Tufts University, Biology) - Allen Discovery Center",
+      "location": "Remote",
+      "position": "NeuroAI Research Mentee",
+      "startDate": "2025-10",
+      "endDate": "Present",
+      "highlights": [
+        "Invited to mentorship from Dr. Levin to extend \"Structural Plasticity as Active Inference\" research [3].",
+        "Designing embodied agents where the computational cells are the device and investigating model robustness to damage & topological changes."
+      ]
+    },
     {
       "name": "Wisconsin Neuromorphic Computing and NeuroAI Lab",
       "location": "Madison, WI",
@@ -72,10 +100,10 @@
       "endDate": "Present",
       "highlights": [
         "Established and direct a university-sanctioned entity to explore the intersection of neuroscience and artificial intelligence.",
-        "Secured formal funding, dedicated space, and administrative support from UW-Madison.",
-        "Delivered lectures on advanced topics intersecting neuroscience and AI to audiences of over 100.",
-        "Mentoring researchers from initial project proposals to research papers.",
-        "Publications from this research: [2], [4], [6]"
+        "Secured formal funding, dedicated space, support from Dr. Akhilesh Jaiswal as advisor, partnership with NeuroAI startup FinalSpark, and administrative support from UW-Madison.",
+        "Delivered lectures on neuroAI (e.g., STDP) to audiences of over 100 including graduate students and professionals.",
+        "Mentoring 15 researchers from initial project proposals to research papers and advised 100.",
+        "Publications from this research: [2], [5], [3]"
       ]
     },
     {
@@ -99,7 +127,7 @@
       "highlights": [
         "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
         "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
-        "Publications from this research: [1] (in collaboration with Dr. Berland's Lab), [5]"
+        "Publications from this research: [1] (in collaboration with Dr. Berland's Lab), [6]"
       ]
     },
     {
@@ -109,9 +137,9 @@
       "startDate": "2024-04",
       "endDate": "Present",
       "highlights": [
-        "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments.",
+        "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments incorporating world models.",
         "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
-        "Publications from this research: [1] (in collaboration with Dr. Hanna's Lab), [3]"
+        "Publications from this research: [1] (in collaboration with Dr. Hanna's Lab), [4]"
       ]
     }
   ],
@@ -176,13 +204,22 @@
       "order": 2
     },
     {
+      "name": "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control",
+      "publisher": "In Bridging the Gap Between Neuroscience and Engineering for Energy-Efficient AI",
+      "releaseDate": "2025",
+      "url": "https://arxiv.org/abs/2511.02241",
+      "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
+      "authors": ["Brennen A. Hill"],
+      "order": 3
+    },
+    {
       "name": "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula",
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
       "summary": "Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline.",
       "authors": ["Brennen A. Hill"],
-      "order": 3
+      "order": 4
     }
   ],
   "additional first-author publications": [
@@ -193,7 +230,7 @@
       "url": "https://arxiv.org/abs/2509.04633",
       "summary": "",
       "authors": ["Brennen A. Hill"],
-      "order": 4
+      "order": 5
     },
     {
       "name": "Generative World Models of Tasks: LLM-Driven Hierarchical Scaffolding for Embodied Agents",
@@ -201,15 +238,6 @@
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.04731",
       "summary": "",
-      "authors": ["Brennen A. Hill"],
-      "order": 5
-    },
-    {
-      "name": "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control",
-      "publisher": "In review",
-      "releaseDate": "",
-      "url": "https://arxiv.org/abs/2511.02241",
-      "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
       "authors": ["Brennen A. Hill"],
       "order": 6
     },
@@ -264,18 +292,18 @@
       "name": "RoboCup International Robotics Competition",
       "highlights": [
         "Achieved top placements in a competition that serves as an international scientific benchmark for multi-agent AI in adversarial environments, using fully autonomous, identical NAO robots.",
-        "Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models [5]",
+        "Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models [6]",
         "Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research [1]"
       ]
     },
     {
       "position": "Presenter",
       "startDate": "2025-01",
-      "endDate": "2025-01",
+      "endDate": "Present",
       "name": "National University of Singapore School of Computing Showcase",
       "highlights": [
         "Selected to present a self-developed 3D videogame to an audience of over 100 students and faculty.",
-        "The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resoucres, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense."
+        "The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resources, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense."
       ]
     },
     {
@@ -303,7 +331,7 @@
       "name": "Hack Midwest 2024",
       "url": "https://brennenhill.com/projects/badger-vision",
       "highlights": [
-        "Won (of over 300 developers), awarded $2,500, and noted for Best Enterprise-Scale Buisnesss Solution.",
+        "Won (of over 300 developers), awarded $2,500, and noted for Best Enterprise-Scale Business Solution.",
         "Designed and built Badger Vision, an AI-powered assistive tool to help individuals with prosopagnosia (face blindness) by providing real-time audio cues for face identification and emotion recognition.",
         "Implemented a computer vision pipeline using deep learning (convolutional neural networks) to identify individuals and classify their emotional expressions from a live low-level video stream."
       ]
@@ -332,6 +360,14 @@
       ]
     },
     {
+      "organization": "AAAI Conference on Artificial Intelligence",
+      "position": "Peer Reviewer",
+      "startDate": "2025-11",
+      "endDate": "2025-11",
+      "summary": "Served as a peer reviewer upon nomination by the respective program committees:",
+      "highlights": ["AAAI 2026 Workshop on Neuro for AI & AI for Neuro: Towards Multi-Modal Natural Intelligence (NeuroAI)"]
+    },
+    {
       "organization": "Cortical Labs",
       "position": "Journal Club Host and speaker",
       "startDate": "2024-10",
@@ -350,9 +386,16 @@
       "startDate": "2025-09",
       "endDate": "Present",
       "highlights": [
-        "Co-organizing and growing a new community hub connecting machine learning students, faculty, and industry professionals.",
-        "Co-leading weekly technical deep-dives and facilitating critical discussions on state-of-the-art papers in machine learning."
+        "Co-organizing and growing a new community hub connecting machine learning researchers.",
+        "Co-leading weekly technical deep-dives and critical discussions on SOTA papers in machine learning."
       ]
+    },
+    {
+      "organization": "Badger Solar Racing",
+      "position": "Head of AI",
+      "startDate": "2025-08",
+      "endDate": "Present",
+      "highlights": []
     },
     {
       "organization": "Badger Ballroom Dance Team",
@@ -376,6 +419,16 @@
       "startDate": "2022-12",
       "endDate": "2023-12",
       "highlights": ["Designed and built a user-focused website to facilitate member communication."]
+    },
+    {
+      "organization": "Slow Food UW",
+      "position": "Volunteer Leadership",
+      "startDate": "2022-11",
+      "endDate": "2023-12",
+      "highlights": [
+        "Mobilized and coordinated a team of 30 dormitory students to partner with Slow Food UW.",
+        "Prepared and distributed pay-what-you-can meals to address local food insecurity."
+      ]
     },
     {
       "organization": "Thunder Warrior Gaming",
@@ -403,6 +456,24 @@
       "startDate": "2020-08",
       "endDate": "2022-05",
       "highlights": ["Taught students advanced science concepts, raising understanding and exam scores."]
+    }
+  ],
+  "grants & funding": [
+    {
+      "status": "Under Review / Pending",
+      "name": "Science, Mathematics, and Research for Transformation (SMART) Scholarship-for-Service Program"
+    },
+    {
+      "status": "Under Review / Pending",
+      "name": "Vitalik Buterin PhD Fellowship in AI Existential Safety"
+    },
+    {
+      "status": "Under Review / Pending",
+      "name": "Department of Energy Computational Science Graduate Fellowship (DOE CSGF)"
+    },
+    {
+      "status": "Under Review / Pending",
+      "name": "Link Foundation Modeling, Simulation, and Training Fellowship"
     }
   ],
   "languages": [
