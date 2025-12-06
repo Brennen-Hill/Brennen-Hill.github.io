@@ -37,14 +37,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-",
-          title: '',
-          description: "",
+        },{id: "presentations-co-evolving-complexity-an-adversarial-framework-for-automatic-marl-curricula",
+          title: 'Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula',
+          description: "Presented at the NeuriPS Workshop on Scaling Environments for Agents",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Co-Evolving-Complexity/";
-            },},{id: "presentations-",
-          title: '',
-          description: "",
+            },},{id: "presentations-communicating-plans-not-percepts-scalable-multi-agent-coordination-with-embodied-world-models",
+          title: 'Communicating Plans, Not Percepts Scalable Multi-Agent Coordination with Embodied World Models',
+          description: "Presented at NeuriPS Workshop",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
             },},{id: "presentations-title",
