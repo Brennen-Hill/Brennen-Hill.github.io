@@ -22,7 +22,6 @@ date: December, 2025
     The poster presented at NeurIPS in the Workshop on TODO_TODO_TODO_WORKSHOP_NAME.
 ---
 
-
 ### The Talk
 
 Here is a recording of me presenting this work.
@@ -35,7 +34,6 @@ Here is a recording of me presenting this work.
 <div class="caption">
     I present this work. 
 </div>
-
 
 ### The paper
 

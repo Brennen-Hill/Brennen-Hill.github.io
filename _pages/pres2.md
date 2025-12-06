@@ -9,7 +9,6 @@ display_categories: [NeurIPS, Cortical Labs, National University of Singapore]
 horizontal: false
 ---
 
-
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
     {% for category in page.display_categories %}
@@ -36,6 +35,7 @@ horizontal: false
             </div>
         {% endif %}
     {% endfor %}
+
 {% else %}
 
     <!-- Display all presentations -->
@@ -45,5 +45,7 @@ horizontal: false
             {% include projects.liquid project=presentation %}
         {% endfor %}
     </div>
+
 {% endif %}
+
 </div>
