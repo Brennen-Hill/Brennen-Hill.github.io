@@ -20,6 +20,7 @@ date: December, 2025
 </div>
 <div class="caption">
     The poster presented at a NeurIPS Workshop.
+</div>
 ---
 
 ### The Talk
