@@ -37,26 +37,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-co-evolving-complexity-an-adversarial-framework-for-automatic-marl-curricula",
-          title: 'Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula',
-          description: "Presented at the NeuriPS Workshop on Embodied World Models",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Co-Evolving-Complexity/";
-            },},{id: "presentations-communicating-plans-not-percepts-scalable-multi-agent-coordination-with-embodied-world-models",
+        },{id: "presentations-communicating-plans-not-percepts-scalable-multi-agent-coordination-with-embodied-world-models",
           title: 'Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models',
-          description: "Presented at the NeuriPS Workshop on Embodied World Models",
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
             },},{id: "presentations-from-emergence-to-intention-a-statistical-inductive-bias-for-tractable-optimization-in-multi-agent-coordination",
           title: 'From Emergence to Intention: A Statistical Inductive Bias for Tractable Optimization in Multi-Agent...',
-          description: "Presented at the NeuriPS Workshop on Optimization for Machine Learning",
+          description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
             },},{id: "presentations-the-physical-basis-of-prediction-world-model-formation-in-neural-organoids-via-an-llm-generated-curriculum",
           title: 'The Physical Basis of Prediction: World Model Formation in Neural Organoids via an...',
-          description: "Presented at the NeuriPS Workshop on Embodied World Models",
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Physical-Basis-of-Prediction/";
+            },},{id: "presentations-generative-world-models-of-tasks-llm-driven-hierarchical-scaffolding-for-embodied-agents",
+          title: 'Generative World Models of Tasks: LLM-Driven Hierarchical Scaffolding for Embodied Agents',
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/World-Models-of-Tasks/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
