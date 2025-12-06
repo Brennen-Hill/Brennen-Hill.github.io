@@ -23,19 +23,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/presentations/";
           },
-        },{id: "nav-presentations",
-          title: "presentations",
-          description: "A collection of my posters, talks, and conference presentations.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/presentations/";
-          },
         },{id: "nav-projects",
           title: "projects",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
+          },
+        },{id: "nav-presentations",
+          title: "presentations",
+          description: "A collection of my posters, talks, and conference presentations.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/presentations/";
           },
         },{id: "nav-cv",
           title: "cv",
@@ -44,11 +44,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-todo-todo-todo-poster-name",
-          title: 'TODO_TODO_TODO_POSTER_NAME',
-          description: "Presented at TODO_TODO_TODO_PRESENTED_AT",
+        },{id: "presentations-",
+          title: '',
+          description: "",
           section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
+              window.location.href = "/presentations/Communicating-Plans-Not-Percepts%20copy/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
