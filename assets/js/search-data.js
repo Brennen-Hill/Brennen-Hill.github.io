@@ -37,24 +37,24 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-communicating-plans-not-percepts",
-          title: 'Communicating Plans, Not Percepts',
-          description: "Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World ModelsPresented at the NeurIPS Workshop on Embodied World Models",
+        },{id: "presentations-",
+          title: '',
+          description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
-            },},{id: "presentations-from-emergence-to-intention",
-          title: 'From Emergence to Intention',
-          description: "From Emergence to Intention: A Statistical Inductive Bias for Tractable Optimization in Multi-Agent CoordinationPresented at the NeurIPS Workshop on Optimization for Machine Learning",
+            },},{id: "presentations-",
+          title: '',
+          description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
-            },},{id: "presentations-the-physical-basis-of-prediction",
-          title: 'The Physical Basis of Prediction',
-          description: "The Physical Basis of Prediction: World Model Formation in Neural Organoids via an LLM-Generated CurriculumPresented at the NeurIPS Workshop on Embodied World Models",
+            },},{id: "presentations-",
+          title: '',
+          description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Physical-Basis-of-Prediction/";
-            },},{id: "presentations-generative-world-models-of-tasks",
-          title: 'Generative World Models of Tasks',
-          description: "Generative World Models of Tasks: LLM-Driven Hierarchical Scaffolding for Embodied AgentsPresented at the NeurIPS Workshop on Embodied World Models",
+            },},{id: "presentations-",
+          title: '',
+          description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/World-Models-of-Tasks/";
             },},{id: "projects-badger-vision",
