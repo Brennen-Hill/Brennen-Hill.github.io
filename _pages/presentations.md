@@ -9,43 +9,56 @@ display_categories: [NeurIPS, Cortical Labs, National University of Singapore]
 horizontal: false
 ---
 
-<!-- pages/presentations.md -->
-
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
-    <!-- Display categorized presentations -->
-    {% for category in page.display_categories %}
-        <h2 class="category">{{ category }}</h2>
-        {% assign categorized_presentations = site.presentations | where: "category", category %}
-        {% assign sorted_presentations = categorized_presentations | sort: "importance" %}
-       
-        <!-- Generate cards for each presentation -->
-        {% if page.horizontal %}
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-2">
-                    {% for presentation in sorted_presentations %}
-                        {% include projects_horizontal.liquid project=presentation %}
-                    {% endfor %}
-                </div>
-            </div>
-        {% else %}
-              <!-- <div class="row row-cols-1 row-cols-md-3"> -->
-
-            <div class="grid">
-                {% for presentation in sorted_presentations %}
-                    {% include projects.liquid project=presentation %}
-                {% endfor %}
-            </div>
-        {% endif %}
+  <!-- Display categorized projects -->
+  {% for category in page.display_categories %}
+  <a id="{{ category }}" href=".#{{ category }}">
+    <h2 class="category">{{ category }}</h2>
+  </a>
+  {% assign categorized_projects = site.presentations | where: "category", category %}
+  {% assign sorted_projects = categorized_projects | sort: "importance" %}
+  <!-- Generate cards for each project -->
+  {% if page.horizontal %}
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+    {% for project in sorted_projects %}
+      {% include projects_horizontal.liquid %}
     {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <div class="row row-cols-1 row-cols-md-3">
+    {% for project in sorted_projects %}
+      {% include projects.liquid %}
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endfor %}
+
 {% else %}
 
-    <!-- Display all presentations -->
-    {% assign sorted_presentations = site.presentations | sort: "importance" %}
-    <div class="grid">
-        {% for presentation in sorted_presentations %}
-            {% include projects.liquid project=presentation %}
-        {% endfor %}
+<!-- Display projects without categories -->
+
+{% assign sorted_projects = site.presentations | sort: "importance" %}
+
+  <!-- Generate cards for each project -->
+
+{% if page.horizontal %}
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2">
+    {% for project in sorted_projects %}
+      {% include projects_horizontal.liquid %}
+    {% endfor %}
     </div>
+  </div>
+  {% else %}
+  <div class="row row-cols-1 row-cols-md-3">
+    {% for project in sorted_projects %}
+      {% include projects.liquid %}
+    {% endfor %}
+  </div>
+  {% endif %}
 {% endif %}
 </div>
