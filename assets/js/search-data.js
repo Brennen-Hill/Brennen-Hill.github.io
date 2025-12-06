@@ -47,6 +47,11 @@ ninja.data = [{
           description: "Presented at NeuriPS Workshop",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
+            },},{id: "presentations-communicating-plans-not-percepts-scalable-multi-agent-coordination-with-embodied-world-models",
+          title: 'Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models',
+          description: "Presented at the NeuriPS Workshop on Optimization for Machine Learning",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/From-Emergence-to-Intention/";
             },},{id: "presentations-title",
           title: 'title',
           description: "pers",
