@@ -27,12 +27,14 @@ date: December, 2025
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/mWGtb8QGUds/TODO_TODO_TODO_EXTRACT_YOUTUBE_EMBED_LINK" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="https://www.youtube.com/embed/wfd_BaKg3sE" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     A recording of me presenting this work.
 </div>
+
+
 
 ### The paper
 
