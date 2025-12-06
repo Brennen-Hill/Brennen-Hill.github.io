@@ -41,7 +41,17 @@ ninja.data = [{
           title: '',
           description: "",
           section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Co-Evolving-Complexity/";
+            },},{id: "presentations-",
+          title: '',
+          description: "",
+          section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
+            },},{id: "presentations-title",
+          title: 'title',
+          description: "pers",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/small/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
