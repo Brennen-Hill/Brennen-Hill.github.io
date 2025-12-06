@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
- - /Communicating-Plans-Not-Percepts.md/
- - /Communicating-Plans-Not-Percepts.md
+ - /Communicating-Plans-Not-Percepts/
+ - /Communicating-Plans-Not-Percepts
 
 ---
 

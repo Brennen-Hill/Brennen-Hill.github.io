@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /From-Emergence-to-Intention.md/
-  - /From-Emergence-to-Intention.md
+  - /From-Emergence-to-Intention/
+  - /From-Emergence-to-Intention
 ---
 
 <!-- Main Content Area -->
