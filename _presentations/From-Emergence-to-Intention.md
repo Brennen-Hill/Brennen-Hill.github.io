@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models"
+title: "From Emergence to Intention: A Statistical Inductive Bias for Tractable Optimization in Multi-Agent Coordination"
 description: Presented at the NeuriPS Workshop on Optimization for Machine Learning
 importance: 1
 img: assets/img/posters/From-Emergence-to-Intention.png
