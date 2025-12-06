@@ -122,7 +122,7 @@ newsletter:
 collections:
   projects:
     output: true
-  pages:
+  presentations:
     output: true
 
 # -----------------------------------------------------------------------------
