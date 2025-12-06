@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Generative World Models of Tasks: LLM-Driven Hierarchical Scaffolding for Embodied Agents"
+title: "Generative World Models of Tasks"
 description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 1
 img: assets/img/posters/World-Models-of-Tasks.png

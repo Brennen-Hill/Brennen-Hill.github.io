@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models"
+title: "Communicating Plans, Not Percepts"
 description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 1
 img: assets/img/posters/Communicating-Plans-Not-Percepts.png

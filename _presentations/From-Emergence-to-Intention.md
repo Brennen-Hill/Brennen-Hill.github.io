@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "From Emergence to Intention: A Statistical Inductive Bias for Tractable Optimization in Multi-Agent Coordination"
+title: "From Emergence to Intention"
 description: Presented at the NeurIPS Workshop on Optimization for Machine Learning
 importance: 1
 img: assets/img/posters/From-Emergence-to-Intention.png
