@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Test Paper Title
-description: Presented at that place test
-img: assets/img/HackMidwest.jpeg
+title: TODO_TODO_TODO_POSTER_NAME
+description: Presented at TODO_TODO_TODO_PRESENTED_AT
+img: assets/img/poster/TODO_TODO_TODO_PRESENTED_LOCATION.jpeg
 importance: 1
 category: NeurIPS
 related_publications: false

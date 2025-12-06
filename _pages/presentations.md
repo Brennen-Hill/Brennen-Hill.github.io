@@ -30,6 +30,8 @@ horizontal: false
                 </div>
             </div>
         {% else %}
+              <!-- <div class="row row-cols-1 row-cols-md-3"> -->
+
             <div class="grid">
                 {% for presentation in sorted_presentations %}
                     <!-- {% include projects.html project=presentation %} -->
@@ -44,7 +46,7 @@ horizontal: false
     {% assign sorted_presentations = site.presentations | sort: "importance" %}
     <div class="grid">
         {% for presentation in sorted_presentations %}
-            {% include projects.html project=presentation %}
+            {% include projects.liquid project=presentation %}
         {% endfor %}
     </div>
 {% endif %}
