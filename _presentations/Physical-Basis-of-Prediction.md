@@ -7,6 +7,10 @@ img: assets/img/posters/Physical-Basis-of-Prediction.png
 category: NeurIPS
 related_publications: false
 date: December, 2025
+redirect_from:
+ - /Physical-Basis-of-Prediction/
+ - /Physical-Basis-of-Prediction
+
 ---
 
 <!-- Main Content Area -->

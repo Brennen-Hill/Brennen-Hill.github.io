@@ -7,6 +7,10 @@ img: assets/img/posters/Communicating-Plans-Not-Percepts.png
 category: NeurIPS
 related_publications: false
 date: December, 2025
+redirect_from:
+ - /Communicating-Plans-Not-Percepts/
+ - /Communicating-Plans-Not-Percepts
+
 ---
 
 <!-- Main Content Area -->

@@ -7,6 +7,10 @@ img: assets/img/posters/World-Models-of-Tasks.png
 category: NeurIPS
 related_publications: false
 date: December, 2025
+redirect_from:
+  - /World-Models-of-Tasks.md/
+  - /World-Models-of-Tasks.md
+
 ---
 
 <!-- Main Content Area -->
