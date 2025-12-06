@@ -24,7 +24,6 @@ horizontal: false
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2">
                     {% for presentation in sorted_presentations %}
-                        <!-- {% include projects.html project=presentation %} -->
                         {% include projects_horizontal.liquid project=presentation %}
                     {% endfor %}
                 </div>
@@ -34,7 +33,6 @@ horizontal: false
 
             <div class="grid">
                 {% for presentation in sorted_presentations %}
-                    <!-- {% include projects.html project=presentation %} -->
                     {% include projects.liquid project=presentation %}
                 {% endfor %}
             </div>
