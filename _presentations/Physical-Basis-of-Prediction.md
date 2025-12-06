@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "The Physical Basis of Prediction"
-description: "The Physical Basis of Prediction: World Model Formation in Neural Organoids via an LLM-Generated Curriculum\nPresented at the NeurIPS Workshop on Embodied World Models"
+description: "Presented at the NeurIPS Workshop on Embodied World Models
 importance: 1
 img: assets/img/posters/Physical-Basis-of-Prediction.png
 category: NeurIPS
