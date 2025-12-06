@@ -37,23 +37,23 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-communicating-plans-not-percepts-scalable-multi-agent-coordination-with-embodied-world-models",
-          title: 'Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models',
+        },{id: "presentations-communicating-plans-not-percepts",
+          title: 'Communicating Plans, Not Percepts',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
-            },},{id: "presentations-from-emergence-to-intention-a-statistical-inductive-bias-for-tractable-optimization-in-multi-agent-coordination",
-          title: 'From Emergence to Intention: A Statistical Inductive Bias for Tractable Optimization in Multi-Agent...',
+            },},{id: "presentations-from-emergence-to-intention",
+          title: 'From Emergence to Intention',
           description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
-            },},{id: "presentations-the-physical-basis-of-prediction-world-model-formation-in-neural-organoids-via-an-llm-generated-curriculum",
-          title: 'The Physical Basis of Prediction: World Model Formation in Neural Organoids via an...',
+            },},{id: "presentations-the-physical-basis-of-prediction",
+          title: 'The Physical Basis of Prediction',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Physical-Basis-of-Prediction/";
-            },},{id: "presentations-generative-world-models-of-tasks-llm-driven-hierarchical-scaffolding-for-embodied-agents",
-          title: 'Generative World Models of Tasks: LLM-Driven Hierarchical Scaffolding for Embodied Agents',
+            },},{id: "presentations-generative-world-models-of-tasks",
+          title: 'Generative World Models of Tasks',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/World-Models-of-Tasks/";
