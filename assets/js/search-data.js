@@ -37,14 +37,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-",
-          title: '',
-          description: "",
+        },{id: "presentations-communicating-plans-not-percepts",
+          title: 'Communicating Plans, Not Percepts',
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
-            },},{id: "presentations-",
-          title: '',
-          description: "",
+            },},{id: "presentations-from-emergence-to-intention",
+          title: 'From Emergence to Intention',
+          description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
             },},{id: "presentations-",
@@ -52,9 +52,9 @@ ninja.data = [{
           description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Physical-Basis-of-Prediction/";
-            },},{id: "presentations-",
-          title: '',
-          description: "",
+            },},{id: "presentations-generative-world-models-of-tasks",
+          title: 'Generative World Models of Tasks',
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/World-Models-of-Tasks/";
             },},{id: "projects-badger-vision",
