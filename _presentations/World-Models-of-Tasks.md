@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Generative World Models of Tasks"
-description: "Presented at the NeurIPS Workshop on Embodied World Models
+description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 1
 img: assets/img/posters/World-Models-of-Tasks.png
 category: NeurIPS
