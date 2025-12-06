@@ -36,6 +36,7 @@ redirect_from:
 <div class="caption">
     A recording of me presenting this work.
 </div>
+---
 
 ### The paper
 

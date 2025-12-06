@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "The Physical Basis of Prediction"
-description: "Presented at the NeurIPS Workshop on Embodied World Models
+description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 1
 img: assets/img/posters/Physical-Basis-of-Prediction.png
 category: NeurIPS
@@ -36,6 +36,7 @@ redirect_from:
 <div class="caption">
     A recording of me presenting this work.
 </div>
+---
 
 ### The paper
 
