@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-presentations",
+          title: "presentations",
+          description: "A collection of my posters, talks, and conference presentations.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/presentations/";
+          },
         },{id: "nav-projects",
           title: "projects",
           description: "",
@@ -30,7 +37,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-badger-vision",
+        },{id: "presentations-todo-todo-todo-poster-name",
+          title: 'TODO_TODO_TODO_POSTER_NAME',
+          description: "Presented at TODO_TODO_TODO_PRESENTED_AT",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
+            },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
           section: "Projects",handler: () => {
