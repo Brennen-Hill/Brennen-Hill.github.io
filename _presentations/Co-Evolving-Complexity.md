@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula
+title: "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula"
 description: Presented at the NeuriPS Workshop on Scaling Environments for Agents
 importance: 1
 img: Co-Evolving-Complexity.png
