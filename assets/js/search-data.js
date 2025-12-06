@@ -47,9 +47,9 @@ ninja.data = [{
           description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
-            },},{id: "presentations-",
-          title: '',
-          description: "",
+            },},{id: "presentations-the-physical-basis-of-prediction",
+          title: 'The Physical Basis of Prediction',
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Physical-Basis-of-Prediction/";
             },},{id: "presentations-generative-world-models-of-tasks",
