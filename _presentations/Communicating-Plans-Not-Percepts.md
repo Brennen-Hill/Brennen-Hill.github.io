@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Communicating Plans, Not Percepts: Scalable Multi-Agent Coordination with Embodied World Models"
-description: Presented at the NeuriPS Workshop on Embodied World Models
+description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 1
 img: assets/img/posters/Communicating-Plans-Not-Percepts.png
 category: NeurIPS
@@ -19,7 +19,7 @@ date: December, 2025
     </div>
 </div>
 <div class="caption">
-    The poster presented at a NeurIPS Workshop.
+    The poster presented at a NeurIPS Workshop on Embodied World Models.
 </div>
 ---
 
@@ -31,9 +31,9 @@ date: December, 2025
     </div>
 </div>
 <div class="caption">
-    Here is a recording of me presenting this work.
+    A recording of me presenting this work.
 </div>
 
 ### The paper
 
-You can read the full paper at: [https://arxiv.org/abs/2508.02912](https://arxiv.org/abs/2508.02912)
+The full paper: [https://arxiv.org/abs/2508.02912](https://arxiv.org/abs/2508.02912)
