@@ -48,7 +48,7 @@ ninja.data = [{
           title: '',
           description: "",
           section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Communicating-Plans-Not-Percepts%20copy/";
+              window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
