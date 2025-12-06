@@ -37,8 +37,6 @@ redirect_from:
     A recording of me presenting this work.
 </div>
 
-
-
 ### The paper
 
 The full paper: [https://openreview.net/forum?id=IHZfWKE4yv](https://openreview.net/forum?id=IHZfWKE4yv)

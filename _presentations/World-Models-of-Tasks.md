@@ -10,7 +10,6 @@ date: December, 2025
 redirect_from:
   - /World-Models-of-Tasks/
   - /World-Models-of-Tasks
-
 ---
 
 <!-- Main Content Area -->
@@ -37,8 +36,6 @@ redirect_from:
 <div class="caption">
     A recording of me presenting this work.
 </div>
-
-
 
 ### The paper
 
