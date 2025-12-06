@@ -33,9 +33,9 @@ Here is a recording of me presenting this work.
     </div>
 </div>
 <div class="caption">
-    I present this work. 
+    Here is a recording of me presenting this work.
 </div>
 
 ### The paper
 
-You can read the full paper at: https://openreview.net/forum?id=IHZfWKE4yv
+You can read the full paper at: [https://openreview.net/forum?id=IHZfWKE4yv](https://openreview.net/forum?id=IHZfWKE4yv)
