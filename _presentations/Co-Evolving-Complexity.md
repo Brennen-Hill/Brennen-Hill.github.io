@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula"
+title: "Co-Evolving Complexity"
 description: Presented at the NeuriPS Workshop on Scaling Environments for Agents
 importance: 1
 img: assets/img/posters/Co-Evolving-Complexity.png
-
 category: NeurIPS
 related_publications: false
 date: December, 2025
+redirect_from:
+  - /Co-Evolving-Complexity/
+  - /Co-Evolving-Complexity
 ---
 
 <!-- Main Content Area -->
@@ -28,12 +30,13 @@ date: December, 2025
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/mWGtb8QGUds/TODO_TODO_TODO_EXTRACT_YOUTUBE_EMBED_LINK" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="https://www.youtube.com/embed/8CxBSrvbr4I" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     A recording of me presenting this work.
 </div>
+---
 
 ### The paper
 

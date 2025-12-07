@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet"
+title: "The Geometry of Cortical Computation"
 description: Presented at the NeurIPS Workshop on Symmetry and Geometry in Neural Representations
 importance: 1
 img: assets/img/posters/Geometry-of-Cortical-Computation.png
@@ -30,7 +30,7 @@ redirect_from:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/VuvB9-P1xT0" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="https://www.youtube.com/embed/m2T9krMrUNw" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
