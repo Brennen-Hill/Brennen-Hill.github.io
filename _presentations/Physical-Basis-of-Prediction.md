@@ -22,7 +22,7 @@ redirect_from:
     </div>
 </div>
 <div class="caption">
-    The poster presented at a NeurIPS Workshop on Embodied World Models.
+    The poster presented at the NeurIPS Workshop on Embodied World Models.
 </div>
 ---
 
