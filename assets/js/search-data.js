@@ -37,8 +37,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-co-evolving-complexity-an-adversarial-framework-for-automatic-marl-curricula",
-          title: 'Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula',
+        },{id: "presentations-co-evolving-complexity",
+          title: 'Co-Evolving Complexity',
           description: "Presented at the NeuriPS Workshop on Scaling Environments for Agents",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Co-Evolving-Complexity/";
@@ -57,8 +57,8 @@ ninja.data = [{
           description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
-            },},{id: "presentations-the-geometry-of-cortical-computation-manifold-disentanglement-and-predictive-dynamics-in-vcnet",
-          title: 'The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet',
+            },},{id: "presentations-the-geometry-of-cortical-computation",
+          title: 'The Geometry of Cortical Computation',
           description: "Presented at the NeurIPS Workshop on Symmetry and Geometry in Neural Representations",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Geometry-of-Cortical-Computation/";
