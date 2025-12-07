@@ -37,7 +37,17 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-communicating-plans-not-percepts",
+        },{id: "presentations-co-evolving-complexity-an-adversarial-framework-for-automatic-marl-curricula",
+          title: 'Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula',
+          description: "Presented at the NeuriPS Workshop on Scaling Environments for Agents",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Co-Evolving-Complexity/";
+            },},{id: "presentations-cognitive-architecture",
+          title: 'Cognitive Architecture',
+          description: "Presented at the NeurIPS Workshop on Interpreting Cognition in Deep Learning Models",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Cognitive-Architecture/";
+            },},{id: "presentations-communicating-plans-not-percepts",
           title: 'Communicating Plans, Not Percepts',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
@@ -47,11 +57,21 @@ ninja.data = [{
           description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/From-Emergence-to-Intention/";
+            },},{id: "presentations-the-geometry-of-cortical-computation-manifold-disentanglement-and-predictive-dynamics-in-vcnet",
+          title: 'The Geometry of Cortical Computation: Manifold Disentanglement and Predictive Dynamics in VCNet',
+          description: "Presented at the NeurIPS Workshop on Symmetry and Geometry in Neural Representations",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Geometry-of-Cortical-Computation/";
             },},{id: "presentations-the-physical-basis-of-prediction",
           title: 'The Physical Basis of Prediction',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Physical-Basis-of-Prediction/";
+            },},{id: "presentations-the-physical-basis-of-prediction",
+          title: 'The Physical Basis of Prediction',
+          description: "Presented at the NeurIPS Workshop on Scaling Environments for Agents",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Scaling-The-Physical-Basis-of-Prediction/";
             },},{id: "presentations-generative-world-models-of-tasks",
           title: 'Generative World Models of Tasks',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
