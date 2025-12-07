@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Co-Evolving Complexity: An Adversarial Framework for Automatic MARL Curricula"
-description: Presented at the NeuriPS Workshop on Embodied World Models
+description: Presented at the NeuriPS Workshop on Scaling Environments for Agents
 importance: 1
 img: assets/img/posters/Co-Evolving-Complexity.png
 
@@ -32,9 +32,9 @@ date: December, 2025
     </div>
 </div>
 <div class="caption">
-    Here is a recording of me presenting this work. 
+    A recording of me presenting this work.
 </div>
 
 ### The paper
 
-You can read the full paper at: [https://arxiv.org/abs/2509.03771](https://arxiv.org/abs/2509.03771)
+The full paper: [https://arxiv.org/abs/2509.03771](https://arxiv.org/abs/2509.03771)
