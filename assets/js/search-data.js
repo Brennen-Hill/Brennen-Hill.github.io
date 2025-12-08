@@ -49,7 +49,7 @@ ninja.data = [{
               window.location.href = "/presentations/Cognitive-Architecture/";
             },},{id: "presentations-communicating-plans-not-percepts",
           title: 'Communicating Plans, Not Percepts',
-          description: "Presented at the NeurIPS Workshop on Embodied World Models",
+          description: "Presented at the NeurIPS Workshops on Scaling Environments for Agents and Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
             },},{id: "presentations-from-emergence-to-intention",
@@ -72,6 +72,11 @@ ninja.data = [{
           description: "Presented at the NeurIPS Workshop on Scaling Environments for Agents",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/Scaling-The-Physical-Basis-of-Prediction/";
+            },},{id: "presentations-structural-plasticity-as-active-inference",
+          title: 'Structural Plasticity as Active Inference',
+          description: "Presented at Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/Structural-Plasticity-as-Active-Inference/";
             },},{id: "presentations-generative-world-models-of-tasks",
           title: 'Generative World Models of Tasks',
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
