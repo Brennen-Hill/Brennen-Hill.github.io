@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control"
-description: Presented at the TODO_TODO_TODO_WORKSHOP_NAME
+title: "Structural Plasticity as Active Inference"
+description: Presented at Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence
 importance: 1
 img: assets/img/posters/Structural-Plasticity-as-Active-Inference.png
 category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Structural-Plasticity-as-Active-Inference.md/
-  - /Structural-Plasticity-as-Active-Inference.md
+  - /Structural-Plasticity-as-Active-Inference/
+  - /Structural-Plasticity-as-Active-Inference
 ---
 
 <!-- Main Content Area -->
@@ -22,7 +22,7 @@ redirect_from:
     </div>
 </div>
 <div class="caption">
-    The poster presented at the TODO_TODO_TODO_WORKSHOP_NAME.
+    The poster presented at Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence.
 </div>
 ---
 
@@ -30,7 +30,7 @@ redirect_from:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/VuvB9-P1xT0" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="https://www.youtube.com/embed/7v8OkhD6aXc" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
