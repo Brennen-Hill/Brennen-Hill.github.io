@@ -355,7 +355,10 @@
 
     {% if entry.video and site.enable_video_embedding %}
       <div class="video hidden">
-        <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1 w-100" controls=true %}</div>
+        <div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
+          {% include video.liquid path=entry.video class="embed-responsive-item" controls=true %}
+        </div>
+        {% comment %} <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1 w-100" controls=true %}</div> {% endcomment %}
       </div>
     {% endif %}
 
