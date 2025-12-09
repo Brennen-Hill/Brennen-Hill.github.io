@@ -358,8 +358,8 @@
 
     {% if entry.video and site.enable_video_embedding %}
       <!-- Hidden video block -->
-      <div class="abstract hidden">
-        {% include video.liquid path=entry.video class="video-universal" controls=true %}
+    <div class="abstract hidden">
+        {% include video.liquid path=entry.video class="video-universal img-fluid rounded z-depth-1 embed-responsive-16by9 embed-responsive" controls=true %}
       </div>
     {% endif %}
   </div>

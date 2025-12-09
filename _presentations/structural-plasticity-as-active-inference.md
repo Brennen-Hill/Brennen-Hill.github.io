@@ -30,7 +30,7 @@ redirect_from:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/7v8OkhD6aXc" class="video-universal" %}
+        {% include video.liquid path="https://www.youtube.com/embed/7v8OkhD6aXc" class="video-universal img-fluid rounded z-depth-1 embed-responsive-16by9 embed-responsive" %}
     </div>
 </div>
 <div class="caption">

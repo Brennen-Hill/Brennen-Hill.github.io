@@ -30,7 +30,7 @@ Please reach out if you are interested in joining the trail.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/nano32S6k5Y" class="video-universal" %}
+        {% include video.liquid path="https://www.youtube.com/embed/nano32S6k5Y" class="video-universal img-fluid rounded z-depth-1 embed-responsive-16by9 embed-responsive" %}
     </div>
 </div>
 <div class="caption">
