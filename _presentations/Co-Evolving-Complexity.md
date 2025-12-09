@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Co-Evolving-Complexity/
-  - /Co-Evolving-Complexity
+  - /co-evolving-complexity/
+  - /co-evolving-complexity
 ---
 
 <!-- Main Content Area -->

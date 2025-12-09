@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Cognitive-Architecture/
-  - /Cognitive-Architecture
+  - /cognitive-architecture/
+  - /cognitive-architecture
 ---
 
 <!-- Main Content Area -->

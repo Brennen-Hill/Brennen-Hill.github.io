@@ -8,8 +8,8 @@ category: BRAID
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Structural-Plasticity-as-Active-Inference/
-  - /Structural-Plasticity-as-Active-Inference
+  - /structural-plasticity-as-active-inference/
+  - /structural-plasticity-as-active-inference
 ---
 
 <!-- Main Content Area -->

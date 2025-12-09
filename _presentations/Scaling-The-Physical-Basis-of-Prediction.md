@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Scaling-The-Physical-Basis-of-Prediction/
-  - /Scaling-The-Physical-Basis-of-Prediction
+  - /scaling-the-physical-basis-of-prediction/
+  - /scaling-the-physical-basis-of-prediction
 ---
 
 <!-- Main Content Area -->

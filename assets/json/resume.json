@@ -205,7 +205,7 @@
     },
     {
       "name": "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control",
-      "publisher": "In Bridging the Gap Between Neuroscience and Engineering for Energy-Efficient AI",
+      "publisher": "In Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2511.02241",
       "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",

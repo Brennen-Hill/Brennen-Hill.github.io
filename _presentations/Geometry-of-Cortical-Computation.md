@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Geometry-of-Cortical-Computation/
-  - /Geometry-of-Cortical-Computation
+  - /geometry-of-cortical-computation/
+  - /geometry-of-cortical-computation
 ---
 
 <!-- Main Content Area -->

@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /Physical-Basis-of-Prediction/
-  - /Physical-Basis-of-Prediction
+  - /physical-basis-of-prediction/
+  - /physical-basis-of-prediction
 ---
 
 <!-- Main Content Area -->

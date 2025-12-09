@@ -8,8 +8,8 @@ category: NeurIPS
 related_publications: false
 date: December, 2025
 redirect_from:
-  - /World-Models-of-Tasks/
-  - /World-Models-of-Tasks
+  - /world-models-of-tasks/
+  - /world-models-of-tasks
 ---
 
 <!-- Main Content Area -->
