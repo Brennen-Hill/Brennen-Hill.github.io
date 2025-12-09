@@ -5,7 +5,8 @@ permalink: /presentations/
 nav: true
 nav_order: 4
 description: A collection of my posters, talks, and conference presentations.
-display_categories: [NeurIPS, Cortical Labs, National University of Singapore]
+display_categories: [NeurIPS, BRAID]
+#Cortical Labs, National University of Singapore,]
 horizontal: false
 ---
 

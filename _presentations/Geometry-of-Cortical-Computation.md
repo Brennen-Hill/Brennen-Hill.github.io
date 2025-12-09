@@ -41,7 +41,3 @@ redirect_from:
 ### The paper
 
 The full paper: [https://arxiv.org/abs/2508.02995](https://arxiv.org/abs/2508.02995)
-
-
-
-

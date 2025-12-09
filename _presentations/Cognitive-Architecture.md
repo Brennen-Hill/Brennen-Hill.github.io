@@ -41,8 +41,3 @@ redirect_from:
 ### The paper
 
 The full paper: [https://openreview.net/forum?id=4OdHkADJw9](https://openreview.net/forum?id=4OdHkADJw9)
-
-
-
-
-
