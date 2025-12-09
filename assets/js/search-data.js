@@ -37,61 +37,61 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "presentations-co-evolving-complexity",
-          title: 'Co-Evolving Complexity',
-          description: "Presented at the NeuriPS Workshop on Scaling Environments for Agents",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Co-Evolving-Complexity/";
-            },},{id: "presentations-cognitive-architecture",
-          title: 'Cognitive Architecture',
-          description: "Presented at the NeurIPS Workshop on Interpreting Cognition in Deep Learning Models",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Cognitive-Architecture/";
-            },},{id: "presentations-communicating-plans-not-percepts",
-          title: 'Communicating Plans, Not Percepts',
-          description: "Presented at the NeurIPS Workshops on Scaling Environments for Agents and Embodied World Models",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Communicating-Plans-Not-Percepts/";
-            },},{id: "presentations-from-emergence-to-intention",
-          title: 'From Emergence to Intention',
-          description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/From-Emergence-to-Intention/";
-            },},{id: "presentations-the-geometry-of-cortical-computation",
-          title: 'The Geometry of Cortical Computation',
-          description: "Presented at the NeurIPS Workshop on Symmetry and Geometry in Neural Representations",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Geometry-of-Cortical-Computation/";
-            },},{id: "presentations-the-physical-basis-of-prediction",
-          title: 'The Physical Basis of Prediction',
-          description: "Presented at the NeurIPS Workshop on Embodied World Models",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Physical-Basis-of-Prediction/";
-            },},{id: "presentations-the-physical-basis-of-prediction",
-          title: 'The Physical Basis of Prediction',
-          description: "Presented at the NeurIPS Workshop on Scaling Environments for Agents",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Scaling-The-Physical-Basis-of-Prediction/";
-            },},{id: "presentations-structural-plasticity-as-active-inference",
-          title: 'Structural Plasticity as Active Inference',
-          description: "Presented at Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/Structural-Plasticity-as-Active-Inference/";
-            },},{id: "presentations-generative-world-models-of-tasks",
-          title: 'Generative World Models of Tasks',
-          description: "Presented at the NeurIPS Workshop on Embodied World Models",
-          section: "Presentations",handler: () => {
-              window.location.href = "/presentations/World-Models-of-Tasks/";
-            },},{id: "presentations-ai-game",
+        },{id: "presentations-ai-game",
           title: 'AI Game',
           description: "Presented at the National University of Singapore School of Computing Showcase",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/ai-game/";
+            },},{id: "presentations-co-evolving-complexity",
+          title: 'Co-Evolving Complexity',
+          description: "Presented at the NeuriPS Workshop on Scaling Environments for Agents",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/co-evolving-complexity/";
+            },},{id: "presentations-cognitive-architecture",
+          title: 'Cognitive Architecture',
+          description: "Presented at the NeurIPS Workshop on Interpreting Cognition in Deep Learning Models",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/cognitive-architecture/";
+            },},{id: "presentations-communicating-plans-not-percepts",
+          title: 'Communicating Plans, Not Percepts',
+          description: "Presented at the NeurIPS Workshops on Scaling Environments for Agents and Embodied World Models",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/communicating-plans-not-percepts/";
+            },},{id: "presentations-from-emergence-to-intention",
+          title: 'From Emergence to Intention',
+          description: "Presented at the NeurIPS Workshop on Optimization for Machine Learning",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/from-emergence-to-intention/";
+            },},{id: "presentations-the-geometry-of-cortical-computation",
+          title: 'The Geometry of Cortical Computation',
+          description: "Presented at the NeurIPS Workshop on Symmetry and Geometry in Neural Representations",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/geometry-of-cortical-computation/";
+            },},{id: "presentations-the-physical-basis-of-prediction",
+          title: 'The Physical Basis of Prediction',
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/physical-basis-of-prediction/";
             },},{id: "presentations-scale-free-cognition",
           title: 'scale-free cognition',
           description: "Hosted and talked at Cortical Labs’ journal club",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/scale-free-cognition/";
+            },},{id: "presentations-the-physical-basis-of-prediction",
+          title: 'The Physical Basis of Prediction',
+          description: "Presented at the NeurIPS Workshop on Scaling Environments for Agents",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/scaling-the-physical-basis-of-prediction/";
+            },},{id: "presentations-structural-plasticity-as-active-inference",
+          title: 'Structural Plasticity as Active Inference',
+          description: "Presented at Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/structural-plasticity-as-active-inference/";
+            },},{id: "presentations-generative-world-models-of-tasks",
+          title: 'Generative World Models of Tasks',
+          description: "Presented at the NeurIPS Workshop on Embodied World Models",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/world-models-of-tasks/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
