@@ -21,8 +21,8 @@ collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 </div>
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://www.youtube.com/embed/mWGtb8QGUds" class="video-universal img-fluid rounded z-depth-1 embed-responsive-16by9 embed-responsive" %}
+    <div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
+        {% include video.liquid path="https://www.youtube.com/embed/mWGtb8QGUds" class="embed-responsive-item video-universal" %}
     </div>
 </div>
 <div class="caption">
