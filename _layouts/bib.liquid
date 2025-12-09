@@ -355,8 +355,9 @@
 
     {% if entry.video and site.enable_video_embedding %}
       <div class="video hidden">
-        <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1 w-100 h-auto" controls=true %}</div>
-      </div>
+        {% comment %} <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1 w-100 h-auto" controls=true %}</div> {% endcomment %}
+          {% include video.liquid path=entry.video class="w-100 rounded z-depth-1" style="aspect-ratio: 16 / 9; object-fit: contain;" controls=true %}
+        </div>
     {% endif %}
 
     {% if entry.pdf %}
