@@ -32,7 +32,7 @@ Bioelectricity, the ability of cells to form electrical networks that process in
 
 Through this experience, I deepened my understanding of cognition and its origins. It was inspiring to engage with others interested in synthetic biological intelligence after our talk and hear their diverse perspectives.
 
-Cortical Labs, the creator of DishBrain—a device that fuses living brain cells with chips to create machines with biological intelligence—organized the journal club. One of their notable accomplishments is training in vitro neurons to play pong.
+Cortical Labs, the creator of DishBrain, a device that fuses living brain cells with chips to create machines with biological intelligence, organized the journal club. One of their notable accomplishments is training in vitro neurons to play pong.
 
 Thanks to Peter Klipfel for organizing the journal club, to Melyne Zhou for being an amazing co-host, to Michael Levin for doing incredible work that motivated the talk, and to everyone who discussed their thoughts after the talk.
 
