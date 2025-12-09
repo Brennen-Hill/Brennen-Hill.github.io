@@ -1,5 +1,3 @@
----
----
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -45,11 +43,8 @@
     </div>
   {% endif %}
 
-  <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title -->
     <div class="title">{{ entry.title }}</div>
-    <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
 
@@ -148,7 +143,6 @@
       {% endif %}
     </div>
 
-    <!-- Journal/Book title and date -->
     <div class="periodical">
       {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
       {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
@@ -179,7 +173,6 @@
       {% endif %}
     </div>
 
-    <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
@@ -220,7 +213,7 @@
         {% endif %}
       {% endif %}
       {% if entry.video and site.enable_video_embedding %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Video</a>
+        <a class="video btn btn-sm z-depth-0" role="button">Video</a>
       {% elsif entry.video %}
         <a href="{{ entry.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
       {% endif %}
@@ -231,11 +224,7 @@
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
       {% if entry.poster %}
-        {% if entry.poster contains '://' %}
-          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
-        {% else %}
-          <a href="{{ entry.poster | prepend: '/assets/img/posters/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
-        {% endif %}
+        <a class="poster btn btn-sm z-depth-0" role="button">Poster</a>
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
@@ -334,21 +323,18 @@
     {% endif %}
 
     {% if entry.award %}
-      <!-- Hidden Award block -->
       <div class="award hidden d-print-inline">
         <p>{{ entry.award | markdownify }}</p>
       </div>
     {% endif %}
 
     {% if entry.abstract %}
-      <!-- Hidden abstract block -->
       <div class="abstract hidden">
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
 
     {% if entry.bibtex_show %}
-      <!-- Hidden bibtex block -->
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
@@ -357,9 +343,31 @@
     {% endif %}
 
     {% if entry.video and site.enable_video_embedding %}
-      <!-- Hidden video block -->
-      <div class="abstract hidden">
+      <div class="video hidden">
         <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1" controls=true %}</div>
+      </div>
+    {% endif %}
+
+    {% if entry.poster %}
+      <div class="poster hidden">
+        <div class="row" style="margin-top: 10px;">
+          <div class="col-sm mt-3 mt-md-0">
+            {% assign poster_path = entry.poster %}
+            {% if entry.poster contains '://' %}
+              {% assign poster_path = entry.poster %}
+            {% else %}
+              {% assign poster_path = entry.poster | prepend: '/assets/img/posters/' | relative_url %}
+            {% endif %}
+
+            {% include figure.liquid 
+              loading="eager" 
+              path=poster_path 
+              class="img-fluid rounded z-depth-1" 
+              zoomable=true 
+              alt="Poster"
+            %}
+          </div>
+        </div>
       </div>
     {% endif %}
   </div>
