@@ -4,7 +4,7 @@ title: "Structural Plasticity as Active Inference"
 description: Presented at Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence
 importance: 1
 img: assets/img/posters/Structural-Plasticity-as-Active-Inference.png
-category: NeurIPS
+category: BRAID
 related_publications: false
 date: December, 2025
 redirect_from:
