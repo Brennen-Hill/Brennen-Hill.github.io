@@ -1,5 +1,3 @@
----
----
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -45,11 +43,8 @@
     </div>
   {% endif %}
 
-  <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title -->
     <div class="title">{{ entry.title }}</div>
-    <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
 
@@ -148,12 +143,10 @@
       {% endif %}
     </div>
 
-    <!-- Journal/Book title and date -->
     <div class="periodical">
       {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
       {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
 
-      {% comment %} --- Main Venue --- {% endcomment %}
       {% if entry.type == 'article' %}
         {% if entry.journal %}
           <em style="display: block; margin-bottom: 0.25rem;">{{ entry.journal | strip }}</em>
@@ -168,7 +161,6 @@
         {% endif %}
       {% endif %}
 
-      {% comment %} --- Multi-Venue List (our new code) --- {% endcomment %}
       {% if entry.also_in %}
         {% assign venues_list = entry.also_in | split: ';' %}
         <ul class="venues-list" style="list-style-type: none; padding-left: 0; margin-bottom: 0.25rem;">
@@ -179,7 +171,6 @@
       {% endif %}
     </div>
 
-    <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
@@ -198,20 +189,23 @@
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       {% endif %}
-      {% if entry.html %}
+      {% comment %} {% if entry.html %}
         {% if entry.html contains '://' %}
           <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
         {% else %}
           <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
         {% endif %}
-      {% endif %}
+      {% endif %} {% endcomment %}
+      
       {% if entry.pdf %}
         {% if entry.pdf contains '://' %}
-          <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          {% assign pdf_url = entry.pdf %}
         {% else %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          {% assign pdf_url = entry.pdf | prepend: '/assets/pdf/' | relative_url %}
         {% endif %}
+        <a class="pdf btn btn-sm z-depth-0" role="button">PDF</a>
       {% endif %}
+
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
           <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
@@ -219,24 +213,29 @@
           <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
         {% endif %}
       {% endif %}
+      
       {% if entry.video and site.enable_video_embedding %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Video</a>
+        <a class="video btn btn-sm z-depth-0" role="button">Video</a>
       {% elsif entry.video %}
         <a href="{{ entry.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
       {% endif %}
+      
       {% if entry.blog %}
         <a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
       {% endif %}
       {% if entry.code %}
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
       {% endif %}
+      
       {% if entry.poster %}
         {% if entry.poster contains '://' %}
-          <a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          {% assign poster_url = entry.poster %}
         {% else %}
-          <a href="{{ entry.poster | prepend: '/assets/img/posters/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+          {% assign poster_url = entry.poster | prepend: '/assets/img/posters/' | relative_url %}
         {% endif %}
+        <a class="poster btn btn-sm z-depth-0" role="button">Poster</a>
       {% endif %}
+      
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
           <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
@@ -248,6 +247,7 @@
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
     </div>
+
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
       {% if entry.altmetric and entry.altmetric != 'false' %}
@@ -334,21 +334,18 @@
     {% endif %}
 
     {% if entry.award %}
-      <!-- Hidden Award block -->
       <div class="award hidden d-print-inline">
         <p>{{ entry.award | markdownify }}</p>
       </div>
     {% endif %}
 
     {% if entry.abstract %}
-      <!-- Hidden abstract block -->
       <div class="abstract hidden">
         <p>{{ entry.abstract }}</p>
       </div>
     {% endif %}
 
     {% if entry.bibtex_show %}
-      <!-- Hidden bibtex block -->
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
@@ -357,10 +354,39 @@
     {% endif %}
 
     {% if entry.video and site.enable_video_embedding %}
-      <!-- Hidden video block -->
-    <div class="abstract hidden">
-        {% include video.liquid path=entry.video class="video-universal img-fluid rounded z-depth-1 embed-responsive-16by9 embed-responsive" controls=true %}
+      <div class="video hidden">
+        <div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
+           {% include video.liquid path=entry.video class="embed-responsive-item video-universal" controls=true %}
+        </div>
       </div>
     {% endif %}
+
+    {% comment %} {% if entry.video and site.enable_video_embedding %}
+      <div class="video hidden">
+        <div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
+          {% include video.liquid path=entry.video class="embed-responsive-item" controls=true %}
+        </div>
+        {% comment %} <div style="text-align: center;">{% include video.liquid path=entry.video class="img-fluid rounded z-depth-1 w-100" controls=true %}</div> {% endcomment %}
+      </div>
+    {% endif %} {% endcomment %}
+
+    {% if entry.pdf %}
+      <div class="pdf hidden">
+        <div style="text-align: center;">
+          <object data="{{ pdf_url }}" type="application/pdf" width="100%" height="500px">
+            <p>Unable to display PDF file. <a href="{{ pdf_url }}">Download</a> instead.</p>
+          </object>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if entry.poster %}
+      <div class="poster hidden">
+        <div style="text-align: center;">
+          <img src="{{ poster_url }}" class="img-fluid rounded z-depth-1">
+        </div>
+      </div>
+    {% endif %}
+    
   </div>
 </div>
