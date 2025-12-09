@@ -4,7 +4,7 @@ title: "scale-free cognition"
 description: Hosted and talked at Cortical Labs’ journal club
 importance: 1
 img: assets/img/posters/scale-free-cognition.jpeg
-category: NeurIPS
+category: Cortical Labs
 related_publications: false
 date: December, 2025
 redirect_from:
