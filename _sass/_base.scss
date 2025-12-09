@@ -1426,13 +1426,6 @@ figure.cover {
 
 /* Custom utility to force videos to fill their container */
 .video-universal {
-    // Inherit properties from Bootstrap/MDB classes. Only works if MDB is present
-    @extend .embed-responsive;
-    @extend .embed-responsive-16by9;
-    @extend .rounded;
-    @extend .z-depth-1;
-    
-    // Custom override
     object-fit: contain !important; 
   }
 }
