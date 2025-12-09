@@ -82,6 +82,16 @@ ninja.data = [{
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/World-Models-of-Tasks/";
+            },},{id: "presentations-ai-game",
+          title: 'AI Game',
+          description: "Presented at the National University of Singapore School of Computing Showcase",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/ai-game/";
+            },},{id: "presentations-scale-free-cognition",
+          title: 'scale-free cognition',
+          description: "Hosted and talked at Cortical Labs’ journal club",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/scale-free-cognition/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
