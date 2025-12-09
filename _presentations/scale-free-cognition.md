@@ -14,11 +14,11 @@ redirect_from:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posters/scale-free-cognition.jpeg" title="Badger Vision Team" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/posters/scale-free-cognition.jpeg" title="An image of of of the talk from the perspective of those attending online" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    A screenshot of of those attending online.
+    The talk from the perspective of those attending online.
 </div>
 ---
 
@@ -35,3 +35,11 @@ Through this experience, I deepened my understanding of cognition and its origin
 Cortical Labs, the creator of DishBrain—a device that fuses living brain cells with chips to create machines with biological intelligence—organized the journal club. One of their notable accomplishments is training in vitro neurons to play pong.
 
 Thanks to Peter Klipfel for organizing the journal club, to Melyne Zhou for being an amazing co-host, to Michael Levin for doing incredible work that motivated the talk, and to everyone who discussed their thoughts after the talk.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <object data="/assets/pdf/scale-free-cognition.pdf" type="application/pdf" width="100%" height="600px">
+            <p>Unable to display PDF file. <a href="/assets/pdf/scale-free-cognition.pdf">Download</a> instead.</p>
+        </object>
+    </div>
+</div>

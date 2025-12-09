@@ -18,7 +18,7 @@ redirect_from:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/posters/From-Emergence-to-Intention.png" title="Badger Vision Team" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/posters/From-Emergence-to-Intention.png" title="The poster presented at the NeurIPS Workshop on Optimization for Machine Learning" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
