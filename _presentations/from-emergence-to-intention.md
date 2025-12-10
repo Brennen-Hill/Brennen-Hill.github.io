@@ -2,7 +2,7 @@
 layout: page
 title: "From Emergence to Intention"
 description: Presented at the NeurIPS Workshop on Optimization for Machine Learning
-importance: 1
+importance: 6
 img: assets/img/posters/From-Emergence-to-Intention.png
 category: NeurIPS
 organization: Conference on Neural Information Processing Systems
