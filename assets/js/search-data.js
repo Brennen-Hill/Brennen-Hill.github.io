@@ -92,6 +92,11 @@ ninja.data = [{
           description: "Presented at the NeurIPS Workshop on Embodied World Models",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/world-models-of-tasks/";
+            },},{id: "projects-ai-game",
+          title: 'AI Game',
+          description: "Complex, interactive world with intelligent NPC and entity AI.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-game/";
             },},{id: "projects-badger-vision",
           title: 'Badger Vision',
           description: "Hack Midwest Winner and Best Enterprise Scale Business Solution",
