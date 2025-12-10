@@ -41,7 +41,7 @@ redirect_from:
 
 ### The Paper
 
-The paper on arXiv: [https://arxiv.org/abs/2508.02912](https://arxiv.org/2508.02912)
+The paper on arXiv: [https://arxiv.org/abs/2508.02912](https://arxiv.org/abs/2508.02912)
 
 <object data="https://arxiv.org/pdf/2508.02912" type="application/pdf" width="100%" height="900px">
     <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2508.02912">Download</a> instead.</p>
