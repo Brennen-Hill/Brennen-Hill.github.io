@@ -44,7 +44,7 @@ Please reach out if you are interested in joining the trail.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <object data="ai-game-tutorial.pdf" type="application/pdf" width="100%" height="600px">
+        <object data="/assets/pdf/ai-game-tutorial.pdf" type="application/pdf" width="100%" height="800px">
             <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/ai-game-tutorial.pdf">Download</a> instead.</p>
         </object>
     </div>
