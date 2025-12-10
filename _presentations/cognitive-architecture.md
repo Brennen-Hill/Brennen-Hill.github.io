@@ -2,7 +2,7 @@
 layout: page
 title: "Cognitive Architecture"
 description: Presented at the NeurIPS Workshop on Interpreting Cognition in Deep Learning Models
-importance: 1
+importance: 8
 img: assets/img/posters/Cognitive-Architecture.png
 category: NeurIPS
 related_publications: false

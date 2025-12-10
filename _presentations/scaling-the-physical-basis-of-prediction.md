@@ -2,7 +2,7 @@
 layout: page
 title: "The Physical Basis of Prediction"
 description: Presented at the NeurIPS Workshop on Scaling Environments for Agents
-importance: 1
+importance: 7
 img: assets/img/posters/Scaling-The-Physical-Basis-of-Prediction.png
 category: NeurIPS
 related_publications: false
