@@ -77,8 +77,8 @@ ninja.data = [{
           description: "Hosted and talked at Cortical Labs’ journal club",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/scale-free-cognition/";
-            },},{id: "presentations-the-physical-basis-of-prediction",
-          title: 'The Physical Basis of Prediction',
+            },},{id: "presentations-scaling-the-physical-basis-of-prediction",
+          title: 'Scaling The Physical Basis of Prediction',
           description: "Presented at the NeurIPS Workshop on Scaling Environments for Agents",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/scaling-the-physical-basis-of-prediction/";
