@@ -44,5 +44,5 @@ redirect_from:
 The paper on arXiv: [https://arxiv.org/abs/2509.03771](https://arxiv.org/abs/2509.03771)
 
 <object data="/assets/pdf/co-evolving-complexity.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="/assets/pdf/co-evolving-complexity.pdf">Download</a> instead.</p>
+    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/co-evolving-complexity.pdf">Download</a> instead.</p>
 </object>

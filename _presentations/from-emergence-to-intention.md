@@ -44,5 +44,5 @@ redirect_from:
 The full on OpenReview [https://openreview.net/forum?id=IHZfWKE4yv](https://openreview.net/forum?id=IHZfWKE4yv)
 
 <object data="/assets/pdf/from-emergence-to-intention.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="/assets/pdf/from-emergence-to-intention.pdf">Download</a> instead.</p>
+    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/from-emergence-to-intention.pdf">Download</a> instead.</p>
 </object>

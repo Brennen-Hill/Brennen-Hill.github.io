@@ -44,5 +44,5 @@ redirect_from:
 The paper on arXiv: [https://arxiv.org/abs/2508.02995](https://arxiv.org/abs/2508.02995)
 
 <object data="/assets/pdf/geometry-of-cortical-computation.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="/assets/pdf/geometry-of-cortical-computation.pdf">Download</a> instead.</p>
+    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/geometry-of-cortical-computation.pdf">Download</a> instead.</p>
 </object>

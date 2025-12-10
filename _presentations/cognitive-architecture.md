@@ -44,5 +44,5 @@ redirect_from:
 The full paper: [https://openreview.net/forum?id=4OdHkADJw9](https://openreview.net/forum?id=4OdHkADJw9)
 
 <object data="/assets/pdf/cognitive-architecture.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="/assets/pdf/cognitive-architecture.pdf">Download</a> instead.</p>
+    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/cognitive-architecture.pdf">Download</a> instead.</p>
 </object>

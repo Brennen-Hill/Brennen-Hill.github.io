@@ -44,5 +44,5 @@ redirect_from:
 The paper on arXiv: [https://arxiv.org/abs/2508.02912](https://arxiv.org/abs/2508.02912)
 
 <object data="/assets/pdf/communicating-plans-not-percepts.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="/assets/pdf/communicating-plans-not-percepts.pdf">Download</a> instead.</p>
+    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/communicating-plans-not-percepts.pdf">Download</a> instead.</p>
 </object>
