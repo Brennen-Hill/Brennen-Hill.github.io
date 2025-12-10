@@ -5,6 +5,9 @@ importance: 1
 category: none
 start: May 2025
 organization: Stealth Startup
+redirect_from:
+  - /stealth-startup/
+  - /stealth-startup
 ---
 
 ## R&D at a Stealth-Mode Robotics Startup

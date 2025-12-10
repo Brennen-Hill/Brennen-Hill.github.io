@@ -5,8 +5,9 @@ description: Presented at the NeurIPS Workshop on Optimization for Machine Learn
 importance: 1
 img: assets/img/posters/From-Emergence-to-Intention.png
 category: NeurIPS
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /from-emergence-to-intention/
   - /from-emergence-to-intention

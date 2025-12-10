@@ -5,8 +5,9 @@ description: Presented at Brain-Inspired Dynamics for Engineering Energy-Efficie
 importance: 1
 img: assets/img/posters/Structural-Plasticity-as-Active-Inference.png
 category: BRAID
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /structural-plasticity-as-active-inference/
   - /structural-plasticity-as-active-inference

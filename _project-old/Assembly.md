@@ -10,7 +10,7 @@ related_publications: false
 
 **Affiliation:** Quantum Software Intern (Research Engineer) - HRL Hughes Research Laboratories
 
-**Date:** Summer 2024
+**start:** Summer 2024
 
 ---
 

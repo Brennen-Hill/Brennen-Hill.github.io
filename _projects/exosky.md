@@ -9,6 +9,9 @@ related_publications: false
 end: October 2024
 role: Lead software engineer
 collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
+redirect_from:
+  - /exosky/
+  - /exosky
 ---
 
 <div class="row">

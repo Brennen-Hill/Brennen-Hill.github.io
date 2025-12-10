@@ -5,8 +5,9 @@ description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 4
 img: assets/img/posters/Physical-Basis-of-Prediction.png
 category: NeurIPS
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /physical-basis-of-prediction/
   - /physical-basis-of-prediction

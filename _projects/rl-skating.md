@@ -13,6 +13,9 @@ start: October 2024
 end: December 2024
 role: Researcher
 collaborators: Hanwen Wang, Aswinkumar Ramkumar
+redirect_from:
+  - /rl-skating/
+  - /rl-skating
 ---
 
 ## Abstract

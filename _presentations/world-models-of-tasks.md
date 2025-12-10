@@ -5,8 +5,9 @@ description: Presented at the NeurIPS Workshop on Embodied World Models
 importance: 5
 img: assets/img/posters/World-Models-of-Tasks.png
 category: NeurIPS
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /world-models-of-tasks/
   - /world-models-of-tasks

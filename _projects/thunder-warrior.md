@@ -12,6 +12,9 @@ start: March 2018
 end: April 2022
 role: Lead Developer and Founder
 organization: Thunder Warrior Gaming
+redirect_from:
+  - /thunder-warrior/
+  - /thunder-warrior
 ---
 
 <div class="row">

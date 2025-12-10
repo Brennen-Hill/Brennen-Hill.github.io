@@ -10,6 +10,9 @@ start: June 2023
 end: August 2023
 role: Lead Research Engineer
 organization: Hughes Research Laboratories (HRL)
+redirect_from:
+  - /quantum-circuit/
+  - /quantum-circuit
 ---
 
 <div class="col">

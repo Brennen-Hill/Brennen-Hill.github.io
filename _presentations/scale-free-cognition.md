@@ -5,8 +5,9 @@ description: Hosted and talked at Cortical Labs’ journal club
 importance: 1
 img: assets/img/posters/scale-free-cognition.jpeg
 category: Cortical Labs
+organization: Cortical Labs' Journal Club
 related_publications: false
-date: December, 2025
+start: October 2024
 redirect_from:
   - /scale-free-cognition/
   - /scale-free-cognition

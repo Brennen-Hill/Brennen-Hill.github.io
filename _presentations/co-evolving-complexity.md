@@ -2,11 +2,12 @@
 layout: page
 title: "Co-Evolving Complexity"
 description: Presented at the NeuriPS Workshop on Scaling Environments for Agents
-importance: 1
+importance: 3
 img: assets/img/posters/Co-Evolving-Complexity.png
 category: NeurIPS
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /co-evolving-complexity/
   - /co-evolving-complexity

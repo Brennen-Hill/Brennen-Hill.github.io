@@ -9,6 +9,9 @@ start: May 2025
 role: Lead Research Engineer
 related_publications: false
 organization: Stealth Startup
+redirect_from:
+  - /embodied-ai/
+  - /embodied-ai
 ---
 
 ## Objective

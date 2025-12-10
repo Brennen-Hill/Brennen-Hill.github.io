@@ -10,6 +10,9 @@ start: May 2024
 end: August 2024
 role: Research Engineer
 organization: Hughes Research Laboratories (HRL)
+redirect_from:
+  - /quantum-compiler/
+  - /quantum-compiler
 ---
 
 <div class="row">

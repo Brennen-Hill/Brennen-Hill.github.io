@@ -5,8 +5,9 @@ description: Presented at the NeurIPS Workshop on Interpreting Cognition in Deep
 importance: 8
 img: assets/img/posters/Cognitive-Architecture.png
 category: NeurIPS
+organization: Neural
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /cognitive-architecture/
   - /cognitive-architecture

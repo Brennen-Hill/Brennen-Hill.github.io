@@ -5,8 +5,9 @@ description: Presented at the NeurIPS Workshop on Scaling Environments for Agent
 importance: 7
 img: assets/img/posters/Scaling-The-Physical-Basis-of-Prediction.png
 category: NeurIPS
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /scaling-the-physical-basis-of-prediction/
   - /scaling-the-physical-basis-of-prediction

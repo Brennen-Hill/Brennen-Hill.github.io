@@ -11,6 +11,9 @@ start: September 2024
 end: December 2024
 role: Researcher
 collaborators: Albert Ge, Chapin Pyne, Arnav Sharma, Karl Vachuska
+redirect_from:
+  - /vision-representations/
+  - /vision-representations
 ---
 
 ## Abstract

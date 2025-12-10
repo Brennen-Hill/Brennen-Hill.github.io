@@ -9,6 +9,9 @@ related_publications: false
 start: February 2024
 end: March 2024
 role: Lead Researcher
+redirect_from:
+  - /llm-training/
+  - /llm-training
 ---
 
 ## 1. Abstract

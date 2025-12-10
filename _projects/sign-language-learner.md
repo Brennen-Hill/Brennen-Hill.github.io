@@ -11,7 +11,9 @@ end: May 2024
 role: Lead Researcher
 related_publications: false
 collaborators: Joseph Mostika, Mehul Maheshwari
-
+redirect_from:
+  - /sign-language-learner/
+  - /sign-language-learner
 ---
 
 ### Abstract

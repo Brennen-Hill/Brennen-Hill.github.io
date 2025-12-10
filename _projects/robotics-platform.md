@@ -9,6 +9,9 @@ related_publications: false
 start: May 2025
 role: Lead Research Engineer
 organization: Stealth Startup
+redirect_from:
+  - /robotics-platform/
+  - /robotics-platform
 ---
 
 ## Objective

@@ -2,11 +2,12 @@
 layout: page
 title: "The Geometry of Cortical Computation"
 description: Presented at the NeurIPS Workshop on Symmetry and Geometry in Neural Representations
-importance: 1
+importance: 2
 img: assets/img/posters/Geometry-of-Cortical-Computation.png
 category: NeurIPS
+organization: Conference on Neural Information Processing Systems
 related_publications: false
-date: December, 2025
+start: December 2025
 redirect_from:
   - /geometry-of-cortical-computation/
   - /geometry-of-cortical-computation
