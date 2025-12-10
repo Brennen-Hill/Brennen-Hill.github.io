@@ -43,18 +43,27 @@ redirect_from:
 
 The paper on arXiv: [https://arxiv.org/abs/2508.02995](https://arxiv.org/abs/2508.02995)
 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <object data="https://arxiv.org/pdf/2508.02995" type="application/pdf" width="100%" height="600px">
+            <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2508.02995">Download</a> instead.</p>
+        </object>
+    </div>
+</div>
+
+
 <div style="text-align: center;">
-    <object data="{{ https://arxiv.org/abs/2508.02995 }}" type="application/pdf" width="100%" height="500px">
-    <p>Unable to display PDF file. <a href="{{ https://arxiv.org/abs/2508.02995 }}">Download</a> instead.</p>
+    <object data="https://arxiv.org/pdf/2508.02995" type="application/pdf" width="100%" height="500px">
+    <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2508.02995">Download</a> instead.</p>
     </object>
 </div>
 
-<object data="{{ https://arxiv.org/abs/2508.02995 }}" type="application/pdf" width="100%" height="500px">
-    <p>Unable to display PDF file. <a href="{{ https://arxiv.org/abs/2508.02995 }}">Download</a> instead.</p>
+<object data="https://arxiv.org/pdf/2508.02995" type="application/pdf" width="100%" height="500px">
+    <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2508.02995">Download</a> instead.</p>
 </object>
 
 
-<object data="{{ https://arxiv.org/abs/2508.02995 }}" type="application/pdf" width="100%" height="500px">
+<object data="https://arxiv.org/pdf/2508.02995" type="application/pdf" width="100%" height="500px">
 </object>
 
-<p>Unable to display PDF file. <a href="{{ https://arxiv.org/abs/2508.02995 }}">Download</a> instead.</p>
+<p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2508.02995">Download</a> instead.</p>
