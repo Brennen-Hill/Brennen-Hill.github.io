@@ -43,6 +43,6 @@ redirect_from:
 
 The paper on arXiv: [https://arxiv.org/abs/2509.04633](https://arxiv.org/abs/2509.04633)
 
-<object data="physical-basis-of-prediction.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="physical-basis-of-prediction.pdf">Download</a> instead.</p>
+<object data="/assets/pdf/physical-basis-of-prediction.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="/assets/pdf/physical-basis-of-prediction.pdf">Download</a> instead.</p>
 </object>

@@ -43,6 +43,6 @@ redirect_from:
 
 The paper on arXiv: [https://arxiv.org/abs/2511.02241](https://arxiv.org/abs/2511.02241)
 
-<object data="structural-plasticity-as-active-inference.pdf" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="structural-plasticity-as-active-inference.pdf">Download</a> instead.</p>
+<object data="/assets/pdf/structural-plasticity-as-active-inference.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="/assets/pdf/structural-plasticity-as-active-inference.pdf">Download</a> instead.</p>
 </object>
