@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "The Physical Basis of Prediction"
+title: "Scaling The Physical Basis of Prediction"
 description: Presented at the NeurIPS Workshop on Scaling Environments for Agents
 importance: 7
 img: assets/img/posters/Scaling-The-Physical-Basis-of-Prediction.png
@@ -43,6 +43,6 @@ redirect_from:
 
 The full paper: [https://openreview.net/forum?id=4fyL61j2fL](https://openreview.net/forum?id=4fyL61j2fL)
 
-<object data="https://openreview.net/pdf?id=4fyL61j2fL" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="https://openreview.net/pdf?id=4fyL61j2fL">Download</a> instead.</p>
+<object data="scaling-the-physical-basis-of-prediction" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="scaling-the-physical-basis-of-prediction">Download</a> instead.</p>
 </object>

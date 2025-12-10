@@ -39,8 +39,8 @@ Thanks to Peter Klipfel for organizing the journal club, to Melyne Zhou for bein
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <object data="/assets/pdf/scale-free-cognition.pdf" type="application/pdf" width="100%" height="600px">
-            <p>Unable to display PDF file. <a href="/assets/pdf/scale-free-cognition.pdf">Download</a> instead.</p>
+        <object data="scale-free-cognition.pdf" type="application/pdf" width="100%" height="600px">
+            <p>Unable to display PDF file. <a href="scale-free-cognition.pdf">Download</a> instead.</p>
         </object>
     </div>
 </div>

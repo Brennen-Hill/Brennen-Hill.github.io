@@ -43,6 +43,6 @@ redirect_from:
 
 The paper on arXiv: [https://arxiv.org/abs/2508.02995](https://arxiv.org/abs/2508.02995)
 
-<object data="https://arxiv.org/pdf/2508.02995" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2508.02995">Download</a> instead.</p>
+<object data="geometry-of-cortical-computation.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="geometry-of-cortical-computation.pdf">Download</a> instead.</p>
 </object>

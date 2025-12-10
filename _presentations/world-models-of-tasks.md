@@ -43,6 +43,6 @@ redirect_from:
 
 The paper on arXiv: [https://arxiv.org/abs/2509.04731](https://arxiv.org/abs/2509.04731)
 
-<object data="https://arxiv.org/pdf/2509.04731" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2509.04731">Download</a> instead.</p>
+<object data="generative-world-models-of-tasks.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="generative-world-models-of-tasks.pdf">Download</a> instead.</p>
 </object>

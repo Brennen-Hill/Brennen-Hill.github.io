@@ -43,6 +43,6 @@ redirect_from:
 
 The paper on arXiv: [https://arxiv.org/abs/2509.03771](https://arxiv.org/abs/2509.03771)
 
-<object data="https://arxiv.org/pdf/2509.03771" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file. <a href="https://arxiv.org/pdf/2509.03771">Download</a> instead.</p>
+<object data="co-evolving-complexity.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="co-evolving-complexity.pdf">Download</a> instead.</p>
 </object>
