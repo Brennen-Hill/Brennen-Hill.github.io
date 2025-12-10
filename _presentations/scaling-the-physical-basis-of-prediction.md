@@ -43,6 +43,6 @@ redirect_from:
 
 The full paper: [https://openreview.net/forum?id=4fyL61j2fL](https://openreview.net/forum?id=4fyL61j2fL)
 
-<object data="/assets/pdf/scaling-the-physical-basis-of-prediction" type="application/pdf" width="100%" height="900px">
-    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/scaling-the-physical-basis-of-prediction">Download</a> instead.</p>
+<object data="/assets/pdf/scaling-the-physical-basis-of-prediction.pdf" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file or mobile device in use. <a href="/assets/pdf/scaling-the-physical-basis-of-prediction.pdf">Download</a> instead.</p>
 </object>
