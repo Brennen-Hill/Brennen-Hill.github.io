@@ -14,8 +14,8 @@ role: Lead Developer and Founder
 organization: Thunder Warrior Gaming
 ---
 
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
+<div class="row">
+    <div class="embed-responsive embed-responsive-16by9 rounded z-depth-1">
         {% include video.liquid path="assets/video/gameVideo.mp4" class="embed-responsive-item video-universal" controls=true autoplay=true %}
     </div>
 </div>

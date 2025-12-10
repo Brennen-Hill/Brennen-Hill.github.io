@@ -30,6 +30,11 @@ collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 </div>
 
 
+embed-responsive embed-responsive-16by9 rounded z-depth-1
+
+embed-responsive-item video-universal
+
+
 **Final Project Link:** [https://shoebills-in-space.web.app/](https://shoebills-in-space.web.app/)
 
 <br>
@@ -38,7 +43,7 @@ collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 
 Our project has been awarded an Honorable Mention at NASA Space Apps!
 
-Out of 93,520 participants and 15,444 teams worldwide, only 19 projects earned this recognition from NASA Space Apps’ global judges for their ingenuity and creativity. We’re thrilled that our project stood out in such an incredible pool of talent!
+Out of 93,520 participants and 15,444 teams worldwide, only 19 projects, the top 0.02%, earned this recognition from NASA Space Apps’ global judges for their ingenuity and creativity. We’re thrilled that our project stood out in such an incredible pool of talent!
 
 ## Winner at Space Apps Chicago Hackathon
 
