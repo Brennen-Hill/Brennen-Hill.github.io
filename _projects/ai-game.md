@@ -1,17 +1,13 @@
 ---
 layout: page
 title: "AI Game"
-description: Presented at the National University of Singapore School of Computing Showcase
-importance: 1
+description: Complex, interactive world with intelligent NPC and entity AI.
 img: assets/img/posters/ai-game.png
-category: National University of Singapore
-organization: National University of Singapore School of Computing Showcase
+importance: 2
+category: game developement
 related_publications: false
-start: January 2025 - present (presented May 2026)
-end: ""
-redirect_from:
-  - /ai-game/
-  - /ai-game
+start: January 2025
+role: Lead Developer
 ---
 
 <div class="row">
@@ -20,11 +16,9 @@ redirect_from:
     </div>
 </div>
 
-Selected to present a self-developed 3D videogame to an audience of over 100 students and faculty.
+### Abstarct
 
 The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resources, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense.
-
-Please reach out if you are interested in joining the trail.
 
 ---
 

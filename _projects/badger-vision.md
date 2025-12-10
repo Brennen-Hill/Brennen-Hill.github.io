@@ -11,7 +11,6 @@ collaborators: Max Maeder, Jeremy Kintana, Rahul Hathwar, Utkarsh Sharma
 redirect_from:
   - /badger-vision/
   - /badger-vision
-
 ---
 
 <div class="row">

@@ -32,11 +32,9 @@ redirect_from:
     Demo: A brief overview and then a constellation drawn from Earth changes shape when viewed from a distant exoplanet. 
 </div>
 
-
 embed-responsive embed-responsive-16by9 rounded z-depth-1
 
 embed-responsive-item video-universal
-
 
 **Final Project Link:** [https://shoebills-in-space.web.app/](https://shoebills-in-space.web.app/)
 

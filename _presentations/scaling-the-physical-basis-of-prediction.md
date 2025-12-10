@@ -42,3 +42,7 @@ redirect_from:
 ### The paper
 
 The full paper: [https://openreview.net/forum?id=4fyL61j2fL](https://openreview.net/forum?id=4fyL61j2fL)
+
+<object data="https://openreview.net/pdf?id=4fyL61j2fL" type="application/pdf" width="100%" height="900px">
+    <p>Unable to display PDF file. <a href="https://openreview.net/pdf?id=4fyL61j2fL">Download</a> instead.</p>
+</object>
