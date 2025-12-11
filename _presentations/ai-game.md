@@ -49,5 +49,3 @@ Please reach out if you are interested in joining the trail.
         </object>
     </div>
 </div>
-
----
