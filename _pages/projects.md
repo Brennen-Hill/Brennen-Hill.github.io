@@ -8,8 +8,8 @@ display_categories: [research, research engineering, game developement, hackatho
 horizontal: false
 ---
 
-<div class="post-description mb-3">
-My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications">publications page</a>. This page is dedicated to my other projects.
+<div class="post-description mb-3" markdown="1">
+My peer-reviewed publications, which represent large-scale research projects, are detailed on the [publications page](/publications). This page is dedicated to my other projects.
 </div>
 <!-- pages/projects.md -->
 <div class="projects">
