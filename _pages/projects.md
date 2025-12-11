@@ -9,10 +9,7 @@ horizontal: false
 ---
 
 <div class="post-description mb-3">
-My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications" style="color: var(--global-theme-color); text-decoration: underline;">publications page</a>. This page is dedicated to my other projects.
-</div>
-<div class="post-description mb-3">
-My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications" style="color: var(--global-theme-color);">publications page</a>. This page is dedicated to my other projects.
+My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications">publications page</a>. This page is dedicated to my other projects.
 </div>
 <!-- pages/projects.md -->
 <div class="projects">
