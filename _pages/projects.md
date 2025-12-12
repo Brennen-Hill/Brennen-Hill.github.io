@@ -8,9 +8,22 @@ display_categories: [research, research engineering, game developement, hackatho
 horizontal: false
 ---
 
+<style>
+  /* 1. Force the link to be the theme color (not grey) */
+  .post-description a {
+    color: var(--global-theme-color) !important;
+  }
+  /* 2. Add underline ONLY when hovering */
+  .post-description a:hover {
+    color: var(--global-theme-color) !important;
+    text-decoration: underline !important;
+  }
+</style>
+
 <div class="post-description mb-3">
-My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications">publications page</a>. This page is dedicated to my other projects.
+  My peer-reviewed publications, which represent large-scale research projects, are detailed on the <a href="/publications">publications page</a>. This page is dedicated to my other projects.
 </div>
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
