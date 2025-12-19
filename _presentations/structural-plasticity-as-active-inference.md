@@ -13,6 +13,8 @@ redirect_from:
   - /structural-plasticity-as-active-inference
 ---
 
+### The Invitation
+
 After contacting the workshop organizer, Dr. Dmitri Strukov (UCSB), regarding my research interests, I was invited to attend the NSF BRAID Workshop and encouraged to submit this work. My paper was accepted for a presentation.
 
 This was a highly selective event. I was one of only two undergraduates in attendance, presenting alongside a cohort comprised primarily of Principal Investigators.
