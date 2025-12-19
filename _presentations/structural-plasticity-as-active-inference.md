@@ -4,7 +4,7 @@ title: "Structural Plasticity as Active Inference"
 description: Presented at NSF Workshop Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence
 importance: 1
 img: assets/img/posters/Structural-Plasticity-as-Active-Inference.png
-category: BRAID
+category: NSF BRAID
 organization: National Science Foundation (NSF) Workshop
 related_publications: false
 start: December 2025
