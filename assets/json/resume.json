@@ -32,7 +32,7 @@
       {
         "network": "Website",
         "username": "BrennenHill.com",
-        "url": "https://brennenhill.com"
+        "url": "https://BrennenHill.com"
       }
     ]
   },
@@ -150,7 +150,7 @@
       "position": "Software Engineer (Research Engineer)",
       "startDate": "2025-05",
       "endDate": "Present",
-      "url": "https://brennenhill.com/projects/stealth-startup",
+      "url": "https://BrennenHill.com/stealth-startup",
       "highlights": [
         "Spearheaded the complete research and development lifecycle for a novel artificial intelligence system, taking the project from an ambiguous high-level goal to a fully deployed, production-ready system.",
         "Devised, prototyped, and implemented a custom, hardware-aware algorithm that significantly outperformed SOTA approaches by over 100x in accuracy on the system's hardware."
@@ -162,7 +162,7 @@
       "position": "Quantum Software Intern (Research Engineer)",
       "startDate": "2024-05",
       "endDate": "2024-08",
-      "url": "https://brennenhill.com/projects/quantum-compiler",
+      "url": "https://BrennenHill.com/quantum-compiler",
       "highlights": [
         "Architected a multi-pass compiler in Common Lisp to generate optimized binary directly for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for direct FPGA execution to maximize performance and control flexibility.",
         "Designed and implemented a custom assembly language to bridge high-level experimental logic with the hardware instruction set, enabling advanced compiler optimizations, automatic resource allocation, and precise picosecond-level timing calculations.",
@@ -175,7 +175,7 @@
       "position": "Quantum Software Intern (Research Engineer)",
       "startDate": "2023-06",
       "endDate": "2023-08",
-      "url": "https://brennenhill.com/projects/quantum-circuit",
+      "url": "https://BrennenHill.com/quantum-circuit",
       "highlights": [
         "Engineered a production-ready implementation of an exact pattern matching algorithm within the Quilc quantum compiler, translating a novel theoretical method into a high-impact optimization tool.",
         "Reduced quantum circuit depth by up to 37%, shortening execution time on quantum hardware, directly enhancing algorithmic fidelity by mitigating qubit decoherence.",
@@ -205,7 +205,7 @@
     },
     {
       "name": "Structural Plasticity as Active Inference: A Biologically-Inspired Architecture for Homeostatic Control",
-      "publisher": "In Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
+      "publisher": "In National Science Foundation (NSF) Workshop on Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2511.02241",
       "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
@@ -217,7 +217,7 @@
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
-      "summary": "Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline.",
+      "summary": "Invited to attend, then submitted the paper. Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
       "authors": ["Brennen A. Hill"],
       "order": 4
     }
@@ -266,7 +266,7 @@
       "description": "Lead Researcher",
       "startDate": "2024-09",
       "endDate": "2024-12",
-      "url": "https://brennenhill.com/projects/vision-representations",
+      "url": "https://BrennenHill.com/vision-representations",
       "highlights": [
         "Investigated Representation Fine-Tuning, a parameter-efficient fine-tuning method, on a vision-language model (nanoLLaVA) for a spatial reasoning task.",
         "Co-authored a research paper demonstrating that ReFT achieved accuracy comparable to LoRA (65.7% vs. 66.0%) while using nearly 10x fewer trainable parameters (0.019% of the model)."
@@ -277,7 +277,7 @@
       "description": "Researcher",
       "startDate": "2024-09",
       "endDate": "2024-12",
-      "url": "https://brennenhill.com/projects/rl-skating",
+      "url": "https://BrennenHill.com/rl-skating",
       "highlights": [
         "Co-authored a research paper on training a Unitree Go1 quadruped robot with passive wheels to skate using reinforcement learning in the Isaac Gym simulator.",
         "Developed an RL policy that resulted in emergent complex behaviors, including automatic gait switching from a stable diagonal gait at low speeds to a dynamic galloping gait at high speeds (3 m/s)."
@@ -301,6 +301,7 @@
       "startDate": "2025-01",
       "endDate": "Present",
       "name": "National University of Singapore School of Computing Showcase",
+      "url": "BrennenHill.com/ai-game",
       "highlights": [
         "Selected to present a self-developed 3D videogame to an audience of over 100 students and faculty.",
         "The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resources, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense."
@@ -317,7 +318,7 @@
       "startDate": "2024-10",
       "endDate": "2024-10",
       "name": "NASA International Space Apps Challenge 2024",
-      "url": "https://brennenhill.com/projects/exosky",
+      "url": "https://BrennenHill.com/exosky",
       "highlights": [
         "Received a global Honorable Mention, only awarded to 19 of 93,520 (0.02%) global participants.",
         "Processed large-scale NASA/ESA astronomical data and implemented the 3D visualization, rendering, and user interface.",
@@ -329,7 +330,7 @@
       "startDate": "2024-10",
       "endDate": "2024-10",
       "name": "Hack Midwest 2024",
-      "url": "https://brennenhill.com/projects/badger-vision",
+      "url": "https://BrennenHill.com/badger-vision",
       "highlights": [
         "Won (of over 300 developers), awarded $2,500, and noted for Best Enterprise-Scale Business Solution.",
         "Designed and built Badger Vision, an AI-powered assistive tool to help individuals with prosopagnosia (face blindness) by providing real-time audio cues for face identification and emotion recognition.",
@@ -372,6 +373,7 @@
       "position": "Journal Club Host and speaker",
       "startDate": "2024-10",
       "endDate": "2024-10",
+      "url":"BrennenHill.com/scale-free-cognition",
       "highlights": [
         "Presented a critical analysis on the origins of intelligence, synthesizing concepts of scale-free cognition and developmental bioelectricity, and referencing work by Dr. Levin to discuss how higher-level agency evolves from the homeostatic, problem-solving capabilities of cellular collectives.",
         "Facilitated a post-talk discussion with researchers on the future of synthetic biological intelligence and the applications of the mechanisms presented.",
@@ -436,7 +438,7 @@
       "position": "Lead Developer and Founder",
       "startDate": "2018-03",
       "endDate": "2022-04",
-      "url": "https://brennenhill.com/projects/thunder-warrior/",
+      "url": "https://BrennenHill.com/thunder-warrior/",
       "highlights": [
         "Designed, built, self-published, and marketed the video game Thunder Warrior: Genesis.",
         "Achieved net profit.",
@@ -483,7 +485,7 @@
     },
     {
       "language": "Spanish",
-      "fluency": "Proficient"
+      "fluency": "Fluent Written, Advanced Oral"
     }
   ]
 }
