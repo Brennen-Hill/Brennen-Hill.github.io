@@ -7,7 +7,7 @@ img: assets/img/posters/Cognitive-Architecture.png
 category: NeurIPS
 organization: Neural
 related_publications: false
-start: December 2025
+end: December 2025
 redirect_from:
   - /cognitive-architecture/
   - /cognitive-architecture

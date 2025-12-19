@@ -7,8 +7,7 @@ img: assets/img/posters/ai-game.png
 category: National University of Singapore
 organization: National University of Singapore School of Computing Showcase
 related_publications: false
-start: January 2025 - present (presented May 2026)
-end: ""
+end: January 2025 - present (presented May 2026)
 redirect_from:
   - /ai-game/
   - /ai-game

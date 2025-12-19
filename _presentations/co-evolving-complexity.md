@@ -7,7 +7,7 @@ img: assets/img/posters/Co-Evolving-Complexity.png
 category: NeurIPS
 organization: Conference on Neural Information Processing Systems
 related_publications: false
-start: December 2025
+end: December 2025
 redirect_from:
   - /co-evolving-complexity/
   - /co-evolving-complexity

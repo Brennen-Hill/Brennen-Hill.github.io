@@ -208,7 +208,7 @@
       "publisher": "In National Science Foundation (NSF) Workshop on Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2511.02241",
-      "summary": "Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
+      "summary": "One of two undergraduates selected to present alongside Principal Investigators. Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating processing units to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
       "authors": ["Brennen A. Hill"],
       "order": 3
     },

@@ -7,7 +7,7 @@ img: assets/img/posters/scale-free-cognition.jpeg
 category: Cortical Labs
 organization: Cortical Labs' Journal Club
 related_publications: false
-start: October 2024
+end: October 2024
 redirect_from:
   - /scale-free-cognition/
   - /scale-free-cognition

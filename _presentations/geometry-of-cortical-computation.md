@@ -7,7 +7,7 @@ img: assets/img/posters/Geometry-of-Cortical-Computation.png
 category: NeurIPS
 organization: Conference on Neural Information Processing Systems
 related_publications: false
-start: December 2025
+end: December 2025
 redirect_from:
   - /geometry-of-cortical-computation/
   - /geometry-of-cortical-computation

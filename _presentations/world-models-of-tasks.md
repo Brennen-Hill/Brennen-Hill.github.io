@@ -7,7 +7,7 @@ img: assets/img/posters/World-Models-of-Tasks.png
 category: NeurIPS
 organization: Conference on Neural Information Processing Systems
 related_publications: false
-start: December 2025
+end: December 2025
 redirect_from:
   - /world-models-of-tasks/
   - /world-models-of-tasks

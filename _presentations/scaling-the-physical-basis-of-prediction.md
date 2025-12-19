@@ -7,7 +7,7 @@ img: assets/img/posters/Scaling-The-Physical-Basis-of-Prediction.png
 category: NeurIPS
 organization: Conference on Neural Information Processing Systems
 related_publications: false
-start: December 2025
+end: December 2025
 redirect_from:
   - /scaling-the-physical-basis-of-prediction/
   - /scaling-the-physical-basis-of-prediction
