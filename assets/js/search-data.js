@@ -84,7 +84,7 @@ ninja.data = [{
               window.location.href = "/presentations/scaling-the-physical-basis-of-prediction/";
             },},{id: "presentations-structural-plasticity-as-active-inference",
           title: 'Structural Plasticity as Active Inference',
-          description: "Presented at NSF Workshop Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
+          description: "Presented at NSF Workshop on Brain-Inspired Dynamics for Engineering Energy-Efficient Circuits and Artificial Intelligence",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/structural-plasticity-as-active-inference/";
             },},{id: "presentations-generative-world-models-of-tasks",
