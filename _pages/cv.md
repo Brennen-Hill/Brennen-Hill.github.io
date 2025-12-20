@@ -8,4 +8,3 @@ cv_pdf: https://BrennenHill.com/cv-brennen-hill.pdf # you can also use external 
 toc:
   sidebar: left
 ---
- 

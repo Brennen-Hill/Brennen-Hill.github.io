@@ -2,7 +2,6 @@
 permalink: /robots.txt
 ---
 User-agent: *
-Disallow: /SOP-
-Disallow: /assets/pdf/SOP-
+Disallow: /sop-
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
