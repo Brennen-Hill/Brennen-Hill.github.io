@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /SOP-
-Disallow: /assets/pdf/SOP-
+Disallow: /sop-
 
 Sitemap: https://Brennen-Hill.github.io/sitemap.xml
