@@ -1,0 +1,42 @@
+import os
+
+# --- CONFIGURATION ---
+# 1. Where the actual PDFs are stored locally
+pdf_source_dir = 'assets/pdf/sop'
+
+# 2. Where the PDFs live on the web (The 'redirect_to' target)
+#    Note: Must match the folder structure above
+web_path_prefix = '/assets/pdf/sop/'
+
+# 3. Where to save the markdown redirect stubs
+output_dir = 'redirects'
+# ---------------------
+
+# Ensure output directory exists
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# Scan and Generate
+files_processed = 0
+
+# Check if the directory exists to avoid errors
+if os.path.exists(pdf_source_dir):
+    for filename in os.listdir(pdf_source_dir):
+            clean_name = os.path.splitext(filename)[0]            
+            content = f"""---
+layout: null
+permalink: /{clean_name}.pdf
+redirect_to: {web_path_prefix}{filename}
+sitemap: false
+---
+"""
+            # Write the file
+            with open(f"{output_dir}/{clean_name}.md", "w") as f:
+                f.write(content)
+            
+            print(f"Generated: MyDomain.com/{clean_name} -> {web_path_prefix}{filename}")
+            files_processed += 1
+else:
+    print(f"Error: Directory '{pdf_source_dir}' not found.")
+
+print(f"Done! Created {files_processed} redirects.")
