@@ -4,7 +4,8 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 5
-cv_pdf: BrennenHill.com/Brennen-Hill-CV.pdf # you can also use external links here
+cv_pdf: https://BrennenHill.com/cv-brennen-hill.pdf # you can also use external links here
 toc:
   sidebar: left
 ---
+ 
