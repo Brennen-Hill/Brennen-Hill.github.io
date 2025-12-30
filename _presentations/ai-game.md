@@ -19,6 +19,8 @@ redirect_from:
     </div>
 </div>
 
+### Presentation
+
 Selected to present a self-developed 3D videogame to an audience of over 100 students and faculty.
 
 The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resources, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense.
