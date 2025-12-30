@@ -20,6 +20,14 @@ role: Lead Developer
 
 The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resources, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense.
 
+Please reach out if you are interested in joining the trail.
+
+---
+
+### Presentation
+
+Selected to present this self-developed 3D videogame to an audience of over 100 students and faculty at the National University of Singapore's School of Computing Showcase.
+
 ---
 
 ### AI Mechanics from Early Development
@@ -32,6 +40,7 @@ The game featured AI-driven monster agents that used complex pathfinding algorit
 <div class="caption">
     A talk introduing AI mechanics from early Development.
 </div>
+
 ---
 
 ### The Game Tutorial
