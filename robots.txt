@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /sop-
+Disallow: /proposal-
+Disallow: /statement-
+
 
 Sitemap: https://Brennen-Hill.github.io/sitemap.xml
