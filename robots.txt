@@ -3,5 +3,8 @@ permalink: /robots.txt
 ---
 User-agent: *
 Disallow: /sop-
+Disallow: /proposal-
+Disallow: /statement-
+
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
