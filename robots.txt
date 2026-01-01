@@ -2,6 +2,6 @@ User-agent: *
 Disallow: /sop-
 Disallow: /proposal-
 Disallow: /statement-
-
+Disallow: /statements-
 
 Sitemap: https://Brennen-Hill.github.io/sitemap.xml
