@@ -5,6 +5,6 @@ User-agent: *
 Disallow: /sop-
 Disallow: /proposal-
 Disallow: /statement-
-
+Disallow: /statements-
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
