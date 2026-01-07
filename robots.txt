@@ -6,5 +6,6 @@ Disallow: /sop-
 Disallow: /proposal-
 Disallow: /statement-
 Disallow: /statements-
+Disallow: /sussex-
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
