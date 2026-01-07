@@ -3,5 +3,6 @@ Disallow: /sop-
 Disallow: /proposal-
 Disallow: /statement-
 Disallow: /statements-
+Disallow: /sussex-
 
 Sitemap: https://Brennen-Hill.github.io/sitemap.xml
