@@ -38,6 +38,17 @@
   },
   "education": [
     {
+      "institution": "University of Southern California (USC)",
+      "location": "Los Angeles, CA",
+      "studyType": "Ph.D. in Computer Engineering",
+      "endDate": "2031-05",
+      "courses": [
+        "Advisor: Dr. Priyadarshini (Priya) Panda, Intelligent Computing Lab.",
+        "Research Focus: Neuroscience-inspired machine learning.",
+        "Honors: Viterbi School of Engineering & Graduate School Fellowship."
+      ]
+    },
+    {
       "institution": "University of Wisconsin-Madison",
       "location": "Madison, WI",
       "studyType": "Bachelor of Science in Computer Science",
@@ -46,10 +57,10 @@
       "score": "3.79/4.0",
       "courses": [
         "GPA: 3.79/4.0",
-        "Honors: Letters & Science Dean's List, Honors in Computer Science Program, Letters & Science Honors Program",
-        "Graduate AI Coursework: Foundation Models, Learning-Based Image Synthesis, Advanced Robotics, Advanced Reinforcement Learning, Advanced Seminar (audit), Theory of Multi-agent Machine Learning, Mathematical Foundations of ML (upcoming).",
+        "Honors: Letters & Science Dean's List, Honors in Computer Science Program, Letters & Science Honors Program, Computer Science Department Interview & Feature.",
+        "Graduate AI Coursework: Foundation Models, Learning-Based Image Synthesis, Advanced Robotics, Advanced Reinforcement Learning, Advanced Seminar (audit), Theory of Multi-agent ML.",
         "AI Coursework: Directed Study on LLMs with Dr. Sala, Game AI, Artificial Neural Networks, Artificial Intelligence, Game Theory & Learning.",
-        "Neuro Coursework: Molecular & Cellular Mechanisms of Memory, Neurobiology, Computational Neuroscience (upcoming), Nanotechnology in Neuroscience (upcoming)."
+        "Neuro Coursework: Molecular & Cellular Mechanisms of Memory, Neurobiology, Computational Neuroscience."
       ]
     },
     {
@@ -63,12 +74,63 @@
         "Awarded a merit-based placement through a highly competitive, university-wide application process.",
         "Graduate AI Coursework: Neural Networks & Deep Learning II (audit).",
         "Graduate Neuro Coursework: Frontiers in Neurotechnology (audit), Behavioral & Cognitive Neuroscience (audit).",
-        "AI Coursework: AI Planning & Decision Making, Mind & Machine.",
-        "Neuro/Bio Engineering Coursework: Bioinformatics, Organoid Engineering (audit), Mind & Machine."
+        "AI Coursework: AI Planning & Decision Making, Mind & Machine (both).",
+        "Neuro/Bio Engineering Coursework: Mind & Machine, Organoid Engineering (audit), Bioinformatics."
       ]
     }
   ],
   "research experience": [
+    {
+      "name": "Wisconsin Neuromorphic Computing and NeuroAI Lab",
+      "location": "Madison, WI",
+      "position": "Founding Director & Research Lead",
+      "url": "https://neuromorphic.cs.wisc.edu/people",
+      "startDate": "2024-06",
+      "endDate": "Present",
+      "highlights": [
+        "Founded and direct to explore the intersection of neuroscience and artificial intelligence.",
+        "Secured formal funding, dedicated space, support from Dr. Akhilesh Jaiswal as advisor, partnership with NeuroAI startup FinalSpark, and administrative support from UW-Madison.",
+        "Lectured on neuroAI (e.g. STDP) to audiences of over 100 (including graduate students and professionals) and organized biweekly workshops.",
+        "Mentoring 15 researchers from initial project proposals to research papers and advised 100.",
+        "Publications from this research: [2], [5], [3]."
+      ]
+    },
+    {
+      "name": "Dr. Sala's Sprocket Lab",
+      "location": "Madison, WI",
+      "position": "Foundation Models Researcher",
+      "startDate": "2024-09",
+      "endDate": "Present",
+      "highlights": [
+        "Researching and implementing novel methods for editing representations within large language models including coarse-to-fine pipelines.",
+        "Worked with big data, GPU clusters, and high throughput systems.",
+        "Publications from this research: [7], [8]."
+      ]
+    },
+    {
+      "name": "Dr. Hanna's Badger RL Lab",
+      "location": "Madison, WI",
+      "position": "Reinforcement Learning Researcher",
+      "startDate": "2024-05",
+      "endDate": "Present",
+      "highlights": [
+        "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
+        "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
+        "Publications from this research: [1] (in collaboration with Dr. Berland's Lab), [6]."
+      ]
+    },
+    {
+      "name": "Dr. Berland's Complex Play Lab",
+      "location": "Madison, WI",
+      "position": "Reinforcement Learning Researcher",
+      "startDate": "2024-04",
+      "endDate": "Present",
+      "highlights": [
+        "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments incorporating world models.",
+        "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
+        "Publications from this research: [1] (in collaboration with Dr. Hanna's Lab), [4]."
+      ]
+    },
     {
       "name": "Dr. Kumar-Singh (Tufts University, Neuroscience)",
       "location": "Boston, MA (Remote)",
@@ -90,60 +152,9 @@
         "Invited to mentorship from Dr. Levin to extend \"Structural Plasticity as Active Inference\" research [3].",
         "Designing embodied agents where the computational cells are the device and investigating model robustness to damage & topological changes."
       ]
-    },
-    {
-      "name": "Wisconsin Neuromorphic Computing and NeuroAI Lab",
-      "location": "Madison, WI",
-      "position": "Founding Director & Research Lead",
-      "url": "https://neuromorphic.cs.wisc.edu/people",
-      "startDate": "2024-06",
-      "endDate": "Present",
-      "highlights": [
-        "Established and direct a university-sanctioned entity to explore the intersection of neuroscience and artificial intelligence.",
-        "Secured formal funding, dedicated space, support from Dr. Akhilesh Jaiswal as advisor, partnership with NeuroAI startup FinalSpark, and administrative support from UW-Madison.",
-        "Delivered lectures on neuroAI (e.g., STDP) to audiences of over 100 including graduate students and professionals.",
-        "Mentoring 15 researchers from initial project proposals to research papers and advised 100.",
-        "Publications from this research: [2], [5], [3]"
-      ]
-    },
-    {
-      "name": "Dr. Sala's Sprocket Lab",
-      "location": "Madison, WI",
-      "position": "Foundation Models Researcher",
-      "startDate": "2024-09",
-      "endDate": "Present",
-      "highlights": [
-        "Researching and implementing novel methods for editing representations within large language models including coarse-to-fine pipelines.",
-        "Worked with big data, GPU clusters, and high throughput systems.",
-        "Publications from this research: [7], [8]"
-      ]
-    },
-    {
-      "name": "Dr. Hanna's Badger RL Lab",
-      "location": "Madison, WI",
-      "position": "Reinforcement Learning Researcher",
-      "startDate": "2024-05",
-      "endDate": "Present",
-      "highlights": [
-        "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
-        "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
-        "Publications from this research: [1] (in collaboration with Dr. Berland's Lab), [6]"
-      ]
-    },
-    {
-      "name": "Dr. Berland's Complex Play Lab",
-      "location": "Madison, WI",
-      "position": "Reinforcement Learning Researcher",
-      "startDate": "2024-04",
-      "endDate": "Present",
-      "highlights": [
-        "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments incorporating world models.",
-        "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
-        "Publications from this research: [1] (in collaboration with Dr. Hanna's Lab), [4]"
-      ]
     }
   ],
-  "research engineer experience": [
+  "industry research engineer experience": [
     {
       "name": "Stealth Mode Startup",
       "location": "Boston, MA",
@@ -164,7 +175,7 @@
       "endDate": "2024-08",
       "url": "https://BrennenHill.com/quantum-compiler",
       "highlights": [
-        "Architected a multi-pass compiler in Common Lisp to generate optimized binary directly for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for direct FPGA execution to maximize performance and control flexibility.",
+        "Architected a multi-pass compiler in Common Lisp to generate optimized binary for a custom quantum control processor (the QICK tProcessor ISA), creating a low-level pathway for FPGA execution to maximize performance and control flexibility.",
         "Designed and implemented a custom assembly language to bridge high-level experimental logic with the hardware instruction set, enabling advanced compiler optimizations, automatic resource allocation, and precise picosecond-level timing calculations.",
         "Awarded a return offer after each period with HRL in recognition of significant technical contributions and research impact."
       ]
@@ -179,7 +190,6 @@
       "highlights": [
         "Engineered a production-ready implementation of an exact pattern matching algorithm within the Quilc quantum compiler, translating a novel theoretical method into a high-impact optimization tool.",
         "Reduced quantum circuit depth by up to 37%, shortening execution time on quantum hardware, directly enhancing algorithmic fidelity by mitigating qubit decoherence.",
-        "Project Link: https://github.com/quil-lang/quilc/tree/master/src/match",
         "Awarded a return offer after each period with HRL in recognition of significant technical contributions and research impact."
       ]
     }
@@ -217,7 +227,7 @@
       "publisher": "In proceedings of NeurIPS 2025 Workshop on Scaling Environments for Agents",
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2509.03771",
-      "summary": "Invited to attend, then submitted the paper. Developed a novel architecture that integrates synaptic and structural plasticity, demonstrating that computational agents can solve tasks by physically migrating their processing units on a grid to minimize local prediction error, driven solely by an intrinsic, active inference-based objective.",
+      "summary": "Developed a novel adversarial co-evolution framework to automatically generate a curriculum for multi-agent reinforcement learning that induces complex emergent strategies, increasing agent task performance by over 300% compared to baseline.",
       "authors": ["Brennen A. Hill"],
       "order": 4
     }
@@ -286,14 +296,32 @@
   ],
   "awards": [
     {
+      "position": "Fellowship",
+      "startDate": "2026-02",
+      "name": "Viterbi School of Engineering & Graduate School Fellowship",
+      "highlights": [
+        "Highly competitive fellowship awarded based on exceptional merit.",
+        "\"The faculty in your program believe you have the potential to make a significant contribution to your field.\""
+      ]
+    },
+    {
+      "position": "Featured Student Researcher",
+      "startDate": "2026-04",
+      "url": "https://cs.wisc.edu/2026/04/08/brennen-hill-x26-is-building-ai-inspired-by-the-brain",
+      "name": "UW-Madison Computer Science Department Interview & Feature",
+      "highlights": [
+        "Highlighted in a dedicated feature article for founding the Neuromorphic Computing & NeuroAI Lab and advancing research on biologically-inspired artificial intelligence."
+      ]
+    },
+    {
       "position": "3rd Place (Standard Platform League 2025), 1st Place (Shield 2024)",
       "startDate": "2024-05",
       "endDate": "Present",
       "name": "RoboCup International Robotics Competition",
       "highlights": [
         "Achieved top placements in a competition that serves as an international scientific benchmark for multi-agent AI in adversarial environments, using fully autonomous, identical NAO robots.",
-        "Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models [6]",
-        "Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research [1]"
+        "Guided the team's technical strategy by conducting a comprehensive literature review on multi-robot soccer, leading to a publication on language-driven world models [6].",
+        "Designed and implemented the multi-agent coordination protocols for collaborative passing that formed a component of our team's winning strategy, applying concepts from my research [1]."
       ]
     },
     {
@@ -301,7 +329,7 @@
       "startDate": "2025-01",
       "endDate": "Present",
       "name": "National University of Singapore School of Computing Showcase",
-      "url": "BrennenHill.com/ai-game",
+      "url": "https://BrennenHill.com/ai-game",
       "highlights": [
         "Selected to present a self-developed 3D videogame to an audience of over 100 students and faculty.",
         "The game featured AI-driven monster agents that used complex pathfinding algorithms to navigate dynamic 3D environments and make strategic targeting decisions; complex player abilities including harvesting resources, crafting equipment, and placing structures; and representing a unique mix of PvE, survival, resource management, and tower defense."
@@ -366,14 +394,16 @@
       "startDate": "2025-11",
       "endDate": "2025-11",
       "summary": "Served as a peer reviewer upon nomination by the respective program committees:",
-      "highlights": ["AAAI 2026 Workshop on Neuro for AI & AI for Neuro: Towards Multi-Modal Natural Intelligence (NeuroAI)"]
+      "highlights": [
+        "AAAI 2026 Workshop on Neuro for AI & AI for Neuro: Towards Multi-Modal Natural Intelligence (NeuroAI)"
+      ]
     },
     {
       "organization": "Cortical Labs",
       "position": "Journal Club Host and speaker",
       "startDate": "2024-10",
       "endDate": "2024-10",
-      "url": "BrennenHill.com/scale-free-cognition",
+      "url": "https://BrennenHill.com/scale-free-cognition",
       "highlights": [
         "Presented a critical analysis on the origins of intelligence, synthesizing concepts of scale-free cognition and developmental bioelectricity, and referencing work by Dr. Levin to discuss how higher-level agency evolves from the homeostatic, problem-solving capabilities of cellular collectives.",
         "Facilitated a post-talk discussion with researchers on the future of synthetic biological intelligence and the applications of the mechanisms presented.",
@@ -426,38 +456,37 @@
       "organization": "Slow Food UW",
       "position": "Volunteer Leadership",
       "startDate": "2022-11",
-      "endDate": "2023-12",
+      "endDate": "2022-11",
       "highlights": [
-        "Mobilized and coordinated a team of 30 dormitory students to partner with Slow Food UW.",
-        "Prepared and distributed pay-what-you-can meals to address local food insecurity."
+        "Mobilized and coordinated a team of 30 to prepare and distribute pay-what-you-can meals."
       ]
     },
     {
-      "organization": "Thunder Warrior Gaming",
-      "location": "Los Angeles, CA",
-      "position": "Lead Developer and Founder",
-      "startDate": "2018-03",
-      "endDate": "2022-04",
-      "url": "https://BrennenHill.com/thunder-warrior/",
-      "highlights": [
-        "Designed, built, self-published, and marketed the video game Thunder Warrior: Genesis.",
-        "Achieved net profit.",
-        "Engineered a custom game engine, multiplayer server, database, 3D models, and animations."
-      ]
-    },
-    {
-      "organization": "Agoura Highschool Math Honors Society",
+      "organization": "Agoura High School Math Honors Society",
       "position": "Math Tutor",
       "startDate": "2020-08",
       "endDate": "2022-05",
       "highlights": ["Taught advanced math concepts to students, improving understanding and exam scores."]
     },
     {
-      "organization": "Agoura Highschool Science Honors Society",
+      "organization": "Agoura High School Science Honors Society",
       "position": "Science Tutor",
       "startDate": "2020-08",
       "endDate": "2022-05",
       "highlights": ["Taught students advanced science concepts, raising understanding and exam scores."]
+    }
+    {
+      "organization": "Thunder Warrior Gaming",
+      "location": "Los Angeles, CA",
+      "position": "Lead Developer and Founder",
+      "startDate": "2018-03",
+      "endDate": "2022-04",
+      "url": "https://BrennenHill.com/thunder-warrior",
+      "highlights": [
+        "Designed, built, self-published, and marketed the video game Thunder Warrior: Genesis.",
+        "Achieved net profit.",
+        "Engineered a custom game engine, multiplayer server, database, 3D models, and animations."
+      ]
     }
   ],
   "grants & funding": [
