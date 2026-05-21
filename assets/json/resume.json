@@ -41,7 +41,6 @@
       "institution": "University of Southern California (USC)",
       "location": "Los Angeles, CA",
       "studyType": "Ph.D. in Computer Engineering",
-      "startDate": "2026-08",
       "endDate": "2031-05",
       "courses": [
         "Advisor: Dr. Priyadarshini (Priya) Panda, Intelligent Computing Lab.",
@@ -53,7 +52,6 @@
       "institution": "University of Wisconsin-Madison",
       "location": "Madison, WI",
       "studyType": "Bachelor of Science in Computer Science",
-      "startDate": "2022-09",
       "endDate": "2026-05",
       "score": "3.79/4.0",
       "courses": [
@@ -81,6 +79,16 @@
     }
   ],
   "research experience": [
+    {
+      "name": "Cold Spring Harbor Laboratory, Dr. Saket Navlakha's Lab",
+      "location": "Long Island, NY",
+      "position": "NeuroAI Research Intern",
+      "startDate": "2026-05",
+      "endDate": "2026-08",
+      "highlights": [
+        "Researching and developing algorithms to enable AI to smell based on olfaction in the brain"
+      ]
+    },
     {
       "name": "Wisconsin Neuromorphic Computing and NeuroAI Lab",
       "location": "Madison, WI",
