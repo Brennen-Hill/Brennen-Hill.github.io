@@ -9,6 +9,8 @@
             {% assign endDate = content.endDate | split: '-' | slice: 0, 2 | join: '.' | default: 'Present' %}
             {% assign date = startDate | append: ' - ' %}
             {% assign date = date | append: endDate %}
+          {% elsif content.endDate and content.endDate != '' %}
+            {% assign date = content.endDate | split: '-' | slice: 0, 2 | join: '.' %}
           {% else %}
             {% assign date = null %}
           {% endif %}
