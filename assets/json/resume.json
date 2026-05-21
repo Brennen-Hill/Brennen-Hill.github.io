@@ -108,7 +108,7 @@
       "location": "Madison, WI",
       "position": "Foundation Models Researcher",
       "startDate": "2024-09",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "highlights": [
         "Researching and implementing novel methods for editing representations within large language models including coarse-to-fine pipelines.",
         "Worked with big data, GPU clusters, and high throughput systems.",
@@ -120,7 +120,7 @@
       "location": "Madison, WI",
       "position": "Reinforcement Learning Researcher",
       "startDate": "2024-05",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "highlights": [
         "Designing and implementing reinforcement learning policies to train physical robots for autonomous soccer, focusing on multi-agent coordination.",
         "Key Accomplishments: Top ranking in RoboCup International Robotics Competition (3rd place in the Standard Platform League 2025; 1st place in the Challenge Shield League 2024).",
@@ -132,7 +132,7 @@
       "location": "Madison, WI",
       "position": "Reinforcement Learning Researcher",
       "startDate": "2024-04",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "highlights": [
         "Architecting communication strategies between agents in multi-agent reinforcement learning (MARL) environments incorporating world models.",
         "Researched and developed a novel adversarial co-evolution framework to automatically generate curriculum for MARL.",
@@ -324,7 +324,7 @@
     {
       "position": "3rd Place (Standard Platform League 2025), 1st Place (Shield 2024)",
       "startDate": "2024-05",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "name": "RoboCup International Robotics Competition",
       "highlights": [
         "Achieved top placements in a competition that serves as an international scientific benchmark for multi-agent AI in adversarial environments, using fully autonomous, identical NAO robots.",
@@ -346,7 +346,7 @@
     {
       "position": "Dean's List, Honors in Computer Science Program, Letters & Science Honors Program",
       "startDate": "2022-09",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "name": "University of Wisconsin-Madison"
     },
     {
@@ -422,7 +422,7 @@
       "organization": "Madison Machine Learning",
       "position": "Co-Founder",
       "startDate": "2025-09",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "highlights": [
         "Co-organizing and growing a new community hub connecting machine learning researchers.",
         "Co-leading weekly technical deep-dives and critical discussions on SOTA papers in machine learning."
@@ -432,14 +432,14 @@
       "organization": "Badger Solar Racing",
       "position": "Head of AI",
       "startDate": "2025-08",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "highlights": []
     },
     {
       "organization": "Badger Ballroom Dance Team",
       "position": "Vice President and Vice-Captain",
       "startDate": "2023-12",
-      "endDate": "Present",
+      "endDate": "2026-05",
       "highlights": [
         "Organized and lead instructional workshops in collaboration with faculty and professionals across multiple universities and companies."
       ]
