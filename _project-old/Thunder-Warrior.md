@@ -544,39 +544,30 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 - **Description**: Standard issue armor, balanced stats.
 
   1.  **Thunder Warrior Helmet**
-
   - **Base Defense**: 2.5
   - **Weight**: 9
   - **Description**: 'Description'
   - **Slot**: Helmet
   - **Stats Contributions**: Provides balanced contributions across Stamina, Thaumaturgy, Health, and Physical categories, including resistances, evasion, defense, and regen. Offers moderate ranged and melee defense.
-
   2.  **Thunder Warrior Torso**
-
   - **Base Defense**: 3
   - **Weight**: 15
   - **Description**: 'Decription' (Typo in source code)
   - **Slot**: Torso
   - **Stats Contributions**: Similar balanced contributions as the helmet, likely slightly higher due to being a larger piece.
-
   3.  **Thunder Warrior Legs**
-
   - **Base Defense**: 2.5
   - **Weight**: 12
   - **Description**: 'Description'
   - **Slot**: Legs
   - **Stats Contributions**: Balanced contributions.
-
   4.  **Thunder Warrior Right Arm**
-
   - **Base Defense**: 2
   - **Weight**: 7
   - **Description**: 'Description'
   - **Slot**: Right Arm
   - **Stats Contributions**: Balanced contributions.
-
   5.  **Thunder Warrior Left Arm**
-
   - **Base Defense**: 2
   - **Weight**: 7
   - **Description**: 'Description'
@@ -590,39 +581,30 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 - **Description**: Focuses on Thaumaturgy stats and melee defense, heavier than Thunder Warrior set.
 
   1.  **Sith Helmet**
-
   - **Base Defense**: 2.083
   - **Weight**: 13.5
   - **Description**: 'Description'
   - **Slot**: Helmet
   - **Stats Contributions**: High Thaumaturgy resistances, defense, tenacity, and regen. Moderate Physical/Stamina stats. Higher melee defense than ranged. Lower stealth radius contribution compared to Thunder Warrior.
-
   2.  **Sith Torso**
-
   - **Base Defense**: 2.5
   - **Weight**: 22.5
   - **Description**: 'Decription' (Typo in source code)
   - **Slot**: Torso
   - **Stats Contributions**: Similar focus as the helmet, higher base values.
-
   3.  **Sith Legs**
-
   - **Base Defense**: 2.083
   - **Weight**: 18
   - **Description**: 'Description'
   - **Slot**: Legs
   - **Stats Contributions**: Similar focus as the helmet.
-
   4.  **Sith Right Arm**
-
   - **Base Defense**: 1.667
   - **Weight**: 10.5
   - **Description**: 'Description'
   - **Slot**: Right Arm
   - **Stats Contributions**: Similar focus as the helmet.
-
   5.  **Sith Left Arm**
-
   - **Base Defense**: 1.667
   - **Weight**: 10.5
   - **Description**: 'Description'
@@ -636,39 +618,30 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 - **Description**: Focuses on Stamina stats, evasion, ranged defense, and stealth. Lighter than Thunder Warrior set.
 
   1.  **Shadow Helmet**
-
   - **Base Defense**: 1.25
   - **Weight**: 5.4
   - **Description**: 'Description'
   - **Slot**: Helmet
   - **Stats Contributions**: Very high Stamina evasion, defense, tenacity, and regen. High Physical evasion. Moderate resistances. Low Thaumaturgy stats. Higher ranged defense than melee. Significant stealth radius contribution (negative effect reduction) but lower detection.
-
   2.  **Shadow Torso**
-
   - **Base Defense**: 1.5
   - **Weight**: 9
   - **Description**: 'Decription' (Typo in source code)
   - **Slot**: Torso
   - **Stats Contributions**: Similar focus as the helmet, higher base values.
-
   3.  **Shadow Legs**
-
   - **Base Defense**: 1.25
   - **Weight**: 7.2
   - **Description**: 'Description'
   - **Slot**: Legs
   - **Stats Contributions**: Similar focus as the helmet.
-
   4.  **Shadow Right Arm**
-
   - **Base Defense**: 1
   - **Weight**: 4.2
   - **Description**: 'Description'
   - **Slot**: Right Arm
   - **Stats Contributions**: Similar focus as the helmet.
-
   5.  **Shadow Left Arm**
-
   - **Base Defense**: 1
   - **Weight**: 4.2
   - **Description**: 'Description'
@@ -682,39 +655,30 @@ Armor pieces provide defensive stats, affect weight, and contribute to various p
 - **Description**: Appears to be a lower-stat set, possibly cosmetic or for events. Generally low contributions across the board compared to other sets.
 
   1.  **Festive Helmet**
-
   - **Base Defense**: 1.0415
   - **Weight**: 7.65
   - **Description**: 'Description'
   - **Slot**: Helmet
   - **Stats Contributions**: Low, relatively balanced contributions to all stats, regen, and defenses.
-
   2.  **Festive Torso**
-
   - **Base Defense**: 1.25
   - **Weight**: 12.75
   - **Description**: 'Decription' (Typo in source code)
   - **Slot**: Torso
   - **Stats Contributions**: Low, balanced contributions.
-
   3.  **Festive Legs**
-
   - **Base Defense**: 1.0415
   - **Weight**: 10.2
   - **Description**: 'Description'
   - **Slot**: Legs
   - **Stats Contributions**: Low, balanced contributions.
-
   4.  **Festive Right Arm**
-
   - **Base Defense**: 0.8335
   - **Weight**: 5.95
   - **Description**: 'Description'
   - **Slot**: Right Arm
   - **Stats Contributions**: Low, balanced contributions.
-
   5.  **Festive Left Arm**
-
   - **Base Defense**: 0.8335
   - **Weight**: 5.95
   - **Description**: 'Description'

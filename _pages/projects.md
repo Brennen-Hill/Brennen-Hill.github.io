@@ -4,7 +4,8 @@ title: projects
 permalink: /projects/
 nav: true
 nav_order: 3
-display_categories: [research, research engineering, game developement, hackathon]
+display_categories:
+  [research, research engineering, game developement, hackathon]
 horizontal: false
 ---
 

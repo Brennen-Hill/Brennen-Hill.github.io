@@ -210,7 +210,11 @@
       "releaseDate": "2025",
       "url": "https://arxiv.org/abs/2508.02912",
       "summary": "Developed a novel intention communication framework in MARL that achieved >96% success in a complex coordination task using a learned world model for latent trajectory planning and a self-attention mechanism to encode and share agent intentions, significantly outperforming emergent protocols.",
-      "authors": ["Brennen A. Hill", "Mant Koh En Wei", "Thangavel Jishnuanandh"],
+      "authors": [
+        "Brennen A. Hill",
+        "Mant Koh En Wei",
+        "Thangavel Jishnuanandh"
+      ],
       "order": 1
     },
     {
@@ -275,7 +279,13 @@
       "releaseDate": "",
       "url": "https://arxiv.org/abs/2509.04615",
       "summary": "",
-      "authors": ["Brennen A. Hill", "Surendra Parla", "Venkata Abhijeeth Balabhadruni", "Atharv Prajod Padmalayam", "Sujay Chandra Shekara Sharma"],
+      "authors": [
+        "Brennen A. Hill",
+        "Surendra Parla",
+        "Venkata Abhijeeth Balabhadruni",
+        "Atharv Prajod Padmalayam",
+        "Sujay Chandra Shekara Sharma"
+      ],
       "order": 8
     }
   ],
@@ -407,9 +417,7 @@
       "startDate": "2026-10",
       "endDate": "2026-10",
       "summary": "Served as a peer reviewer upon nomination by the respective program committees:",
-      "highlights": [
-        "COLM 2026 Workshop on Efficient Reasoning (ER)"
-      ]
+      "highlights": ["COLM 2026 Workshop on Efficient Reasoning (ER)"]
     },
     {
       "organization": "AAAI Conference on Artificial Intelligence",
@@ -480,14 +488,18 @@
       "position": "Executive Boardmember and Webmaster",
       "startDate": "2024-03",
       "endDate": "2025-03",
-      "highlights": ["Organized projects, designed a website, and managed resources to support students interested in artificial intelligence."]
+      "highlights": [
+        "Organized projects, designed a website, and managed resources to support students interested in artificial intelligence."
+      ]
     },
     {
       "organization": "Ballroom Association UW-Madison",
       "position": "Executive Boardmember and Webmaster",
       "startDate": "2022-12",
       "endDate": "2023-12",
-      "highlights": ["Designed and built a user-focused website to facilitate member communication."]
+      "highlights": [
+        "Designed and built a user-focused website to facilitate member communication."
+      ]
     },
     {
       "organization": "Slow Food UW",
@@ -503,14 +515,18 @@
       "position": "Math Tutor",
       "startDate": "2020-08",
       "endDate": "2022-05",
-      "highlights": ["Taught advanced math concepts to students, improving understanding and exam scores."]
+      "highlights": [
+        "Taught advanced math concepts to students, improving understanding and exam scores."
+      ]
     },
     {
       "organization": "Agoura High School Science Honors Society",
       "position": "Science Tutor",
       "startDate": "2020-08",
       "endDate": "2022-05",
-      "highlights": ["Taught students advanced science concepts, raising understanding and exam scores."]
+      "highlights": [
+        "Taught students advanced science concepts, raising understanding and exam scores."
+      ]
     },
     {
       "organization": "Thunder Warrior Gaming",
