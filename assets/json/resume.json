@@ -81,7 +81,7 @@
   "research experience": [
     {
       "name": "Dr. Priya Panda's Intelligent Computing Lab",
-      "location": "University of Southern California",
+      "location": "USC",
       "position": "Doctoral Researcher",
       "startDate": "2026-08",
       "endDate": "Present",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Wisconsin Neuromorphic Computing and NeuroAI Lab",
-      "location": "University of Wisconsin-Madison",
+      "location": "UW-Madison",
       "position": "Founding Director & Research Lead",
       "startDate": "2024-06",
       "endDate": "Present",
@@ -117,7 +117,7 @@
     },
     {
       "name": "Dr. Frederic Sala's Sprocket Lab",
-      "location": "University of Wisconsin-Madison",
+      "location": "UW-Madison",
       "position": "Foundation Models Researcher",
       "startDate": "2024-09",
       "endDate": "2026-05",
@@ -129,7 +129,7 @@
     },
     {
       "name": "Dr. Josiah Hanna's Badger RL Lab",
-      "location": "University of Wisconsin-Madison",
+      "location": "UW-Madison",
       "position": "Reinforcement Learning Researcher",
       "startDate": "2024-05",
       "endDate": "2026-05",
@@ -141,7 +141,7 @@
     },
     {
       "name": "Dr. Matthew Berland's Complex Play Lab",
-      "location": "University of Wisconsin-Madison",
+      "location": "UW-Madison",
       "position": "Reinforcement Learning Researcher",
       "startDate": "2024-04",
       "endDate": "2026-05",
@@ -153,7 +153,7 @@
     },
     {
       "name": "Collaboration with Dr. Rajendra Kumar-Singh",
-      "location": "Tufts University (Remote)",
+      "location": "Tufts University",
       "position": "NeuroAI Research Collaborator & AI Lead",
       "startDate": "2025-10",
       "endDate": "2026-08",
@@ -164,7 +164,7 @@
     },
     {
       "name": "Mentorship from Dr. Michael Levin",
-      "location": "Allen Discovery Center at Tufts University (Remote)",
+      "location": "Allen Discovery Center",
       "position": "NeuroAI Research Mentee",
       "startDate": "2025-10",
       "endDate": "2026-08",
